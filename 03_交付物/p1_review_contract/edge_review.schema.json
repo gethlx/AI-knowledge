@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "p1_review_contract/edge_review.schema.json",
+  "title": "ReviewOpinion",
+  "description": "三路独立盲评的单路评审意见（规划 8.4 节 P1 最低可运行接口：reviewer_glm / reviewer_deepseek / reviewer_hy4 各自产出）。程序化校验（Schema 校验、实体规范校验、逐字证据校验、禁用字段扫描）由编排主控执行，不属于本 Schema 表达范围。",
+  "type": "object",
+  "properties": {
+    "pair_id": {
+      "description": "候选概念对标识，格式为 源卡号__目标卡号，如 1-01__1-02。pair_id 中卡号顺序即评审输入 CARD_A、CARD_B 的顺序，direction 的 source_to_target 指 A→B。",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80,
+      "pattern": "^[^_\\s]+__[^_\\s]+$"
+    },
+    "reviewer_id": {
+      "description": "评审路标识。reviewer_id 本身不构成独立性证明，独立性以不同模型来源 + 输入隔离日志为准（规划 3.2 节）。",
+      "type": "string",
+      "enum": [
+        "reviewer_glm",
+        "reviewer_deepseek",
+        "reviewer_hy4"
+      ]
+    },
+    "model_requested": {
+      "description": "评审请求时使用的模型名，如 glm5.3-flash / deepseek4.1flash / hy4。",
+      "type": "string",
+      "minLength": 1
+    },
+    "model_returned": {
+      "description": "API 实际返回的模型名。若与 model_requested 不一致，该路独立性须标记 ROUTING_ALIAS（规划 3.2 节）。",
+      "type": "string",
+      "minLength": 1
+    },
+    "relation_type": {
+      "description": "五类判定中的关系类型；方向由 direction 字段单独表达。",
+      "type": "string",
+      "enum": [
+        "prerequisite",
+        "related",
+        "no_relation",
+        "insufficient_evidence"
+      ]
+    },
+    "direction": {
+      "description": "先修方向：source_to_target=A→B；target_to_source=B→A；relation_type 非 prerequisite 时必须为 null。",
+      "enum": [
+        "source_to_target",
+        "target_to_source",
+        null
+      ]
+    },
+    "evidence": {
+      "description": "证据数组。每条 quote 必须是输入卡文允许字段全文的逐字子串，程序校验失败则该意见整体无效（红线 R6）。",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "card_id": {
+            "description": "证据来源卡号，必须属于本 pair 的两张卡；出现表外卡号触发红线 R7。",
+            "type": "string",
+            "minLength": 1
+          },
+          "field": {
+            "description": "原句所在字段名（允许字段，如 精确定义/常见误解/典型案例/反例/安全与伦理边界）。",
+            "type": "string",
+            "minLength": 1
+          },
+          "quote": {
+            "description": "卡文原句逐字引用，禁止改写、拼接、缩写或修正标点。",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "card_id",
+          "field",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reason": {
+      "description": "判定理由，仅解释卡文如何支持本次判断，不得引入外部知识或作废字段。",
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "description": "评审置信度，0 到 1（含边界）。",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "input_card_hash": {
+      "description": "本次评审输入的两卡卡文快照哈希（由编排主控计算），用于卡文版本追溯与缓存键。",
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_hash": {
+      "description": "本次评审所使用 Prompt（含 guideline_version）的哈希，三路必须一致。",
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "description": "单路评审状态。REVIEW_INCOMPLETE 表示三路互审缺员或本路未完成，不得补齐后宣称完成互审。",
+      "type": "string",
+      "enum": [
+        "REVIEW_COMPLETED",
+        "REVIEW_FAILED",
+        "REVIEW_INCOMPLETE"
+      ]
+    }
+  },
+  "required": [
+    "pair_id",
+    "reviewer_id",
+    "model_requested",
+    "model_returned",
+    "relation_type",
+    "direction",
+    "evidence",
+    "reason",
+    "confidence",
+    "input_card_hash",
+    "prompt_hash",
+    "status"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "relation_type": { "const": "prerequisite" }
+        }
+      },
+      "then": {
+        "properties": {
+          "direction": {
+            "enum": [
+              "source_to_target",
+              "target_to_source"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "relation_type": {
+            "enum": [
+              "related",
+              "no_relation",
+              "insufficient_evidence"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "direction": { "const": null }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "REVIEW_COMPLETED" }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidence": { "minItems": 1 }
+        }
+      }
+    }
+  ]
+}

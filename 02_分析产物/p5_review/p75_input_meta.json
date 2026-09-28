@@ -1,0 +1,66 @@
+{
+ "graph_version": "d0324d77dd44",
+ "input_tier": "tier1",
+ "review_input_hash": "2715ee6efdf1090633c1adf43b657e95d1d008939a8a834f0be20239c4b0646e",
+ "input_chars": 98801,
+ "mech": {
+  "node_count": 197,
+  "edge_count": 1376,
+  "relation_type_counts": {
+   "prerequisite": 84,
+   "related": 1292
+  },
+  "dag_check": "pass",
+  "three_format_consistency": "pass",
+  "axis_dist": {
+   "1": 20,
+   "2": 22,
+   "3": 40,
+   "4": 47,
+   "5": 27,
+   "6": 41
+  },
+  "isolated_nodes": [
+   "1-02",
+   "1-03",
+   "1-07",
+   "1-11",
+   "1-13",
+   "1-14"
+  ],
+  "top_degree": [
+   [
+    "4-01",
+    57
+   ],
+   [
+    "3-04",
+    48
+   ],
+   [
+    "4-02",
+    44
+   ],
+   [
+    "4-03",
+    41
+   ],
+   [
+    "6-41",
+    37
+   ],
+   [
+    "3-06",
+    35
+   ],
+   [
+    "6-08",
+    34
+   ],
+   [
+    "4-34",
+    31
+   ]
+  ]
+ }
+}

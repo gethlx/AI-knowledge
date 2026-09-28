@@ -1,0 +1,1384 @@
+{
+  "cards": [
+    {
+      "card_id": "1-01",
+      "canonical_name": "1-01 人工智能",
+      "name": "人工智能",
+      "en": "Artificial Intelligence (AI)",
+      "axis": 1
+    },
+    {
+      "card_id": "1-02",
+      "canonical_name": "1-02 智能",
+      "name": "智能",
+      "en": "Intelligence",
+      "axis": 1
+    },
+    {
+      "card_id": "1-03",
+      "canonical_name": "1-03 人类与机器的差异",
+      "name": "人类与机器的差异",
+      "en": "Human–Machine Difference",
+      "axis": 1
+    },
+    {
+      "card_id": "1-04",
+      "canonical_name": "1-04 输入—处理—输出",
+      "name": "输入—处理—输出",
+      "en": "Input–Process–Output (IPO)",
+      "axis": 1
+    },
+    {
+      "card_id": "1-05",
+      "canonical_name": "1-05 窄人工智能",
+      "name": "窄人工智能",
+      "en": "Narrow AI",
+      "axis": 1
+    },
+    {
+      "card_id": "1-06",
+      "canonical_name": "1-06 通用人工智能（AGI）",
+      "name": "通用人工智能（AGI）",
+      "en": "Artificial General Intelligence (AGI)",
+      "axis": 1
+    },
+    {
+      "card_id": "1-07",
+      "canonical_name": "1-07 超级智能（ASI）",
+      "name": "超级智能（ASI）",
+      "en": "Artificial Superintelligence (ASI)",
+      "axis": 1
+    },
+    {
+      "card_id": "1-08",
+      "canonical_name": "1-08 图灵测试",
+      "name": "图灵测试",
+      "en": "Turing Test",
+      "axis": 1
+    },
+    {
+      "card_id": "1-09",
+      "canonical_name": "1-09 感知—决策—行动",
+      "name": "感知—决策—行动",
+      "en": "Sense–Decide–Act",
+      "axis": 1
+    },
+    {
+      "card_id": "1-10",
+      "canonical_name": "1-10 AI系统的能力边界",
+      "name": "AI系统的能力边界",
+      "en": "Capability Boundary",
+      "axis": 1
+    },
+    {
+      "card_id": "1-11",
+      "canonical_name": "1-11 自主性",
+      "name": "自主性",
+      "en": "Autonomy",
+      "axis": 1
+    },
+    {
+      "card_id": "1-12",
+      "canonical_name": "1-12 计算器与计算机的区别",
+      "name": "计算器与计算机的区别",
+      "en": "Calculator vs. Computer",
+      "axis": 1
+    },
+    {
+      "card_id": "1-13",
+      "canonical_name": "1-13 人与技术系统的关系",
+      "name": "人与技术系统的关系",
+      "en": "Human–Technology Relationship",
+      "axis": 1
+    },
+    {
+      "card_id": "1-14",
+      "canonical_name": "1-14 人机协作中的分工与责任",
+      "name": "人机协作中的分工与责任",
+      "en": "Division of Labour and Responsibility in Human–AI Collaboration",
+      "axis": 1
+    },
+    {
+      "card_id": "1-15",
+      "canonical_name": "1-15 递归自我改进（RSI）",
+      "name": "递归自我改进（RSI）",
+      "en": "Recursive Self-Improvement (RSI)",
+      "axis": 1
+    },
+    {
+      "card_id": "1-16",
+      "canonical_name": "1-16 AI 发展史（时间轴）",
+      "name": "AI 发展史（时间轴）",
+      "en": "A Brief History of AI",
+      "axis": 1
+    },
+    {
+      "card_id": "1-17",
+      "canonical_name": "1-17 AI 的主要技术路线",
+      "name": "AI 的主要技术路线",
+      "en": "Major Approaches to AI",
+      "axis": 1
+    },
+    {
+      "card_id": "1-18",
+      "canonical_name": "1-18 AlphaGo 与专用人工智能",
+      "name": "AlphaGo 与专用人工智能",
+      "en": "AlphaGo and Narrow AI Breakthroughs",
+      "axis": 1
+    },
+    {
+      "card_id": "1-19",
+      "canonical_name": "1-19 AlphaFold 与 AI 做科学",
+      "name": "AlphaFold 与 AI 做科学",
+      "en": "AlphaFold and AI for Science",
+      "axis": 1
+    },
+    {
+      "card_id": "1-20",
+      "canonical_name": "1-20 专用人工智能与通用人工智能",
+      "name": "专用人工智能与通用人工智能",
+      "en": "Special-purpose AI and General-purpose AI",
+      "axis": 1
+    },
+    {
+      "card_id": "2-01",
+      "canonical_name": "2-01 数据",
+      "name": "数据",
+      "en": "Data",
+      "axis": 2
+    },
+    {
+      "card_id": "2-02",
+      "canonical_name": "2-02 信息",
+      "name": "信息",
+      "en": "Information",
+      "axis": 2
+    },
+    {
+      "card_id": "2-03",
+      "canonical_name": "2-03 知识",
+      "name": "知识",
+      "en": "Knowledge",
+      "axis": 2
+    },
+    {
+      "card_id": "2-04",
+      "canonical_name": "2-04 数据集",
+      "name": "数据集",
+      "en": "Dataset",
+      "axis": 2
+    },
+    {
+      "card_id": "2-05",
+      "canonical_name": "2-05 数据标注与标签",
+      "name": "数据标注与标签",
+      "en": "Data Annotation / Label",
+      "axis": 2
+    },
+    {
+      "card_id": "2-06",
+      "canonical_name": "2-06 训练集、验证集与测试集",
+      "name": "训练集、验证集与测试集",
+      "en": "Training / Validation / Test Set",
+      "axis": 2
+    },
+    {
+      "card_id": "2-07",
+      "canonical_name": "2-07 结构化与非结构化数据",
+      "name": "结构化与非结构化数据",
+      "en": "Structured / Unstructured Data",
+      "axis": 2
+    },
+    {
+      "card_id": "2-08",
+      "canonical_name": "2-08 数据质量与数据清洗",
+      "name": "数据质量与数据清洗",
+      "en": "Data Quality / Data Cleaning",
+      "axis": 2
+    },
+    {
+      "card_id": "2-09",
+      "canonical_name": "2-09 元数据",
+      "name": "元数据",
+      "en": "Metadata",
+      "axis": 2
+    },
+    {
+      "card_id": "2-10",
+      "canonical_name": "2-10 数据偏差",
+      "name": "数据偏差",
+      "en": "Data Bias",
+      "axis": 2
+    },
+    {
+      "card_id": "2-11",
+      "canonical_name": "2-11 数据来源与数据权利",
+      "name": "数据来源与数据权利",
+      "en": "Data Provenance / Data Rights",
+      "axis": 2
+    },
+    {
+      "card_id": "2-12",
+      "canonical_name": "2-12 知识图谱",
+      "name": "知识图谱",
+      "en": "Knowledge Graph",
+      "axis": 2
+    },
+    {
+      "card_id": "2-13",
+      "canonical_name": "2-13 检索",
+      "name": "检索",
+      "en": "Retrieval",
+      "axis": 2
+    },
+    {
+      "card_id": "2-14",
+      "canonical_name": "2-14 资料核验与信息来源判断",
+      "name": "资料核验与信息来源判断",
+      "en": "Source Verification",
+      "axis": 2
+    },
+    {
+      "card_id": "2-15",
+      "canonical_name": "2-15 嵌入与语义相似",
+      "name": "嵌入与语义相似",
+      "en": "Embedding / Semantic Similarity",
+      "axis": 2
+    },
+    {
+      "card_id": "2-16",
+      "canonical_name": "2-16 数字素养",
+      "name": "数字素养",
+      "en": "Digital Literacy",
+      "axis": 2
+    },
+    {
+      "card_id": "2-17",
+      "canonical_name": "2-17 信息茧房与算法推荐",
+      "name": "信息茧房与算法推荐",
+      "en": "Information Cocoons and Algorithmic Recommendation",
+      "axis": 2
+    },
+    {
+      "card_id": "2-18",
+      "canonical_name": "2-18 向量数据库",
+      "name": "向量数据库",
+      "en": "Vector Database",
+      "axis": 2
+    },
+    {
+      "card_id": "2-19",
+      "canonical_name": "2-19 结构化输出",
+      "name": "结构化输出",
+      "en": "Structured Output",
+      "axis": 2
+    },
+    {
+      "card_id": "2-20",
+      "canonical_name": "2-20 企业知识问答",
+      "name": "企业知识问答",
+      "en": "Enterprise Knowledge Q&A",
+      "axis": 2
+    },
+    {
+      "card_id": "2-21",
+      "canonical_name": "2-21 幻觉与事实性评估",
+      "name": "幻觉与事实性评估",
+      "en": "Hallucination and Factuality Evaluation",
+      "axis": 2
+    },
+    {
+      "card_id": "2-22",
+      "canonical_name": "2-22 水印与内容溯源",
+      "name": "水印与内容溯源",
+      "en": "Watermarking and Content Provenance — C2PA (Coalition for Content Provenance and Authenticity)",
+      "axis": 2
+    },
+    {
+      "card_id": "3-01",
+      "canonical_name": "3-01 算法",
+      "name": "算法",
+      "en": "Algorithm",
+      "axis": 3
+    },
+    {
+      "card_id": "3-02",
+      "canonical_name": "3-02 规则",
+      "name": "规则",
+      "en": "Rule",
+      "axis": 3
+    },
+    {
+      "card_id": "3-03",
+      "canonical_name": "3-03 搜索（问题求解）",
+      "name": "搜索（问题求解）",
+      "en": "Search (Problem Solving)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-04",
+      "canonical_name": "3-04 模型",
+      "name": "模型",
+      "en": "Model",
+      "axis": 3
+    },
+    {
+      "card_id": "3-05",
+      "canonical_name": "3-05 特征",
+      "name": "特征",
+      "en": "Feature",
+      "axis": 3
+    },
+    {
+      "card_id": "3-06",
+      "canonical_name": "3-06 机器学习",
+      "name": "机器学习",
+      "en": "Machine Learning (ML)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-07",
+      "canonical_name": "3-07 监督学习与无监督学习",
+      "name": "监督学习与无监督学习",
+      "en": "Supervised / Unsupervised Learning",
+      "axis": 3
+    },
+    {
+      "card_id": "3-08",
+      "canonical_name": "3-08 深度学习与神经网络",
+      "name": "深度学习与神经网络",
+      "en": "Deep Learning / Neural Network (NN)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-09",
+      "canonical_name": "3-09 训练与推断",
+      "name": "训练与推断",
+      "en": "Training / Inference",
+      "axis": 3
+    },
+    {
+      "card_id": "3-10",
+      "canonical_name": "3-10 强化学习",
+      "name": "强化学习",
+      "en": "Reinforcement Learning (RL)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-11",
+      "canonical_name": "3-11 分类与聚类",
+      "name": "分类与聚类",
+      "en": "Classification / Clustering",
+      "axis": 3
+    },
+    {
+      "card_id": "3-12",
+      "canonical_name": "3-12 模式与相关不等于因果",
+      "name": "模式与相关不等于因果",
+      "en": "Pattern / Correlation vs. Causation",
+      "axis": 3
+    },
+    {
+      "card_id": "3-13",
+      "canonical_name": "3-13 概率与不确定性",
+      "name": "概率与不确定性",
+      "en": "Probability / Uncertainty",
+      "axis": 3
+    },
+    {
+      "card_id": "3-14",
+      "canonical_name": "3-14 泛化",
+      "name": "泛化",
+      "en": "Generalization",
+      "axis": 3
+    },
+    {
+      "card_id": "3-15",
+      "canonical_name": "3-15 模型评价",
+      "name": "模型评价",
+      "en": "Model Evaluation",
+      "axis": 3
+    },
+    {
+      "card_id": "3-16",
+      "canonical_name": "3-16 边界案例与可靠性测试",
+      "name": "边界案例与可靠性测试",
+      "en": "Edge Cases and Reliability Testing",
+      "axis": 3
+    },
+    {
+      "card_id": "3-17",
+      "canonical_name": "3-17 缩放定律",
+      "name": "缩放定律",
+      "en": "Scaling Laws",
+      "axis": 3
+    },
+    {
+      "card_id": "3-18",
+      "canonical_name": "3-18 任务适配与AI适用性判断",
+      "name": "任务适配与AI适用性判断",
+      "en": "Task Fit / AI Appropriateness",
+      "axis": 3
+    },
+    {
+      "card_id": "3-19",
+      "canonical_name": "3-19 模型架构",
+      "name": "模型架构",
+      "en": "Model Architecture",
+      "axis": 3
+    },
+    {
+      "card_id": "3-20",
+      "canonical_name": "3-20 Transformer 架构",
+      "name": "Transformer 架构",
+      "en": "Transformer Architecture",
+      "axis": 3
+    },
+    {
+      "card_id": "3-21",
+      "canonical_name": "3-21 下一个词预测与自回归生成",
+      "name": "下一个词预测与自回归生成",
+      "en": "Next-Token Prediction / Autoregressive Generation",
+      "axis": 3
+    },
+    {
+      "card_id": "3-22",
+      "canonical_name": "3-22 参数规模与模型大小",
+      "name": "参数规模与模型大小",
+      "en": "Model Size / Parameters",
+      "axis": 3
+    },
+    {
+      "card_id": "3-23",
+      "canonical_name": "3-23 扩散模型",
+      "name": "扩散模型",
+      "en": "Diffusion Model",
+      "axis": 3
+    },
+    {
+      "card_id": "3-24",
+      "canonical_name": "3-24 混合专家模型（MoE）",
+      "name": "混合专家模型（MoE）",
+      "en": "Mixture of Experts (MoE)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-25",
+      "canonical_name": "3-25 思维链（CoT）",
+      "name": "思维链（CoT）",
+      "en": "Chain-of-Thought (CoT)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-26",
+      "canonical_name": "3-26 涌现能力与顿悟时刻",
+      "name": "涌现能力与顿悟时刻",
+      "en": "Emergent Abilities / Grokking",
+      "axis": 3
+    },
+    {
+      "card_id": "3-27",
+      "canonical_name": "3-27 奖励模型与偏好优化家族",
+      "name": "奖励模型与偏好优化家族",
+      "en": "Reward Model and Preference Optimization Family",
+      "axis": 3
+    },
+    {
+      "card_id": "3-28",
+      "canonical_name": "3-28 推断与\"推理模型\"之辨",
+      "name": "推断与\"推理模型\"之辨",
+      "en": "Inference vs. Reasoning",
+      "axis": 3
+    },
+    {
+      "card_id": "3-29",
+      "canonical_name": "3-29 模型评测与基准",
+      "name": "模型评测与基准",
+      "en": "Model Benchmarks and Evaluation",
+      "axis": 3
+    },
+    {
+      "card_id": "3-30",
+      "canonical_name": "3-30 推荐系统",
+      "name": "推荐系统",
+      "en": "Recommender System",
+      "axis": 3
+    },
+    {
+      "card_id": "3-31",
+      "canonical_name": "3-31 强化学习与自我对弈",
+      "name": "强化学习与自我对弈",
+      "en": "Reinforcement Learning and Self-Play",
+      "axis": 3
+    },
+    {
+      "card_id": "3-32",
+      "canonical_name": "3-32 AI 做科学研究的原理（结构预测）",
+      "name": "AI 做科学研究的原理（结构预测）",
+      "en": "AI for Scientific Structure Prediction",
+      "axis": 3
+    },
+    {
+      "card_id": "3-33",
+      "canonical_name": "3-33 多模态大模型",
+      "name": "多模态大模型",
+      "en": "Multimodal Large Language Model (MLLM)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-34",
+      "canonical_name": "3-34 推理模型",
+      "name": "推理模型",
+      "en": "Reasoning Model / Large Reasoning Model (LRM)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-35",
+      "canonical_name": "3-35 模型蒸馏",
+      "name": "模型蒸馏",
+      "en": "Model Distillation",
+      "axis": 3
+    },
+    {
+      "card_id": "3-36",
+      "canonical_name": "3-36 AI反馈强化学习",
+      "name": "AI反馈强化学习",
+      "en": "Reinforcement Learning from AI Feedback (RLAIF)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-37",
+      "canonical_name": "3-37 后训练",
+      "name": "后训练",
+      "en": "Post-training",
+      "axis": 3
+    },
+    {
+      "card_id": "3-38",
+      "canonical_name": "3-38 世界模型",
+      "name": "世界模型",
+      "en": "World Model",
+      "axis": 3
+    },
+    {
+      "card_id": "3-39",
+      "canonical_name": "3-39 可解释性",
+      "name": "可解释性",
+      "en": "Explainable AI (XAI)",
+      "axis": 3
+    },
+    {
+      "card_id": "3-40",
+      "canonical_name": "3-40 具身智能与物理AI",
+      "name": "具身智能与物理AI",
+      "en": "Embodied AI / Physical AI",
+      "axis": 3
+    },
+    {
+      "card_id": "4-01",
+      "canonical_name": "4-01 生成式人工智能",
+      "name": "生成式人工智能",
+      "en": "Generative AI (GenAI)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-02",
+      "canonical_name": "4-02 人工智能生成内容",
+      "name": "人工智能生成内容",
+      "en": "AI-Generated Content (AIGC)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-03",
+      "canonical_name": "4-03 大语言模型",
+      "name": "大语言模型",
+      "en": "Large Language Model (LLM)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-04",
+      "canonical_name": "4-04 预训练",
+      "name": "预训练",
+      "en": "Pre-training",
+      "axis": 4
+    },
+    {
+      "card_id": "4-05",
+      "canonical_name": "4-05 微调与指令微调",
+      "name": "微调与指令微调",
+      "en": "Fine-tuning / Instruction Tuning",
+      "axis": 4
+    },
+    {
+      "card_id": "4-06",
+      "canonical_name": "4-06 对齐",
+      "name": "对齐",
+      "en": "Alignment",
+      "axis": 4
+    },
+    {
+      "card_id": "4-07",
+      "canonical_name": "4-07 人类反馈强化学习与直接偏好优化",
+      "name": "人类反馈强化学习与直接偏好优化",
+      "en": "Reinforcement Learning from Human Feedback (RLHF) / Direct Preference Optimization (DPO)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-08",
+      "canonical_name": "4-08 聊天机器人",
+      "name": "聊天机器人",
+      "en": "Chatbot",
+      "axis": 4
+    },
+    {
+      "card_id": "4-09",
+      "canonical_name": "4-09 Token（词元）",
+      "name": "Token（词元）",
+      "en": "Token",
+      "axis": 4
+    },
+    {
+      "card_id": "4-10",
+      "canonical_name": "4-10 提示与提示工程",
+      "name": "提示与提示工程",
+      "en": "Prompt / Prompt Engineering",
+      "axis": 4
+    },
+    {
+      "card_id": "4-11",
+      "canonical_name": "4-11 多模态",
+      "name": "多模态",
+      "en": "Multimodal",
+      "axis": 4
+    },
+    {
+      "card_id": "4-12",
+      "canonical_name": "4-12 幻觉",
+      "name": "幻觉",
+      "en": "Hallucination",
+      "axis": 4
+    },
+    {
+      "card_id": "4-13",
+      "canonical_name": "4-13 生成结果的比较与核查",
+      "name": "生成结果的比较与核查",
+      "en": "Comparing and Verifying Outputs",
+      "axis": 4
+    },
+    {
+      "card_id": "4-14",
+      "canonical_name": "4-14 检索增强生成",
+      "name": "检索增强生成",
+      "en": "Retrieval-Augmented Generation (RAG)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-15",
+      "canonical_name": "4-15 基于资料的回答与知识库",
+      "name": "基于资料的回答与知识库",
+      "en": "Grounded Answering / Knowledge Base",
+      "axis": 4
+    },
+    {
+      "card_id": "4-16",
+      "canonical_name": "4-16 工具调用",
+      "name": "工具调用",
+      "en": "Tool Use / Function Calling",
+      "axis": 4
+    },
+    {
+      "card_id": "4-17",
+      "canonical_name": "4-17 AI智能体",
+      "name": "AI智能体",
+      "en": "AI Agent",
+      "axis": 4
+    },
+    {
+      "card_id": "4-18",
+      "canonical_name": "4-18 工作流",
+      "name": "工作流",
+      "en": "Workflow",
+      "axis": 4
+    },
+    {
+      "card_id": "4-19",
+      "canonical_name": "4-19 人工判断点",
+      "name": "人工判断点",
+      "en": "Human Oversight Points",
+      "axis": 4
+    },
+    {
+      "card_id": "4-20",
+      "canonical_name": "4-20 人机交互",
+      "name": "人机交互",
+      "en": "Human–Computer Interaction (HCI)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-21",
+      "canonical_name": "4-21 内容标识与AI参与说明",
+      "name": "内容标识与AI参与说明",
+      "en": "AI Content Labelling",
+      "axis": 4
+    },
+    {
+      "card_id": "4-22",
+      "canonical_name": "4-22 原生多模态",
+      "name": "原生多模态",
+      "en": "Native Multimodal",
+      "axis": 4
+    },
+    {
+      "card_id": "4-23",
+      "canonical_name": "4-23 上下文窗口与长上下文",
+      "name": "上下文窗口与长上下文",
+      "en": "Context Window / Long Context",
+      "axis": 4
+    },
+    {
+      "card_id": "4-24",
+      "canonical_name": "4-24 Agent 技能包（Skill）",
+      "name": "Agent 技能包（Skill）",
+      "en": "Agent Skill / Skill Package",
+      "axis": 4
+    },
+    {
+      "card_id": "4-25",
+      "canonical_name": "4-25 智能体循环（Loop）",
+      "name": "智能体循环（Loop）",
+      "en": "Agent Loop",
+      "axis": 4
+    },
+    {
+      "card_id": "4-26",
+      "canonical_name": "4-26 智能体脚手架与子智能体",
+      "name": "智能体脚手架与子智能体",
+      "en": "Agent Scaffolding / Sub-agent",
+      "axis": 4
+    },
+    {
+      "card_id": "4-27",
+      "canonical_name": "4-27 长期记忆",
+      "name": "长期记忆",
+      "en": "Long-term Memory",
+      "axis": 4
+    },
+    {
+      "card_id": "4-28",
+      "canonical_name": "4-28 氛围编程与规格驱动编程",
+      "name": "氛围编程与规格驱动编程",
+      "en": "Vibe Coding / Spec Coding (Spec-Driven Development)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-29",
+      "canonical_name": "4-29 提示素养",
+      "name": "提示素养",
+      "en": "Prompt Literacy",
+      "axis": 4
+    },
+    {
+      "card_id": "4-30",
+      "canonical_name": "4-30 学术诚信与 AI",
+      "name": "学术诚信与 AI",
+      "en": "Academic Integrity and AI",
+      "axis": 4
+    },
+    {
+      "card_id": "4-31",
+      "canonical_name": "4-31 计算机视觉与图像识别",
+      "name": "计算机视觉与图像识别",
+      "en": "Computer Vision and Image Recognition",
+      "axis": 4
+    },
+    {
+      "card_id": "4-32",
+      "canonical_name": "4-32 语音识别与语音合成",
+      "name": "语音识别与语音合成",
+      "en": "Speech Recognition and Speech Synthesis",
+      "axis": 4
+    },
+    {
+      "card_id": "4-33",
+      "canonical_name": "4-33 机器翻译与自然语言处理",
+      "name": "机器翻译与自然语言处理",
+      "en": "Machine Translation and Natural Language Processing (NLP)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-34",
+      "canonical_name": "4-34 AI 应用全景",
+      "name": "AI 应用全景",
+      "en": "The Landscape of Everyday AI",
+      "axis": 4
+    },
+    {
+      "card_id": "4-35",
+      "canonical_name": "4-35 实时语音对话",
+      "name": "实时语音对话",
+      "en": "Real-time Voice Conversation",
+      "axis": 4
+    },
+    {
+      "card_id": "4-36",
+      "canonical_name": "4-36 AI生成视频",
+      "name": "AI生成视频",
+      "en": "Text-to-Video / Image-to-Video",
+      "axis": 4
+    },
+    {
+      "card_id": "4-37",
+      "canonical_name": "4-37 AI音乐生成",
+      "name": "AI音乐生成",
+      "en": "AI Music Generation",
+      "axis": 4
+    },
+    {
+      "card_id": "4-38",
+      "canonical_name": "4-38 AI配音与语音克隆",
+      "name": "AI配音与语音克隆",
+      "en": "AI Voice Cloning / Speech Synthesis",
+      "axis": 4
+    },
+    {
+      "card_id": "4-39",
+      "canonical_name": "4-39 智能体工作流",
+      "name": "智能体工作流",
+      "en": "Agentic Workflow",
+      "axis": 4
+    },
+    {
+      "card_id": "4-40",
+      "canonical_name": "4-40 多智能体协作",
+      "name": "多智能体协作",
+      "en": "Multi-Agent System",
+      "axis": 4
+    },
+    {
+      "card_id": "4-41",
+      "canonical_name": "4-41 智能体间协议",
+      "name": "智能体间协议",
+      "en": "Agent2Agent Protocol (A2A)",
+      "axis": 4
+    },
+    {
+      "card_id": "4-42",
+      "canonical_name": "4-42 计算机使用智能体",
+      "name": "计算机使用智能体",
+      "en": "Computer Use Agent",
+      "axis": 4
+    },
+    {
+      "card_id": "4-43",
+      "canonical_name": "4-43 AI编程智能体",
+      "name": "AI编程智能体",
+      "en": "Coding Agent",
+      "axis": 4
+    },
+    {
+      "card_id": "4-44",
+      "canonical_name": "4-44 智能体的规划与反思",
+      "name": "智能体的规划与反思",
+      "en": "Planning and Reflection",
+      "axis": 4
+    },
+    {
+      "card_id": "4-45",
+      "canonical_name": "4-45 AI搜索与对话式搜索",
+      "name": "AI搜索与对话式搜索",
+      "en": "AI Search / Conversational Search",
+      "axis": 4
+    },
+    {
+      "card_id": "4-46",
+      "canonical_name": "4-46 AI助手与副驾驶",
+      "name": "AI助手与副驾驶",
+      "en": "AI Assistant / Copilot",
+      "axis": 4
+    },
+    {
+      "card_id": "4-47",
+      "canonical_name": "4-47 AI内容创作工作流",
+      "name": "AI内容创作工作流",
+      "en": "AI Content Creation Workflow",
+      "axis": 4
+    },
+    {
+      "card_id": "5-01",
+      "canonical_name": "5-01 需求与用户",
+      "name": "需求与用户",
+      "en": "Requirement / User",
+      "axis": 5
+    },
+    {
+      "card_id": "5-02",
+      "canonical_name": "5-02 原型",
+      "name": "原型",
+      "en": "Prototype",
+      "axis": 5
+    },
+    {
+      "card_id": "5-03",
+      "canonical_name": "5-03 页面、组件与状态",
+      "name": "页面、组件与状态",
+      "en": "Page / Component / State",
+      "axis": 5
+    },
+    {
+      "card_id": "5-04",
+      "canonical_name": "5-04 用户反馈",
+      "name": "用户反馈",
+      "en": "User Feedback",
+      "axis": 5
+    },
+    {
+      "card_id": "5-05",
+      "canonical_name": "5-05 数据流与流程",
+      "name": "数据流与流程",
+      "en": "Data Flow",
+      "axis": 5
+    },
+    {
+      "card_id": "5-06",
+      "canonical_name": "5-06 接口与模型调用",
+      "name": "接口与模型调用",
+      "en": "Interface / Model Call",
+      "axis": 5
+    },
+    {
+      "card_id": "5-07",
+      "canonical_name": "5-07 迭代",
+      "name": "迭代",
+      "en": "Iteration",
+      "axis": 5
+    },
+    {
+      "card_id": "5-08",
+      "canonical_name": "5-08 测试用例与测试设计",
+      "name": "测试用例与测试设计",
+      "en": "Test Case Design",
+      "axis": 5
+    },
+    {
+      "card_id": "5-09",
+      "canonical_name": "5-09 失败分析与修复",
+      "name": "失败分析与修复",
+      "en": "Failure Analysis and Fixing",
+      "axis": 5
+    },
+    {
+      "card_id": "5-10",
+      "canonical_name": "5-10 应用结构与系统关系",
+      "name": "应用结构与系统关系",
+      "en": "Application Architecture",
+      "axis": 5
+    },
+    {
+      "card_id": "5-11",
+      "canonical_name": "5-11 部署与发布判断",
+      "name": "部署与发布判断",
+      "en": "Deployment and Release Decision",
+      "axis": 5
+    },
+    {
+      "card_id": "5-12",
+      "canonical_name": "5-12 任务说明与结构化表达",
+      "name": "任务说明与结构化表达",
+      "en": "Task Specification",
+      "axis": 5
+    },
+    {
+      "card_id": "5-13",
+      "canonical_name": "5-13 方法沉淀与复用",
+      "name": "方法沉淀与复用",
+      "en": "Method Reuse",
+      "axis": 5
+    },
+    {
+      "card_id": "5-14",
+      "canonical_name": "5-14 创新价值判断",
+      "name": "创新价值判断",
+      "en": "Innovation Value",
+      "axis": 5
+    },
+    {
+      "card_id": "5-15",
+      "canonical_name": "5-15 API 与 API Key（安全视角）",
+      "name": "API 与 API Key（安全视角）",
+      "en": "API (Application Programming Interface) and API Key (Safety Perspective)",
+      "axis": 5
+    },
+    {
+      "card_id": "5-16",
+      "canonical_name": "5-16 超算中心与智算中心",
+      "name": "超算中心与智算中心",
+      "en": "Supercomputing Center / AI Computing Center (AIDC)",
+      "axis": 5
+    },
+    {
+      "card_id": "5-17",
+      "canonical_name": "5-17 词元计费与推理成本",
+      "name": "词元计费与推理成本",
+      "en": "Token Billing and Inference Cost",
+      "axis": 5
+    },
+    {
+      "card_id": "5-18",
+      "canonical_name": "5-18 云端部署与本地部署",
+      "name": "云端部署与本地部署",
+      "en": "Cloud vs. Local Deployment",
+      "axis": 5
+    },
+    {
+      "card_id": "5-19",
+      "canonical_name": "5-19 提示注入与越狱",
+      "name": "提示注入与越狱",
+      "en": "Prompt Injection and Jailbreak",
+      "axis": 5
+    },
+    {
+      "card_id": "5-20",
+      "canonical_name": "5-20 AI 芯片",
+      "name": "AI 芯片",
+      "en": "AI Chips (GPU / NPU)",
+      "axis": 5
+    },
+    {
+      "card_id": "5-21",
+      "canonical_name": "5-21 算力",
+      "name": "算力",
+      "en": "Compute Power",
+      "axis": 5
+    },
+    {
+      "card_id": "5-22",
+      "canonical_name": "5-22 数据中心与散热",
+      "name": "数据中心与散热",
+      "en": "Data Center and Cooling",
+      "axis": 5
+    },
+    {
+      "card_id": "5-23",
+      "canonical_name": "5-23 AI for Science（科学智能）",
+      "name": "AI for Science（科学智能）",
+      "en": "AI for Science",
+      "axis": 5
+    },
+    {
+      "card_id": "5-24",
+      "canonical_name": "5-24 自动化编排平台",
+      "name": "自动化编排平台",
+      "en": "Agent Orchestration Platform",
+      "axis": 5
+    },
+    {
+      "card_id": "5-25",
+      "canonical_name": "5-25 无代码与低代码AI应用搭建",
+      "name": "无代码与低代码AI应用搭建",
+      "en": "No-code / Low-code AI",
+      "axis": 5
+    },
+    {
+      "card_id": "5-26",
+      "canonical_name": "5-26 智能体治理与责任",
+      "name": "智能体治理与责任",
+      "en": "AI Agent Governance and Accountability",
+      "axis": 5
+    },
+    {
+      "card_id": "5-27",
+      "canonical_name": "5-27 AI在行业中的落地",
+      "name": "AI在行业中的落地",
+      "en": "AI in Healthcare / Education / Manufacturing",
+      "axis": 5
+    },
+    {
+      "card_id": "6-01",
+      "canonical_name": "6-01 事实与误导信息",
+      "name": "事实与误导信息",
+      "en": "Misinformation / Disinformation",
+      "axis": 6
+    },
+    {
+      "card_id": "6-02",
+      "canonical_name": "6-02 偏差与公平",
+      "name": "偏差与公平",
+      "en": "Bias and Fairness",
+      "axis": 6
+    },
+    {
+      "card_id": "6-03",
+      "canonical_name": "6-03 算法偏见与可解释性",
+      "name": "算法偏见与可解释性",
+      "en": "Algorithmic Bias and Explainable AI (XAI)",
+      "axis": 6
+    },
+    {
+      "card_id": "6-04",
+      "canonical_name": "6-04 隐私与个人信息保护",
+      "name": "隐私与个人信息保护",
+      "en": "Privacy / Personal Information Protection",
+      "axis": 6
+    },
+    {
+      "card_id": "6-05",
+      "canonical_name": "6-05 版权与署名",
+      "name": "版权与署名",
+      "en": "Copyright / Attribution",
+      "axis": 6
+    },
+    {
+      "card_id": "6-06",
+      "canonical_name": "6-06 深度伪造与内容安全",
+      "name": "深度伪造与内容安全",
+      "en": "Deepfake / Content Safety",
+      "axis": 6
+    },
+    {
+      "card_id": "6-07",
+      "canonical_name": "6-07 安全边界与人工决定点",
+      "name": "安全边界与人工决定点",
+      "en": "Safety Boundary and Human Decision Points",
+      "axis": 6
+    },
+    {
+      "card_id": "6-08",
+      "canonical_name": "6-08 责任与发布决定",
+      "name": "责任与发布决定",
+      "en": "Responsibility and Release Decision",
+      "axis": 6
+    },
+    {
+      "card_id": "6-09",
+      "canonical_name": "6-09 AI治理与制度",
+      "name": "AI治理与制度",
+      "en": "AI Governance",
+      "axis": 6
+    },
+    {
+      "card_id": "6-10",
+      "canonical_name": "6-10 劳动、环境与未来选择",
+      "name": "劳动、环境与未来选择",
+      "en": "Labour, Environment and Future Choices",
+      "axis": 6
+    },
+    {
+      "card_id": "6-11",
+      "canonical_name": "6-11 AI 安全与可控性",
+      "name": "AI 安全与可控性",
+      "en": "AI Safety and Controllability",
+      "axis": 6
+    },
+    {
+      "card_id": "6-12",
+      "canonical_name": "6-12 超级对齐",
+      "name": "超级对齐",
+      "en": "Superalignment",
+      "axis": 6
+    },
+    {
+      "card_id": "6-13",
+      "canonical_name": "6-13 AI 对齐与价值对齐",
+      "name": "AI 对齐与价值对齐",
+      "en": "Value Alignment",
+      "axis": 6
+    },
+    {
+      "card_id": "6-14",
+      "canonical_name": "6-14 人类文明与 AI 共生共存",
+      "name": "人类文明与 AI 共生共存",
+      "en": "Human–AI Coexistence",
+      "axis": 6
+    },
+    {
+      "card_id": "6-15",
+      "canonical_name": "6-15 AI 与人的尊严和意义感",
+      "name": "AI 与人的尊严和意义感",
+      "en": "AI, Human Dignity and Meaning",
+      "axis": 6
+    },
+    {
+      "card_id": "6-16",
+      "canonical_name": "6-16 未成年人保护与 AI",
+      "name": "未成年人保护与 AI",
+      "en": "Minor Protection and AI",
+      "axis": 6
+    },
+    {
+      "card_id": "6-17",
+      "canonical_name": "6-17 AI 与就业及社会结构变迁",
+      "name": "AI 与就业及社会结构变迁",
+      "en": "AI, Employment and Social Structure",
+      "axis": 6
+    },
+    {
+      "card_id": "6-18",
+      "canonical_name": "6-18 智能鸿沟与 AI 平等",
+      "name": "智能鸿沟与 AI 平等",
+      "en": "AI Divide / Digital Equity",
+      "axis": 6
+    },
+    {
+      "card_id": "6-19",
+      "canonical_name": "6-19 AI 与人类未来选择",
+      "name": "AI 与人类未来选择",
+      "en": "AI and Humanity's Future Choices",
+      "axis": 6
+    },
+    {
+      "card_id": "6-20",
+      "canonical_name": "6-20 算法备案与治理制度",
+      "name": "算法备案与治理制度",
+      "en": "Algorithm Filing and Governance",
+      "axis": 6
+    },
+    {
+      "card_id": "6-21",
+      "canonical_name": "6-21 软蒸馏与硬蒸馏（行业含义）",
+      "name": "软蒸馏与硬蒸馏（行业含义）",
+      "en": "Soft vs. Hard Distillation (Industry Slang)",
+      "axis": 6
+    },
+    {
+      "card_id": "6-22",
+      "canonical_name": "6-22 认知卸载（认知外包）",
+      "name": "认知卸载（认知外包）",
+      "en": "Cognitive Offloading",
+      "axis": 6
+    },
+    {
+      "card_id": "6-23",
+      "canonical_name": "6-23 AI 依赖与自我管理",
+      "name": "AI 依赖与自我管理",
+      "en": "AI Dependence and Self-Management",
+      "axis": 6
+    },
+    {
+      "card_id": "6-24",
+      "canonical_name": "6-24 注意力经济与算法操纵",
+      "name": "注意力经济与算法操纵",
+      "en": "Attention Economy and Algorithmic Manipulation",
+      "axis": 6
+    },
+    {
+      "card_id": "6-25",
+      "canonical_name": "6-25 拟人化倾向与 AI 依恋",
+      "name": "拟人化倾向与 AI 依恋",
+      "en": "Anthropomorphism and AI Attachment",
+      "axis": 6
+    },
+    {
+      "card_id": "6-26",
+      "canonical_name": "6-26 信任校准",
+      "name": "信任校准",
+      "en": "Trust Calibration",
+      "axis": 6
+    },
+    {
+      "card_id": "6-27",
+      "canonical_name": "6-27 AI 生成内容的版权归属",
+      "name": "AI 生成内容的版权归属",
+      "en": "AI-Generated Content Copyright",
+      "axis": 6
+    },
+    {
+      "card_id": "6-28",
+      "canonical_name": "6-28 人机共创",
+      "name": "人机共创",
+      "en": "Human-AI Co-creation",
+      "axis": 6
+    },
+    {
+      "card_id": "6-29",
+      "canonical_name": "6-29 AI 垃圾内容（AI Slop）与风格趋同",
+      "name": "AI 垃圾内容（AI Slop）与风格趋同",
+      "en": "AI Slop and Aesthetic Homogenization",
+      "axis": 6
+    },
+    {
+      "card_id": "6-30",
+      "canonical_name": "6-30 芯片出口管制",
+      "name": "芯片出口管制",
+      "en": "Chip Export Controls",
+      "axis": 6
+    },
+    {
+      "card_id": "6-31",
+      "canonical_name": "6-31 国产替代与自主可控",
+      "name": "国产替代与自主可控",
+      "en": "Domestic Substitution and Self-Reliance",
+      "axis": 6
+    },
+    {
+      "card_id": "6-32",
+      "canonical_name": "6-32 开源与闭源之争",
+      "name": "开源与闭源之争",
+      "en": "Open-Source vs Closed-Source",
+      "axis": 6
+    },
+    {
+      "card_id": "6-33",
+      "canonical_name": "6-33 算力鸿沟",
+      "name": "算力鸿沟",
+      "en": "Compute Divide",
+      "axis": 6
+    },
+    {
+      "card_id": "6-34",
+      "canonical_name": "6-34 红队测试",
+      "name": "红队测试",
+      "en": "Red Teaming",
+      "axis": 6
+    },
+    {
+      "card_id": "6-35",
+      "canonical_name": "6-35 护栏与内容审核",
+      "name": "护栏与内容审核",
+      "en": "Guardrails and Content Moderation",
+      "axis": 6
+    },
+    {
+      "card_id": "6-36",
+      "canonical_name": "6-36 模型卡与安全说明",
+      "name": "模型卡与安全说明",
+      "en": "Model Card",
+      "axis": 6
+    },
+    {
+      "card_id": "6-37",
+      "canonical_name": "6-37 深度伪造检测",
+      "name": "深度伪造检测",
+      "en": "Deepfake Detection",
+      "axis": 6
+    },
+    {
+      "card_id": "6-38",
+      "canonical_name": "6-38 欧盟人工智能法案",
+      "name": "欧盟人工智能法案",
+      "en": "EU AI Act",
+      "axis": 6
+    },
+    {
+      "card_id": "6-39",
+      "canonical_name": "6-39 中国生成式人工智能管理办法",
+      "name": "中国生成式人工智能管理办法",
+      "en": "《生成式人工智能服务管理暂行办法》",
+      "axis": 6
+    },
+    {
+      "card_id": "6-40",
+      "canonical_name": "6-40 人工智能生成合成内容标识办法",
+      "name": "人工智能生成合成内容标识办法",
+      "en": "AI-Generated Content Labelling Measures (China)",
+      "axis": 6
+    },
+    {
+      "card_id": "6-41",
+      "canonical_name": "6-41 AI素养",
+      "name": "AI素养",
+      "en": "AI Literacy",
+      "axis": 6
+    }
+  ],
+  "count": 197
+}

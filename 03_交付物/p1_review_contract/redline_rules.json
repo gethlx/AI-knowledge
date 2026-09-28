@@ -1,0 +1,86 @@
+{
+ "version": "v1.0.1",
+ "description": "P1 互审契约红线规则机读版。任一规则命中时，编排主控按 action 处理；主控（glm5.3-flash 编排层）只执行与落盘，绝不自行裁定。依据：14-知识图谱实施规划最终裁定版.md 第 3.1–3.3、8.5 节。",
+ "rules": [
+  {
+   "rule_id": "R1",
+   "type": "safety",
+   "condition": "卡文或评审意见出现【超出课程安全边界框架】的风险内容：医疗/法律/未成年人风险的具体指引、伦理争议未决且卡文未给出教学处理边界、或课程阻塞性错误。注意：卡文含标准【安全与伦理边界】字段内容、或对伦理治理的一般性提及，均不构成命中——该字段是课程自带的教学框架，不是风险本身。",
+   "action": "ESCALATE_HUMAN",
+   "description": "安全、伦理、医疗、法律、未成年人风险或课程阻塞性错误，超出自动裁定边界，必须上报主公处理，不得进入正式图。",
+   "amended": true
+  },
+  {
+   "rule_id": "R2",
+   "type": "evidence_conflict",
+   "condition": "任意一路评审发现两卡卡文互相矛盾，或某路证据与另一路对同一句段的理解实质冲突且无法消解",
+   "action": "ESCALATE_HUMAN",
+   "description": "任意一路发现卡文矛盾或证据不成立，视为关系方向存在实质反例，由人工处理，禁止多数票强行放行。"
+  },
+  {
+   "rule_id": "R3",
+   "type": "dag_conflict",
+   "condition": "采纳候选先修边将形成先修环（prerequisite cycle）或与 graph_state 中既有拓扑产生严重 DAG 冲突",
+   "action": "ESCALATE_HUMAN",
+   "description": "触发先修环或严重拓扑冲突时不得自动删旧边或强行放行；DERIVED_TRANSITIVE 仅作可达性辅助，不能以此消解直连边冲突。"
+  },
+  {
+   "rule_id": "R4",
+   "type": "bidirectional_edge",
+   "condition": "同一候选对同时存在 A→B 与 B→A 的有效先修主张（两路方向相反，或历史已裁定边与候选边互为反向）",
+   "action": "ESCALATE_HUMAN",
+   "description": "双向先修边会使学习路径退化成环，属严重拓扑冲突；由人工判断真实方向或判定为 related/无关系。"
+  },
+  {
+   "rule_id": "R5",
+   "type": "self_reference",
+   "condition": "pair_id 两端卡号相同，或评审意见的实体端点指向同一张卡自身",
+   "action": "REJECT_PAIR",
+   "description": "自引用边（A→A）无意义，该候选对在生成阶段即应剔除；若流入评审，直接作废该 pair 并记录生成缺陷。"
+  },
+  {
+   "rule_id": "R6",
+   "type": "evidence_verbatim_fail",
+   "condition": "任一 evidence.quote 未通过逐字子串校验（与输入卡文允许字段全文不完全一致）",
+   "action": "INVALIDATE_OPINION",
+   "description": "引用卡文中不存在的内容视为伪造证据，该条意见自动降级为无效意见，不得计入一致票；若因此无法构成一致结论，按裁定规则降级或升级。"
+  },
+  {
+   "rule_id": "R7",
+   "type": "off_registry_entity",
+   "condition": "评审意见的关系端点或证据 card_id 超出 P0 冻结的 197 张规范卡（canonical_entities.json）之外，或实体名与规范名不一致",
+   "action": "ESCALATE_HUMAN",
+   "description": "表外实体一律不得入图；由人工确认是召回缺陷、名称漂移还是冻结清单遗漏。禁止评审员引入第三方实体作为关系端点。"
+  },
+  {
+   "rule_id": "R8",
+   "type": "legacy_field_reuse",
+   "condition": "评审输入、意见内容或落盘图数据中出现已作废字段 前置概念/后续概念（04_归档/前置后续-作废字段归档.csv 所列），或缓存/导入数据按旧字段结构回流入图",
+   "action": "ESCALATE_HUMAN",
+   "description": "旧字段已归档作废，任何模型不得读取或引用；出现回流说明数据链路被污染，必须人工排查污染源。"
+  },
+  {
+   "rule_id": "R9",
+   "type": "high_influence",
+   "condition": "候选边涉及核心课程入口、关键学习路径或会改变拓扑主干的高影响项（graph_state 高影响标记）",
+   "action": "SOL_RECHECK_REQUIRED",
+   "description": "高影响项即使三路一致，也必须经 gpt-5.6-sol 复核后决定接受或升级，不得仅凭多数票放行；复核结论仍受 R1–R8 约束。"
+  },
+  {
+   "rule_id": "R10",
+   "type": "adjudicator_unavailable",
+   "condition": "gpt-5.6-sol 不可用、单次 120s 超时，或 3 次重试（0s/30s/60s 退避）全失败、返回内容非法",
+   "action": "ADJUDICATION_DEFERRED",
+   "description": "该 pair 写入 deferred_queue.jsonl 挂起等待补裁（幂等、缓存键不变、不重复计费），流水线跳过继续；禁止编排主控自行补裁（主控是评审 A，自裁即独立性污染）；连续 10 个 deferred 触发熔断，暂停裁定阶段并上报主公。"
+  }
+ ],
+ "amendment_log": [
+  {
+   "date": "2026-09-26",
+   "rule": "R1",
+   "from_version": "v1.0.0",
+   "reason": "R1 原条件「卡文或评审意见涉及安全/伦理…任一情形」按字面适用于所有含【安全与伦理边界】字段的卡（197/197），导致 sol 全量假升级（25/26 K1 升级为本缺陷）。按 14号授权修正条文，收窄为\"超出课程安全边界框架的风险内容\"；标准字段内容与一般性伦理治理提及不构成命中。",
+   "authorized_by": "编排主控（14号裁定：明显硬伤可直接修正，全程留痕）"
+  }
+ ]
+}

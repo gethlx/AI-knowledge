@@ -1,0 +1,10 @@
+{
+ "release": "G_K1",
+ "boundary": "模型裁定，未人工逐条核验（多模型互审 + 主控采纳 gpt-5.6-sol 裁定建议 + 红线升级）",
+ "nodes": 197,
+ "edges": 76,
+ "three_way_consistency": true,
+ "dag": "pass",
+ "roll_back_to": "无（首个版本）",
+ "escalation_note": "ESCALATE_HUMAN 队列项不入本图"
+}

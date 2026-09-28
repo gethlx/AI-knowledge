@@ -1,0 +1,213 @@
+{
+ "graph_version": "d0324d77dd44",
+ "findings_total": 11,
+ "findings": [
+  {
+   "finding_id": "F-001",
+   "level": "blocking",
+   "edge_refs": [
+    "e0620_3-37__4-04"
+   ],
+   "node_refs": [
+    "3-37",
+    "4-04"
+   ],
+   "reason": "先修方向颠倒：后训练以预训练完成为前提，不能作为预训练的先修。",
+   "evidence": "节点3-37定义为‘预训练完成之后对模型进行的一切进一步训练’，而现有边为3-37→4-04。应核定为4-04→3-37。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-001），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-002",
+   "level": "blocking",
+   "edge_refs": [
+    "e0401_2-22__4-02"
+   ],
+   "node_refs": [
+    "2-22",
+    "4-02"
+   ],
+   "reason": "先修方向颠倒：理解AI生成内容不需要先理解水印与内容溯源。",
+   "evidence": "节点2-22的定义以‘在AI生成内容中’嵌入水印或元数据为对象；节点4-02才定义AI生成内容。现有边却为2-22→4-02。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-002），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-003",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0877_2-20__4-14"
+   ],
+   "node_refs": [
+    "2-20",
+    "4-14"
+   ],
+   "reason": "企业知识问答是检索增强生成的应用场景之一，不是理解该通用架构的必要前提；建议改为related。",
+   "evidence": "节点2-20描述企业内部文档问答‘通常由RAG加权限管理与评测构成’，节点4-14描述一般性的‘检索组件+生成组件’架构；现有边为2-20→4-14。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-003），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-004",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0886_2-15__4-14"
+   ],
+   "node_refs": [
+    "2-15",
+    "4-14"
+   ],
+   "reason": "嵌入与语义相似是RAG的一种常见检索实现，并非理解RAG的必要前提；建议改为related。",
+   "evidence": "节点4-14只要求检索组件从外部知识库找内容，没有限定必须使用节点2-15所定义的向量表示与语义相似度；现有边为2-15→4-14。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-004），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-005",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0915_3-31__3-36"
+   ],
+   "node_refs": [
+    "3-31",
+    "3-36"
+   ],
+   "reason": "自我对弈不是AI反馈强化学习的必要条件；建议改为related，并保留更一般的强化学习先修边。",
+   "evidence": "节点3-36定义的是用AI评价或偏好作为奖励信号，并未要求自我对弈；边e0485_3-10__3-36已将‘强化学习’连到3-36。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-005），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-006",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0178_3-14__3-15"
+   ],
+   "node_refs": [
+    "3-14",
+    "3-15"
+   ],
+   "reason": "泛化是模型评价可考察的能力之一，但模型评价还可衡量其他指标；建议改为related。",
+   "evidence": "节点3-15仅定义为使用独立数据与明确指标衡量表现，并未以先理解节点3-14的泛化能力为必要条件。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-006），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-007",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0379_4-23__4-27"
+   ],
+   "node_refs": [
+    "4-23",
+    "4-27"
+   ],
+   "reason": "跨对话长期记忆与单次生成可读取的上下文窗口有关，但理解长期记忆不必先掌握上下文窗口及长上下文；建议改为related。",
+   "evidence": "节点4-27直接定义跨对话记住重要信息；边理由‘上下文是记忆运行基础’说明一种实现联系，未证明严格先修。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-007），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-008",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0179_6-30__6-31"
+   ],
+   "node_refs": [
+    "6-30",
+    "6-31"
+   ],
+   "reason": "芯片出口管制可成为国产替代的动因或案例，但不理解出口管制不会阻断对自主研发和自主可控的理解；建议改为related。",
+   "evidence": "节点6-30讲特定贸易限制，节点6-31讲关键技术自主研发；两者有情境联系，但当前边6-30→6-31把动因误作必要先修。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-008），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-009",
+   "level": "suggestion",
+   "edge_refs": [
+    "e0268_3-06__3-09"
+   ],
+   "node_refs": [
+    "3-06",
+    "3-09"
+   ],
+   "reason": "边的裁定理由与所存方向相反，需核定方向或改写理由。",
+   "evidence": "边表存储3-06→3-09，但理由写‘训练推断是理解机器学习运行的基础’，按该理由应是3-09→3-06。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-009），边文件与裁定记录同步更新，重建图重审 ｜复审否决翻方向，改降 related（部分-整体非先修），经主公复审确认",
+   "recheck_result": "第二轮全图复审中",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-010",
+   "level": "suggestion",
+   "edge_refs": [
+    "e1198_4-03__4-06",
+    "e0444_4-03__4-07"
+   ],
+   "node_refs": [
+    "4-03",
+    "4-06",
+    "4-07"
+   ],
+   "reason": "对齐及人类反馈强化学习/直接偏好优化不限于大语言模型，不能把大语言模型设为两者的通用必要先修；建议复核并改为related。",
+   "evidence": "节点4-06与4-07定义的是模型行为引导和偏好优化方法，并未限定对象为节点4-03的大语言模型；两条边的理由均以‘大语言模型是基础’扩大了必要条件。",
+   "disposition_status": "fixed",
+   "owner": "human",
+   "fix_record": "按主公御审建议修正（F-010），边文件与裁定记录同步更新，重建图重审",
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
+  },
+  {
+   "finding_id": "F-011",
+   "level": "informational",
+   "edge_refs": [],
+   "node_refs": [
+    "1-01",
+    "1-02",
+    "1-03",
+    "1-07",
+    "1-11",
+    "1-13",
+    "1-14"
+   ],
+   "reason": "基础轴存在六个孤岛节点，且‘人工智能’节点仅连接两个具体应用；建议检查是否有意排除概念之间的联系。",
+   "evidence": "图统计列出1-02、1-03、1-07、1-11、1-13、1-14为度0；节点表记载1-01的度为2。这是覆盖异常提示，现有材料不足以断定具体缺失边应为先修。",
+   "disposition_status": "open",
+   "owner": "human",
+   "fix_record": "",
+   "recheck_result": "",
+   "related_graph_version": "d0324d77dd44"
+  }
+ ],
+ "disposition_summary": {
+  "fixed": 10,
+  "open_informational": 1
+ }
+}

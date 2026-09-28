@@ -1,0 +1,14 @@
+{
+ "k": 8,
+ "total_pairs_19306": 19306,
+ "candidate_pool": 4051,
+ "road_counts": {
+  "R1_semantic_topk": 1161,
+  "R2_axis_level": 3265,
+  "R3_cross_top3": 472,
+  "R3_random_sample": 120
+ },
+ "embed_model": "glm-embedding-3-pro",
+ "embed_dim": 4096,
+ "r2_note": "v3.9.6 无知识标签/学习场景字段，按红线R8以 同轴+认知层级(相同/相邻/待定通配) 替代"
+}

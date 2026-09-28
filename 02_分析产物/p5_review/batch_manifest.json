@@ -1,0 +1,162 @@
+{
+ "full_total": 1769,
+ "light_total": 2282,
+ "missing_proposals": 0,
+ "batches": [
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch1.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch2.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch3.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch4.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch5.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch6.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch7.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch8.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch9.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch10.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch11.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch12.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch13.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch14.md",
+   "pairs": 120
+  },
+  {
+   "kind": "full",
+   "file": "reviewer_input_full_batch15.md",
+   "pairs": 89
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch1.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch2.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch3.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch4.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch5.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch6.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch7.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch8.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch9.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch10.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch11.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch12.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch13.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch14.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch15.md",
+   "pairs": 150
+  },
+  {
+   "kind": "light",
+   "file": "reviewer_input_light_batch16.md",
+   "pairs": 32
+  }
+ ]
+}

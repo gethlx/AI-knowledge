@@ -1,0 +1,55 @@
+{
+ "kind": "disputed_full",
+ "source": "light_disputed_pairs.json",
+ "total_pairs": 138,
+ "sessions": [
+  {
+   "route": "reviewer_glm",
+   "unit": "DS",
+   "session": 1,
+   "pairs": 114,
+   "cards": 109,
+   "kind": "disputed_full"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "DS",
+   "session": 2,
+   "pairs": 24,
+   "cards": 31,
+   "kind": "disputed_full"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "DS",
+   "session": 1,
+   "pairs": 114,
+   "cards": 109,
+   "kind": "disputed_full"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "DS",
+   "session": 2,
+   "pairs": 24,
+   "cards": 31,
+   "kind": "disputed_full"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "DS",
+   "session": 1,
+   "pairs": 114,
+   "cards": 109,
+   "kind": "disputed_full"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "DS",
+   "session": 2,
+   "pairs": 24,
+   "cards": 31,
+   "kind": "disputed_full"
+  }
+ ]
+}

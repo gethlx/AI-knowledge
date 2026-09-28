@@ -1,0 +1,36 @@
+{
+ "full": {
+  "reviewer_glm": {
+   "ok": 1769,
+   "missing": 0
+  },
+  "reviewer_deepseek": {
+   "ok": 1769,
+   "missing": 0
+  },
+  "reviewer_hy4": {
+   "ok": 1769,
+   "missing": 0
+  },
+  "missing_detail": {
+   "reviewer_glm": [],
+   "reviewer_deepseek": [],
+   "reviewer_hy4": []
+  }
+ },
+ "light": {
+  "reviewer_glm": {
+   "dispute_files": 80,
+   "silent_unverified": 2202
+  },
+  "reviewer_deepseek": {
+   "dispute_files": 112,
+   "silent_unverified": 2170
+  },
+  "reviewer_hy4": {
+   "dispute_files": 75,
+   "silent_unverified": 2207
+  },
+  "total_pairs": 2282
+ }
+}

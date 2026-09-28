@@ -1,0 +1,272 @@
+{
+ "kind": "light",
+ "session_cap": 350,
+ "sessions": [
+  {
+   "route": "reviewer_glm",
+   "unit": "U1",
+   "session": 1,
+   "pairs": 350,
+   "cards": 60,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U1",
+   "session": 2,
+   "pairs": 118,
+   "cards": 20,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U1",
+   "session": 1,
+   "pairs": 350,
+   "cards": 60,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U1",
+   "session": 2,
+   "pairs": 118,
+   "cards": 20,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U1",
+   "session": 1,
+   "pairs": 350,
+   "cards": 60,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U1",
+   "session": 2,
+   "pairs": 118,
+   "cards": 20,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U2",
+   "session": 1,
+   "pairs": 350,
+   "cards": 46,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U2",
+   "session": 2,
+   "pairs": 304,
+   "cards": 30,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U2",
+   "session": 1,
+   "pairs": 350,
+   "cards": 46,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U2",
+   "session": 2,
+   "pairs": 304,
+   "cards": 30,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U2",
+   "session": 1,
+   "pairs": 350,
+   "cards": 46,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U2",
+   "session": 2,
+   "pairs": 304,
+   "cards": 30,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U3",
+   "session": 1,
+   "pairs": 350,
+   "cards": 40,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U3",
+   "session": 2,
+   "pairs": 159,
+   "cards": 22,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U3",
+   "session": 1,
+   "pairs": 350,
+   "cards": 40,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U3",
+   "session": 2,
+   "pairs": 159,
+   "cards": 22,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U3",
+   "session": 1,
+   "pairs": 350,
+   "cards": 40,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U3",
+   "session": 2,
+   "pairs": 159,
+   "cards": 22,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U4",
+   "session": 1,
+   "pairs": 207,
+   "cards": 26,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U4",
+   "session": 1,
+   "pairs": 207,
+   "cards": 26,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U4",
+   "session": 1,
+   "pairs": 207,
+   "cards": 26,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U5",
+   "session": 1,
+   "pairs": 139,
+   "cards": 24,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U5",
+   "session": 1,
+   "pairs": 139,
+   "cards": 24,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U5",
+   "session": 1,
+   "pairs": 139,
+   "cards": 24,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U6",
+   "session": 1,
+   "pairs": 122,
+   "cards": 110,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U6",
+   "session": 2,
+   "pairs": 122,
+   "cards": 110,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_glm",
+   "unit": "U6",
+   "session": 3,
+   "pairs": 61,
+   "cards": 60,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U6",
+   "session": 1,
+   "pairs": 122,
+   "cards": 110,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U6",
+   "session": 2,
+   "pairs": 122,
+   "cards": 110,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_deepseek",
+   "unit": "U6",
+   "session": 3,
+   "pairs": 61,
+   "cards": 60,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U6",
+   "session": 1,
+   "pairs": 122,
+   "cards": 110,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U6",
+   "session": 2,
+   "pairs": 122,
+   "cards": 110,
+   "kind": "light"
+  },
+  {
+   "route": "reviewer_hy4",
+   "unit": "U6",
+   "session": 3,
+   "pairs": 61,
+   "cards": 60,
+   "kind": "light"
+  }
+ ],
+ "total_light_pairs": 2282,
+ "total_sessions": 33
+}

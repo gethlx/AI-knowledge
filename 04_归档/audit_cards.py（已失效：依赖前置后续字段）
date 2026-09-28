@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""知识卡引用与内容一致性校验。"""
+import re, json, itertools
+from collections import Counter, defaultdict
+
+D = "/Users/larry/WorkBuddy/2026-09-13-14-09-47/02_分析产物/"
+cards = json.load(open(D + "cards.json", encoding="utf-8"))
+SRC = "/Users/larry/WorkBuddy/2026-09-13-14-09-47/03_交付物/银河AI通识课程体系-知识地图总纲-v3.9.5-瘦身版.md"
+raw = open(SRC, encoding="utf-8").read()
+lines = raw.split("\n")
+
+byid = {c["id"]: c for c in cards}
+ids = set(byid)
+
+def parse_refs(s):
+    if not s or s.strip() in ("—", "-", ""):
+        return []
+    return re.findall(r"\d+-\d+", s)
+
+# 从附录A 取 知识标签/主场景/认知层级/层级
+appendix = {}
+for ln in lines:
+    m = re.match(r"^\|\s*(\d+-\d+)\s*\|\s*(.+?)\s*\|\s*(\d+)\s*\|\s*(S\d)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|", ln)
+    if m:
+        appendix[m.group(1)] = {"name": m.group(2), "axis": int(m.group(3)),
+                                "scene": m.group(4), "level": m.group(5), "layer": m.group(6)}
+
+print("=" * 78)
+print("【附录A】条数：", len(appendix), " 正文卡数：", len(cards))
+missing_in_app = sorted(ids - set(appendix))
+extra_in_app = sorted(set(appendix) - ids)
+print("正文有、附录缺：", missing_in_app)
+print("附录有、正文缺：", extra_in_app)
+
+# 附录A 名称 vs 正文名称
+mismatch = []
+for c in cards:
+    a = appendix.get(c["id"])
+    if a and a["name"] != c["name"]:
+        mismatch.append((c["id"], c["name"], a["name"]))
+print("\n【名称不一致】(正文 / 附录A)：")
+for x in mismatch: print("   ", x)
+if not mismatch: print("    无")
+
+# 附录A axis vs 正文 axis
+axbad = [(c["id"], c["axis"], appendix[c["id"]]["axis"]) for c in cards
+         if c["id"] in appendix and appendix[c["id"]]["axis"] != c["axis"]]
+print("\n【知识标签归属不一致】：", axbad if axbad else "无")
+
+print("\n" + "=" * 78)
+print("A. 引用完整性 / 自引用 / 数值合法性")
+dangling, selfref = [], []
+for c in cards:
+    for kind in ("前置概念", "后续概念"):
+        for r in parse_refs(c["fields"].get(kind, "")):
+            if r not in ids:
+                dangling.append((c["id"], kind, r))
+            if r == c["id"]:
+                selfref.append((c["id"], kind))
+print("  悬空引用：", dangling if dangling else "无")
+print("  自引用：", selfref if selfref else "无")
+
+print("\n" + "=" * 78)
+print("B. 互引对称性（A 的后续=同行内 B，则 B 的前置应含 A）")
+asym = []
+for c in cards:
+    for t in parse_refs(c["fields"].get("后续概念", "")):
+        if t in byid and c["id"] not in parse_refs(byid[t]["fields"].get("前置概念", "")):
+            asym.append((c["id"], t))
+print(f"  单向声明数：{len(asym)}  （总后续边 {sum(len(parse_refs(c['fields'].get('后续概念',''))) for c in cards)}）")
+for a, b in asym:
+    print(f"    {a} 后续→ {b}，但 {b} 的前置未回指")
+
+print("\n" + "=" * 78)
+print("D. 正文硬编码编号引用校验（形如「见 3-34」「（见 6-04）」）")
+hard = []
+for c in cards:
+    for k, v in c["fields"].items():
+        for m in re.finditer(r"见\s*(\d+-\d+)", v):
+            hard.append((c["id"], k, m.group(1)))
+for c in cards:
+    pass
+print(f"  含「见 X-YY」的引用共 {len(hard)} 处，逐一核对语义：")
+for hid, k, ref in hard:
+    ok = ref in ids
+    print(f"    {hid} [{k}] → 见 {ref}  {'✔存在' if ok else '✘不存在'}"
+          f"  （{ref} = {byid[ref]['name'] if ok else '?'}）")
+
+print("\n" + "=" * 78)
+print("E. 英文名重复 / 缺失")
+en = defaultdict(list)
+for c in cards:
+    en[c["en"]].append(c["id"])
+dup = {k: v for k, v in en.items() if len(v) > 1}
+print("  英文名重复：")
+for k, v in dup.items(): print(f"    {k} -> {v}")
+if not dup: print("    无")
+
+print("\n" + "=" * 78)
+print("F. 中文名高度相似（≥ 4 字符公共子串，提示潜在重叠）")
+names = [(c["id"], c["name"]) for c in cards]
+pairs = []
+for (i1, n1), (i2, n2) in itertools.combinations(names, 2):
+    a = re.sub(r"[（）()，,、·—\-—\s]", "", n1)
+    b = re.sub(r"[（）()，,、·—\-—\s]", "", n2)
+    L = 0
+    for k in range(2, min(len(a), len(b)) + 1):
+        for s in range(0, len(a) - k + 1):
+            if a[s:s+k] in b:
+                L = max(L, k); break
+    if L >= 5:
+        pairs.append((L, i1, n1, i2, n2))
+pairs.sort(reverse=True)
+for L, i1, n1, i2, n2 in pairs:
+    print(f"    [{L}] {i1} {n1}  <->  {i2} {n2}")
+
+print("\n" + "=" * 78)
+print("G. 认知层级字段 vs 附录A 一致性")
+bad_lv = []
+for c in cards:
+    raw_lv = c["fields"].get("认知层级", "")
+    a = appendix.get(c["id"])
+    if not a: continue
+    if a["level"] == "待定":
+        continue
+    if a["level"] not in raw_lv:
+        bad_lv.append((c["id"], raw_lv, a["level"]))
+for x in bad_lv: print("   ", x)
+print(f"  合计 {len(bad_lv)} 处")

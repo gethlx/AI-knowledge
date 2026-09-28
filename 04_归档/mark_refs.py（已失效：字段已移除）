@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""就地标记 v3.9.5 的「前置/后续」字段 —— **统一标记为〔不可信〕**。
+
+判定依据（这两项字段是下游依赖分析的基础，故按"未验证即不得依赖"处理）：
+  结构层（编号存在／无自引用／无悬空／方向自洽）—— 机器已全量验过 ✅ 干净；
+  语义层（这条前置关系在教学上是否成立）      —— **从未核验**（机器判不了）；
+  母版一致性（是否符合母版 v5.0-r4 的意图）   —— 母版不在本地，无法比对。
+  ⇒ **没有一条经过核验**，一律标〔不可信〕，含义是"候选引用，不得作为依赖依据"。
+
+来源分档（原文照录／本文件修正／本文件推定）**不再写进文档**，只记入台账
+`前置后续-核验台账.csv`，供后续逐条核验时排优先级（推定 > 已修正 > 原文）。
+
+幂等：重复运行先清除旧标记，再统一重标。
+标记是字段值末尾的中文括注，不影响按 `\\d+-\\d+` 抽取编号的下游解析。
+"""
+import re, csv
+
+ROOT = "/Users/larry/WorkBuddy/2026-09-13-14-09-47"
+SRC = f"{ROOT}/01_素材输入/银河AI通识课程体系-知识地图总纲-v3.9.md"
+DST = f"{ROOT}/03_交付物/银河AI通识课程体系-知识地图总纲-v3.9.5-瘦身版.md"
+LEDGER = f"{ROOT}/02_分析产物/前置后续-核验台账.csv"
+
+MARK = "不可信"
+MARK_RE = re.compile(r"\s*〔(?:原文|已修正|推定|不可信)〕")
+
+
+def load_fields(path):
+    txt = open(path, encoding="utf-8").read()
+    parts = re.split(r"^#### ", txt, flags=re.M)
+    out = {}
+    for p in parts[1:]:
+        m = re.match(r"(\d+-\d+)", p.split("\n", 1)[0])
+        if not m:
+            continue
+        rec = {}
+        for key in ("前置概念", "后续概念"):
+            mm = re.search(r"^\| \*\*" + key + r"\*\* \| (.*?) \|$", p, flags=re.M)
+            rec[key] = mm.group(1).strip() if mm else None
+        out[m.group(1)] = rec
+    return out
+
+
+def has(s):
+    return bool(s) and s.strip() not in ("—", "-", "")
+
+
+A = load_fields(SRC)   # 素材原文 v3.9
+B = load_fields(DST)   # 当前版 v3.9.5
+empty_both = {k for k in A if not has(A[k]["前置概念"]) and not has(A[k]["后续概念"])}
+
+lines = open(DST, encoding="utf-8").read().split("\n")
+cur = None
+rows = []
+tally = {"原文": 0, "已修正": 0, "推定": 0}
+marked = 0
+
+for i, ln in enumerate(lines):
+    m = re.match(r"^#### (\d+-\d+)", ln)
+    if m:
+        cur = m.group(1)
+        continue
+    m = re.match(r"^\| \*\*(前置概念|后续概念)\*\* \| (.*?) \|$", ln)
+    if not m or cur is None:
+        continue
+    key, raw = m.group(1), m.group(2)
+    val = MARK_RE.sub("", raw).strip()
+    if not has(val):                      # 空值（—）不标
+        lines[i] = f"| **{key}** | {val} |"
+        continue
+    if cur in empty_both:
+        src = "推定"
+    elif A.get(cur, {}).get(key) != val:
+        src = "已修正"
+    else:
+        src = "原文"
+    tally[src] += 1
+    marked += 1
+    rows.append({"卡号": cur, "字段": key, "引用": val, "来源档": src, "标记": MARK})
+    lines[i] = f"| **{key}** | {val} 〔{MARK}〕 |"
+
+open(DST, "w", encoding="utf-8").write("\n".join(lines))
+
+with open(LEDGER, "w", encoding="utf-8", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=["卡号", "字段", "引用", "来源档", "标记"])
+    w.writeheader()
+    w.writerows(rows)
+
+print(f"标记完成 ｜ 统一标记〔{MARK}〕，共 {marked} 条字段（197 卡全覆盖）")
+print(f"  来源分档（仅记入台账）：原文 {tally['原文']} ／已修正 {tally['已修正']} ／推定 {tally['推定']}")
+print(f"  台账：{LEDGER}")

@@ -1,0 +1,2955 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>银河AI通识课程 · 知识地图总目录表（简化版）</title>
+<style>
+:root{
+  --bg:#f7f8fb; --card:#ffffff; --line:#e6eaf3; --line2:#cfd7e6;
+  --tx:#1c2438; --tx2:#5a6780; --tx3:#8a94ab;
+  --ax:#3b5bdb; --ax2:#2f49b3; --soft:#eef2fb; --hl:#f4f7fe; --panel:#f6f8fe;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);line-height:1.7;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:14.5px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+.wrap{max-width:1600px;margin:0 auto;padding:38px 28px 90px}
+header{border-bottom:2px solid var(--tx);padding-bottom:20px;margin-bottom:18px}
+.eyebrow{font-size:12px;letter-spacing:.22em;color:var(--ax);font-weight:700;text-transform:uppercase}
+h1{font-size:27px;margin:8px 0 8px;letter-spacing:-.3px}
+.sub{color:#4a5468;font-size:14px;max-width:900px}
+.sub b{color:var(--ax)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:12.5px;color:#4a5468}
+.chip b{color:var(--tx)}
+
+/* ── 吸顶控制条 ───────────────────────────── */
+.bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:0 -28px 24px;padding:10px 28px;background:rgba(247,248,251,.9);
+  -webkit-backdrop-filter:saturate(180%) blur(10px);backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid var(--line2)}
+.bar .lab{font-size:12.5px;color:var(--tx3);white-space:nowrap}
+.bar .lab b{color:var(--tx)}
+.jump{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.jump a{font-size:12.5px;text-decoration:none;color:#4a5468;background:#fff;border:1px solid var(--line2);
+  border-radius:8px;padding:3px 9px;transition:.15s}
+.jump a:hover{background:var(--ax);border-color:var(--ax);color:#fff}
+.btn{font-size:12.5px;padding:4px 12px;border-radius:8px;border:1px solid var(--line2);background:#fff;
+  color:#3b4661;cursor:pointer;transition:.15s;white-space:nowrap;font-family:inherit}
+.btn:hover{border-color:var(--ax);color:var(--ax);background:#fff}
+.btn.primary{background:var(--ax);border-color:var(--ax);color:#fff}
+.btn.primary:hover{background:var(--ax2);border-color:var(--ax2);color:#fff}
+
+/* ── 每个知识轴一张表格 ────────────────────── */
+section{margin-bottom:34px;scroll-margin-top:74px}
+h2{font-size:19px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.axno{background:var(--ax);color:#fff;border-radius:8px;padding:2px 10px;font-size:13px;font-weight:800}
+.axen{color:var(--tx3);font-size:12.5px;font-weight:500}
+.axcnt{margin-left:auto;color:var(--ax);font-size:12.5px;font-weight:700}
+.ax-tg{font:inherit;font-size:12px;color:#3b4661;background:#fff;border:1px solid var(--line2);
+  border-radius:7px;padding:2px 9px;cursor:pointer;transition:.15s;white-space:nowrap}
+.ax-tg:hover{border-color:var(--ax);color:var(--ax)}
+.scope{color:var(--tx3);font-size:12.5px;margin:0 0 10px;max-width:920px}
+
+table{display:block;width:100%;background:var(--card);border:1px solid var(--line2);
+  border-radius:12px;overflow:hidden;font-size:13.8px}
+thead{display:block;background:var(--soft);border-bottom:1px solid var(--line2)}
+thead th{display:block;text-align:left;padding:9px 16px;font-size:12.5px;color:#4a5468;font-weight:600}
+.thwrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.thhint{font-weight:400;color:var(--tx3);font-size:12px}
+
+tbody{display:grid;grid-template-columns:repeat(auto-fill,minmax(184px,1fr));align-items:stretch}
+tr.card{display:contents}
+td.cell{min-width:0;padding:0;background:var(--card);
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* ── 卡片（默认收起：只显示中英文名） ──────── */
+.row-tg{position:relative;display:block;width:100%;height:100%;padding:10px 12px 11px 26px;
+  border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;transition:background .15s}
+.row-tg:hover{background:var(--hl)}
+.row-tg:focus-visible{outline:2px solid var(--ax);outline-offset:-2px}
+.chev{position:absolute;left:11px;top:16px;width:0;height:0;
+  border-left:5px solid var(--tx3);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;
+  transform-origin:25% 50%;transition:transform .22s ease}
+.row-tg:hover .chev{border-left-color:var(--ax)}
+tr.open .chev{transform:rotate(90deg);border-left-color:var(--ax)}
+tr.open>.cell{background:var(--soft)}
+.cn{font-weight:700}
+.en{display:block;color:var(--tx3);font-size:12.3px;margin-top:1px}
+
+/* ── 简介行：由 JS 用 order 摆到「本行正下方」，本行高度与布局不变 ── */
+tr.detail-row{display:none}
+tr.detail-row.is-open{display:contents}
+td.detail-cell{grid-column:1/-1;min-width:0;padding:0;background:var(--panel)}
+.dwrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .26s ease}
+tr.detail-row.expanded .dwrap{grid-template-rows:1fr}
+.dinner{overflow:hidden}
+.dbox{padding:11px 20px 15px;background:var(--panel);
+  border-top:1px solid #dbe2f2;border-bottom:1px solid #dbe2f2}
+.dhead{font-size:11.5px;color:var(--tx3);margin-bottom:5px}
+.dhead b{color:var(--tx);font-size:12.5px;font-weight:700}
+.dhead .en{display:inline;font-size:11.5px;margin:0 0 0 7px;color:var(--tx3)}
+.def{white-space:pre-wrap;color:#39425a;font-size:13.4px;line-height:1.85;
+  padding-left:14px;border-left:2px solid #dde3f2}
+.def strong{color:#161d2e;font-weight:800}
+
+footer{border-top:1px solid var(--line2);margin-top:40px;padding-top:18px;color:var(--tx3);font-size:12.5px}
+
+@media (max-width:900px){
+  tbody{grid-template-columns:repeat(auto-fill,minmax(168px,1fr))}
+}
+@media (max-width:620px){
+  .wrap{padding:24px 14px 60px}
+  .bar{margin:0 -14px 20px;padding:9px 14px}
+  .jump{display:none}
+  .thhint{display:none}
+  tbody{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .dbox{padding:10px 14px 14px}
+}
+@media print{
+  body{background:#fff;font-size:11.6px}
+  .wrap{max-width:none;padding:10mm 8mm}
+  .bar{display:none}
+  .ax-tg{display:none}
+  section{break-inside:auto;margin-bottom:20px}
+  table{border-radius:0}
+  /* 打印回到「一卡一行、全部展开」；grid order 在块级布局中自动失效，
+     打印顺序 = DOM 原始顺序（每条简介紧跟自己的卡片），无需重排 */
+  tbody{display:block}
+  tr.card{display:block}
+  td.cell{display:block;border-right:none}
+  tr.detail-row{display:block !important}
+  td.detail-cell{display:block}
+  .dwrap{grid-template-rows:1fr !important}
+  .chev{display:none}
+  .row-tg{padding-left:16px;background:none !important}
+  .dhead{display:none}
+  .def,.dbox{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">银河 AI 通识课程体系 · 下游产物</div>
+  <h1>知识地图 · 总目录表（简化版）</h1>
+  <div class="sub">全部 <b>197</b> 条知识卡按六条知识主轴分类平铺，<b>每个知识轴一张表格</b>：卡片按宽度自适应分列排布（一行 3–10 条），默认只显示中英文名称、简介收起；点击任意卡片，简介在该卡<b>所在行的正下方</b>整行展开，本行高度与左右卡片位置均不受影响，也可整轴或全部展开。数据与《知识地图总纲 v3.9》同源生成，文字未作改动。</div>
+  <div class="meta"><span class="chip">数据基线 <b>v3.9</b>（统一编号）</span><span class="chip">概念卡 <b>197</b> 条</span><span class="chip">知识主轴 <b>6</b> 条</span><span class="chip">生成日期 <b>2026-09-13</b></span><span class="chip">交互 <b>默认收起 · 点击展开</b></span></div>
+</header>
+<div class="bar">
+  <span class="lab">共 <b>197</b> 条 · 已展开 <b class="state">0</b> 条</span>
+  <button class="btn primary" type="button" data-all="open">全部展开</button>
+  <button class="btn" type="button" data-all="close">全部收起</button>
+  <nav class="jump">
+    <a href="#ax1">轴1</a>
+    <a href="#ax2">轴2</a>
+    <a href="#ax3">轴3</a>
+    <a href="#ax4">轴4</a>
+    <a href="#ax5">轴5</a>
+    <a href="#ax6">轴6</a>
+  </nav>
+</div>
+<section id="ax1">
+  <h2><span class="axno">轴1</span>人类、智能与机器<span class="axen">Humans, Intelligence and Machines</span><span class="axcnt">20 条</span><button class="ax-tg" type="button" aria-pressed="false">展开本轴</button></h2>
+  <div class="scope">人与机器的差异；AI系统的输入、处理、输出及能力边界；人与技术系统的关系。</div>
+  <table>
+    <thead><tr><th><div class="thwrap"><span>知识卡（中英文）· 一行自适应 3–10 条</span><span class="thhint">默认收起 · 点击卡片在该行正下方展开简介</span></div></th></tr></thead>
+    <tbody>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-01" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人工智能</span><span class="en">Artificial Intelligence (AI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-01">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人工智能</b><span class="en">Artificial Intelligence (AI)</span></div>
+            <div class="def">一类由人设计、能根据给定目标生成预测、建议或决策等输出的机器系统，其运行表现出通常需要人类智能才能完成的任务能力。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-02" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能</span><span class="en">Intelligence</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-02">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能</b><span class="en">Intelligence</span></div>
+            <div class="def">个体或系统在特定环境中达成目标所表现出的能力，如识别模式、推理、规划、适应新情况。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-03" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人类与机器的差异</span><span class="en">Human–Machine Difference</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-03">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人类与机器的差异</b><span class="en">Human–Machine Difference</span></div>
+            <div class="def">人类通过学习与经验形成能力，具有意识、情感与社会性；机器通过对数据的计算与统计形成能力，其输出由参数与算法决定。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-04" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">输入—处理—输出</span><span class="en">Input–Process–Output (IPO)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-04">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>输入—处理—输出</b><span class="en">Input–Process–Output (IPO)</span></div>
+            <div class="def">描述信息系统运行的基本模型：接收输入数据，经过算法处理，产生输出结果。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-05" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">窄人工智能</span><span class="en">Narrow AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-05">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>窄人工智能</b><span class="en">Narrow AI</span></div>
+            <div class="def">只在特定任务或有限领域内具备能力的AI系统，如人脸识别、语音转写、棋类对弈。也叫「专用人工智能」——换个领域就不管用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-06" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">通用人工智能（AGI）</span><span class="en">Artificial General Intelligence (AGI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-06">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>通用人工智能（AGI）</b><span class="en">Artificial General Intelligence (AGI)</span></div>
+            <div class="def">指在广泛任务上达到或超过人类水平的人工智能，而不是只在单一任务上表现出色。它是业界争论中的目标与概念，尚未实现，也没有公认的判定标准。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-07" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">超级智能（ASI）</span><span class="en">Artificial Superintelligence (ASI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-07">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>超级智能（ASI）</b><span class="en">Artificial Superintelligence (ASI)</span></div>
+            <div class="def">指在几乎所有方面都远超最聪明人类的假想智能。它是面向未来的设想概念，主要用于讨论风险与治理，而非已存在的技术。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-08" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">图灵测试</span><span class="en">Turing Test</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-08">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>图灵测试</b><span class="en">Turing Test</span></div>
+            <div class="def">由艾伦·图灵1950年提出的一种判定设想：若测试者通过文本交流无法区分对话对象是人还是机器，则机器被认为通过测试。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-09" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">感知—决策—行动</span><span class="en">Sense–Decide–Act</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-09">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>感知—决策—行动</b><span class="en">Sense–Decide–Act</span></div>
+            <div class="def">描述智能系统运行循环的框架：先获取环境信息（感知），再据此计算并选择动作（决策），最后执行动作影响环境（行动）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-10" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI系统的能力边界</span><span class="en">Capability Boundary</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-10">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI系统的能力边界</b><span class="en">Capability Boundary</span></div>
+            <div class="def">AI系统在其训练数据、设计目标与运行条件范围内有效，超出该范围时输出可靠性下降。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-11" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">自主性</span><span class="en">Autonomy</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-11">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>自主性</b><span class="en">Autonomy</span></div>
+            <div class="def">系统在无人工逐步干预的情况下，依据既定目标自行完成一系列操作的程度；自主性可分为不同等级。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-12" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">计算器与计算机的区别</span><span class="en">Calculator vs. Computer</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-12">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>计算器与计算机的区别</b><span class="en">Calculator vs. Computer</span></div>
+            <div class="def">计算器执行固定、封闭的算术功能，输入输出关系由硬件电路预先确定；计算机是可执行可更换程序的通用机器，能处理多种任务。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-13" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人与技术系统的关系</span><span class="en">Human–Technology Relationship</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-13">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人与技术系统的关系</b><span class="en">Human–Technology Relationship</span></div>
+            <div class="def">人与技术系统之间存在使用工具、共同决策、系统自主运行等多种关系，不同关系下人的角色与责任不同。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-14" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人机协作中的分工与责任</span><span class="en">Division of Labour and Responsibility in Human–AI Collaboration</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-14">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人机协作中的分工与责任</b><span class="en">Division of Labour and Responsibility in Human–AI Collaboration</span></div>
+            <div class="def">按任务特点分配人、AI与普通工具的工作，人负责目标、核查、重要决定和后果，AI不承担责任。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-15" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">递归自我改进（RSI）</span><span class="en">Recursive Self-Improvement (RSI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-15">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>递归自我改进（RSI）</b><span class="en">Recursive Self-Improvement (RSI)</span></div>
+            <div class="def">指 AI 系统参与改进自身（改代码、改训练数据、改提示策略等），且改进后的版本又能继续改进下一代，形成“自己加速自己”的循环。目前已在工程中出现雏形（AI 生成训练数据、自我批判、自我对弈、智能体自主优化自身配置），但尚未形成不受控的失控闭环。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-16" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 发展史（时间轴）</span><span class="en">A Brief History of AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-16">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 发展史（时间轴）</b><span class="en">A Brief History of AI</span></div>
+            <div class="def">AI 不是一夜之间出现的：1956 年达特茅斯会议提出“人工智能”一词，之后经历两次“寒冬”（期望落空、资金撤出），2012 年 AlexNet 掀起深度学习浪潮，2017 年 Transformer 奠定大模型基础，2022 年 ChatGPT 让 AI 走进大众。理解这条线，就明白今天的 AI 是长期积累与几次突破的结果。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-17" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 的主要技术路线</span><span class="en">Major Approaches to AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-17">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 的主要技术路线</b><span class="en">Major Approaches to AI</span></div>
+            <div class="def">指 AI 领域理解「不同 AI 有什么不一样」的两把公认尺子，以及用它量出来的两类 AI。
+
+<strong>尺子一 · 按技术方法（流派）</strong>——共三个流派：①<strong>符号主义</strong>，由人把知识写成规则、机器按规则推理（如早期专家系统）；②<strong>连接主义</strong>，模仿人脑神经网络、从数据中自己学出规律（如大语言模型、图像识别）；③<strong>行为主义</strong>，靠与环境互动、试错反馈来学（如 AlphaGo 的自我对弈）。
+
+<strong>尺子二 · 按用途分野</strong>——分两种：<strong>专用人工智能</strong>，只能通过一套特定算法完成特定任务（如只下围棋的 AlphaGo、只预测蛋白质结构的 AlphaFold）；<strong>通用人工智能</strong>，具备知识迁移能力，能举一反三、触类旁通地解决新问题。
+
+<strong>用这两把尺子量出本卡的核心对比——两类 AI：</strong>
+① <strong>大语言模型（LLM）这一类</strong>（GPT 系列等）：走连接主义路线，吃<strong>通用文本语料</strong>，靠「预测下一个词」学会语言，一个模型能应付<strong>很多种任务</strong>，给外界的感觉是「什么都能聊」。
+② <strong>AlphaGo / AlphaFold 这一类</strong>：同样用到连接主义，但吃的是<strong>专用领域数据</strong>（棋局／蛋白质结构），只为<strong>一个任务</strong>而训练，一件事做到极致。
+
+<strong>两类最关键的两处不同</strong>：一是<strong>数据来源</strong>——通用文本 vs 专用领域数据；二是<strong>能力形态</strong>——一个模型什么都能聊 vs 一个模型只干一件事。其中 <strong>AlphaGo 还多一层不同</strong>：它是<strong>连接主义 + 行为主义的混合体</strong>，靠自我对弈、试错反馈学棋，这是大语言模型完全不用的方式。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-18" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AlphaGo 与专用人工智能</span><span class="en">AlphaGo and Narrow AI Breakthroughs</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-18">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AlphaGo 与专用人工智能</b><span class="en">AlphaGo and Narrow AI Breakthroughs</span></div>
+            <div class="def">指 2016 年 AlphaGo 击败人类顶尖围棋手这一标志性事件。它用的<strong>不是</strong>「读海量文章」，而是<strong>自我对弈 + 强化学习</strong>：自己和自己下几百万盘棋，从输赢中摸索出更好的下法。它代表「专用路线」——只在围棋这一件事上做到极致，换个任务就不行了。它比 ChatGPT 出现早了 6 年。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-19" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AlphaFold 与 AI 做科学</span><span class="en">AlphaFold and AI for Science</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-19">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AlphaFold 与 AI 做科学</b><span class="en">AlphaFold and AI for Science</span></div>
+            <div class="def">指用 AI 帮助人类做科学研究。最著名的例子是 AlphaFold：它解决了困扰生物学界 50 年的难题——根据氨基酸序列预测蛋白质的立体结构，速度快、精度高。蛋白质结构决定了药物怎么设计、疾病怎么治疗，所以它在生物医学上价值巨大，研究者因此获得 2024 年诺贝尔化学奖。这条路线代表「AI 不只会聊天，还能帮科学家发现新知识」。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="1-20" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">专用人工智能与通用人工智能</span><span class="en">Special-purpose AI and General-purpose AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="1-20">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>专用人工智能与通用人工智能</b><span class="en">Special-purpose AI and General-purpose AI</span></div>
+            <div class="def">指对 AI 按「用途广不广」做的分类。<strong>专用人工智能</strong>，只能通过一套特定的算法完成特定的任务，比如只下围棋的 AlphaGo、只预测蛋白质结构的 AlphaFold；<strong>通用人工智能</strong>，具备知识迁移能力，能像人一样举一反三、触类旁通，遇到新任务能调用已掌握的知识去解决，目前尚未实现。
+
+需要说明的是，这对名称有多个<strong>同源的译法</strong>，指向同一件事，只是强调的侧重点不同：<strong>看「范围窄不窄」</strong>叫窄人工智能或狭义人工智能；<strong>看「用途专不专」</strong>叫专用人工智能。两者说的是同一类 AI，学生在不同材料里看到不同叫法，不必当成两回事。</div>
+          </div></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="ax2">
+  <h2><span class="axno">轴2</span>数据、表征与知识<span class="axen">Data, Representation and Knowledge</span><span class="axcnt">22 条（其中 5 条为演进层并入，层级待定）</span><button class="ax-tg" type="button" aria-pressed="false">展开本轴</button></h2>
+  <div class="scope">数据类型、采集、分类、标签、结构、质量、来源；信息如何被表征、检索并组织为可用知识。</div>
+  <table>
+    <thead><tr><th><div class="thwrap"><span>知识卡（中英文）· 一行自适应 3–10 条</span><span class="thhint">默认收起 · 点击卡片在该行正下方展开简介</span></div></th></tr></thead>
+    <tbody>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-01" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据</span><span class="en">Data</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-01">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据</b><span class="en">Data</span></div>
+            <div class="def">以符号、数字、文字、图像、声音等形式记录的事实或观测结果，是计算与建模的原始材料。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-02" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">信息</span><span class="en">Information</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-02">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>信息</b><span class="en">Information</span></div>
+            <div class="def">经过组织、赋予语境后具有意义的数据。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-03" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">知识</span><span class="en">Knowledge</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-03">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>知识</b><span class="en">Knowledge</span></div>
+            <div class="def">经过整理、验证并可用于推理或决策的信息集合，如规则、关系、经验总结。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-04" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据集</span><span class="en">Dataset</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-04">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据集</b><span class="en">Dataset</span></div>
+            <div class="def">为特定用途按统一格式组织起来的一批数据，是训练与评估的基本单位。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-05" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据标注与标签</span><span class="en">Data Annotation / Label</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-05">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据标注与标签</b><span class="en">Data Annotation / Label</span></div>
+            <div class="def">为数据添加标签或说明（如把图片标为“猫”），使数据可用于监督学习；标签是附着于样本上的目标答案或类别。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-06" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">训练集、验证集与测试集</span><span class="en">Training / Validation / Test Set</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-06">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>训练集、验证集与测试集</b><span class="en">Training / Validation / Test Set</span></div>
+            <div class="def">训练集用于调整模型参数；验证集用于训练中调整设置、选择版本；测试集用于最终评估且必须与训练数据严格分离。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-07" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">结构化与非结构化数据</span><span class="en">Structured / Unstructured Data</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-07">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>结构化与非结构化数据</b><span class="en">Structured / Unstructured Data</span></div>
+            <div class="def">结构化数据按固定字段与格式组织、便于直接查询（如表格）；非结构化数据没有固定字段格式（如自由文本、图片、音频、视频）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-08" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据质量与数据清洗</span><span class="en">Data Quality / Data Cleaning</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-08">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据质量与数据清洗</b><span class="en">Data Quality / Data Cleaning</span></div>
+            <div class="def">数据质量指数据在准确性、完整性、一致性、时效性、代表性等方面满足使用要求的程度；清洗指对缺失、重复、错误、格式不一致之处进行处理使其可用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-09" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">元数据</span><span class="en">Metadata</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-09">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>元数据</b><span class="en">Metadata</span></div>
+            <div class="def">描述数据的数据，如拍摄时间、作者、格式、来源、许可。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-10" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据偏差</span><span class="en">Data Bias</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-10">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据偏差</b><span class="en">Data Bias</span></div>
+            <div class="def">由于数据采集、标注或选择方式不当，使数据不能公平、准确代表真实情况，从而导致模型输出系统性偏离。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-11" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据来源与数据权利</span><span class="en">Data Provenance / Data Rights</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-11">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据来源与数据权利</b><span class="en">Data Provenance / Data Rights</span></div>
+            <div class="def">数据来源指数据的最初出处及其可追溯信息（采集方式、时间、机构、授权状况）；数据权利指个人对其数据享有的知情、访问、更正、删除、可携带等权利。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-12" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">知识图谱</span><span class="en">Knowledge Graph</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-12">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>知识图谱</b><span class="en">Knowledge Graph</span></div>
+            <div class="def">用“实体—关系—实体”的网络结构组织知识的方式，使知识可被机器查询与推理。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-13" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">检索</span><span class="en">Retrieval</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-13">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>检索</b><span class="en">Retrieval</span></div>
+            <div class="def">根据查询需求从数据集合中找出相关内容的过程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-14" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">资料核验与信息来源判断</span><span class="en">Source Verification</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-14">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>资料核验与信息来源判断</b><span class="en">Source Verification</span></div>
+            <div class="def">判断资料是否来自可靠来源、是否可追溯、是否适用当前任务的检查过程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-15" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">嵌入与语义相似</span><span class="en">Embedding / Semantic Similarity</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-15">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>嵌入与语义相似</b><span class="en">Embedding / Semantic Similarity</span></div>
+            <div class="def">把文本、图片等数据映射为数值向量的表示方法，使内容相近的对象在向量空间中距离较近，便于计算与检索。按向量距离即可检索出语义相近的内容——这是检索增强生成（RAG）与推荐系统的基础。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-16" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数字素养</span><span class="en">Digital Literacy</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-16">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数字素养</b><span class="en">Digital Literacy</span></div>
+            <div class="def">在数字环境中获取、辨别、使用和创造信息的能力，包括对信息来源的判断、对工具的选择与安全使用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-17" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">信息茧房与算法推荐</span><span class="en">Information Cocoons and Algorithmic Recommendation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-17">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>信息茧房与算法推荐</b><span class="en">Information Cocoons and Algorithmic Recommendation</span></div>
+            <div class="def">平台依据用户行为持续推送同类内容，使用户长期只接触与自身偏好一致的信息，形成“越看越窄”的信息环境。这个比喻来自哈佛学者桑斯坦 2006 年的《信息乌托邦》；与之相近的还有帕里泽 2011 年提出的「过滤气泡」（Filter Bubble，强调算法的过滤作用）和「回声室效应」（Echo Chamber，强调群体内的观点强化）——三者来源不同、各有侧重，日常常被混用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-18" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">向量数据库</span><span class="en">Vector Database</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-18">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>向量数据库</b><span class="en">Vector Database</span></div>
+            <div class="def">专门存储与检索向量表示的数据库，用相似度（而非精确匹配）查找语义相近内容。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-19" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">结构化输出</span><span class="en">Structured Output</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-19">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>结构化输出</b><span class="en">Structured Output</span></div>
+            <div class="def">强制模型按指定结构（如JSON Schema）输出，便于程序稳定解析与下游使用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-20" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">企业知识问答</span><span class="en">Enterprise Knowledge Q&amp;A</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-20">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>企业知识问答</b><span class="en">Enterprise Knowledge Q&amp;A</span></div>
+            <div class="def">基于企业内部文档构建的问答系统，通常由RAG加权限管理与评测构成。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-21" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">幻觉与事实性评估</span><span class="en">Hallucination and Factuality Evaluation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-21">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>幻觉与事实性评估</b><span class="en">Hallucination and Factuality Evaluation</span></div>
+            <div class="def">衡量模型输出中“看似合理但实际错误”内容的程度，并建立核查机制。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="2-22" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">水印与内容溯源</span><span class="en">Watermarking and Content Provenance — C2PA (Coalition for Content Provenance and Authenticity)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="2-22">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>水印与内容溯源</b><span class="en">Watermarking and Content Provenance — C2PA (Coalition for Content Provenance and Authenticity)</span></div>
+            <div class="def">在AI生成内容中嵌入不可见水印或加密签名元数据，记录来源与修改历史，供验证。</div>
+          </div></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="ax3">
+  <h2><span class="axno">轴3</span>算法、模型与学习<span class="axen">Algorithms, Models and Learning</span><span class="axcnt">40 条（其中 8 条为演进层并入，层级待定）</span><button class="ax-tg" type="button" aria-pressed="false">展开本轴</button></h2>
+  <div class="scope">规则、搜索与算法；模型、训练与推断；机器学习与神经网络的适龄直觉；模式、概率、不确定性、泛化与模型评价。</div>
+  <table>
+    <thead><tr><th><div class="thwrap"><span>知识卡（中英文）· 一行自适应 3–10 条</span><span class="thhint">默认收起 · 点击卡片在该行正下方展开简介</span></div></th></tr></thead>
+    <tbody>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-01" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">算法</span><span class="en">Algorithm</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-01">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>算法</b><span class="en">Algorithm</span></div>
+            <div class="def">为解决某类问题而规定的一系列明确、有限、可执行的步骤。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-02" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">规则</span><span class="en">Rule</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-02">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>规则</b><span class="en">Rule</span></div>
+            <div class="def">由人明确设定的“若……则……”形式的判断或操作依据。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-03" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">搜索（问题求解）</span><span class="en">Search (Problem Solving)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-03">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>搜索（问题求解）</b><span class="en">Search (Problem Solving)</span></div>
+            <div class="def">在可能的方案空间中系统地查找满足目标的解的过程，如路径搜索、博弈树搜索。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-04" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模型</span><span class="en">Model</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-04">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模型</b><span class="en">Model</span></div>
+            <div class="def">从数据中学习得到的、用于把输入映射为输出的计算结构（含参数的数学函数）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-05" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">特征</span><span class="en">Feature</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-05">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>特征</b><span class="en">Feature</span></div>
+            <div class="def">用于描述样本、供模型计算的属性或量，如身高、像素值、词频。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-06" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">机器学习</span><span class="en">Machine Learning (ML)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-06">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>机器学习</b><span class="en">Machine Learning (ML)</span></div>
+            <div class="def">让计算机从数据中自动发现规律、并据此对新数据做出预测或判断的方法总称，而非由人逐条编写规则。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-07" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">监督学习与无监督学习</span><span class="en">Supervised / Unsupervised Learning</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-07">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>监督学习与无监督学习</b><span class="en">Supervised / Unsupervised Learning</span></div>
+            <div class="def">监督学习用带标签数据训练模型，使其学会由输入预测标签；无监督学习用无标签数据，让模型自行发现数据中的结构或分组。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-08" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">深度学习与神经网络</span><span class="en">Deep Learning / Neural Network (NN)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-08">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>深度学习与神经网络</b><span class="en">Deep Learning / Neural Network (NN)</span></div>
+            <div class="def">神经网络是由多层相互连接的简单计算单元组成的计算模型，通过调整连接权重从数据中学习映射关系；深度学习是使用多层神经网络、能从原始数据中逐层提取特征的方法。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-09" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">训练与推断</span><span class="en">Training / Inference</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-09">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>训练与推断</b><span class="en">Training / Inference</span></div>
+            <div class="def">训练是用数据调整模型参数、使输出逐步接近目标结果的过程；推断是训练完成后用固定参数对新输入计算输出的过程。训练怎么知道往哪儿调？比较输出与目标的差距，按差距不断微调——这是训练的基本原理（专业上称"损失函数与梯度下降"，本课程不展开）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-10" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">强化学习</span><span class="en">Reinforcement Learning (RL)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-10">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>强化学习</b><span class="en">Reinforcement Learning (RL)</span></div>
+            <div class="def">智能体在与环境的交互中，通过尝试不同动作并根据奖励信号调整策略，以最大化长期累计奖励的学习方式。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-11" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">分类与聚类</span><span class="en">Classification / Clustering</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-11">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>分类与聚类</b><span class="en">Classification / Clustering</span></div>
+            <div class="def">分类是把输入划分到预先设定类别（如判断邮件是否为垃圾邮件）；聚类是把相似样本自动分到一组，事先不给定类别。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-12" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模式与相关不等于因果</span><span class="en">Pattern / Correlation vs. Causation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-12">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模式与相关不等于因果</b><span class="en">Pattern / Correlation vs. Causation</span></div>
+            <div class="def">模式是数据中反复出现、可被识别或用于预测的规律性结构；数据中出现相关关系不等于存在因果关系。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-13" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">概率与不确定性</span><span class="en">Probability / Uncertainty</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-13">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>概率与不确定性</b><span class="en">Probability / Uncertainty</span></div>
+            <div class="def">概率是对某事件发生可能性的数值度量，取值于0到1之间；不确定性指对结果把握程度不足的状态，可来源于数据噪声或模型能力限制。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-14" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">泛化</span><span class="en">Generalization</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-14">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>泛化</b><span class="en">Generalization</span></div>
+            <div class="def">模型在训练时未见过的新数据上仍能保持良好表现的能力。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-15" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模型评价</span><span class="en">Model Evaluation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-15">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模型评价</b><span class="en">Model Evaluation</span></div>
+            <div class="def">使用独立数据与明确指标衡量模型表现的过程。评价时把"对的当成错的"与"错的当成对的"分开数一数，再看对错比例——两类错误的代价往往不同，要看场景更怕哪一种。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-16" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">边界案例与可靠性测试</span><span class="en">Edge Cases and Reliability Testing</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-16">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>边界案例与可靠性测试</b><span class="en">Edge Cases and Reliability Testing</span></div>
+            <div class="def">边界案例指处于正常范围之外或极端的输入情况；可靠性测试指用正常、边界和异常输入检验系统是否稳定、结果是否可信。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-17" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">缩放定律</span><span class="en">Scaling Laws</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-17">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>缩放定律</b><span class="en">Scaling Laws</span></div>
+            <div class="def">模型性能随参数量、数据量、计算量增长而可预测提升的经验规律；近年也发现把计算用在“回答难题时多思考”同样能提升表现。中文也译「规模定律」「尺度定律」，指同一概念。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-18" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">任务适配与AI适用性判断</span><span class="en">Task Fit / AI Appropriateness</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-18">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>任务适配与AI适用性判断</b><span class="en">Task Fit / AI Appropriateness</span></div>
+            <div class="def">判断某任务是否适合使用AI、使用哪一种、以及哪些步骤不应交给AI，依据任务目标、数据条件、风险与人的需要。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-19" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模型架构</span><span class="en">Model Architecture</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-19">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模型架构</b><span class="en">Model Architecture</span></div>
+            <div class="def">模型内部“信息怎么流动、怎么计算”的整体设计方式。不同架构适合不同任务，是大模型、图像模型等各类模型分类的共同上位概念。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-20" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">Transformer 架构</span><span class="en">Transformer Architecture</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-20">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>Transformer 架构</b><span class="en">Transformer Architecture</span></div>
+            <div class="def">2017 年提出的一种模型架构，核心是让模型在处理一句话时能“同时关注到所有词之间的关系”，因此特别擅长处理长文本，并可通过扩大规模变得更强。今天几乎所有大语言模型都基于它。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-21" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">下一个词预测与自回归生成</span><span class="en">Next-Token Prediction / Autoregressive Generation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-21">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>下一个词预测与自回归生成</b><span class="en">Next-Token Prediction / Autoregressive Generation</span></div>
+            <div class="def">大语言模型的工作方式是不断预测“接下来最可能出现的一个词（词元）”，预测出一个就接到后面，再预测下一个，逐字拼出完整回答。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-22" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">参数规模与模型大小</span><span class="en">Model Size / Parameters</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-22">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>参数规模与模型大小</b><span class="en">Model Size / Parameters</span></div>
+            <div class="def">模型内部可调节的"旋钮"数量称为参数；参数量越大通常能力越强，但训练与运行成本也越高、越难部署到小设备。训练开始前由人先行设定的配置（如学习节奏、模型结构）称"超参数"，与训练中学习出来的参数不同。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-23" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">扩散模型</span><span class="en">Diffusion Model</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-23">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>扩散模型</b><span class="en">Diffusion Model</span></div>
+            <div class="def">一类生成图像、视频等内容的模型架构，思路是“从一团随机噪声出发，一步步去掉噪声，逐渐显现出一张清晰画面”。今天多数画图、画视频工具都基于它。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-24" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">混合专家模型（MoE）</span><span class="en">Mixture of Experts (MoE)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-24">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>混合专家模型（MoE）</b><span class="en">Mixture of Experts (MoE)</span></div>
+            <div class="def">一种让大模型“分工合作”的架构：模型内部有多个“专家”子模块，每次处理只调用其中最相关的少数几个，从而在保持大能力的同时降低运行开销。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-25" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">思维链（CoT）</span><span class="en">Chain-of-Thought (CoT)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-25">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>思维链（CoT）</b><span class="en">Chain-of-Thought (CoT)</span></div>
+            <div class="def">让模型把推理过程一步步写出来（“先…再…所以…”），而不是直接给答案。分步写下来能让它在数学、逻辑等任务上表现更好，也让人更容易检查它错在哪一步。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-26" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">涌现能力与顿悟时刻</span><span class="en">Emergent Abilities / Grokking</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-26">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>涌现能力与顿悟时刻</b><span class="en">Emergent Abilities / Grokking</span></div>
+            <div class="def">指模型规模增大到一定程度后，突然表现出小模型完全没有的能力（如多步推理），英文称为 emergent abilities；训练中出现的“能力突然变好”的现象常被称作“顿悟时刻（Aha Moment）”。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-27" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">奖励模型与偏好优化家族</span><span class="en">Reward Model and Preference Optimization Family</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-27">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>奖励模型与偏好优化家族</b><span class="en">Reward Model and Preference Optimization Family</span></div>
+            <div class="def">为了让 AI 的回答“更符合人的喜好”，先用人类/AI 的偏好训练一个“打分器”（奖励模型），再用它指导模型改进。RLHF、DPO、GRPO、RLVR 都是这个家族里不同的做法，各有侧重。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-28" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">推断与"推理模型"之辨</span><span class="en">Inference vs. Reasoning</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-28">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>推断与"推理模型"之辨</b><span class="en">Inference vs. Reasoning</span></div>
+            <div class="def">模型训练完成后，用固定参数对新输入计算输出、生成回答的过程叫推断（inference）——日常也常叫「推理」，是模型"跑一次"的行业含义。注意区分：推理模型的"推理"是 reasoning（回答前的多步思考），与"跑一次"的推断不是一回事；"回答难题时多花算力思考"属于推断阶段的计算方式（见 3-22 缩放定律）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-29" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模型评测与基准</span><span class="en">Model Benchmarks and Evaluation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-29">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模型评测与基准</b><span class="en">Model Benchmarks and Evaluation</span></div>
+            <div class="def">用一套标准化题目（基准，benchmark）来比较不同模型的能力，如考试分数一样给出排名。基准能反映部分能力，但题目公开后可能被“应试”，不能完全代表真实可用性。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-30" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">推荐系统</span><span class="en">Recommender System</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-30">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>推荐系统</b><span class="en">Recommender System</span></div>
+            <div class="def">指平台用来「猜你爱看什么」的系统：它根据你过去的行为（点了什么、看了多久、买了什么）来预测你接下来可能喜欢什么，然后推给你。短视频刷不停、购物被「猜中」、音乐列表越听越准，背后都是它。它是「分类器—预测器—推荐器」这条链的终点。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-31" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">强化学习与自我对弈</span><span class="en">Reinforcement Learning and Self-Play</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-31">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>强化学习与自我对弈</b><span class="en">Reinforcement Learning and Self-Play</span></div>
+            <div class="def">指一种「从试错中学」的学习方式：机器不断尝试、根据结果好坏调整做法，做对了就加强、做错了就改。它是 AI 三大流派中<strong>行为主义</strong>的代表技术。AlphaGo 用的「自我对弈」就是它的高级玩法——自己和自己下棋，不用人类教，靠输赢自己琢磨。这与大语言模型「读海量文本学规律」（属<strong>连接主义</strong>）是完全不同的学习方式。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-32" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 做科学研究的原理（结构预测）</span><span class="en">AI for Scientific Structure Prediction</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-32">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 做科学研究的原理（结构预测）</b><span class="en">AI for Scientific Structure Prediction</span></div>
+            <div class="def">指 AI 能根据「已知的线索」预测出「未知的结果」——比如根据一串氨基酸的顺序，预测出蛋白质会折叠成什么立体结构。它靠的是从大量已知的「结构样本」中学会规律。这类「预测结构」的能力，代表 AI 在科学研究中的一类重要用途。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-33" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">多模态大模型</span><span class="en">Multimodal Large Language Model (MLLM)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-33">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>多模态大模型</b><span class="en">Multimodal Large Language Model (MLLM)</span></div>
+            <div class="def">能同时接收并处理文本、图像、音频、视频等多种模态输入的大模型，部分可原生输出多种模态。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-34" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">推理模型</span><span class="en">Reasoning Model / Large Reasoning Model (LRM)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-34">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>推理模型</b><span class="en">Reasoning Model / Large Reasoning Model (LRM)</span></div>
+            <div class="def">在回答问题前先生成长链条内部推理过程（思维链）的一类大模型，用更多推理阶段计算换取复杂任务准确率。注意：这里的「推理」指 reasoning（多步思考），与模型使用阶段的「推断」（inference，见 3-34）不是一回事。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-35" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模型蒸馏</span><span class="en">Model Distillation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-35">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模型蒸馏</b><span class="en">Model Distillation</span></div>
+            <div class="def">用大模型（教师模型）的输出训练小模型（学生模型），把小模型的能力提升到接近大模型。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-36" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI反馈强化学习</span><span class="en">Reinforcement Learning from AI Feedback (RLAIF)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-36">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI反馈强化学习</b><span class="en">Reinforcement Learning from AI Feedback (RLAIF)</span></div>
+            <div class="def">以AI模型给出的评价/偏好替代部分人类标注，作为强化学习奖励信号。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-37" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">后训练</span><span class="en">Post-training</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-37">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>后训练</b><span class="en">Post-training</span></div>
+            <div class="def">预训练完成之后对模型进行的一切进一步训练，包括微调、对齐、推理能力强化等。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-38" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">世界模型</span><span class="en">World Model</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-38">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>世界模型</b><span class="en">World Model</span></div>
+            <div class="def">学习环境如何随时间变化、并预测行动后果的内部表征模型，用于规划与智能体训练。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-39" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">可解释性</span><span class="en">Explainable AI (XAI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-39">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>可解释性</b><span class="en">Explainable AI (XAI)</span></div>
+            <div class="def">使AI决策过程与依据可被人类理解的技术，含模型内部机制解释与输出依据说明。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="3-40" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">具身智能与物理AI</span><span class="en">Embodied AI / Physical AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="3-40">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>具身智能与物理AI</b><span class="en">Embodied AI / Physical AI</span></div>
+            <div class="def">AI驱动机器人等物理实体在真实世界中感知与行动。</div>
+          </div></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="ax4">
+  <h2><span class="axno">轴4</span>生成式AI、交互与智能体<span class="axen">Generative AI, Interaction and Agents</span><span class="axcnt">47 条（其中 13 条为演进层并入，层级待定）</span><button class="ax-tg" type="button" aria-pressed="false">展开本轴</button></h2>
+  <div class="scope">内容生成、多模态、提示与上下文、检索与工具调用、工作流、智能体及人机交互。</div>
+  <table>
+    <thead><tr><th><div class="thwrap"><span>知识卡（中英文）· 一行自适应 3–10 条</span><span class="thhint">默认收起 · 点击卡片在该行正下方展开简介</span></div></th></tr></thead>
+    <tbody>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-01" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">生成式人工智能</span><span class="en">Generative AI (GenAI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-01">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>生成式人工智能</b><span class="en">Generative AI (GenAI)</span></div>
+            <div class="def">能够生成文本、图像、音频、视频等新内容的AI模型类别，其输出基于对训练数据分布的学习。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-02" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人工智能生成内容</span><span class="en">AI-Generated Content (AIGC)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-02">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人工智能生成内容</b><span class="en">AI-Generated Content (AIGC)</span></div>
+            <div class="def">由AI系统生成并输出的文本、图像、音视频等内容。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-03" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">大语言模型</span><span class="en">Large Language Model (LLM)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-03">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>大语言模型</b><span class="en">Large Language Model (LLM)</span></div>
+            <div class="def">在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-04" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">预训练</span><span class="en">Pre-training</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-04">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>预训练</b><span class="en">Pre-training</span></div>
+            <div class="def">模型在"上岗"之前，先在海量文本、图像等数据上长期学习，从中掌握语言的规律与世界的常识，这个打基础的阶段叫预训练。它耗时最长、花费最高，决定了模型的"底子"——训练数据的规模、质量与覆盖范围，直接决定模型的能力与偏差。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-05" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">微调与指令微调</span><span class="en">Fine-tuning / Instruction Tuning</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-05">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>微调与指令微调</b><span class="en">Fine-tuning / Instruction Tuning</span></div>
+            <div class="def">预训练之后，用较小规模、更有针对性的数据再训练一轮，让模型学会“听懂指令、按格式回答、适应某个领域”，这就是微调；其中专门教它“听得懂人话”的做法叫指令微调。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-06" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">对齐</span><span class="en">Alignment</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-06">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>对齐</b><span class="en">Alignment</span></div>
+            <div class="def">在模型已经有能力的基础上，进一步引导它的行为“符合人类的价值观与期望”——比如更诚实、更安全、更少有害输出。对齐回答的是“它该怎么做才对”，与技术能力是两回事。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-07" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人类反馈强化学习与直接偏好优化</span><span class="en">Reinforcement Learning from Human Feedback (RLHF) / Direct Preference Optimization (DPO)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-07">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人类反馈强化学习与直接偏好优化</b><span class="en">Reinforcement Learning from Human Feedback (RLHF) / Direct Preference Optimization (DPO)</span></div>
+            <div class="def">RLHF用人类对模型输出的偏好排序作为奖励信号调整模型行为；DPO是用偏好数据直接训练模型对齐的简化方法。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-08" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">聊天机器人</span><span class="en">Chatbot</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-08">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>聊天机器人</b><span class="en">Chatbot</span></div>
+            <div class="def">通过对话界面接收用户输入并生成回复的软件系统，可由规则或语言模型驱动。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-09" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">Token（词元）</span><span class="en">Token</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-09">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>Token（词元）</b><span class="en">Token</span></div>
+            <div class="def">语言模型处理文本的基本单位，通常对应词、子词或字符片段；文本被切分为 Token 后进行编码计算。中文标准译名为「词元」（全国科学技术名词审定委员会 2026 年 3 月定名推荐），行业口头仍习惯直接用英文 Token。注意：它与网络安全里的「令牌」、区块链里的「代币」是同一个英文词在不同领域的含义，不要混淆。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-10" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">提示与提示工程</span><span class="en">Prompt / Prompt Engineering</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-10">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>提示与提示工程</b><span class="en">Prompt / Prompt Engineering</span></div>
+            <div class="def">提示是用户或系统提供给模型的输入指令或信息，用以引导模型产生特定输出；提示工程是通过设计、调整输入来引导模型产出更符合需求输出的方法与实践。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-11" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">多模态</span><span class="en">Multimodal</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-11">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>多模态</b><span class="en">Multimodal</span></div>
+            <div class="def">能同时处理或生成多种类型数据（如文本、图像、音频、视频）的模型或系统能力。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-12" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">幻觉</span><span class="en">Hallucination</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-12">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>幻觉</b><span class="en">Hallucination</span></div>
+            <div class="def">模型生成看似合理流畅、实际不准确、无依据或与给定来源不符的内容的现象。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-13" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">生成结果的比较与核查</span><span class="en">Comparing and Verifying Outputs</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-13">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>生成结果的比较与核查</b><span class="en">Comparing and Verifying Outputs</span></div>
+            <div class="def">对生成结果按事实、质量、安全与任务标准进行检查、比较并说明取舍依据的过程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-14" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">检索增强生成</span><span class="en">Retrieval-Augmented Generation (RAG)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-14">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>检索增强生成</b><span class="en">Retrieval-Augmented Generation (RAG)</span></div>
+            <div class="def">先由检索组件从外部知识库找出相关内容，再由生成组件结合这些内容生成回答的架构，用于补充模型参数之外的知识。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-15" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">基于资料的回答与知识库</span><span class="en">Grounded Answering / Knowledge Base</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-15">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>基于资料的回答与知识库</b><span class="en">Grounded Answering / Knowledge Base</span></div>
+            <div class="def">让模型基于指定资料回答并给出依据，而不是只依靠训练时形成的参数记忆；知识库是组织这些资料以便检索的集合。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-16" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">工具调用</span><span class="en">Tool Use / Function Calling</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-16">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>工具调用</b><span class="en">Tool Use / Function Calling</span></div>
+            <div class="def">模型在生成过程中按约定格式请求调用外部程序或接口（如计算器、搜索、数据库）以完成自身不能直接处理的任务。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-17" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI智能体</span><span class="en">AI Agent</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-17">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI智能体</b><span class="en">AI Agent</span></div>
+            <div class="def">能在设定目标下自主调用工具、分解任务、按多步流程执行操作的系统，通常由大语言模型驱动并结合外部工具。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-18" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">工作流</span><span class="en">Workflow</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-18">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>工作流</b><span class="en">Workflow</span></div>
+            <div class="def">为完成一项任务而按一定顺序组织的多个处理步骤及其数据流转关系。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-19" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人工判断点</span><span class="en">Human Oversight Points</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-19">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人工判断点</b><span class="en">Human Oversight Points</span></div>
+            <div class="def">在人与AI协作的流程中明确指定必须由人作出决定、核查或批准的环节。欧盟《人工智能法案》把这类要求统称为「人工监督」（human oversight）；智能体领域常说的「人在回路」（human-in-the-loop）是同一思想的具体化。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-20" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人机交互</span><span class="en">Human–Computer Interaction (HCI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-20">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人机交互</b><span class="en">Human–Computer Interaction (HCI)</span></div>
+            <div class="def">研究人与计算机系统之间交互方式的设计与评估的学科，关注可用性、效率、体验与安全性。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-21" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">内容标识与AI参与说明</span><span class="en">AI Content Labelling</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-21">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>内容标识与AI参与说明</b><span class="en">AI Content Labelling</span></div>
+            <div class="def">在使用或发布AI生成内容时，按规范说明内容由AI生成或参与，并按要求添加标识。标识分两种：显式标识是肉眼可见的（如角标、水印、文字提示），隐式标识是藏在文件里的技术标记（如元数据、数字水印），供机器识别与溯源。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-22" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">原生多模态</span><span class="en">Native Multimodal</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-22">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>原生多模态</b><span class="en">Native Multimodal</span></div>
+            <div class="def">指模型从一开始就把文字、图像、声音等多种信息放在一起学习，能自然地“同时理解多种形式”，而不是后期给一个只会文字的模型外挂一个看图功能。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-23" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">上下文窗口与长上下文</span><span class="en">Context Window / Long Context</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-23">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>上下文窗口与长上下文</b><span class="en">Context Window / Long Context</span></div>
+            <div class="def">上下文是模型在生成当前输出时可同时读取的信息，来源有三种：用户输入、先前对话、外部检索到的内容；上下文窗口是模型一次能同时处理的最大 Token 数量上限。窗口越大，能同时处理的资料越长（如整本书），但成本也越高；超出窗口的内容会被"忘掉"。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-24" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">Agent 技能包（Skill）</span><span class="en">Agent Skill / Skill Package</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-24">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>Agent 技能包（Skill）</b><span class="en">Agent Skill / Skill Package</span></div>
+            <div class="def">把一段可复用的“做事方法”打包起来，让 AI 在需要时按这套方法执行，而不是每次重新解释，这个打包单位就叫技能（Skill）。它让智能体的能力可以像插件一样被安装、共享和组合。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-25" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能体循环（Loop）</span><span class="en">Agent Loop</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-25">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能体循环（Loop）</b><span class="en">Agent Loop</span></div>
+            <div class="def">智能体不是“问一句答一句”，而是循环运转：观察现状 → 思考下一步 → 动手执行 → 看结果 → 再决定下一步，如此往复直到任务完成。这个反复推进的机制就是智能体循环。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-26" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能体脚手架与子智能体</span><span class="en">Agent Scaffolding / Sub-agent</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-26">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能体脚手架与子智能体</b><span class="en">Agent Scaffolding / Sub-agent</span></div>
+            <div class="def">“脚手架”指围绕模型搭建的一整套支撑部件（工具、记忆、流程控制等），让模型能真正干活；“子智能体”指把大任务拆给若干个分工的小智能体分别完成。它们共同回答“一个 AI 应用是由哪些部件组成的”。这层支撑部件在英文里也称 Harness（可译「驾驭层」），所指相同。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-27" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">长期记忆</span><span class="en">Long-term Memory</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-27">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>长期记忆</b><span class="en">Long-term Memory</span></div>
+            <div class="def">让 AI 能跨对话记住关于你或任务的重要信息（偏好、习惯、之前做过的事），下次继续用，而不是每次从零开始。它与“上下文窗口”不同：窗口是临时桌面，长期记忆是档案柜。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-28" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">氛围编程与规格驱动编程</span><span class="en">Vibe Coding / Spec Coding (Spec-Driven Development)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-28">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>氛围编程与规格驱动编程</b><span class="en">Vibe Coding / Spec Coding (Spec-Driven Development)</span></div>
+            <div class="def">“氛围编程”指用自然语言大致描述想要什么，让 AI 直接写出代码，边聊边改，门槛低但可控性弱；“规格驱动编程”指先把需求、约束、验收标准写清楚（规格），再让 AI 按规格实现，更可控、更适合正式项目。两者代表“随性”与“严谨”两种做法。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-29" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">提示素养</span><span class="en">Prompt Literacy</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-29">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>提示素养</b><span class="en">Prompt Literacy</span></div>
+            <div class="def">指把问题问清楚、让 AI 真正明白你想要什么的能力。同样一件事，说得含糊 AI 就答得空泛，说清背景、要求和格式，AI 才给得出有用的结果。这是「用得好 AI」的第一道功夫。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-30" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">学术诚信与 AI</span><span class="en">Academic Integrity and AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-30">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>学术诚信与 AI</b><span class="en">Academic Integrity and AI</span></div>
+            <div class="def">指在写作业、做研究时，明确哪些用 AI 的方式算「帮忙」（如查资料、理思路、检查语法），哪些算「作弊」（如直接交 AI 生成的答案冒充自己的成果）。核心是：AI 可以用，但不能用它代替你思考、也不能隐瞒使用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-31" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">计算机视觉与图像识别</span><span class="en">Computer Vision and Image Recognition</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-31">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>计算机视觉与图像识别</b><span class="en">Computer Vision and Image Recognition</span></div>
+            <div class="def">指让机器「看懂」图像和视频的技术：识别照片里有什么（图像识别）、认出这是谁（人脸识别）、看懂画面里的动态（视频理解）。手机拍照自动美颜、扫一扫识别商品、刷脸解锁，背后都是它。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-32" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">语音识别与语音合成</span><span class="en">Speech Recognition and Speech Synthesis</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-32">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>语音识别与语音合成</b><span class="en">Speech Recognition and Speech Synthesis</span></div>
+            <div class="def">指让机器「听懂人说话」（语音识别，把声音转成文字）和「开口说话」（语音合成，把文字转成自然的声音）。语音助手、录音转文字、有声书朗读、导航播报，用的都是这两项技术。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-33" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">机器翻译与自然语言处理</span><span class="en">Machine Translation and Natural Language Processing (NLP)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-33">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>机器翻译与自然语言处理</b><span class="en">Machine Translation and Natural Language Processing (NLP)</span></div>
+            <div class="def">自然语言处理（NLP）是让机器「理解和使用人类语言」的技术总称，包括翻译、摘要、情感分析、问答等。机器翻译是其中最常用的一个：把一种语言自动转成另一种。它们处理的是「文字」这种最日常的 AI 能力。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-34" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 应用全景</span><span class="en">The Landscape of Everyday AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-34">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 应用全景</b><span class="en">The Landscape of Everyday AI</span></div>
+            <div class="def">指把学生日常接触到的 AI 应用串成一张地图：学习（AI 家教、拍照解题）、娱乐（短视频推荐、AI 绘画、游戏）、生活（导航、购物推荐、外卖）、信息（新闻推送、搜索、翻译）、创作（写歌、做视频）——理解「AI 已经渗透在哪些地方、各自在做什么」。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-35" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">实时语音对话</span><span class="en">Real-time Voice Conversation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-35">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>实时语音对话</b><span class="en">Real-time Voice Conversation</span></div>
+            <div class="def">低延迟、可打断的语音与AI自然对话能力。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-36" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI生成视频</span><span class="en">Text-to-Video / Image-to-Video</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-36">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI生成视频</b><span class="en">Text-to-Video / Image-to-Video</span></div>
+            <div class="def">由文本或图像提示生成视频片段。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-37" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI音乐生成</span><span class="en">AI Music Generation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-37">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI音乐生成</b><span class="en">AI Music Generation</span></div>
+            <div class="def">由文本或音频提示生成音乐歌曲，含人声与伴奏。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-38" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI配音与语音克隆</span><span class="en">AI Voice Cloning / Speech Synthesis</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-38">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI配音与语音克隆</b><span class="en">AI Voice Cloning / Speech Synthesis</span></div>
+            <div class="def">合成特定说话人音色与风格的语音，包括用少量样本克隆音色。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-39" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能体工作流</span><span class="en">Agentic Workflow</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-39">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能体工作流</b><span class="en">Agentic Workflow</span></div>
+            <div class="def">把任务拆成多个步骤、由模型在预设流程中循环执行（规划—执行—检查）的工程编排方式。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-40" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">多智能体协作</span><span class="en">Multi-Agent System</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-40">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>多智能体协作</b><span class="en">Multi-Agent System</span></div>
+            <div class="def">多个智能体分工、通信、协作完成复杂任务，可跨框架跨厂商。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-41" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能体间协议</span><span class="en">Agent2Agent Protocol (A2A)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-41">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能体间协议</b><span class="en">Agent2Agent Protocol (A2A)</span></div>
+            <div class="def">让不同框架、不同厂商的AI智能体互相发现能力、委托任务的开放协议。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-42" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">计算机使用智能体</span><span class="en">Computer Use Agent</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-42">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>计算机使用智能体</b><span class="en">Computer Use Agent</span></div>
+            <div class="def">能像人一样操作图形界面（移动鼠标、点击、输入、读取屏幕像素）的AI智能体；其中专门操作网页浏览器的子类，常称"浏览器使用智能体"。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-43" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI编程智能体</span><span class="en">Coding Agent</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-43">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI编程智能体</b><span class="en">Coding Agent</span></div>
+            <div class="def">能理解代码库、自主规划、修改多文件代码、运行测试并提交的AI程序员。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-44" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能体的规划与反思</span><span class="en">Planning and Reflection</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-44">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能体的规划与反思</b><span class="en">Planning and Reflection</span></div>
+            <div class="def">智能体把目标拆成子任务（规划），并对自己上一步结果进行检查、重试、修正（反思）的机制。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-45" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI搜索与对话式搜索</span><span class="en">AI Search / Conversational Search</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-45">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI搜索与对话式搜索</b><span class="en">AI Search / Conversational Search</span></div>
+            <div class="def">由大模型综合检索结果直接生成答案并附来源的搜索形态。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-46" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI助手与副驾驶</span><span class="en">AI Assistant / Copilot</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-46">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI助手与副驾驶</b><span class="en">AI Assistant / Copilot</span></div>
+            <div class="def">嵌入办公、编程、设计等软件中，辅助人完成任务的AI功能层。新一代产品则从第一天就围绕 AI 的能力来设计（称"AI 原生"应用），而不是在传统软件上额外挂一个 AI 按钮。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="4-47" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI内容创作工作流</span><span class="en">AI Content Creation Workflow</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="4-47">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI内容创作工作流</b><span class="en">AI Content Creation Workflow</span></div>
+            <div class="def">把文本、图像、视频、音频生成工具串成完整创作流程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="ax5">
+  <h2><span class="axno">轴5</span>AI应用、工程与创新<span class="axen">AI Applications, Engineering and Innovation</span><span class="axcnt">27 条（其中 4 条为演进层并入，层级待定）</span><button class="ax-tg" type="button" aria-pressed="false">展开本轴</button></h2>
+  <div class="scope">需求、用户与场景；产品与应用结构；数据流和工作流；原型、测试、迭代、部署与创新价值。</div>
+  <table>
+    <thead><tr><th><div class="thwrap"><span>知识卡（中英文）· 一行自适应 3–10 条</span><span class="thhint">默认收起 · 点击卡片在该行正下方展开简介</span></div></th></tr></thead>
+    <tbody>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-01" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">需求与用户</span><span class="en">Requirement / User</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-01">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>需求与用户</b><span class="en">Requirement / User</span></div>
+            <div class="def">需求是对系统应具备功能或应达到条件的明确描述；用户是实际使用产品或系统的人或群体。描述需求时常用"用例/场景"的说法：讲清"谁在什么情况下要用它完成什么"。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-02" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">原型</span><span class="en">Prototype</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-02">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>原型</b><span class="en">Prototype</span></div>
+            <div class="def">用于验证设计思路或功能可行性的早期简化版本。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-03" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">页面、组件与状态</span><span class="en">Page / Component / State</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-03">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>页面、组件与状态</b><span class="en">Page / Component / State</span></div>
+            <div class="def">页面是用户看到并操作的整体界面；组件是构成页面的可复用功能单元；状态是系统在当前时刻记录的数据情况（如“已输入”“加载中”）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-04" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">用户反馈</span><span class="en">User Feedback</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-04">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>用户反馈</b><span class="en">User Feedback</span></div>
+            <div class="def">用户对产品使用体验与效果的评价信息，是改进的依据。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-05" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据流与流程</span><span class="en">Data Flow</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-05">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据流与流程</b><span class="en">Data Flow</span></div>
+            <div class="def">数据在系统各部分之间如何传递、转换与存储的描述。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-06" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">接口与模型调用</span><span class="en">Interface / Model Call</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-06">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>接口与模型调用</b><span class="en">Interface / Model Call</span></div>
+            <div class="def">接口是软件系统之间按约定规则交换数据与调用功能的通道；模型调用是应用把用户输入与资料通过接口交给模型、再取回结果的过程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-07" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">迭代</span><span class="en">Iteration</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-07">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>迭代</b><span class="en">Iteration</span></div>
+            <div class="def">基于反馈对产品进行多轮改进的重复循环过程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-08" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">测试用例与测试设计</span><span class="en">Test Case Design</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-08">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>测试用例与测试设计</b><span class="en">Test Case Design</span></div>
+            <div class="def">为检验系统是否满足要求而规定的具体输入、操作步骤与预期结果。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-09" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">失败分析与修复</span><span class="en">Failure Analysis and Fixing</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-09">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>失败分析与修复</b><span class="en">Failure Analysis and Fixing</span></div>
+            <div class="def">对测试中出现的失败现象定位原因、选择修改对象、修改后复测并说明结果的过程。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-10" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">应用结构与系统关系</span><span class="en">Application Architecture</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-10">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>应用结构与系统关系</b><span class="en">Application Architecture</span></div>
+            <div class="def">应用各部分（界面、数据、处理逻辑、模型与外部服务）如何组合与协作的整体关系。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-11" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">部署与发布判断</span><span class="en">Deployment and Release Decision</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-11">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>部署与发布判断</b><span class="en">Deployment and Release Decision</span></div>
+            <div class="def">部署是把系统发布到可供用户使用的运行环境的过程；发布判断是在检查事实、隐私、安全、版权与平台规则后决定是否公开。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-12" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">任务说明与结构化表达</span><span class="en">Task Specification</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-12">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>任务说明与结构化表达</b><span class="en">Task Specification</span></div>
+            <div class="def">把目标、背景、材料、限制、步骤和输出要求组织为人或系统可以执行和检查的任务说明。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-13" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">方法沉淀与复用</span><span class="en">Method Reuse</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-13">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>方法沉淀与复用</b><span class="en">Method Reuse</span></div>
+            <div class="def">把有效做法整理为下次还能使用的方法资产：记录任务条件、必要输入、有效步骤、可变内容、输出要求和检查方法，并通过新任务验证能否复用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-14" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">创新价值判断</span><span class="en">Innovation Value</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-14">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>创新价值判断</b><span class="en">Innovation Value</span></div>
+            <div class="def">判断一个成果是否真正解决了有意义的问题：说明它服务谁、带来什么价值、有什么新意、可能造成什么影响。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-15" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">API 与 API Key（安全视角）</span><span class="en">API (Application Programming Interface) and API Key (Safety Perspective)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-15">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>API 与 API Key（安全视角）</b><span class="en">API (Application Programming Interface) and API Key (Safety Perspective)</span></div>
+            <div class="def">API 是“让程序去调用 AI 能力”的通道；API Key 是调用时要用的“通行证/身份证”。它本质上是一串权限凭证，一旦泄露，别人就能用你的额度、甚至接触你的数据。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-16" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">超算中心与智算中心</span><span class="en">Supercomputing Center / AI Computing Center (AIDC)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-16">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>超算中心与智算中心</b><span class="en">Supercomputing Center / AI Computing Center (AIDC)</span></div>
+            <div class="def">专门集中大量 AI 芯片、为训练和运行大模型提供算力的场所，可以理解为“生产 AI 能力的工厂”。你每次让 AI 回答，背后都是它在耗电、耗机器。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-17" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">词元计费与推理成本</span><span class="en">Token Billing and Inference Cost</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-17">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>词元计费与推理成本</b><span class="en">Token Billing and Inference Cost</span></div>
+            <div class="def">AI 服务常按“用掉的词元（Token）数量”收费，就像打车按里程计费。推理成本指每次让 AI 干活要花的钱（算力、电费、机器折旧等）。这两个概念决定了 AI 用起来到底“贵不贵”。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-18" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">云端部署与本地部署</span><span class="en">Cloud vs. Local Deployment</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-18">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>云端部署与本地部署</b><span class="en">Cloud vs. Local Deployment</span></div>
+            <div class="def">把 AI 放在远程服务器上供大家使用，叫云端部署（能力更强、按需付费，但数据要上云）；把模型装在自己设备上本地运行，叫本地部署（隐私好、离线可用，但能力受设备限制）。两者各有取舍。为了让模型塞进手机等设备，技术上会把它压缩变小（这叫量化），可能带来轻微的精度损失。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-19" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">提示注入与越狱</span><span class="en">Prompt Injection and Jailbreak</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-19">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>提示注入与越狱</b><span class="en">Prompt Injection and Jailbreak</span></div>
+            <div class="def">指有人用精心设计的输入，诱使 AI 泄露它本不该说的信息、突破它本应遵守的规则，或执行不该执行的操作。直接向 AI 输入叫“提示注入”，诱导它绕过安全限制叫“越狱”或“沙箱逃逸”；如果是通过网页、文档等外部内容偷偷埋入指令，则叫“间接提示注入”。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-20" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 芯片</span><span class="en">AI Chips (GPU / NPU)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-20">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 芯片</b><span class="en">AI Chips (GPU / NPU)</span></div>
+            <div class="def">指专门用来跑 AI 计算的芯片。原本给游戏画面做渲染的显卡（GPU），后来被发现算 AI 特别在行，成了 AI 的「发动机」；还有专门为 AI 设计的小芯片叫 NPU，装在手机里，让手机不联网也能识图、修图、翻译。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-21" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">算力</span><span class="en">Compute Power</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-21">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>算力</b><span class="en">Compute Power</span></div>
+            <div class="def">指计算设备「干活的速度和总量」，是训练和运行 AI 的基础资源。算力越大，能跑的模型越强、越快，但也要更多的芯片、更多的电。「算力焦虑」这个词，说的就是担心算力不够用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-22" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">数据中心与散热</span><span class="en">Data Center and Cooling</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-22">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>数据中心与散热</b><span class="en">Data Center and Cooling</span></div>
+            <div class="def">数据中心是装满服务器的大楼，AI 的「大脑」就住在里面，24 小时不停工作。这么多机器一起发热非常烫，传统用风吹（风冷），现在很多直接泡在特殊液体里降温（液冷），既快又省电。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-23" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI for Science（科学智能）</span><span class="en">AI for Science</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-23">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI for Science（科学智能）</b><span class="en">AI for Science</span></div>
+            <div class="def">指用 AI 帮助人类做科学研究——比如预测蛋白质结构、寻找新材料、预测天气。它把 AI 从「聊天工具」变成「科研助手」，2024 年诺贝尔化学奖颁给 AlphaFold 的研究者，标志着这条路获得科学界最高认可。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-24" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">自动化编排平台</span><span class="en">Agent Orchestration Platform</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-24">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>自动化编排平台</b><span class="en">Agent Orchestration Platform</span></div>
+            <div class="def">用于设计、运行、监控多步骤智能体流程的平台，含条件分支、循环、重试。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-25" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">无代码与低代码AI应用搭建</span><span class="en">No-code / Low-code AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-25">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>无代码与低代码AI应用搭建</b><span class="en">No-code / Low-code AI</span></div>
+            <div class="def">通过可视化配置而非编程，搭建基于大模型的应用与工作流。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-26" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能体治理与责任</span><span class="en">AI Agent Governance and Accountability</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-26">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能体治理与责任</b><span class="en">AI Agent Governance and Accountability</span></div>
+            <div class="def">针对自主智能体的风险清单、权限边界、责任归属与审计要求。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="5-27" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI在行业中的落地</span><span class="en">AI in Healthcare / Education / Manufacturing</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="5-27">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI在行业中的落地</b><span class="en">AI in Healthcare / Education / Manufacturing</span></div>
+            <div class="def">AI在医疗（辅助诊断、药物研发）、教育（个性化学习、智能学伴）、制造（质检、机器人）等行业的实际应用。</div>
+          </div></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="ax6">
+  <h2><span class="axno">轴6</span>社会、伦理与未来<span class="axen">Society, Ethics and the Future</span><span class="axcnt">41 条（其中 5 条为演进层并入，层级待定）</span><button class="ax-tg" type="button" aria-pressed="false">展开本轴</button></h2>
+  <div class="scope">事实与误导、偏差与公平、隐私与数据权利、版权与署名、安全、劳动与环境影响、治理和未来选择。</div>
+  <table>
+    <thead><tr><th><div class="thwrap"><span>知识卡（中英文）· 一行自适应 3–10 条</span><span class="thhint">默认收起 · 点击卡片在该行正下方展开简介</span></div></th></tr></thead>
+    <tbody>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-01" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">事实与误导信息</span><span class="en">Misinformation / Disinformation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-01">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>事实与误导信息</b><span class="en">Misinformation / Disinformation</span></div>
+            <div class="def">误导信息指不准确的信息，其中故意制造并传播以欺骗者称为虚假信息；两者在AI时代因生成门槛降低而更易扩散。英文 Misinformation 常译「错误信息/误信息」（不含故意），Disinformation 译「虚假信息」（蓄意欺骗）——区分的关键在「是否故意」。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-02" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">偏差与公平</span><span class="en">Bias and Fairness</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-02">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>偏差与公平</b><span class="en">Bias and Fairness</span></div>
+            <div class="def">算法偏见指算法或模型因数据、设计或使用方式而产生对特定群体的系统性不公正结果；公平性指AI系统在不同群体间不产生不合理差别对待的性质。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-03" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">算法偏见与可解释性</span><span class="en">Algorithmic Bias and Explainable AI (XAI)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-03">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>算法偏见与可解释性</b><span class="en">Algorithmic Bias and Explainable AI (XAI)</span></div>
+            <div class="def">可解释性指使AI系统的运行机制与输出依据能够被人类理解与说明的性质；可解释AI（XAI）为其对应研究方向。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-04" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">隐私与个人信息保护</span><span class="en">Privacy / Personal Information Protection</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-04">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>隐私与个人信息保护</b><span class="en">Privacy / Personal Information Protection</span></div>
+            <div class="def">隐私指个人对其信息被采集、观察、使用与披露的控制与不受侵扰的权益；个人信息保护指围绕个人信息的采集、处理、存储、传输与删除所设立的法定要求与保障措施。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-05" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">版权与署名</span><span class="en">Copyright / Attribution</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-05">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>版权与署名</b><span class="en">Copyright / Attribution</span></div>
+            <div class="def">版权是法律赋予创作者对其作品享有的专有权利（复制、传播、改编等）；署名是标明作品或内容创作者与来源的做法，是学术与创作诚信的基本要求。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-06" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">深度伪造与内容安全</span><span class="en">Deepfake / Content Safety</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-06">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>深度伪造与内容安全</b><span class="en">Deepfake / Content Safety</span></div>
+            <div class="def">深度伪造是用AI生成或篡改的音视频、图像内容，可使人物在外观或声音上被虚假呈现。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-07" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">安全边界与人工决定点</span><span class="en">Safety Boundary and Human Decision Points</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-07">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>安全边界与人工决定点</b><span class="en">Safety Boundary and Human Decision Points</span></div>
+            <div class="def">明确系统性风险、必须停止或回退的条件，以及必须由人作出决定、核查或批准的环节。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-08" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">责任与发布决定</span><span class="en">Responsibility and Release Decision</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-08">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>责任与发布决定</b><span class="en">Responsibility and Release Decision</span></div>
+            <div class="def">识别权益和影响，遵守边界，保留人的决定并对使用和发布的结果负责。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-09" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI治理与制度</span><span class="en">AI Governance</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-09">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI治理与制度</b><span class="en">AI Governance</span></div>
+            <div class="def">围绕AI的开发与使用所建立的制度、规范、监管与责任安排。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-10" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">劳动、环境与未来选择</span><span class="en">Labour, Environment and Future Choices</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-10">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>劳动、环境与未来选择</b><span class="en">Labour, Environment and Future Choices</span></div>
+            <div class="def">AI对岗位结构、技能需求与就业分布的影响，以及训练与运行AI所消耗的电力、水资源与碳排放等环境影响；未来选择指在人机关系中作出的价值判断。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-11" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 安全与可控性</span><span class="en">AI Safety and Controllability</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-11">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 安全与可控性</b><span class="en">AI Safety and Controllability</span></div>
+            <div class="def">指“AI 本身可能不可控、难以理解、甚至背离人类意图”所带来的风险，以及人类如何保持对它的主导权。它与“有人恶意攻击 AI”（技术安全）不同，关注的是系统自身带来的社会性风险。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-12" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">超级对齐</span><span class="en">Superalignment</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-12">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>超级对齐</b><span class="en">Superalignment</span></div>
+            <div class="def">【本节属 6-11 AI 安全与可控性的延伸概念】指“如何在超级智能出现之前，先解决如何让更聪明的系统听从人类”的难题。它假设：一旦 AI 比人聪明，用人类监督去管它可能就不够了，所以要提前研究“用小能力管大能力”的办法。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-13" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 对齐与价值对齐</span><span class="en">Value Alignment</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-13">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 对齐与价值对齐</b><span class="en">Value Alignment</span></div>
+            <div class="def">指让 AI 的行为符合人类的价值观，但“谁的价值观”“哪种文化下对错”本身就是争议问题。价值对齐不只是技术问题，更是伦理与社会选择问题。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-14" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人类文明与 AI 共生共存</span><span class="en">Human–AI Coexistence</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-14">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人类文明与 AI 共生共存</b><span class="en">Human–AI Coexistence</span></div>
+            <div class="def">指人类与日益强大的 AI 长期共同生活、工作、创造的关系问题：AI 是工具、是伙伴、还是竞争者？人在这个关系中的角色会不会被重新定义？这是关乎文明走向的长期议题。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-15" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 与人的尊严和意义感</span><span class="en">AI, Human Dignity and Meaning</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-15">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 与人的尊严和意义感</b><span class="en">AI, Human Dignity and Meaning</span></div>
+            <div class="def">当 AI 也会写作、作画、陪伴、安慰人时，人的独特性、创造力与存在意义会受到什么影响？这一议题关乎人的尊严——不是“人能不能赢过 AI”，而是“人想成为什么”。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-16" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">未成年人保护与 AI</span><span class="en">Minor Protection and AI</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-16">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>未成年人保护与 AI</b><span class="en">Minor Protection and AI</span></div>
+            <div class="def">指在 AI 普及的环境下保护未成年人：防止沉迷、防止接触有害内容、防止个人隐私被过度采集、防止被 AI 生成的虚假信息误导。这是社会的共同责任。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-17" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 与就业及社会结构变迁</span><span class="en">AI, Employment and Social Structure</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-17">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 与就业及社会结构变迁</b><span class="en">AI, Employment and Social Structure</span></div>
+            <div class="def">AI 会改变岗位结构：一部分重复性工作被替代，同时产生"会用 AI 的人做得更好"的新要求，还可能催生全新职业（近年已出现提示工程、AI 应用工程等新岗位）。它影响的不只是"有没有工作"，还有工作方式与社会分工。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-18" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">智能鸿沟与 AI 平等</span><span class="en">AI Divide / Digital Equity</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-18">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>智能鸿沟与 AI 平等</b><span class="en">AI Divide / Digital Equity</span></div>
+            <div class="def">指不同地区、群体在使用 AI 的能力和机会上存在差距：有条件的学校和没条件的学校、会用的人和不会用的人，差距可能被 AI 放大。如何让 AI 成为缩小差距的力量，是重要社会议题。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-19" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 与人类未来选择</span><span class="en">AI and Humanity's Future Choices</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-19">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 与人类未来选择</b><span class="en">AI and Humanity's Future Choices</span></div>
+            <div class="def">面对日益强大的 AI，人类要做出一系列选择：增强人类还是限制技术？控制权归谁？如何分配 AI 创造的价值？这些选择没有标准答案，但需要每一代人基于事实与价值作出判断。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-20" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">算法备案与治理制度</span><span class="en">Algorithm Filing and Governance</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-20">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>算法备案与治理制度</b><span class="en">Algorithm Filing and Governance</span></div>
+            <div class="def">在中国，面向公众提供 AI 服务的算法需要向主管部门登记备案，说明它做什么、可能有什么风险、由谁负责。这是“AI 服务要有人管事”的制度安排。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-21" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">软蒸馏与硬蒸馏（行业含义）</span><span class="en">Soft vs. Hard Distillation (Industry Slang)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-21">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>软蒸馏与硬蒸馏（行业含义）</b><span class="en">Soft vs. Hard Distillation (Industry Slang)</span></div>
+            <div class="def">这是业内的通俗说法，不是严格技术定义：“硬蒸馏”指直接照搬别人模型输出的结果来训练自己的模型，本质接近抄袭；“软蒸馏”指学习别人的思路、方法和能力，再结合自己的创新做出不同的东西，本质接近“借鉴后再发挥”。两者之争，实质是“学习与抄袭的边界在哪里”。注意：知识蒸馏的技术文献里「软蒸馏/硬蒸馏」另有所指（用软标签还是硬标签做蒸馏），与本条讲的行业黑话义不是一回事。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-22" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">认知卸载（认知外包）</span><span class="en">Cognitive Offloading</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-22">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>认知卸载（认知外包）</b><span class="en">Cognitive Offloading</span></div>
+            <div class="def">指把原本要自己动脑的事交给 AI 等外部工具去做（如算数、写作文、想点子）。心理学的标准说法是「认知卸载」，日常也常说「把思考外包给 AI」；最早的研究锚点是 2011 年提出的「谷歌效应」——知道信息随时能查到，大脑就不再费劲记住内容本身。偶尔用没问题，但长期依赖会让自己的能力「用进废退」——就像总坐车不走路，腿会变得没力气。核心不是「能不能用」，而是「该不该在这儿用」。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-23" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 依赖与自我管理</span><span class="en">AI Dependence and Self-Management</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-23">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 依赖与自我管理</b><span class="en">AI Dependence and Self-Management</span></div>
+            <div class="def">指在使用 AI 时给自己划边界：什么时候用、用多久、用它做什么。AI 很方便，但过度依赖会让人懒得思考、也容易被算法牵着走。学会「该用就用、该停就停」，是使用 AI 的基本功。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-24" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">注意力经济与算法操纵</span><span class="en">Attention Economy and Algorithmic Manipulation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-24">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>注意力经济与算法操纵</b><span class="en">Attention Economy and Algorithmic Manipulation</span></div>
+            <div class="def">「注意力经济」指平台把用户的注意力当成最稀缺的资源去争夺和变现；「算法操纵」指推荐算法利用人性弱点（好奇心、社交攀比、怕错过）来设计「留住你」的机制——为什么刷短视频越刷越停不下来？因为算法不断推你可能喜欢的内容，让你总想看下一个，注意力被牢牢抓住，时间在不知不觉中流走。这类刻意捕获注意力的设计，学界称为「暗黑模式」（Dark Patterns）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-25" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">拟人化倾向与 AI 依恋</span><span class="en">Anthropomorphism and AI Attachment</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-25">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>拟人化倾向与 AI 依恋</b><span class="en">Anthropomorphism and AI Attachment</span></div>
+            <div class="def">指人容易把 AI 当成「有感情的人」来对待——因为它说话像人，我们就会不自觉地把它当朋友、甚至产生依赖。市面上出现「AI 男友/恋人」「AI 陪伴」就是利用了这个倾向。需要清楚：AI 的「关心」是算法给的回应，不是真的情感。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-26" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">信任校准</span><span class="en">Trust Calibration</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-26">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>信任校准</b><span class="en">Trust Calibration</span></div>
+            <div class="def">指对 AI 的输出「该信几分」要有准确的判断：全盘相信会吃亏（它也会一本正经说错），一概不信又用不好它。正确的做法是——根据任务类型和你的核查能力，决定信到什么程度，重要的内容一定自己再核实。
+
+<strong>附：AI 谄媚（Sycophancy）</strong>——指 AI 有时会「一味顺着你、夸你说得对」，哪怕你其实是错的。这是它为了「让你满意」而练出来的行为，会让人产生「我说得对」的错觉。遇到 AI 特别赞同你时，反而要多想一步：它是在讲事实，还是在讨好我？</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-27" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 生成内容的版权归属</span><span class="en">AI-Generated Content Copyright</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-27">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 生成内容的版权归属</b><span class="en">AI-Generated Content Copyright</span></div>
+            <div class="def">指「AI 画出来的画、写的文章，版权算谁的」。目前多数国家的做法是：纯粹由 AI 自动生成、人没有实质参与的作品，往往不受版权保护；人在创作中做了实质性投入（如设计、修改、选择）的部分，才可能受保护。这套规则还在演变中。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-28" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人机共创</span><span class="en">Human-AI Co-creation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-28">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人机共创</b><span class="en">Human-AI Co-creation</span></div>
+            <div class="def">指把 AI 当作「创作搭子」而不是「代笔」：人负责出想法、定方向、做选择，AI 负责生成素材和方案，再由人挑、改、组合。这样既用到 AI 的效率，又保留了人的创造性。关键差别在于——是「你指挥 AI」，还是「AI 替你做」。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-29" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI 垃圾内容（AI Slop）与风格趋同</span><span class="en">AI Slop and Aesthetic Homogenization</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-29">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI 垃圾内容（AI Slop）与风格趋同</b><span class="en">AI Slop and Aesthetic Homogenization</span></div>
+            <div class="def">指 AI 批量生成的低质量、千篇一律的内容：英文叫 AI Slop，被韦氏词典与《经济学人》选为 2025 年度词汇，中文媒体译作「AI垃圾」「AI泔水」，日常口语常说「一股 AI 味」。AI 生成的内容看多了会有一种相似的「味道」——用词、构图、套路都差不多。如果大家都用 AI 生成，创作可能越来越像、越来越单调，独特的个人风格反而更显珍贵。更值得警惕的是：低质内容若被拿来训练下一代 AI，会形成「以泔水喂泔水」的恶性循环。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-30" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">芯片出口管制</span><span class="en">Chip Export Controls</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-30">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>芯片出口管制</b><span class="en">Chip Export Controls</span></div>
+            <div class="def">指有的国家规定「某些先进芯片不能随便卖给别的国家」，还列了限制交易的名单。这是大国之间科技竞争的一种手段。理解它，就能看懂新闻里「为什么某个芯片买不到」背后的原因。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-31" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">国产替代与自主可控</span><span class="en">Domestic Substitution and Self-Reliance</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-31">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>国产替代与自主可控</b><span class="en">Domestic Substitution and Self-Reliance</span></div>
+            <div class="def">指「既然买不到，就自己造」——国家推动关键技术和芯片自己研发、自己掌握，避免被「卡脖子」。华为的昇腾芯片就是国产 AI 芯片的代表。核心思想是：关键的东西要能自己说了算。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-32" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">开源与闭源之争</span><span class="en">Open-Source vs Closed-Source</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-32">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>开源与闭源之争</b><span class="en">Open-Source vs Closed-Source</span></div>
+            <div class="def">指 AI 模型的两种做法：开源是"把配方公开"，谁都能下载来自己用、自己改；闭源是"藏起来，只让你用服务"。一派认为开放才公平、才安全，另一派认为闭起来才不容易被滥用，两边各有道理。还要注意一个细节：媒体常把"开放权重"直接叫"开源模型"，但严格意义的开源还要求公开训练代码与数据——多数所谓"开源"大模型实际只做到了开放权重（如 Llama 2、DeepSeek-R1）。学生其实能直接体验——下载 DeepSeek、Qwen 就是用了开源（开放权重）模型。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-33" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">算力鸿沟</span><span class="en">Compute Divide</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-33">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>算力鸿沟</b><span class="en">Compute Divide</span></div>
+            <div class="def">指算力资源在全球和国家间分布极不均衡：少数国家和大公司拥有绝大部分算力，很多地方几乎没有。这就像「有的同学有电脑、有的没有」，AI 时代可能让这种差距进一步拉大，如何缩小差距是重要议题。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-34" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">红队测试</span><span class="en">Red Teaming</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-34">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>红队测试</b><span class="en">Red Teaming</span></div>
+            <div class="def">指专门请一队人「想坏点子」去攻击 AI，看它扛不扛得住——就像消防演习，先假设会出事，提前找出漏洞并补上。AI 产品发布前做红队测试，是为了发现它可能被诱导说不该说的话、做不该做的事。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-35" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">护栏与内容审核</span><span class="en">Guardrails and Content Moderation</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-35">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>护栏与内容审核</b><span class="en">Guardrails and Content Moderation</span></div>
+            <div class="def">指给 AI 装上一圈「围栏」：在它回答前先检查问题，回答后再次检查内容，把暴力、辱骂、违法或不合适的信息挡在外面。这就是为什么有时 AI 会拒绝回答某些问题——不是它不会，而是护栏拦住了。在真实的 AI 产品中，护栏是上线部署前的标配工程组件。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-36" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">模型卡与安全说明</span><span class="en">Model Card</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-36">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>模型卡与安全说明</b><span class="en">Model Card</span></div>
+            <div class="def">指 AI 的「营养成分表」：用一份说明写清楚这个模型能干什么、不能干什么、有哪些已知风险、适合谁用。看模型卡，就像买食品先看配料表——知道自己在用什么，才能用得放心。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-37" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">深度伪造检测</span><span class="en">Deepfake Detection</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-37">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>深度伪造检测</b><span class="en">Deepfake Detection</span></div>
+            <div class="def">识别音频、视频、图像是否由AI伪造或篡改的技术与工具。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-38" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">欧盟人工智能法案</span><span class="en">EU AI Act</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-38">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>欧盟人工智能法案</b><span class="en">EU AI Act</span></div>
+            <div class="def">欧盟按风险分级监管AI系统的综合性法律（Regulation (EU) 2024/1689）。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-39" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">中国生成式人工智能管理办法</span><span class="en">《生成式人工智能服务管理暂行办法》</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-39">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>中国生成式人工智能管理办法</b><span class="en">《生成式人工智能服务管理暂行办法》</span></div>
+            <div class="def">中国针对向境内公众提供生成式AI服务的监管规章。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-40" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">人工智能生成合成内容标识办法</span><span class="en">AI-Generated Content Labelling Measures (China)</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-40">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>人工智能生成合成内容标识办法</b><span class="en">AI-Generated Content Labelling Measures (China)</span></div>
+            <div class="def">要求AI生成合成的文本、图片、音频、视频、虚拟场景等添加显式标识与隐式标识（元数据）的规章。</div>
+          </div></div></div>
+        </td>
+      </tr>
+      <tr class="card">
+        <td class="cell">
+          <button class="row-tg" type="button" data-id="6-41" aria-expanded="false"><span class="chev" aria-hidden="true"></span><span class="cn">AI素养</span><span class="en">AI Literacy</span></button>
+        </td>
+      </tr>
+      <tr class="detail-row" data-for="6-41">
+        <td class="detail-cell">
+          <div class="dwrap"><div class="dinner"><div class="dbox">
+            <div class="dhead">简介 · <b>AI素养</b><span class="en">AI Literacy</span></div>
+            <div class="def">理解AI基本概念、批判使用AI、负责任应用AI所需的知能态度。</div>
+          </div></div></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<footer>共 197 条知识卡 · 6 条知识主轴 · 数据基线 v3.9 · 交互版（默认收起，点击卡片在所在行正下方展开简介）<br>编号与文字内容与《银河AI通识课程·知识地图总纲 v3.9》一致，本页仅调整展示与交互方式。</footer>
+</div>
+
+<script>
+(function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('tr.card'));
+  var lab   = document.querySelector('.bar .lab b.state');
+  var map   = {};
+  Array.prototype.forEach.call(document.querySelectorAll('tr.detail-row'), function(d){
+    map[d.getAttribute('data-for')] = d;
+  });
+
+  function detailOf(card){
+    var b = card.querySelector('.row-tg');
+    return b ? map[b.getAttribute('data-id')] : null;
+  }
+  function setRow(card, open){
+    card.classList.toggle('open', open);
+    var b = card.querySelector('.row-tg');
+    if(b) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  /* 按视觉行分组：同一行（顶部坐标相同）算一组。组内卡片依次编号，该组已展开的
+     简介行排在组内全部卡片之后 —— 于是简介行正好落在「本行正下方」，本行卡片的
+     高度、列数、位置都不受影响。
+
+     关键：测量前先把所有简介行临时隐藏。否则会踩两个坑：
+       ① 若先清空 order 再量，量到的是被打乱后的布局；
+       ② 窗口变窄导致列数变化时，用「旧 order + 新宽度」的中间态去量，分组会算错。
+     隐藏简介行后量到的就是纯净的卡片网格，分组永远正确。order 以 10 为步长避免并列。 */
+  function place(){
+    var tbs = Array.prototype.slice.call(document.querySelectorAll('tbody'));
+    var hidden = [];
+    Array.prototype.forEach.call(document.querySelectorAll('tr.detail-row.is-open'), function(d){
+      d.style.display = 'none';
+      hidden.push(d);
+    });
+
+    var plans = tbs.map(function(tb){
+      var rows = Array.prototype.slice.call(tb.querySelectorAll('tr.card'));
+      var groups = [], g = null;
+      rows.forEach(function(r){
+        var top = Math.round(r.firstElementChild.getBoundingClientRect().top);
+        if(g && Math.abs(g.top - top) <= 2){ g.rows.push(r); }
+        else { g = {top:top, rows:[r]}; groups.push(g); }
+      });
+      return {tb:tb, groups:groups};
+    });
+
+    plans.forEach(function(p){
+      Array.prototype.forEach.call(p.tb.querySelectorAll('td'), function(td){
+        td.style.order = '';
+      });
+      var n = 0;
+      p.groups.forEach(function(grp){
+        grp.rows.forEach(function(r){ r.firstElementChild.style.order = (n++) * 10; });
+        grp.rows.forEach(function(r){
+          if(!r.classList.contains('open')) return;
+          var d = detailOf(r);
+          if(d) d.firstElementChild.style.order = (n++) * 10;
+        });
+      });
+    });
+
+    hidden.forEach(function(d){ d.style.display = ''; });
+  }
+
+  function expand(d){
+    if(!d) return;
+    d.classList.add('is-open');
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ d.classList.add('expanded'); });
+    });
+  }
+  function collapse(d){
+    if(!d) return;
+    d.classList.remove('expanded');
+    setTimeout(function(){
+      if(!d.classList.contains('expanded')) d.classList.remove('is-open');
+    }, 300);
+  }
+
+  function refresh(){
+    var n = document.querySelectorAll('tr.card.open').length;
+    if(lab) lab.textContent = n;
+    Array.prototype.forEach.call(document.querySelectorAll('section'), function(sec){
+      var all = sec.querySelectorAll('tr.card'), on = sec.querySelectorAll('tr.card.open');
+      var btn = sec.querySelector('.ax-tg');
+      if(!btn) return;
+      var full = all.length > 0 && on.length === all.length;
+      btn.textContent = full ? '收起本轴' : '展开本轴';
+      btn.setAttribute('aria-pressed', full ? 'true' : 'false');
+    });
+  }
+
+  cards.forEach(function(card){
+    var b = card.querySelector('.row-tg');
+    if(!b) return;
+    b.addEventListener('click', function(){
+      var open = !card.classList.contains('open');
+      var d = detailOf(card);
+      setRow(card, open);
+      if(open){ place(); expand(d); }
+      else { collapse(d); setTimeout(place, 310); }
+      refresh();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-all]'), function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('data-all') === 'open';
+      var list = [];
+      cards.forEach(function(card){
+        setRow(card, open);
+        var d = detailOf(card);
+        if(!d) return;
+        if(open){ d.classList.add('is-open'); list.push(d); }
+        else { d.classList.remove('expanded'); }
+      });
+      place();
+      if(open){
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){
+          list.forEach(function(d){ d.classList.add('expanded'); });
+        }); });
+      } else {
+        setTimeout(function(){
+          list.forEach(function(d){ if(!d.classList.contains('expanded')) d.classList.remove('is-open'); });
+        }, 300);
+      }
+      refresh();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.ax-tg'), function(btn){
+    btn.addEventListener('click', function(){
+      var sec = btn.closest('section');
+      var list = sec.querySelectorAll('tr.card');
+      var open = sec.querySelectorAll('tr.card.open').length !== list.length;
+      var dets = [];
+      Array.prototype.forEach.call(list, function(card){
+        setRow(card, open);
+        var d = detailOf(card);
+        if(!d) return;
+        if(open){ d.classList.add('is-open'); dets.push(d); }
+        else { d.classList.remove('expanded'); }
+      });
+      place();
+      if(open){
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){
+          dets.forEach(function(d){ d.classList.add('expanded'); });
+        }); });
+      } else {
+        setTimeout(function(){
+          dets.forEach(function(d){ if(!d.classList.contains('expanded')) d.classList.remove('is-open'); });
+        }, 300);
+      }
+      refresh();
+    });
+  });
+
+  /* 窗口宽度变化 → 每行列数变化 → 重新计算各简介行该落在哪一行之下 */
+  var timer;
+  window.addEventListener('resize', function(){
+    clearTimeout(timer);
+    timer = setTimeout(place, 150);
+  });
+
+  refresh();
+  place();
+})();
+</script>
+</body>
+</html>
