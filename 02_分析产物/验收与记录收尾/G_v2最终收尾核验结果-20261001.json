@@ -1,0 +1,249 @@
+{
+  "checked_at": "2026-10-01",
+  "graph_artifact_pass": true,
+  "baseline": "0bd1a09cd159",
+  "graph_data_checks": {
+    "node_count_197": true,
+    "nodes_unchanged": true,
+    "edge_count_and_types": true,
+    "old_1376_edges_unchanged": true,
+    "new_edges_exactly_reviewed_186": true,
+    "43_excluded_pairs_absent": true,
+    "unique_pairs_and_edge_ids": true,
+    "valid_endpoints_no_self_loops": true,
+    "prerequisite_DAG": true,
+    "one_component_zero_isolates": true,
+    "graph_version_matches_content": true,
+    "candidate_equals_formal_data": true,
+    "legacy_and_source_hashes_unchanged": true
+  },
+  "graph_data_pass": true,
+  "delivery_checks": {
+    "node_summaries_current": true,
+    "node_summary_original_definitions_preserved": true,
+    "GraphML_content_counts_endpoints_match": true,
+    "GraphML_related_edges_undirected": true,
+    "GraphML_prerequisite_edges_directed": true,
+    "GraphML_double_values_valid_or_unknown_omitted": true,
+    "schema_legacy_boundary_disclosed": true,
+    "schema_v2_local_cases_pass": true,
+    "new_contract_connected_to_existing_pipeline": true,
+    "G_v2_HTML_data_matches_formal_graph": true,
+    "G_v2_browser_evidence_matches_current_HTML": true
+  },
+  "final_delivery_pass": true,
+  "counts": {
+    "nodes": 197,
+    "edges": 1562,
+    "related": 1484,
+    "prerequisite": 78,
+    "components": 1,
+    "isolates": 0
+  },
+  "node_summary_degree_mismatches": [],
+  "node_summary_adjacency_mismatches": [],
+  "GraphML_errors": {
+    "invalid_double_count": 0,
+    "related_directed_count": 0,
+    "content_mismatches": []
+  },
+  "schema": {
+    "passed": 260,
+    "failed": 1647,
+    "failure_samples": [
+      {
+        "pair_id": "1-01__4-08",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-01__4-31",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-04__1-09",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-05__3-30",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-05__4-01",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      }
+    ],
+    "v2_cases": {
+      "missing_fields_rejected": {
+        "expected_valid": false,
+        "actual_valid": false,
+        "pass": true
+      },
+      "pre_missing_direction_rejected": {
+        "expected_valid": false,
+        "actual_valid": false,
+        "pass": true
+      },
+      "pre_null_direction_rejected": {
+        "expected_valid": false,
+        "actual_valid": false,
+        "pass": true
+      },
+      "pre_reverse_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      },
+      "pre_forward_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      },
+      "related_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      },
+      "v2_wrong_version_rejected": {
+        "expected_valid": false,
+        "actual_valid": false,
+        "pass": true
+      },
+      "related_direction_rejected": {
+        "expected_valid": false,
+        "actual_valid": false,
+        "pass": true
+      },
+      "no_relation_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      },
+      "insufficient_evidence_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      },
+      "escalate_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      },
+      "deferred_valid": {
+        "expected_valid": true,
+        "actual_valid": true,
+        "pass": true
+      }
+    },
+    "pipeline_probes": {
+      "bridge_missing_fields_errors": [
+        "(root): 'adopted_relation' is a required property",
+        "(root): 'adopted_direction' is a required property",
+        "(root): 'adopted_relation' is a required property",
+        "(root): 'adopted_direction' is a required property",
+        "(root): 'adopted_direction' is a required property"
+      ],
+      "bridge_pre_null_direction_errors": [
+        "adopted_direction: None is not one of ['source_to_target', 'target_to_source']"
+      ],
+      "consumer_valid_v2_errors": []
+    }
+  },
+  "protected_hash_checks": {
+    "04_归档/图谱关系审计凭据/adjudications.jsonl": true,
+    "02_分析产物/p5_review/accepted_model_adjudicated_edges.jsonl": true,
+    "03_交付物/G_v1_模型裁定版/graph.html": true,
+    "03_交付物/G_v1_模型裁定版/node_summaries.json": true,
+    "03_交付物/G_v1_模型裁定版/release_manifest.json": true,
+    "03_交付物/G_v1_模型裁定版/graph.json": true,
+    "03_交付物/G_v1_模型裁定版/graph.graphml": true,
+    "03_交付物/G_v1_展示修正版/graph.html": true,
+    "03_交付物/G_v1_展示修正版/node_summaries.json": true,
+    "03_交付物/G_v1_展示修正版/release_manifest.json": true,
+    "03_交付物/G_v1_展示修正版/graph.json": true,
+    "03_交付物/G_v1_展示修正版/graph.graphml": true
+  },
+  "permanent_evidence_hash_checks": {
+    "P5-P6原始评审与裁定-20261001.zip": true,
+    "adjudications.jsonl": true
+  },
+  "current_browser_render": true,
+  "semantic_review_scope": "恢复边与此前逐对裁定结果一致；不重新证明所有1562条关系的教学语义",
+  "contract_pipeline_hashes": {
+    "03_交付物/p1_review_contract/edge_adjudication.schema.json": "ad98c2055fb1f2b3a45feeb1506cdad920bf67013c850efca4aba1441651ad29",
+    "03_交付物/p1_review_contract/edge_adjudication.v2.schema.json": "078c9e18af0b52a5c372f8887a38b9286a8d8b19b20f6a2d6b11129a8db6374f",
+    "03_交付物/p1_review_contract/edge_adjudication_prompt.md": "683f7ac5554f3c364b978e7e332356e4a65e980ca486621086d57b8a96cdb0d3",
+    "02_分析产物/sol_api_bridge.py": "da4c27b75a44c1a609e62c811c54659b33916849b453313f34a09165493944a3",
+    "02_分析产物/multi_model_review.py": "b8387014240fc63956ddb5d1b2740226ff58e6ecc365dfcf17e3cd1d451639fd",
+    "02_分析产物/p6_batch_adjudicator.py": "9d7245dbd4f795b1722a407c124a51588af5b012473186fe905437d70951d639",
+    "02_分析产物/p6_mega_adjudicator.py": "57bdfc1686f674e52e05498a74842786e648a7282cda5c6c5fc936f47c2978dd",
+    "02_分析产物/adjudication_contract.py": "9d276b1017becf514f05235bba72fb2fc685cec7b35c25f0160b286c22f21ce7",
+    "02_分析产物/build_graph.py": "a2a9057377836ec69a08cf89554ec1891167b587ac23f2974a6520a7f73ac4e1"
+  },
+  "source_artifact_hashes": {
+    "03_交付物/G_v2_模型裁定版/graph.json": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "03_交付物/G_v2_模型裁定版/graph.graphml": "d0e9025c937ec5ca43f518b7825beada34290000a0709fcb7f7ea0f721d05c60",
+    "03_交付物/G_v2_模型裁定版/node_summaries.json": "36ff5c644fb85a6e1827e81ad7db5137c62e763c0913af5dd2581034f3ec38c5",
+    "03_交付物/G_v2_模型裁定版/graph.html": "078f5dd75f36feb0aa9bf2ed34a88d91091a55b8935f42ce88c8ac00626ae9c7"
+  },
+  "closure_checks": {
+    "checked_at": "2026-10-01",
+    "all_pass": true,
+    "cases": [
+      {
+        "case": "actual_process_pair_related",
+        "pass": true,
+        "accepted_count": 1,
+        "negative_count": 0
+      },
+      {
+        "case": "actual_process_pair_prerequisite",
+        "pass": true,
+        "accepted_count": 1,
+        "negative_count": 0
+      },
+      {
+        "case": "actual_process_pair_no_relation",
+        "pass": true,
+        "accepted_count": 0,
+        "negative_count": 1
+      },
+      {
+        "case": "actual_process_pair_insufficient_evidence",
+        "pass": true,
+        "accepted_count": 0,
+        "negative_count": 1
+      },
+      {
+        "case": "reverse_prerequisite_cycle_detected",
+        "pass": true,
+        "violations": [
+          {
+            "type": "prerequisite_cycle",
+            "pair_ids": [
+              "1-01__1-02",
+              "1-01__1-03",
+              "1-02__1-03"
+            ]
+          }
+        ]
+      },
+      {
+        "case": "effective_acyclic_graph_not_falsely_rejected",
+        "pass": true
+      },
+      {
+        "case": "actual_batch_cycle_escalates_instead_of_retaining_edges",
+        "pass": true
+      }
+    ],
+    "scope": "真实编排入口、本地假裁定、临时输出；零模型调用，正式数据不变",
+    "test_log": "[DAG 告警] accepted 先修边检测到拓扑冲突，涉事边降级为 ESCALATE_HUMAN：\n  - prerequisite_cycle: ['1-01__1-02', '1-01__1-03', '1-02__1-03']\n"
+  },
+  "regression_results": {
+    "workbuddy_f3_pipeline_cases_passed": 14,
+    "existing_orchestrator_scenarios_passed": 8,
+    "independent_real_entry_and_direction_cases_passed": 7,
+    "v2_schema_cases_passed": 12
+  },
+  "verification_boundary": "正式四件工件哈希与32号保持一致；本轮复用与当前HTML哈希匹配的已通过浏览器证据，未重新渲染；本地假数据验证，不调用模型、不自动重建图谱。"
+}

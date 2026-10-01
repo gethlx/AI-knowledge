@@ -33,7 +33,6 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_graph import normalize as normalize_edge
 from adjudication_contract import (
     build_edge_from_adjudication,
     validate_adjudication_v2,
@@ -683,8 +682,7 @@ class GraphState:
         for rec in self.edges.values():
             if rec["relation_type"] != "prerequisite":
                 continue
-            # 与正式建图保持同一先修生效方向；概念对顺序不等于先修方向。
-            s, t = normalize_edge(rec)
+            s, t = rec["source"], rec["target"]
             if s not in adj:
                 nodes.append(s)
                 adj[s] = []
