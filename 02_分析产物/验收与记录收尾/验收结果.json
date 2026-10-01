@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-10-01",
+  "graph_version": "6031421d9f22",
+  "checks": {
+    "original_hashes": true,
+    "display_hashes": true,
+    "frozen_data_unchanged": true,
+    "nodes_match_cards": true,
+    "node_required_fields_present": true,
+    "graph_statistics": true,
+    "edge_identifiers_unique": true,
+    "endpoints_and_no_self_loops": true,
+    "prerequisite_DAG": true,
+    "graphml_matches_json": true,
+    "accepted_edges_match_graph": true,
+    "display_summaries_match_graph_and_definition": true,
+    "html_embedded_data_matches": true,
+    "display_labels_correct": true,
+    "javascript_syntax": true,
+    "permanent_evidence_hashes": true,
+    "archive_matches_original_bytes": true,
+    "published_edges_have_matching_adjudication": true,
+    "current_p6_summary_matches": true,
+    "p75_fixed_edges_verified": true,
+    "curriculum_snapshot_hash": true,
+    "followup_queue_complete": true
+  },
+  "structure_pass": true,
+  "counts": {
+    "nodes": 197,
+    "edges": 1376,
+    "related": 1301,
+    "prerequisite": 75,
+    "adjudications": 1907,
+    "missing_structured_relation": 260,
+    "accepted_missing_relation": 229,
+    "missing_pairs_in_graph": 0,
+    "permanent_evidence_files": 7895,
+    "full_pairs": 1769,
+    "light_pairs": 2282
+  },
+  "isolates": [
+    {
+      "card_id": "1-02",
+      "name": "智能"
+    },
+    {
+      "card_id": "1-03",
+      "name": "人类与机器的差异"
+    },
+    {
+      "card_id": "1-07",
+      "name": "超级智能（ASI）"
+    },
+    {
+      "card_id": "1-11",
+      "name": "自主性"
+    },
+    {
+      "card_id": "1-13",
+      "name": "人与技术系统的关系"
+    },
+    {
+      "card_id": "1-14",
+      "name": "人机协作中的分工与责任"
+    }
+  ],
+  "node_fields": {
+    "认知层级": 197,
+    "精确定义": 197,
+    "常见误解": 197,
+    "典型案例": 197,
+    "反例": 197,
+    "深度上限": 197,
+    "安全与伦理边界": 197,
+    "来源依据": 197,
+    "教学类比": 88
+  },
+  "node_field_dash_placeholders": {
+    "认知层级": 0,
+    "精确定义": 0,
+    "常见误解": 35,
+    "典型案例": 35,
+    "反例": 35,
+    "深度上限": 0,
+    "安全与伦理边界": 54,
+    "来源依据": 0,
+    "教学类比": 0
+  },
+  "undetermined_level": 35,
+  "semantic_content_acceptance": "NOT_CLOSED: 260份缺结构化关系裁定，229份为已采纳；未自行补边或推断为无关系",
+  "current_render_acceptance": "NOT_VERIFIED: 本会话浏览器安全策略已拒绝本地file协议，本轮未重试或绕过；语法和嵌入数据检查不等于渲染交互验收",
+  "human_acceptance": "NOT_RECORDED_THIS_RUN",
+  "publication": "仅本地记录整改和展示修正版，未推送或部署"
+}

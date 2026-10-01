@@ -1,0 +1,46 @@
+{
+ "generated": "2026-10-01",
+ "checks": {
+  "edge_count_1562": true,
+  "node_count_197": true,
+  "no_duplicate_pairs": true,
+  "no_bidirectional_prerequisite": true,
+  "prerequisite_dag_acyclic_78_edges": true,
+  "endpoints_within_197_nodes": true,
+  "errors": []
+ },
+ "connectivity": {
+  "components_before": 7,
+  "components_after": 1,
+  "component_sizes_after": [
+   197
+  ],
+  "isolated_nodes_before": [
+   "1-02",
+   "1-03",
+   "1-07",
+   "1-11",
+   "1-13",
+   "1-14"
+  ],
+  "isolated_nodes_after": []
+ },
+ "new_prerequisite_edges": [
+  {
+   "pair_id": "1-01__1-02",
+   "direction": "1-02→1-01",
+   "direction_code": "target_to_source"
+  },
+  {
+   "pair_id": "1-05__1-20",
+   "direction": "1-05→1-20",
+   "direction_code": "source_to_target"
+  },
+  {
+   "pair_id": "1-07__6-12",
+   "direction": "1-07→6-12",
+   "direction_code": "source_to_target"
+  }
+ ],
+ "sha256_graph_json": "bf3cbc17f781d296b9f4bb92f01f22d37b7210373207d1714201e34eb0ab4f7f"
+}

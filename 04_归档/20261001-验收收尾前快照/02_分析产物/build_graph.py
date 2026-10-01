@@ -223,7 +223,7 @@ HTML_TMPL = """<!DOCTYPE html>
 <div class="bar">
   <label><input type="checkbox" id="fPre" checked> 先修（prerequisite）</label>
   <label><input type="checkbox" id="fRel" checked> 相关（related）</label>
-  <span style="color:#9ca3af">知识标签：</span>
+  <span style="color:#9ca3af">轴筛选：</span>
   <select id="axisSel"><option value="">全部</option></select>
   <div class="legend">
     <span><span class="dot" style="background:#2563eb"></span>先修</span>
@@ -234,7 +234,7 @@ HTML_TMPL = """<!DOCTYPE html>
 <script>
 const NODES=__NODES__, EDGES=__EDGES__;
 const svg=document.getElementById('g'),NS='http://www.w3.org/2000/svg';
-const axisNames={'1':'K1 人类、智能与机器','2':'K2 数据、表征与知识','3':'K3 算法、模型与学习','4':'K4 生成式AI、交互与智能体','5':'K5 AI应用、工程与创新','6':'K6 社会、伦理与未来'};
+const axisNames={'1':'轴1 AI是什么','2':'轴2 机器怎么学','3':'轴3 数据与算力','4':'轴4 应用与场景','5':'轴5 人与社会','6':'轴6 前沿与治理'};
 const colX=a=>120+((+a)-1)*420, colY=i=>80+ (i%14)*150, colSub=i=>Math.floor(i/14);
 function pos(n){const a=n.axis,i=NODES.filter(x=>x.axis===n.axis).findIndex(x=>x.card_id===n.card_id);
  return {x:colX(a)+colSub(i)*160, y:colY(i)};}

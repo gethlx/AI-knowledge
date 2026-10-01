@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-01",
+  "purpose": "永久保存P5-P6评审、证据引用及原始裁定；待删除区未改未删",
+  "source_root": "04_归档/待删除_验收后清/02_分析产物/p5_review",
+  "source_files": 7895,
+  "full_adjudications": 1907,
+  "full_reviewer_files": 5721,
+  "light_reviewer_files": 267,
+  "all_member_bytes_verified": true,
+  "member_sha256_digest": "a9de0ee6d83e43641d3cb362fec989b92254e66cc22ff51a1b4588ff8f06513f",
+  "artifact_hashes": {
+    "P5-P6原始评审与裁定-20261001.zip": "f9d587f932411768d81d72003badb6753c71051409cee7317cbd058f651345d0",
+    "adjudications.jsonl": "0be71110deec324d76eaa2525ec68ffdfa0981b1d27ebe97bfbcf9cc54aadf03"
+  }
+}

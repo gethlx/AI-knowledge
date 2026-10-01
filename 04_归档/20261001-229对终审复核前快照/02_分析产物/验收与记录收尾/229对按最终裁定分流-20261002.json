@@ -1,0 +1,2317 @@
+{
+ "generated": "2026-10-02（v2 终版，LLM 逐对语义终审）",
+ "basis": "adjudications.jsonl 原始最终裁定（rationale 文字）；正则初筛+LLM逐对终审全量229对，13对结论句截断对补读全文定案；与 GPT 第四轮独立统计交叉验证一致（related 183 / prerequisite 3 / no_relation 37 / insufficient_evidence 6）；回归测试仅覆盖 85 条 mid 已入图对（short 通道 rationale 无结论文字，不适用）",
+ "total": 229,
+ "stats": {
+  "restore_related": 183,
+  "restore_prerequisite": 3,
+  "exclude_no_relation": 37,
+  "exclude_insufficient_evidence": 6
+ },
+ "prerequisite_edges": [
+  {
+   "pair_id": "1-01__1-02",
+   "direction": "1-02→1-01"
+  },
+  {
+   "pair_id": "1-05__1-20",
+   "direction": "1-05→1-20"
+  },
+  {
+   "pair_id": "1-07__6-12",
+   "direction": "1-07→6-12"
+  }
+ ],
+ "records": [
+  {
+   "pair_id": "1-01__1-02",
+   "final_relation": "prerequisite",
+   "direction": "1-02→1-01",
+   "source": "adjudications.jsonl 行1",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行2",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-04",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行3",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-05",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行4",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行5",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行6",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行7",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-09",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行8",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行9",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行10",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-12",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行11",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行12",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行13",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-15",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行14",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-16",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行15",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行16",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行17",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行18",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__1-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行19",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-02",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行21",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行22",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行23",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行24",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-32",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行25",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-39",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行26",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__3-40",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行27",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-01",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行28",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-02",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行29",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-12",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行31",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行32",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-20",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行33",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-27",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行34",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-32",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行36",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-33",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行37",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__4-34",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行38",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__5-15",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行39",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__5-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行40",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__5-22",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行41",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__5-23",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行42",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__5-27",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行43",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-02",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行44",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行45",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行46",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行47",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行48",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行49",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-15",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行50",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-16",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行51",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行52",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行53",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行54",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-25",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行55",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-38",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行56",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-01__6-41",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行57",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行58",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-05",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行59",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行60",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行61",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行62",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-09",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行63",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行64",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-12",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行65",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-17",
+   "final_relation": "insufficient_evidence",
+   "direction": "null",
+   "source": "adjudications.jsonl 行69",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行70",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__1-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行72",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__2-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行73",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__3-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行74",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__3-40",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行75",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__4-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行76",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__4-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行77",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-02__4-31",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行78",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-04",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行80",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-05",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行81",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行82",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行83",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行84",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-09",
+   "final_relation": "insufficient_evidence",
+   "direction": "null",
+   "source": "adjudications.jsonl 行85",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行86",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行87",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行89",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行90",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-15",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行91",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-16",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行92",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-17",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行93",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-18",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行94",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-19",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行95",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__1-20",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行96",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__3-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行97",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__3-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行98",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__4-33",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行100",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__4-38",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行101",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__6-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行102",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__6-15",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行103",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__6-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行104",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-03__6-28",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行105",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__1-05",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行106",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__1-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行108",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__1-12",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行110",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__1-13",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行111",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__1-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行112",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__2-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行113",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__3-01",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行114",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__3-04",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行115",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__4-01",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行116",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__4-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行117",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__4-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行118",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__4-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行119",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__4-20",
+   "final_relation": "insufficient_evidence",
+   "direction": "null",
+   "source": "adjudications.jsonl 行120",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__5-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行121",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__5-05",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行122",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__5-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行123",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__5-07",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行124",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__5-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行125",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-04__5-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行126",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行127",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行128",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行130",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-12",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行131",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-16",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行132",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行133",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行134",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行135",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-05__1-20",
+   "final_relation": "prerequisite",
+   "direction": "1-05→1-20",
+   "source": "adjudications.jsonl 行136",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行140",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行141",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-09",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行142",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-10",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行143",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行146",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行147",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-19",
+   "final_relation": "insufficient_evidence",
+   "direction": "null",
+   "source": "adjudications.jsonl 行148",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-06__1-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行149",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__1-10",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行153",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__1-15",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行157",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__1-17",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行158",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__1-18",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行159",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__1-20",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行160",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__6-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行161",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-07__6-12",
+   "final_relation": "prerequisite",
+   "direction": "1-07→6-12",
+   "source": "adjudications.jsonl 行162",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-08__1-10",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行163",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-08__1-11",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行164",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-08__1-15",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行165",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-08__1-19",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行167",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-08__4-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行168",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-08__4-33",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行170",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__1-10",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行171",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__1-11",
+   "final_relation": "insufficient_evidence",
+   "direction": "null",
+   "source": "adjudications.jsonl 行172",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__1-12",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行173",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__3-02",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行176",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__3-03",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行177",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__3-38",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行178",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__3-40",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行180",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__4-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行181",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__4-25",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行182",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__4-39",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行184",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__4-44",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行185",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-09__6-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行186",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行188",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行190",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行191",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行193",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行194",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行195",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__1-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行196",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__2-21",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行197",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__3-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行198",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__3-16",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行199",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__3-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行200",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__3-21",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行201",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__3-26",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行202",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__3-32",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行203",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__4-01",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行204",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__4-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行205",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__4-12",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行206",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__5-15",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行208",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行212",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行213",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-11",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行214",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-12",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行215",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-23",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行217",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-25",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行218",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-26",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行219",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-36",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行221",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-10__6-41",
+   "final_relation": "insufficient_evidence",
+   "direction": "null",
+   "source": "adjudications.jsonl 行222",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__1-13",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行223",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__1-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行224",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__1-15",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行225",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__1-18",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行226",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__1-19",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行227",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__4-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行228",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__5-26",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行229",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__6-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行230",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-11__6-31",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行232",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-12__1-15",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行233",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-12__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行235",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-12__3-06",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行238",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-12__4-31",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行239",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-12__5-21",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行241",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-12__6-33",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行242",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__1-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行243",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__1-17",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行245",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行246",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__4-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行247",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__4-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行248",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__6-07",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行249",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-13__6-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行250",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__1-15",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行251",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行253",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__3-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行254",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__4-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行255",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__4-40",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行256",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__4-46",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行257",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__5-26",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行258",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__6-08",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行259",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__6-14",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行260",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__6-22",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行261",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-14__6-28",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行262",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-15__1-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行263",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-15__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行264",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-15__3-31",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行265",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-15__4-17",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行267",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-15__6-11",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行268",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-16__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行269",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-16__4-01",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行271",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-17__1-18",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行272",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-17__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行273",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-17__1-20",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行274",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-17__3-31",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行275",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-17__4-34",
+   "final_relation": "no_relation",
+   "direction": "null",
+   "source": "adjudications.jsonl 行278",
+   "in_graph": false,
+   "disposition": "合理排除",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  },
+  {
+   "pair_id": "1-18__1-19",
+   "final_relation": "related",
+   "direction": "null",
+   "source": "adjudications.jsonl 行279",
+   "in_graph": false,
+   "disposition": "应恢复入图",
+   "review_method": "LLM逐对语义终审",
+   "final_status": "ACCEPTED_MODEL_ADJUDICATED"
+  }
+ ]
+}

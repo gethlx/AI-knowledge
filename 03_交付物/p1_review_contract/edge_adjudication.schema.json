@@ -57,6 +57,24 @@
         "null"
       ]
     },
+    "adopted_relation": {
+      "description": "【2026-10-01 契约修补新增】编排主控最终采纳的结构化关系结论。枚举：related / prerequisite / no_relation / insufficient_evidence。修补前存量 1,907 条裁定（2026-09 批次）无此字段，其结论仅在 rationale 文字中，恢复时必须逐对核对原文，不得由三路多数票或正则自动推断。",
+      "enum": [
+        "related",
+        "prerequisite",
+        "no_relation",
+        "insufficient_evidence",
+        null
+      ]
+    },
+    "adopted_direction": {
+      "description": "【2026-10-01 契约修补新增】采纳的方向结论：source_to_target / target_to_source / null（无方向）。仅 relation_type=prerequisite 时应为非空；related/no_relation/insufficient_evidence 恒为 null。存量裁定同上，恢复时逐对核对。",
+      "enum": [
+        "source_to_target",
+        "target_to_source",
+        null
+      ]
+    },
     "schema_version": {
       "description": "本 Adjudication 记录遵循的 Schema 契约版本，与 guideline_version 联动记录。",
       "type": "string",
@@ -76,6 +94,32 @@
   ],
   "additionalProperties": false,
   "allOf": [
+    {
+      "if": {
+        "properties": {
+          "adopted_relation": { "const": "prerequisite" }
+        }
+      },
+      "then": {
+        "properties": {
+          "adopted_direction": {
+            "enum": ["source_to_target", "target_to_source"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "adopted_relation": { "enum": ["related", "no_relation", "insufficient_evidence", null] }
+        }
+      },
+      "then": {
+        "properties": {
+          "adopted_direction": { "type": "null" }
+        }
+      }
+    },
     {
       "if": {
         "properties": {

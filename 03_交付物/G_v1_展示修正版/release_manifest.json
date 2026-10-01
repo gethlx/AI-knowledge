@@ -1,0 +1,41 @@
+{
+  "release": {
+    "released_at": "2026-09-28 07:18:41",
+    "artifact_hashes": {
+      "graph.graphml": "f87c6b42a4427bce260413a252c45b94690e3e6564886ce51602fbb85d989ec6",
+      "graph.html": "34b27dc4e6286aa3149683f81c528d183b204cbe90e8d8f3743eeb7b539a85f7",
+      "graph.json": "d39d04ff80306c96e31cc5bd42a653137660c33b6e9c48896efb19099c9724fb",
+      "node_summaries.json": "82e7a2ada60643ab7ac7ba84841b09697b02e85d951b08570806a2aca17036cc"
+    },
+    "rollback": "首版发布（v1.0）：回滚动作 = 将本目录整体移出交付物（无更早版本可回退）；graph_version=6031421d9f22 为唯一有效版本",
+    "post_release_fix": "2026-09-28 浏览器验收发现 graph.html 渲染空白：模板 colSub 误写为立即求值（colSub=Math.floor(i/14)，i 未定义）致脚本第 39 行 ReferenceError 全线中断。修正为 colSub=i=>Math.floor(i/14) 并同步 pos() 调用（colSub(i)*160），build_graph.py 模板与产物同步修复。修复后验收：197 节点 / 1,376 边全渲染，先修 75 / 相关 1,301 与权威数据吻合，轴筛选 / tooltip / 过滤器交互正常。仅 graph.html 变更，graph.json / graph.graphml / graph_version 均未动。",
+    "immutable": true
+  },
+  "boundary": "模型裁定，未人工逐条核验（多模型互审 + 主控采纳 gpt-5.6-sol 裁定建议 + 红线升级）",
+  "nodes": 197,
+  "edges": 1376,
+  "three_way_consistency": true,
+  "dag": "pass",
+  "roll_back_to": "无（首个版本）",
+  "escalation_note": "ESCALATE_HUMAN 队列项不入本图",
+  "graph_version": "6031421d9f22",
+  "p75_recheck": "closed-by-orchestrator",
+  "p75_close_basis": "主公 2026-09-28 明示授权主控代裁：一轮 11 findings 全部落实（审计链完整）+ 机械校验全绿 + 程序化全图体检（逆序先修/重复边/孤岛/度数）替代二轮模型复审。",
+  "p75_program_check_issues": [
+    "先修逆序: 4-12→2-21（4 轴先修于 2 轴）",
+    "先修逆序: 4-02→2-22（4 轴先修于 2 轴）",
+    "先修逆序: 4-04→3-37（4 轴先修于 3 轴）"
+  ],
+  "gate_checks": {
+    "P5_exit": "pass（4,051 台账逐对终态，18号报告）",
+    "P6_adjudication": "pass（1,907/1,907 零缺失，五种裁定通道留痕）",
+    "P7_build": "pass（DAG pass + 三格式一致）",
+    "P7_5_gate": "pass（11 findings 全落实 + 程序化体检，主公授权主控代裁）",
+    "P8_blocking_open": 0
+  },
+  "artifact_revision": "display-r1-20261001",
+  "base_release": "G_v1_模型裁定版",
+  "display_fix": "修正K1-K6展示名称及筛选标题；按当前graph.json重建节点摘要，修复3-06/3-09仍存旧先修方向的问题。graph.json/graph.graphml字节不变；原发布包完整保留。",
+  "acceptance_note": "2026-10-01发现260份缺字段裁定未入图，内容完整性未闭合；本包只修展示，不表示新增语义验收通过。",
+  "render_verified_current_run": false
+}

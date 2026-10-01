@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-01",
+  "scope": "分流与记录修正；未建候选图、未调用模型服务或LightRAG、未提交或发布",
+  "checks": {
+    "regenerated_json_matches": true,
+    "complete_material_matches": true,
+    "unique_229_pairs": true,
+    "all_229_currently_outside_graph": true,
+    "non_prerequisite_json_null": true,
+    "invalid_inputs_rejected": true,
+    "protected_files_byte_unchanged": true,
+    "three_prerequisites_in_memory_DAG": true
+  },
+  "stats": {
+    "restore_related": 183,
+    "restore_prerequisite": 3,
+    "exclude_no_relation": 37,
+    "exclude_insufficient_evidence": 6
+  },
+  "corrections": [
+    {
+      "pair_id": "1-03__4-38",
+      "old_relation": "related",
+      "new_relation": "insufficient_evidence",
+      "source_line": 101
+    },
+    {
+      "pair_id": "1-09__1-11",
+      "old_relation": "insufficient_evidence",
+      "new_relation": "related",
+      "source_line": 172
+    }
+  ],
+  "old_group_counts": {
+    "三路一致有关系_应程序采纳": {
+      "prerequisite": 2,
+      "related": 143
+    },
+    "两票分歧_需补裁定": {
+      "related": 31,
+      "prerequisite": 1
+    },
+    "无关系排除": {
+      "no_relation": 37,
+      "insufficient_evidence": 6,
+      "related": 9
+    },
+    "无矩阵记录": {}
+  },
+  "invalid_input_cases": {
+    "missing_record": true,
+    "invented_evidence": true,
+    "unknown_relation": true,
+    "wrong_endpoint": true,
+    "source_changed": true
+  },
+  "protected_files": {
+    "04_归档/图谱关系审计凭据/adjudications.jsonl": true,
+    "02_分析产物/p5_review/accepted_model_adjudicated_edges.jsonl": true,
+    "03_交付物/G_v1_模型裁定版/graph.html": true,
+    "03_交付物/G_v1_模型裁定版/node_summaries.json": true,
+    "03_交付物/G_v1_模型裁定版/release_manifest.json": true,
+    "03_交付物/G_v1_模型裁定版/graph.json": true,
+    "03_交付物/G_v1_模型裁定版/graph.graphml": true,
+    "03_交付物/G_v1_展示修正版/graph.html": true,
+    "03_交付物/G_v1_展示修正版/node_summaries.json": true,
+    "03_交付物/G_v1_展示修正版/release_manifest.json": true,
+    "03_交付物/G_v1_展示修正版/graph.json": true,
+    "03_交付物/G_v1_展示修正版/graph.graphml": true
+  },
+  "protected_count": 12,
+  "current_graph": {
+    "nodes": 197,
+    "edges": 1376,
+    "prerequisite": 75
+  },
+  "in_memory_prerequisite_count": 78,
+  "semantic_review": "Codex模型核对229条裁定结论，异常与弱证据条目回读全文；机器检查仅确认覆盖、来源、字段与结构，不代替用户人工接受"
+}

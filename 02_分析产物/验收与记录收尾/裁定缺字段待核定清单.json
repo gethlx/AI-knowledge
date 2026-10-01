@@ -1,0 +1,1826 @@
+{
+  "graph_version": "6031421d9f22",
+  "finding": "260份裁定缺少adopted_relation，229份为ACCEPTED且均未入图；不能将文字结论自动回灌为边",
+  "pairs": [
+    {
+      "pair_id": "1-01__1-02",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-04",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-05",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-09",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-16",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__2-09",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-02",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-32",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-39",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__3-40",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-01",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-02",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-27",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-32",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-33",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__4-34",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__5-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__5-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__5-22",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__5-23",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__5-27",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-02",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-16",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-25",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-38",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-01__6-41",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-05",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-09",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-13",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-14",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-15",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-19",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__2-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__3-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__3-40",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__4-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__4-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__4-31",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-02__4-44",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-04",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-05",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-09",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-12",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-16",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__3-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__3-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__3-38",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__4-33",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__4-38",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__6-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__6-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__6-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-03__6-28",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__1-05",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__1-11",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__1-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__1-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__1-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__2-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__3-01",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__3-04",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__4-01",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__4-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__4-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__4-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__4-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__5-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__5-05",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__5-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__5-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__5-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-04__5-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-08",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-16",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-05__5-27",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-09",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-06__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-11",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-13",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-14",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__6-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-07__6-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__1-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__4-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__4-20",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-08__4-33",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__1-10",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__1-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__1-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__1-13",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__1-14",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__3-02",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__3-03",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__3-38",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__3-39",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__3-40",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__4-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__4-25",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__4-39",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__4-44",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__6-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-09__6-26",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-12",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-15",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__2-21",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__3-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__3-16",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__3-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__3-21",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__3-26",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__3-32",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__4-01",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__4-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__4-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__5-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__5-19",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-03",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-12",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-13",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-23",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-25",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-26",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-35",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-36",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-10__6-41",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__1-13",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__1-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__4-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__5-26",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__6-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__6-23",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-11__6-31",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__1-16",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__3-01",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__3-06",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__4-31",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__4-42",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__5-21",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-12__6-33",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__1-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__1-15",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__4-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__4-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__6-07",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-13__6-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__1-15",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__1-17",
+      "final_status": "REJECTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__3-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__4-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__4-40",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__4-46",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__5-26",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__6-08",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__6-14",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__6-22",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-14__6-28",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-15__1-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-15__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-15__3-31",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-15__4-17",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-15__6-11",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-16__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-16__4-01",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-17__1-18",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-17__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-17__1-20",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-17__3-31",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-17__4-34",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    },
+    {
+      "pair_id": "1-18__1-19",
+      "final_status": "ACCEPTED_MODEL_ADJUDICATED",
+      "in_published_graph": false,
+      "evidence_record": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+      "reason": "缺少结构化adopted_relation和direction；需恢复权威结构化输出或重新核定"
+    }
+  ]
+}

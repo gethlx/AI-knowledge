@@ -17,8 +17,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-001），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-002",
@@ -35,8 +35,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-002），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-003",
@@ -53,8 +53,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-003），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-004",
@@ -71,8 +71,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-004），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-005",
@@ -89,8 +89,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-005），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-006",
@@ -107,8 +107,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-006），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-007",
@@ -125,8 +125,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-007），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-008",
@@ -143,8 +143,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-008），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-009",
@@ -161,8 +161,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-009），边文件与裁定记录同步更新，重建图重审 ｜复审否决翻方向，改降 related（部分-整体非先修），经主公复审确认",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "第二轮全图复审中",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-010",
@@ -181,8 +181,8 @@
    "disposition_status": "fixed",
    "owner": "human",
    "fix_record": "按主公御审建议修正（F-010），边文件与裁定记录同步更新，重建图重审",
-   "recheck_result": "2026-10-01核对当前图，修正已落地；独立二轮语义复审未执行，2026-09-28发布清单记载授权主控代裁。",
-   "related_graph_version": "6031421d9f22"
+   "recheck_result": "待新图完整重跑 P7.5",
+   "related_graph_version": "新图重建后更新"
   },
   {
    "finding_id": "F-011",
@@ -201,17 +201,13 @@
    "evidence": "图统计列出1-02、1-03、1-07、1-11、1-13、1-14为度0；节点表记载1-01的度为2。这是覆盖异常提示，现有材料不足以断定具体缺失边应为先修。",
    "disposition_status": "open",
    "owner": "human",
-   "fix_record": "保留6个孤岛记录，未补边；informational非阻断项，含缺字段未入图问题需在内容完整性复核时一并判断。",
-   "recheck_result": "2026-10-01实核仍为6个孤岛；未宣称语义解决。",
-   "related_graph_version": "6031421d9f22"
+   "fix_record": "",
+   "recheck_result": "",
+   "related_graph_version": "d0324d77dd44"
   }
  ],
  "disposition_summary": {
   "fixed": 10,
   "open_informational": 1
- },
- "current_graph_version": "6031421d9f22",
- "record_updated_at": "2026-10-01",
- "closure_source": "03_交付物/G_v1_模型裁定版/release_manifest.json",
- "record_note": "graph_version保留首次发现版本；related_graph_version更新为实核版本。发布代裁记录不等于独立二轮语义复审。"
+ }
 }

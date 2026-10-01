@@ -1,38 +1,28 @@
 {
+ "updated_at": "2026-10-01",
+ "graph_version": "6031421d9f22",
+ "source": "04_归档/图谱关系审计凭据/adjudications.jsonl",
+ "historical_summary_backup": "04_归档/20261001-验收收尾前快照/02_分析产物/p5_review/p6_close_summary.json",
  "final_status": {
-  "ACCEPTED_MODEL_ADJUDICATED": 1798,
-  "REJECTED_MODEL_ADJUDICATED": 92,
-  "ESCALATE_HUMAN": 17
+  "ACCEPTED_MODEL_ADJUDICATED": 1815,
+  "REJECTED_MODEL_ADJUDICATED": 92
  },
  "modes": {
-  "mega": 915,
-  "tier3-focus": 260,
+  "UNRECORDED": 260,
   "tier2-matrix": 584,
+  "mega": 898,
+  "manual-web-escalated": 17,
   "unanimous-programmatic": 107,
   "manual-web": 41
  },
- "edges": 1369,
+ "edges": 1376,
  "edge_rt": {
-  "related": 1286,
-  "prerequisite": 83
+  "related": 1301,
+  "prerequisite": 75
  },
- "escalated": [
-  "6-08__6-21",
-  "6-07__6-10",
-  "6-08__6-29",
-  "6-08__6-33",
-  "6-05__6-06",
-  "6-03__6-04",
-  "6-07__6-23",
-  "5-23__5-26",
-  "6-05__6-07",
-  "6-04__6-23",
-  "6-04__6-35",
-  "6-06__6-37",
-  "6-06__6-25",
-  "6-07__6-24",
-  "6-08__6-32",
-  "6-06__6-32",
-  "6-08__6-14"
- ]
+ "escalated": [],
+ "structured_relation_missing": 260,
+ "accepted_relation_unresolved": 229,
+ "missing_relation_pairs_in_graph": 0,
+ "acceptance": "结构一致；裁定到入图完整性未闭合。ACCEPTED状态不自动代表有可入图的结构化关系。"
 }

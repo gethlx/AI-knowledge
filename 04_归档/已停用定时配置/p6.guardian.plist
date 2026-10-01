@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>workbuddy.p6.guardian</string>
+<key>ProgramArguments</key><array>
+<string>/Users/larry/.workbuddy/binaries/python/versions/3.13.12/bin/python3</string>
+<string>/Users/larry/WorkBuddy/2026-09-13-14-09-47/02_分析产物/p6_guardian.py</string>
+<string>once</string>
+</array>
+<key>StartInterval</key><integer>300</integer>
+<key>StandardOutPath</key><string>/Users/larry/WorkBuddy/2026-09-13-14-09-47/02_分析产物/p6_launchd.log</string>
+<key>StandardErrorPath</key><string>/Users/larry/WorkBuddy/2026-09-13-14-09-47/02_分析产物/p6_launchd.log</string>
+</dict></plist>

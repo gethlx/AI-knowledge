@@ -1,0 +1,312 @@
+
+===== GUARDIAN round 1 (16:44:10) =====
+[SOL-BRIDGE] 载入 luna 提议 0 条（no_relation 不入 bundle）
+[SOL-BRIDGE] 端点=https://router.vimox.cn/v1/chat/completions model=gpt-5.6-sol workers=3（主公可在 Vimox 控制台对账）
+[SOL-BRIDGE] 程序校验透传：1769 对（FLAGGED 3）
+[SOL-CALL] 16:45:41 pair=1-01__1-03 耗时=90.5s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 16:45:48 pair=1-01__1-02 耗时=98.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 16:45:50 pair=1-01__1-04 耗时=99.9s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 16:47:31 pair=1-01__1-02 耗时=72.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 16:47:34 pair=1-01__1-04 耗时=73.9s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 16:47:44 pair=1-01__1-03 耗时=92.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 16:49:51 pair=1-01__1-03 耗时=67.6s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[GIVE-UP] 1-01__1-03 3 次失败，留在 deferred
+[SOL-CALL] 16:50:08 pair=1-01__1-02 耗时=97.2s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[GIVE-UP] 1-01__1-02 3 次失败，留在 deferred
+[SOL-CALL] 16:50:10 pair=1-01__1-04 耗时=95.8s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[GIVE-UP] 1-01__1-04 3 次失败，留在 deferred
+[SOL-CALL] 16:51:00 pair=1-01__1-05 耗时=68.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 16:51:29 pair=1-01__1-07 耗时=78.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 16:52:07 pair=1-01__1-06 耗时=119.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 16:52:33 pair=1-01__1-05 耗时=62.7s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 16:53:09 pair=1-01__1-07 耗时=70.2s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 16:54:16 pair=1-01__1-06 耗时=98.8s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 16:55:07 pair=1-01__1-05 耗时=94.5s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[GIVE-UP] 1-01__1-05 3 次失败，留在 deferred
+[SOL-CALL] 16:55:28 pair=1-01__1-07 耗时=79.0s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[GIVE-UP] 1-01__1-07 3 次失败，留在 deferred
+[SOL-CALL] 16:56:15 pair=1-01__1-08 耗时=67.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[SOL-CALL] 16:56:32 pair=1-01__1-06 耗时=76.0s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[GIVE-UP] 1-01__1-06 3 次失败，留在 deferred
+[SOL-CALL] 16:56:51 pair=1-01__1-09 耗时=82.5s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+[SOL-CALL] 16:58:04 pair=1-01__1-10 耗时=91.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[RETRY 2] 1-01__1-08 失败: TimeoutError: The read operation timed out
+[SOL-CALL] 16:58:57 pair=1-01__1-09 耗时=95.6s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+
+===== GUARDIAN round 2 (16:59:21) =====
+[SOL-BRIDGE] 载入 luna 提议 0 条（no_relation 不入 bundle）
+[SOL-BRIDGE] 端点=https://router.vimox.cn/v1/chat/completions model=gpt-5.6-sol workers=3（主公可在 Vimox 控制台对账）
+[SOL-BRIDGE] 程序校验透传：1769 对（FLAGGED 3）
+[SOL-CALL] 17:00:31 pair=1-01__1-02 耗时=70.7s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:00:34 pair=1-01__1-04 耗时=72.9s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:01:10 pair=1-01__1-03 耗时=109.3s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:02:20 pair=1-01__1-04 耗时=75.8s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:02:28 pair=1-01__1-02 耗时=86.3s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:03:11 pair=1-01__1-03 耗时=91.3s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:04:47 pair=1-01__1-03 耗时=35.4s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:04:47 pair=1-01__1-02 耗时=79.1s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[GIVE-UP] 1-01__1-03 3 次失败，留在 deferred
+[GIVE-UP] 1-01__1-02 3 次失败，留在 deferred
+[SOL-CALL] 17:04:49 pair=1-01__1-04 耗时=89.7s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[GIVE-UP] 1-01__1-04 3 次失败，留在 deferred
+[SOL-CALL] 17:06:08 pair=1-01__1-05 耗时=80.7s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:06:15 pair=1-01__1-06 耗时=87.7s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 17:06:23 pair=1-01__1-07 耗时=93.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:08:04 pair=1-01__1-06 耗时=79.2s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 17:08:05 pair=1-01__1-07 耗时=71.6s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:08:13 pair=1-01__1-05 耗时=95.0s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:10:37 pair=1-01__1-07 耗时=91.8s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[GIVE-UP] 1-01__1-07 3 次失败，留在 deferred
+[SOL-CALL] 17:10:41 pair=1-01__1-05 耗时=88.2s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[GIVE-UP] 1-01__1-05 3 次失败，留在 deferred
+[SOL-CALL] 17:10:49 pair=1-01__1-06 耗时=104.5s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[GIVE-UP] 1-01__1-06 3 次失败，留在 deferred
+[SOL-CALL] 17:11:52 pair=1-01__1-10 耗时=63.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[SOL-CALL] 17:12:11 pair=1-01__1-09 耗时=90.5s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+[SOL-CALL] 17:12:13 pair=1-01__1-08 耗时=96.4s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[SOL-CALL] 17:12:47 pair=1-01__1-10 耗时=25.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[SOL-CALL] 17:13:58 pair=1-01__1-08 耗时=74.9s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[SOL-CALL] 17:14:09 pair=1-01__1-10 耗时=21.7s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[GIVE-UP] 1-01__1-10 3 次失败，留在 deferred
+[SOL-CALL] 17:14:20 pair=1-01__1-09 耗时=98.6s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+
+===== GUARDIAN round 3 (17:14:31) =====
+[SOL-BRIDGE] 载入 luna 提议 0 条（no_relation 不入 bundle）
+[SOL-BRIDGE] 端点=https://router.vimox.cn/v1/chat/completions model=gpt-5.6-sol workers=3（主公可在 Vimox 控制台对账）
+[SOL-BRIDGE] 程序校验透传：1769 对（FLAGGED 3）
+[SOL-CALL] 17:15:40 pair=1-01__1-02 耗时=69.5s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:15:52 pair=1-01__1-03 耗时=80.9s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:16:00 pair=1-01__1-04 耗时=88.7s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:17:23 pair=1-01__1-02 耗时=72.0s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:17:41 pair=1-01__1-03 耗时=78.7s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:17:59 pair=1-01__1-04 耗时=89.1s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:19:40 pair=1-01__1-02 耗时=77.0s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[GIVE-UP] 1-01__1-02 3 次失败，留在 deferred
+[SOL-CALL] 17:19:50 pair=1-01__1-03 耗时=69.4s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[GIVE-UP] 1-01__1-03 3 次失败，留在 deferred
+[SOL-CALL] 17:20:18 pair=1-01__1-04 耗时=78.8s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[GIVE-UP] 1-01__1-04 3 次失败，留在 deferred
+[SOL-CALL] 17:20:24 pair=1-01__1-05 耗时=44.1s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:20:56 pair=1-01__1-07 耗时=38.1s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:21:13 pair=1-01__1-06 耗时=82.7s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 17:21:49 pair=1-01__1-05 耗时=54.8s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:22:06 pair=1-01__1-07 耗时=39.9s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[RETRY 2] 1-01__1-06 失败: TimeoutError: The read operation timed out
+[SOL-CALL] 17:23:48 pair=1-01__1-07 耗时=41.6s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[GIVE-UP] 1-01__1-07 3 次失败，留在 deferred
+[SOL-CALL] 17:24:24 pair=1-01__1-05 耗时=95.0s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[GIVE-UP] 1-01__1-05 3 次失败，留在 deferred
+[SOL-CALL] 17:24:59 pair=1-01__1-08 耗时=71.6s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[SOL-CALL] 17:25:55 pair=1-01__1-09 耗时=91.5s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+[SOL-CALL] 17:26:24 pair=1-01__1-06 耗时=101.3s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[GIVE-UP] 1-01__1-06 3 次失败，留在 deferred
+[SOL-CALL] 17:26:50 pair=1-01__1-10 耗时=25.3s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[SOL-CALL] 17:27:07 pair=1-01__1-08 耗时=97.2s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[SOL-CALL] 17:27:46 pair=1-01__1-10 耗时=25.7s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[SOL-CALL] 17:28:13 pair=1-01__1-09 耗时=108.0s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+[SOL-CALL] 17:29:07 pair=1-01__1-10 耗时=21.4s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[GIVE-UP] 1-01__1-10 3 次失败，留在 deferred
+[SOL-CALL] 17:29:24 pair=1-01__1-08 耗时=77.8s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[GIVE-UP] 1-01__1-08 3 次失败，留在 deferred
+
+===== GUARDIAN round 4 (17:29:41) =====
+[SOL-BRIDGE] 载入 luna 提议 0 条（no_relation 不入 bundle）
+[SOL-BRIDGE] 端点=https://router.vimox.cn/v1/chat/completions model=gpt-5.6-sol workers=3（主公可在 Vimox 控制台对账）
+[SOL-BRIDGE] 程序校验透传：1769 对（FLAGGED 3）
+[SOL-CALL] 17:31:17 pair=1-01__1-04 耗时=96.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:31:18 pair=1-01__1-02 耗时=96.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:31:24 pair=1-01__1-03 耗时=103.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:32:58 pair=1-01__1-02 耗时=69.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:33:14 pair=1-01__1-03 耗时=79.4s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:33:16 pair=1-01__1-04 耗时=88.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:35:22 pair=1-01__1-02 耗时=84.7s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[GIVE-UP] 1-01__1-02 3 次失败，留在 deferred
+[SOL-CALL] 17:35:57 pair=1-01__1-04 耗时=100.7s model_returned=gpt-5.6-sol
+[SOL-CALL] 17:35:57 pair=1-01__1-03 耗时=102.9s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[RETRY 3] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[GIVE-UP] 1-01__1-03 3 次失败，留在 deferred
+[GIVE-UP] 1-01__1-04 3 次失败，留在 deferred
+[SOL-CALL] 17:36:08 pair=1-01__1-05 耗时=46.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:36:44 pair=1-01__1-07 耗时=47.3s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:37:30 pair=1-01__1-05 耗时=51.8s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:37:40 pair=1-01__1-06 耗时=103.5s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 17:38:07 pair=1-01__1-07 耗时=52.6s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:39:22 pair=1-01__1-05 耗时=51.6s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[GIVE-UP] 1-01__1-05 3 次失败，留在 deferred
+[SOL-CALL] 17:39:56 pair=1-01__1-07 耗时=49.7s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[GIVE-UP] 1-01__1-07 3 次失败，留在 deferred
+[SOL-CALL] 17:39:59 pair=1-01__1-06 耗时=109.2s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 17:40:36 pair=1-01__1-08 耗时=73.9s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[SOL-CALL] 17:41:46 pair=1-01__1-09 耗时=109.4s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+[SOL-CALL] 17:42:49 pair=1-01__1-08 耗时=102.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-08 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-08/ad
+[RETRY 3] 1-01__1-06 失败: TimeoutError: The read operation timed out
+[GIVE-UP] 1-01__1-06 3 次失败，留在 deferred
+[SOL-CALL] 17:43:46 pair=1-01__1-10 耗时=46.3s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+[RETRY 2] 1-01__1-09 失败: TimeoutError: The read operation timed out
+
+===== GUARDIAN round 5 (17:44:51) =====
+[SOL-BRIDGE] 载入 luna 提议 0 条（no_relation 不入 bundle）
+[SOL-BRIDGE] 端点=https://router.vimox.cn/v1/chat/completions model=gpt-5.6-sol workers=3（主公可在 Vimox 控制台对账）
+[SOL-BRIDGE] 程序校验透传：1769 对（FLAGGED 3）
+[SOL-CALL] 17:46:32 pair=1-01__1-02 耗时=100.6s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:46:43 pair=1-01__1-03 耗时=111.2s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:46:50 pair=1-01__1-04 耗时=119.1s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[SOL-CALL] 17:48:28 pair=1-01__1-02 耗时=85.5s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-02 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-02/ad
+[SOL-CALL] 17:48:41 pair=1-01__1-03 耗时=88.6s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-03 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-03/ad
+[SOL-CALL] 17:48:53 pair=1-01__1-04 耗时=92.6s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[RETRY 3] 1-01__1-02 失败: TimeoutError: The read operation timed out
+[GIVE-UP] 1-01__1-02 3 次失败，留在 deferred
+[SOL-CALL] 17:51:29 pair=1-01__1-04 耗时=95.3s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-04 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-04/ad
+[GIVE-UP] 1-01__1-04 3 次失败，留在 deferred
+[RETRY 3] 1-01__1-03 失败: TimeoutError: The read operation timed out
+[GIVE-UP] 1-01__1-03 3 次失败，留在 deferred
+[SOL-CALL] 17:52:46 pair=1-01__1-05 耗时=78.1s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[SOL-CALL] 17:52:51 pair=1-01__1-07 耗时=69.8s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:53:11 pair=1-01__1-06 耗时=102.2s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[SOL-CALL] 17:54:26 pair=1-01__1-07 耗时=64.8s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 17:54:42 pair=1-01__1-05 耗时=86.2s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[RETRY 2] 1-01__1-06 失败: TimeoutError: The read operation timed out
+[SOL-CALL] 17:56:40 pair=1-01__1-07 耗时=74.3s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[GIVE-UP] 1-01__1-07 3 次失败，留在 deferred
+[SOL-CALL] 17:57:08 pair=1-01__1-05 耗时=85.5s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-05 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-05/ad
+[GIVE-UP] 1-01__1-05 3 次失败，留在 deferred
+[SOL-CALL] 17:58:21 pair=1-01__1-06 耗时=99.8s model_returned=gpt-5.6-sol
+[RETRY 3] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[GIVE-UP] 1-01__1-06 3 次失败，留在 deferred
+[RETRY 1] 1-01__1-08 失败: TimeoutError: The read operation timed out
+[SOL-CALL] 17:58:41 pair=1-01__1-09 耗时=93.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-09 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-09/ad
+[SOL-CALL] 17:59:25 pair=1-01__1-10 耗时=64.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-10 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-10/ad
+
+===== GUARDIAN round 6 (18:00:01) =====
+[SOL-BRIDGE] 载入 luna 提议 0 条（no_relation 不入 bundle）
+[SOL-BRIDGE] 端点=https://router.vimox.cn/v1/chat/completions model=gpt-5.6-sol workers=3（主公可在 Vimox 控制台对账）
+[SOL-BRIDGE] 程序校验透传：1769 对（FLAGGED 3）
+[RETRY 1] 1-01__1-02 失败: TimeoutError: The read operation timed out
+[RETRY 1] 1-01__1-04 失败: TimeoutError: The read operation timed out
+[RETRY 1] 1-01__1-03 失败: TimeoutError: The read operation timed out
+[RETRY 2] 1-01__1-02 失败: TimeoutError: The read operation timed out
+[RETRY 2] 1-01__1-04 失败: TimeoutError: The read operation timed out
+[RETRY 2] 1-01__1-03 失败: TimeoutError: The read operation timed out
+[RETRY 3] 1-01__1-02 失败: TimeoutError: The read operation timed out
+[GIVE-UP] 1-01__1-02 3 次失败，留在 deferred
+[RETRY 3] 1-01__1-03 失败: TimeoutError: The read operation timed out
+[GIVE-UP] 1-01__1-03 3 次失败，留在 deferred
+[RETRY 3] 1-01__1-04 失败: TimeoutError: The read operation timed out
+[GIVE-UP] 1-01__1-04 3 次失败，留在 deferred
+[SOL-CALL] 18:08:40 pair=1-01__1-07 耗时=68.4s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 18:09:13 pair=1-01__1-06 耗时=101.0s model_returned=gpt-5.6-sol
+[RETRY 1] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad
+[RETRY 1] 1-01__1-05 失败: TimeoutError: The read operation timed out
+[SOL-CALL] 18:10:30 pair=1-01__1-07 耗时=79.8s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-07 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-07/ad
+[SOL-CALL] 18:10:43 pair=1-01__1-06 耗时=60.4s model_returned=gpt-5.6-sol
+[RETRY 2] 1-01__1-06 失败: FileNotFoundError: [Errno 2] No such file or directory: 'p5_review/reviews_inbox_full/1-01__1-06/ad

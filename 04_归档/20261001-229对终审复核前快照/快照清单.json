@@ -1,0 +1,43 @@
+{
+  "snapshot_date": "2026-10-01",
+  "files": [
+    {
+      "path": "00-项目导航账本.md",
+      "sha256": "8f40afc035deb3232e2c1746abfb60526cc51dfe29ca725ae49e670bc74af57a"
+    },
+    {
+      "path": "03_交付物/29-复核报告-按原始最终裁定重做229对分流.md",
+      "sha256": "6fc6859c44057ba5f510162ef6663855eb753191abb95a2d9ccb7639a7502e93"
+    },
+    {
+      "path": "02_分析产物/验收与记录收尾/229对按最终裁定分流-20261002.json",
+      "sha256": "9946f1b6a4df31800b9d8eb74f63d73c4e5d083b6461378db9fd6daeaaff70ce"
+    },
+    {
+      "path": "02_分析产物/验收与记录收尾/229对终审材料-20261002.txt",
+      "sha256": "de0980bd4fb7076a3b39ce0e160ee0a4eefdd0edeec02b8b9587da017c210483"
+    },
+    {
+      "path": "02_分析产物/验收与记录收尾/finalize_229_review.py",
+      "sha256": "073fe2a58399f948d3b0eab24a6dd98103728bdc2157a78e3711bb39263250c6"
+    },
+    {
+      "path": "02_分析产物/验收与记录收尾/reclassify_229_v4_prescreen.py",
+      "sha256": "a8bf43e3c90364d8c28d90fa39df79991ee6637c38b6abd084493eeeabc7e617"
+    }
+  ],
+  "protected_hashes": {
+    "04_归档/图谱关系审计凭据/adjudications.jsonl": "0be71110deec324d76eaa2525ec68ffdfa0981b1d27ebe97bfbcf9cc54aadf03",
+    "02_分析产物/p5_review/accepted_model_adjudicated_edges.jsonl": "939e73f116b5c1ee8c16ce028f3a64738310f308eaba999c8d93dc7940997302",
+    "03_交付物/G_v1_模型裁定版/graph.html": "0273cec41ea9ed73ddd03be80a9fa5b541ff4690fcc6e197c25004e6928cec18",
+    "03_交付物/G_v1_模型裁定版/node_summaries.json": "3aa0e311494b0cbdb440d2dec29da51e11fe7fa1a53f8ed817d461d12917bf97",
+    "03_交付物/G_v1_模型裁定版/release_manifest.json": "b909648bd1e97be71200fecb2b0fe2d67683a7c68cfd1b1a035d651f3486dae9",
+    "03_交付物/G_v1_模型裁定版/graph.json": "d39d04ff80306c96e31cc5bd42a653137660c33b6e9c48896efb19099c9724fb",
+    "03_交付物/G_v1_模型裁定版/graph.graphml": "f87c6b42a4427bce260413a252c45b94690e3e6564886ce51602fbb85d989ec6",
+    "03_交付物/G_v1_展示修正版/graph.html": "34b27dc4e6286aa3149683f81c528d183b204cbe90e8d8f3743eeb7b539a85f7",
+    "03_交付物/G_v1_展示修正版/node_summaries.json": "82e7a2ada60643ab7ac7ba84841b09697b02e85d951b08570806a2aca17036cc",
+    "03_交付物/G_v1_展示修正版/release_manifest.json": "93fed6b2f32b71abc7d6b5bc5d7ea4f09318f586d5478405717d91d2a18c5ff8",
+    "03_交付物/G_v1_展示修正版/graph.json": "d39d04ff80306c96e31cc5bd42a653137660c33b6e9c48896efb19099c9724fb",
+    "03_交付物/G_v1_展示修正版/graph.graphml": "f87c6b42a4427bce260413a252c45b94690e3e6564886ce51602fbb85d989ec6"
+  }
+}
