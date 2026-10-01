@@ -1,0 +1,90 @@
+{
+ "checked_at": "2026-10-01",
+ "schema": "edge_adjudication.v2.schema.json",
+ "validator": "jsonschema Draft7 4.26.0",
+ "all_pass": true,
+ "cases": [
+  {
+   "case": "ACCEPTED 缺 adopted_relation/adopted_direction（GPT 用例1，应拒绝）",
+   "expect": "reject",
+   "actual": "reject",
+   "verdict": "OK",
+   "errors": [
+    "$: 'adopted_relation' is a required property",
+    "$: 'adopted_direction' is a required property",
+    "$: 'adopted_relation' is a required property"
+   ]
+  },
+  {
+   "case": "prerequisite 缺 adopted_direction（GPT 用例2，应拒绝）",
+   "expect": "reject",
+   "actual": "reject",
+   "verdict": "OK",
+   "errors": [
+    "$.adopted_direction: None is not one of ['source_to_target', 'target_to_source']"
+   ]
+  },
+  {
+   "case": "prerequisite target_to_source 完整（GPT 用例3，应通过）",
+   "expect": "pass",
+   "actual": "pass",
+   "verdict": "OK",
+   "errors": []
+  },
+  {
+   "case": "prerequisite 完整 source_to_target（应通过）",
+   "expect": "pass",
+   "actual": "pass",
+   "verdict": "OK",
+   "errors": []
+  },
+  {
+   "case": "prerequisite 缺方向字段本身（应拒绝）",
+   "expect": "reject",
+   "actual": "reject",
+   "verdict": "OK",
+   "errors": [
+    "$: 'adopted_direction' is a required property",
+    "$: 'adopted_direction' is a required property",
+    "$: 'adopted_direction' is a required property"
+   ]
+  },
+  {
+   "case": "no_relation 完整（应通过）",
+   "expect": "pass",
+   "actual": "pass",
+   "verdict": "OK",
+   "errors": []
+  },
+  {
+   "case": "insufficient_evidence 完整（应通过）",
+   "expect": "pass",
+   "actual": "pass",
+   "verdict": "OK",
+   "errors": []
+  },
+  {
+   "case": "related 但误填方向（应拒绝）",
+   "expect": "reject",
+   "actual": "reject",
+   "verdict": "OK",
+   "errors": [
+    "$.adopted_direction: 'source_to_target' is not of type 'null'"
+   ]
+  },
+  {
+   "case": "ESCALATE_HUMAN（ adopted 可为 null，应通过）",
+   "expect": "pass",
+   "actual": "pass",
+   "verdict": "OK",
+   "errors": []
+  },
+  {
+   "case": "DEFERRED（adopted 可为 null，应通过）",
+   "expect": "pass",
+   "actual": "pass",
+   "verdict": "OK",
+   "errors": []
+  }
+ ]
+}

@@ -97,13 +97,42 @@
     {
       "if": {
         "properties": {
-          "adopted_relation": { "const": "prerequisite" }
+          "adopted_relation": {
+            "const": "prerequisite"
+          }
         }
       },
       "then": {
         "properties": {
           "adopted_direction": {
-            "enum": ["source_to_target", "target_to_source"]
+            "enum": [
+              "source_to_target",
+              "target_to_source"
+            ]
+          }
+        },
+        "required": [
+          "adopted_direction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "adopted_relation": {
+            "enum": [
+              "related",
+              "no_relation",
+              "insufficient_evidence",
+              null
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "adopted_direction": {
+            "type": "null"
           }
         }
       }
@@ -111,19 +140,9 @@
     {
       "if": {
         "properties": {
-          "adopted_relation": { "enum": ["related", "no_relation", "insufficient_evidence", null] }
-        }
-      },
-      "then": {
-        "properties": {
-          "adopted_direction": { "type": "null" }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "final_status": { "const": "ESCALATE_HUMAN" }
+          "final_status": {
+            "const": "ESCALATE_HUMAN"
+          }
         }
       },
       "then": {
@@ -155,5 +174,6 @@
         }
       }
     }
-  ]
+  ],
+  "$comment": "【v1 存量读取契约｜2026-10-01 修正】本 schema 界定 2026-09 批次的 1,907 条存量裁定。实测全量校验：260 通过 / 1,647 失败（direction、batch_mode 等历史字段与 additionalProperties 冲突）。存量读取须经显式适配检查（逐对核对 rationale 文字结论，见 29/30 号报告），适配通过不等于原对象通过本 schema 校验。新产裁定必须符合 edge_adjudication.v2.schema.json（adopted_relation/adopted_direction 必填）。1,907 份原对象保留原字节，永不回写。"
 }

@@ -1,0 +1,657 @@
+{
+  "checked_at": "2026-10-01",
+  "baseline": "0bd1a09cd159",
+  "graph_data_checks": {
+    "node_count_197": true,
+    "nodes_unchanged": true,
+    "edge_count_and_types": true,
+    "old_1376_edges_unchanged": true,
+    "new_edges_exactly_reviewed_186": true,
+    "43_excluded_pairs_absent": true,
+    "unique_pairs_and_edge_ids": true,
+    "valid_endpoints_no_self_loops": true,
+    "prerequisite_DAG": true,
+    "one_component_zero_isolates": true,
+    "graph_version_matches_content": true,
+    "candidate_equals_formal_data": true,
+    "legacy_and_source_hashes_unchanged": true
+  },
+  "graph_data_pass": true,
+  "delivery_checks": {
+    "node_summaries_current": false,
+    "GraphML_content_counts_endpoints_match": true,
+    "GraphML_related_edges_undirected": false,
+    "GraphML_double_values_valid": false,
+    "schema_all_1907_records_compatible": false,
+    "schema_new_structured_result_required": false,
+    "schema_prerequisite_direction_required": false,
+    "G_v2_HTML_present": false
+  },
+  "final_delivery_pass": false,
+  "counts": {
+    "nodes": 197,
+    "edges": 1562,
+    "related": 1484,
+    "prerequisite": 78,
+    "components": 1,
+    "isolates": 0
+  },
+  "node_summary_degree_mismatches": [
+    {
+      "card_id": "4-01",
+      "summary_degree": 57,
+      "actual_degree": 61
+    },
+    {
+      "card_id": "3-04",
+      "summary_degree": 48,
+      "actual_degree": 49
+    },
+    {
+      "card_id": "4-02",
+      "summary_degree": 44,
+      "actual_degree": 45
+    },
+    {
+      "card_id": "6-41",
+      "summary_degree": 37,
+      "actual_degree": 38
+    },
+    {
+      "card_id": "3-06",
+      "summary_degree": 35,
+      "actual_degree": 38
+    },
+    {
+      "card_id": "6-08",
+      "summary_degree": 34,
+      "actual_degree": 36
+    },
+    {
+      "card_id": "4-34",
+      "summary_degree": 31,
+      "actual_degree": 32
+    },
+    {
+      "card_id": "4-13",
+      "summary_degree": 28,
+      "actual_degree": 29
+    },
+    {
+      "card_id": "4-19",
+      "summary_degree": 27,
+      "actual_degree": 29
+    },
+    {
+      "card_id": "4-12",
+      "summary_degree": 26,
+      "actual_degree": 28
+    },
+    {
+      "card_id": "4-17",
+      "summary_degree": 26,
+      "actual_degree": 31
+    },
+    {
+      "card_id": "3-21",
+      "summary_degree": 24,
+      "actual_degree": 25
+    },
+    {
+      "card_id": "4-06",
+      "summary_degree": 24,
+      "actual_degree": 25
+    },
+    {
+      "card_id": "6-07",
+      "summary_degree": 24,
+      "actual_degree": 27
+    },
+    {
+      "card_id": "4-08",
+      "summary_degree": 22,
+      "actual_degree": 24
+    },
+    {
+      "card_id": "4-10",
+      "summary_degree": 22,
+      "actual_degree": 23
+    },
+    {
+      "card_id": "4-33",
+      "summary_degree": 22,
+      "actual_degree": 24
+    },
+    {
+      "card_id": "6-19",
+      "summary_degree": 22,
+      "actual_degree": 24
+    },
+    {
+      "card_id": "6-28",
+      "summary_degree": 22,
+      "actual_degree": 24
+    },
+    {
+      "card_id": "5-26",
+      "summary_degree": 21,
+      "actual_degree": 23
+    },
+    {
+      "card_id": "6-16",
+      "summary_degree": 21,
+      "actual_degree": 22
+    },
+    {
+      "card_id": "3-18",
+      "summary_degree": 20,
+      "actual_degree": 22
+    },
+    {
+      "card_id": "4-25",
+      "summary_degree": 20,
+      "actual_degree": 21
+    },
+    {
+      "card_id": "6-26",
+      "summary_degree": 20,
+      "actual_degree": 21
+    },
+    {
+      "card_id": "3-08",
+      "summary_degree": 19,
+      "actual_degree": 21
+    },
+    {
+      "card_id": "4-18",
+      "summary_degree": 19,
+      "actual_degree": 20
+    },
+    {
+      "card_id": "6-22",
+      "summary_degree": 18,
+      "actual_degree": 19
+    },
+    {
+      "card_id": "4-32",
+      "summary_degree": 17,
+      "actual_degree": 18
+    },
+    {
+      "card_id": "6-13",
+      "summary_degree": 17,
+      "actual_degree": 18
+    },
+    {
+      "card_id": "4-31",
+      "summary_degree": 16,
+      "actual_degree": 17
+    },
+    {
+      "card_id": "4-46",
+      "summary_degree": 16,
+      "actual_degree": 17
+    },
+    {
+      "card_id": "6-02",
+      "summary_degree": 16,
+      "actual_degree": 17
+    },
+    {
+      "card_id": "2-21",
+      "summary_degree": 15,
+      "actual_degree": 16
+    },
+    {
+      "card_id": "3-26",
+      "summary_degree": 15,
+      "actual_degree": 16
+    },
+    {
+      "card_id": "3-32",
+      "summary_degree": 15,
+      "actual_degree": 17
+    },
+    {
+      "card_id": "4-20",
+      "summary_degree": 15,
+      "actual_degree": 16
+    },
+    {
+      "card_id": "6-11",
+      "summary_degree": 15,
+      "actual_degree": 19
+    },
+    {
+      "card_id": "6-14",
+      "summary_degree": 15,
+      "actual_degree": 19
+    },
+    {
+      "card_id": "3-16",
+      "summary_degree": 14,
+      "actual_degree": 15
+    },
+    {
+      "card_id": "3-31",
+      "summary_degree": 14,
+      "actual_degree": 16
+    },
+    {
+      "card_id": "4-39",
+      "summary_degree": 14,
+      "actual_degree": 15
+    },
+    {
+      "card_id": "5-05",
+      "summary_degree": 14,
+      "actual_degree": 15
+    },
+    {
+      "card_id": "6-10",
+      "summary_degree": 14,
+      "actual_degree": 15
+    },
+    {
+      "card_id": "6-15",
+      "summary_degree": 14,
+      "actual_degree": 16
+    },
+    {
+      "card_id": "3-02",
+      "summary_degree": 13,
+      "actual_degree": 15
+    },
+    {
+      "card_id": "5-06",
+      "summary_degree": 13,
+      "actual_degree": 14
+    },
+    {
+      "card_id": "2-03",
+      "summary_degree": 12,
+      "actual_degree": 13
+    },
+    {
+      "card_id": "3-13",
+      "summary_degree": 12,
+      "actual_degree": 14
+    },
+    {
+      "card_id": "5-03",
+      "summary_degree": 12,
+      "actual_degree": 13
+    },
+    {
+      "card_id": "5-10",
+      "summary_degree": 12,
+      "actual_degree": 13
+    },
+    {
+      "card_id": "6-17",
+      "summary_degree": 12,
+      "actual_degree": 13
+    },
+    {
+      "card_id": "6-18",
+      "summary_degree": 12,
+      "actual_degree": 13
+    },
+    {
+      "card_id": "6-25",
+      "summary_degree": 12,
+      "actual_degree": 14
+    },
+    {
+      "card_id": "6-36",
+      "summary_degree": 12,
+      "actual_degree": 13
+    },
+    {
+      "card_id": "3-39",
+      "summary_degree": 11,
+      "actual_degree": 12
+    },
+    {
+      "card_id": "4-44",
+      "summary_degree": 11,
+      "actual_degree": 12
+    },
+    {
+      "card_id": "3-01",
+      "summary_degree": 10,
+      "actual_degree": 11
+    },
+    {
+      "card_id": "5-08",
+      "summary_degree": 10,
+      "actual_degree": 11
+    },
+    {
+      "card_id": "5-23",
+      "summary_degree": 10,
+      "actual_degree": 11
+    },
+    {
+      "card_id": "3-38",
+      "summary_degree": 9,
+      "actual_degree": 10
+    },
+    {
+      "card_id": "5-20",
+      "summary_degree": 9,
+      "actual_degree": 10
+    },
+    {
+      "card_id": "5-22",
+      "summary_degree": 9,
+      "actual_degree": 10
+    },
+    {
+      "card_id": "6-38",
+      "summary_degree": 9,
+      "actual_degree": 10
+    },
+    {
+      "card_id": "6-12",
+      "summary_degree": 8,
+      "actual_degree": 9
+    },
+    {
+      "card_id": "4-40",
+      "summary_degree": 7,
+      "actual_degree": 8
+    },
+    {
+      "card_id": "5-27",
+      "summary_degree": 7,
+      "actual_degree": 8
+    },
+    {
+      "card_id": "6-31",
+      "summary_degree": 7,
+      "actual_degree": 8
+    },
+    {
+      "card_id": "1-20",
+      "summary_degree": 6,
+      "actual_degree": 12
+    },
+    {
+      "card_id": "2-19",
+      "summary_degree": 6,
+      "actual_degree": 7
+    },
+    {
+      "card_id": "4-27",
+      "summary_degree": 6,
+      "actual_degree": 7
+    },
+    {
+      "card_id": "6-03",
+      "summary_degree": 6,
+      "actual_degree": 7
+    },
+    {
+      "card_id": "1-06",
+      "summary_degree": 5,
+      "actual_degree": 15
+    },
+    {
+      "card_id": "1-19",
+      "summary_degree": 5,
+      "actual_degree": 12
+    },
+    {
+      "card_id": "3-03",
+      "summary_degree": 5,
+      "actual_degree": 7
+    },
+    {
+      "card_id": "3-40",
+      "summary_degree": 5,
+      "actual_degree": 8
+    },
+    {
+      "card_id": "1-16",
+      "summary_degree": 3,
+      "actual_degree": 6
+    },
+    {
+      "card_id": "1-01",
+      "summary_degree": 2,
+      "actual_degree": 54
+    },
+    {
+      "card_id": "1-05",
+      "summary_degree": 2,
+      "actual_degree": 12
+    },
+    {
+      "card_id": "1-09",
+      "summary_degree": 2,
+      "actual_degree": 14
+    },
+    {
+      "card_id": "1-10",
+      "summary_degree": 2,
+      "actual_degree": 30
+    },
+    {
+      "card_id": "1-15",
+      "summary_degree": 2,
+      "actual_degree": 11
+    },
+    {
+      "card_id": "1-18",
+      "summary_degree": 2,
+      "actual_degree": 12
+    },
+    {
+      "card_id": "1-04",
+      "summary_degree": 1,
+      "actual_degree": 18
+    },
+    {
+      "card_id": "1-08",
+      "summary_degree": 1,
+      "actual_degree": 6
+    },
+    {
+      "card_id": "1-12",
+      "summary_degree": 1,
+      "actual_degree": 6
+    },
+    {
+      "card_id": "1-17",
+      "summary_degree": 1,
+      "actual_degree": 10
+    },
+    {
+      "card_id": "1-02",
+      "summary_degree": 0,
+      "actual_degree": 17
+    },
+    {
+      "card_id": "1-03",
+      "summary_degree": 0,
+      "actual_degree": 19
+    },
+    {
+      "card_id": "1-07",
+      "summary_degree": 0,
+      "actual_degree": 8
+    },
+    {
+      "card_id": "1-11",
+      "summary_degree": 0,
+      "actual_degree": 11
+    },
+    {
+      "card_id": "1-13",
+      "summary_degree": 0,
+      "actual_degree": 10
+    },
+    {
+      "card_id": "1-14",
+      "summary_degree": 0,
+      "actual_degree": 16
+    }
+  ],
+  "node_summary_adjacency_mismatches": [
+    "4-01",
+    "3-04",
+    "4-02",
+    "6-41",
+    "3-06",
+    "6-08",
+    "4-34",
+    "4-13",
+    "3-09",
+    "4-19",
+    "4-12",
+    "4-17",
+    "3-21",
+    "4-06",
+    "6-07",
+    "4-08",
+    "4-10",
+    "4-33",
+    "6-19",
+    "6-28",
+    "5-26",
+    "6-16",
+    "3-18",
+    "4-25",
+    "6-26",
+    "3-08",
+    "4-18",
+    "6-22",
+    "4-32",
+    "6-13",
+    "4-31",
+    "4-46",
+    "6-02",
+    "2-21",
+    "3-26",
+    "3-32",
+    "4-20",
+    "6-11",
+    "6-14",
+    "3-16",
+    "3-31",
+    "4-39",
+    "5-05",
+    "6-10",
+    "6-15",
+    "3-02",
+    "5-06",
+    "2-03",
+    "3-13",
+    "5-03",
+    "5-10",
+    "6-17",
+    "6-18",
+    "6-25",
+    "6-36",
+    "3-39",
+    "4-44",
+    "3-01",
+    "5-08",
+    "5-23",
+    "3-38",
+    "5-20",
+    "5-22",
+    "6-38",
+    "6-12",
+    "4-40",
+    "5-27",
+    "6-31",
+    "1-20",
+    "2-19",
+    "4-27",
+    "6-03",
+    "1-06",
+    "1-19",
+    "3-03",
+    "3-40",
+    "1-16",
+    "1-01",
+    "1-05",
+    "1-09",
+    "1-10",
+    "1-15",
+    "1-18",
+    "1-04",
+    "1-08",
+    "1-12",
+    "1-17",
+    "1-02",
+    "1-03",
+    "1-07",
+    "1-11",
+    "1-13",
+    "1-14"
+  ],
+  "GraphML_errors": {
+    "invalid_double_count": 1562,
+    "related_directed_count": 1484,
+    "content_mismatches": []
+  },
+  "schema": {
+    "passed": 260,
+    "failed": 1647,
+    "failure_samples": [
+      {
+        "pair_id": "1-01__4-08",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-01__4-31",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-04__1-09",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-05__3-30",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      },
+      {
+        "pair_id": "1-05__4-01",
+        "first_error": "Additional properties are not allowed ('batch_mode', 'direction' were unexpected)"
+      }
+    ],
+    "cases": {
+      "missing_relation_and_direction_accepted": true,
+      "prerequisite_without_direction_accepted": true,
+      "valid_prerequisite_accepted": true
+    }
+  },
+  "protected_hash_checks": {
+    "04_归档/图谱关系审计凭据/adjudications.jsonl": true,
+    "02_分析产物/p5_review/accepted_model_adjudicated_edges.jsonl": true,
+    "03_交付物/G_v1_模型裁定版/graph.html": true,
+    "03_交付物/G_v1_模型裁定版/node_summaries.json": true,
+    "03_交付物/G_v1_模型裁定版/release_manifest.json": true,
+    "03_交付物/G_v1_模型裁定版/graph.json": true,
+    "03_交付物/G_v1_模型裁定版/graph.graphml": true,
+    "03_交付物/G_v1_展示修正版/graph.html": true,
+    "03_交付物/G_v1_展示修正版/node_summaries.json": true,
+    "03_交付物/G_v1_展示修正版/release_manifest.json": true,
+    "03_交付物/G_v1_展示修正版/graph.json": true,
+    "03_交付物/G_v1_展示修正版/graph.graphml": true
+  },
+  "permanent_evidence_hash_checks": {
+    "P5-P6原始评审与裁定-20261001.zip": true,
+    "adjudications.jsonl": true
+  },
+  "current_browser_render": "NOT_VERIFIED: G_v2 lacks graph.html; old HTML remains at G_v1",
+  "semantic_review_scope": "恢复边与此前逐对裁定结果一致；不重新证明所有1562条关系的教学语义",
+  "source_artifact_hashes": {
+    "03_交付物/G_v2_模型裁定版/graph.json": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "03_交付物/G_v2_模型裁定版/graph.graphml": "e1b52a068aecdd916221a7a842b1519b83c34c34efb5a0b218dd958ba03af2c9",
+    "03_交付物/G_v2_模型裁定版/node_summaries.json": "3aa0e311494b0cbdb440d2dec29da51e11fe7fa1a53f8ed817d461d12917bf97"
+  }
+}

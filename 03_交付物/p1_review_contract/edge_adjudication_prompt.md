@@ -40,25 +40,28 @@
 
 ## 四、输出格式
 
-只输出**一个**符合 `edge_adjudication.schema.json`（Adjudication）的 JSON 对象：
+只输出**一个** JSON 对象。2026-10-01 契约修补（v2）起，**结构化关系结论为必填**，符合 `edge_adjudication.v2.schema.json`：
 
 ```json
 {
   "pair_id": "与 review_bundle 一致",
   "adjudicator": "gpt-5.6-sol(via-subagent)",
   "final_status": "ACCEPTED_MODEL_ADJUDICATED | REJECTED_MODEL_ADJUDICATED | ESCALATE_HUMAN | ADJUDICATION_DEFERRED",
+  "adopted_relation": "related | prerequisite | no_relation | insufficient_evidence（final_status 为 ACCEPTED/REJECTED 时必填；历史 v1 记录缺此字段，结论只应在 rationale 复核时读取）",
+  "adopted_direction": "source_to_target | target_to_source | null（仅 adopted_relation=prerequisite 时为非 null，必须与 rationale 结论一致）",
   "adopted_by": "orchestrator",
-  "rationale": "逐项复核结论：多数/少数意见、证据命中、影响范围、红线、DAG",
+  "rationale": "逐项复核结论：多数/少数意见、证据命中、影响范围、红线、DAG；尾句必须与 adopted_relation/adopted_direction 一致",
   "residual_risks": ["残余风险逐条列出"],
   "reviewer_agreement": "三路一致情况摘要（含各路类型/方向/有效性、反对理由）",
   "escalation_reason": "final_status 为 ESCALATE_HUMAN 时必填且注明 rule_id；否则为 null",
-  "schema_version": "契约版本，由编排层填入"
+  "schema_version": "契约版本，由编排层填入（v2 起为 p1-contract-v2）"
 }
 ```
 
 注意：
 
 - `final_status=ESCALATE_HUMAN` 时 `escalation_reason` 必须非空（Schema 条件必填）；
+- **`final_status` 为 ACCEPTED/REJECTED 时 `adopted_relation` 必填；`adopted_relation=prerequisite` 时 `adopted_direction` 必填且为 source_to_target/target_to_source**——v2 Schema 会拒绝缺方向或缺关系的裁定，防止结论只存在于 rationale 文字（2026-10-01 P9 教训：229 份 v1 裁定因此漏边）；
 - `rationale` 必须体现逐项复核过程，禁止只写"多数一致，故采纳"；
 - "三路一致"只表示模型来源之间一致，不表示客观真理：accepted 边发布时仍标注"模型裁定，未人工逐条核验"，请把不确定处写入 `residual_risks`。
 

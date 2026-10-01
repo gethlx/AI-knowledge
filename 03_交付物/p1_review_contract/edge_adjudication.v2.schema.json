@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "p1_review_contract/edge_adjudication.v2.schema.json",
+  "title": "Adjudication v2（写入契约，2026-10-01 契约修补闭环）",
+  "description": "v2 起（schema_version=p1-contract-v2）**新产裁定**必须符合本契约：结构化关系结论 adopted_relation/adopted_direction 为必填，防止结论只存在于 rationale 文字（P9 教训：229 份 v1 裁定因此漏边）。存量读取边界：2026-09 批次的 1,907 条 v1 原对象按 edge_adjudication.schema.json（v1）界定，其中 1,647 条因 direction/batch_mode 等历史字段与 v1 additionalProperties 冲突而无法原样通过——读取须经显式适配检查（逐对核对 rationale 结论），适配通过不等于原对象通过 v1 校验；1,907 份原对象保留原字节，永不回写。",
+  "type": "object",
+  "properties": {
+    "pair_id": {
+      "description": "被裁定的候选概念对，与三路 ReviewOpinion 的 pair_id 一致。",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80,
+      "pattern": "^[^_\\s]+__[^_\\s]+$"
+    },
+    "adjudicator": {
+      "description": "裁定建议模型来源，固定值：经 subagent 按需拉起的 gpt-5.6-sol。",
+      "type": "string",
+      "const": "gpt-5.6-sol(via-subagent)"
+    },
+    "final_status": {
+      "description": "裁定结果状态。ADJUDICATION_DEFERRED 表示三路评审完成但裁定建议未获得，挂起等待补裁，不得进入正式图。",
+      "type": "string",
+      "enum": [
+        "ACCEPTED_MODEL_ADJUDICATED",
+        "REJECTED_MODEL_ADJUDICATED",
+        "ESCALATE_HUMAN",
+        "ADJUDICATION_DEFERRED"
+      ]
+    },
+    "adopted_relation": {
+      "description": "编排主控最终采纳的结构化关系结论。final_status 为 ACCEPTED/REJECTED 时必填（见 allOf）。",
+      "enum": [
+        "related",
+        "prerequisite",
+        "no_relation",
+        "insufficient_evidence",
+        null
+      ]
+    },
+    "adopted_direction": {
+      "description": "采纳的方向结论。adopted_relation=prerequisite 时必填且为 source_to_target/target_to_source（见 allOf）；其余关系恒为 null。",
+      "enum": [
+        "source_to_target",
+        "target_to_source",
+        null
+      ]
+    },
+    "adopted_by": {
+      "description": "执行落盘方，固定为编排主控。主控只采纳建议，不产生裁定内容。",
+      "type": "string",
+      "const": "orchestrator"
+    },
+    "rationale": {
+      "description": "可追溯的裁定理由：必须逐项说明多数意见、少数/反对意见、证据逐字命中情况与红线核查结果，不得只写'多数一致故采纳'。尾句必须与 adopted_relation/adopted_direction 一致。",
+      "type": "string",
+      "minLength": 1
+    },
+    "residual_risks": {
+      "description": "残余风险清单。模型裁定不等于人工核验，发布物必须同时展示裁定方式与残余风险。",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reviewer_agreement": {
+      "description": "三路一致情况摘要：三路一致 / 两对一（附反对方与反对理由）/ 一致不确定 / 缺员等，含各路 relation_type+direction 与意见有效性。",
+      "type": "string",
+      "minLength": 1
+    },
+    "escalation_reason": {
+      "description": "升级原因。final_status=ESCALATE_HUMAN 时必须非空（条件必填）；触发红线时须注明 rule_id。",
+      "type": ["string", "null"]
+    },
+    "schema_version": {
+      "description": "本 Adjudication 记录遵循的 Schema 契约版本。v2 记录固定为 p1-contract-v2。",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "pair_id",
+    "adjudicator",
+    "final_status",
+    "adopted_by",
+    "rationale",
+    "residual_risks",
+    "reviewer_agreement",
+    "escalation_reason",
+    "schema_version",
+    "adopted_relation",
+    "adopted_direction"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "final_status": { "const": "ESCALATE_HUMAN" }
+        }
+      },
+      "then": {
+        "properties": {
+          "escalation_reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "final_status": {
+            "enum": ["ACCEPTED_MODEL_ADJUDICATED", "REJECTED_MODEL_ADJUDICATED", "ADJUDICATION_DEFERRED"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "escalation_reason": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "final_status": { "enum": ["ACCEPTED_MODEL_ADJUDICATED", "REJECTED_MODEL_ADJUDICATED"] }
+        }
+      },
+      "then": {
+        "properties": {
+          "adopted_relation": { "type": "string" }
+        },
+        "required": ["adopted_relation", "adopted_direction"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "adopted_relation": { "const": "prerequisite" }
+        }
+      },
+      "then": {
+        "properties": {
+          "adopted_direction": { "enum": ["source_to_target", "target_to_source"] }
+        },
+        "required": ["adopted_direction"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "adopted_relation": { "enum": ["related", "no_relation", "insufficient_evidence", null] }
+        }
+      },
+      "then": {
+        "properties": {
+          "adopted_direction": { "type": "null" }
+        }
+      }
+    }
+  ]
+}
