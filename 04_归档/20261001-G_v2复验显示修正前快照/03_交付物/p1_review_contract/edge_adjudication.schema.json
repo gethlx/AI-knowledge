@@ -100,10 +100,7 @@
           "adopted_relation": {
             "const": "prerequisite"
           }
-        },
-        "required": [
-          "adopted_relation"
-        ]
+        }
       },
       "then": {
         "properties": {
@@ -130,10 +127,7 @@
               null
             ]
           }
-        },
-        "required": [
-          "adopted_relation"
-        ]
+        }
       },
       "then": {
         "properties": {

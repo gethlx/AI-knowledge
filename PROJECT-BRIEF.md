@@ -1,6 +1,6 @@
 # 项目说明 · 银河AI通识课程体系知识图谱
 
-> 更新：2026-10-02｜**G_v2 已正式入图（主公明示豁免人工验收）；31 号四项缺陷（F1-F4）全部整改完毕，待外部 AI 重跑独立终审后声明完整交付通过**。
+> 更新：2026-10-02｜**G_v2 图谱与页面维持 32 号"通过"结论；32 号唯一剩余阻断（F3 实际程序接入新契约）已整改完毕，待外部 AI 重跑独立终审后声明完整收尾通过**。
 
 ## 项目与当前阶段
 
@@ -8,7 +8,7 @@
 
 2026-10-01 主线：229 份缺结构化字段的历史裁定完成逐对结论恢复分流——**186 对恢复（183 related + 3 prerequisite 带方向）、43 对排除（37 no_relation + 6 insufficient_evidence）**，GPT 与 WorkBuddy 双方逐对核验交叉一致（29 号 v3、30 号报告），随后候选图机器校验全绿，主公明示豁免人工验收，正式入图。
 
-2026-10-02 整改：31 号终审核验提出 F1（节点摘要过期）、F2（GraphML 方向/类型错误）、F3（契约未闭环）、F4（展示未更新）四项缺陷，已按收尾顺序全部整改完毕（详见账本"2026-10-02 F1-F4 整改执行"节）。
+2026-10-02 整改：31 号终审核验提出 F1（节点摘要过期）、F2（GraphML 方向/类型错误）、F3（契约未闭环）、F4（展示未更新）四项缺陷，已按收尾顺序全部整改完毕；32 号复验确认图谱/摘要/GraphML/页面通过，唯一剩余阻断为 F3 实际程序未接入新契约，已当日整改（见下）。
 
 ## 位置与先读文件
 
@@ -27,7 +27,8 @@
 | F1/F2 整改脚本 | `02_分析产物/验收与记录收尾/fix_f1_f2_summaries_graphml.py`（摘要全量重建 + GraphML 重写，自校验含六前孤岛度数比对） |
 | F3 写入契约 | `03_交付物/p1_review_contract/edge_adjudication.v2.schema.json`（required 强制 adopted_relation/adopted_direction）＋ 10 用例验证 `F3契约用例验证-20261001.json` |
 | F3 存量读取契约 | `03_交付物/p1_review_contract/edge_adjudication.schema.json`（v1，1,907 条实测 260 过/1,647 失败，已加边界声明） |
-| F4 页面生成脚本 | `02_分析产物/验收与记录收尾/build_g_v2_page.py`（浏览器实测全过：渲染/筛选/节点关系清单/先修方向） |
+| F4 页面生成脚本 | `02_分析产物/验收与记录收尾/build_g_v2_page.py`（浏览器实测全过：渲染/筛选/节点关系清单/先修方向；32 号修正箭头遮挡后重建） |
+| **F3 程序闭环（32号整改）** | 共享契约模块 `02_分析产物/adjudication_contract.py`（jsonschema 加载真实 v2 schema，入边唯一映射）＋ 端到端验证 `02_分析产物/验收与记录收尾/verify_f3_pipeline_loop.py`（14 项假数据用例全过） |
 | 186 对恢复依据 | `02_分析产物/验收与记录收尾/229对按最终裁定分流-20261002.json`（五元组+证据句+rationale哈希）＋ `229对裁定结论复核证据-20261001.json` ＋ `229对终审材料-20261002.txt`（全文 rationale） |
 | 入图机器校验 | `02_分析产物/验收与记录收尾/G_v2_候选图_186恢复/候选图验证报告.json` ＋ `promote_candidate_to_v2.py` |
 | 防呆脚本 | `02_分析产物/验收与记录收尾/finalize_229_review.py`（缺项/哈希变化/未知关系报错；默认只读，--write 重建） |
@@ -47,8 +48,8 @@
 
 ## 终审建议核对清单（重跑独立终审用）
 
-1. 复核 F1：node_summaries.json 197 条与当前边集逐条一致（六前孤岛度数 17/19/8/11/10/16）。
-2. 复核 F2：graph.graphml 用 GraphML 解析器读取——related 显式无向、prerequisite 有向生效端点、无文本 null。
-3. 复核 F3：`edge_adjudication.v2.schema.json` 用 jsonschema 真实校验——新先修结论缺 adopted_relation/adopted_direction 必须失败；v1 为存量读取契约（260/1,647 实测边界）。
-4. 复核 F4：打开 `G_v2_模型裁定版/graph.html` 实测渲染/筛选/节点关系清单/先修方向（不得用旧页面截图或静态检查替代）。
-5. 数据层复审不变：186 对逐对依据、43 对排除、DAG、连通性、哈希、G_v1 字节未动。
+1. 复核 F3 程序闭环：跑 `02_分析产物/验收与记录收尾/verify_f3_pipeline_loop.py`（14 项：缺字段拒绝/合法 v2 通过/反向先修 1-02→1-01 全链路/两类无边排除/停用护栏）；重跑 `verify_g_v2_delivery.py` 确认 final_delivery_pass=true。
+2. 确认入边逻辑：multi_model_review 采纳段已删除 _vote_relation/_vote_direction，入边只取 adopted_relation/adopted_direction（adjudication_contract.build_edge_from_adjudication 唯一映射）。
+3. 确认旧批量入口停用：p6_batch_adjudicator.py / p6_mega_adjudicator.py 无 P6_LEGACY_CONFIRM=1 时 exit 2。
+4. 数据层复审不变：186 对逐对依据、43 对排除、DAG、连通性、哈希、G_v1 字节未动（32 号已独立确认，graph.json 本轮零改动）。
+5. F1/F2/F4 维持 32 号"通过"结论：node_summaries 197 条、GraphML 语义、页面数据与浏览器证据绑定当前哈希。

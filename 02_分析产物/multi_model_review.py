@@ -4,7 +4,8 @@
 
 依据：03_交付物/14-知识图谱实施规划最终裁定版.md 3.1（主控换防）、3.2（输入隔离）、
 3.3（裁定规则）、8.4（P1 最低可运行接口）、8.5（gpt-5.6-sol 稳定性协议）；
-契约：03_交付物/p1_review_contract/{edge_review,edge_adjudication}.schema.json、redline_rules.json。
+契约：03_交付物/p1_review_contract/{edge_review,edge_adjudication}.schema.json、
+edge_adjudication.v2.schema.json（32号 F3：新产裁定写入契约）、redline_rules.json。
 
 职责边界（3.1）：本编排器是"编排主控"（glm5.3-flash 编排层）的程序化执行体——
 只做流程推进、程序校验、采纳 gpt-5.6-sol 裁定建议并落盘；**绝不自行裁定**。
@@ -14,7 +15,9 @@ live 模式下评审意见来自 reviews_inbox/<pair_id>/<reviewer>.json（由�
 WorkBuddy 会话里经 subagent 生成后放入）；裁定建议来自
 reviews_inbox/<pair_id>/adjudication.json。dry-run 模式全部走内置 fixture。
 
-纯标准库实现（json/hashlib/re/argparse/pathlib/dataclasses），Python 3.13。
+校验实现：v2 记录经 adjudication_contract（jsonschema 加载真实 schema 文件，32号 F3
+闭环）；v1 存量记录走本文件手写等价实现（读取边界，不回写原件）。
+其余为纯标准库实现（json/hashlib/re/argparse/pathlib/dataclasses），Python 3.13。
 """
 
 from __future__ import annotations
@@ -28,6 +31,13 @@ import time
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable, Iterable
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from adjudication_contract import (
+    build_edge_from_adjudication,
+    validate_adjudication_v2,
+    V2_SCHEMA_VERSION,
+)
 
 # ---------------------------------------------------------------------------
 # 常量与契约
@@ -47,7 +57,7 @@ PROMPT_TEMPLATE = (
     "禁止引用作废字段（前置概念/后续概念）；evidence.quote 必须逐字引用卡文。"
 )
 
-SCHEMA_VERSION = "p1-contract-v1"
+SCHEMA_VERSION = V2_SCHEMA_VERSION  # 新产裁定一律 v2（32号 F3：写入契约闭环）
 
 REVIEWERS: tuple[str, ...] = ("reviewer_glm", "reviewer_deepseek", "reviewer_hy4")
 REVIEWER_MODELS = {
@@ -225,7 +235,15 @@ def validate_review_schema(op: Any) -> list[str]:
 
 
 def validate_adjudication_schema(adj: Any) -> list[str]:
-    """校验 Adjudication（edge_adjudication.schema.json 的手写等价实现）。"""
+    """校验 Adjudication：v2 记录（schema_version=p1-contract-v2）走真实契约文件校验；
+    其余（存量 v1）走下方手写等价实现，保持 1,907 条存量读取边界不变。"""
+    if isinstance(adj, dict) and adj.get("schema_version") == V2_SCHEMA_VERSION:
+        return validate_adjudication_v2(adj)
+    return _validate_adjudication_v1(adj)
+
+
+def _validate_adjudication_v1(adj: Any) -> list[str]:
+    """v1 存量手写校验（edge_adjudication.schema.json 的等价实现，历史行为原样保留）。"""
     errs: list[str] = []
     if not isinstance(adj, dict):
         return ["adjudication 不是 object"]
@@ -530,12 +548,15 @@ class DryRunAdjudicationProvider(AdjudicationProvider):
         votes = [(o.raw["relation_type"], o.raw["direction"]) for o in valid]
         esc_hits = [h for h in bundle["redline_hits"] if h["rule_id"] in REDLINE_ESCALATE_RULES]
 
-        def make(final: str, rationale: str, escalation_reason: str | None = None,
+        def make(final: str, rationale: str, rel: str | None = None,
+                 dir_: str | None = None, escalation_reason: str | None = None,
                  minority: bool = False) -> dict[str, Any]:
             return {
                 "pair_id": pair.pair_id,
                 "adjudicator": ADJUDICATOR_ID,
                 "final_status": final,
+                "adopted_relation": rel,
+                "adopted_direction": dir_,
                 "adopted_by": "orchestrator",
                 "rationale": rationale + (
                     "；少数意见为 INSUFFICIENT_EVIDENCE（minority_uncertain）。" if minority
@@ -551,9 +572,11 @@ class DryRunAdjudicationProvider(AdjudicationProvider):
             ids = sorted({h["rule_id"] for h in esc_hits})
             return make(ST_ESCALATE,
                         f"红线核查命中 {','.join(ids)}：{'；'.join(h['detail'] for h in esc_hits)}。",
+                        rel=None, dir_=None,
                         escalation_reason=f"红线命中 {'/'.join(ids)}（超出自动裁定边界）")
         if not votes:
             return make(ST_ESCALATE, "无有效评审意见，无法构成一致结论。",
+                        rel=None, dir_=None,
                         escalation_reason="三路意见均无效，证据不足")
 
         from collections import Counter
@@ -561,19 +584,23 @@ class DryRunAdjudicationProvider(AdjudicationProvider):
         top, top_n = cnt.most_common(1)[0]
         detail = f"有效票分布 {dict(cnt)}；证据逐字命中情况已逐条复核。"
         if len(cnt) == 1:
-            (rel, _dir) = top
+            (rel, direction) = top
             if rel == "no_relation":
-                return make(ST_REJECTED, detail + "三路一致为 NO_RELATION，无有效证据支持关系。")
+                return make(ST_REJECTED, detail + "三路一致为 NO_RELATION，无有效证据支持关系。",
+                            rel="no_relation", dir_=None)
             if rel == "insufficient_evidence":
                 return make(ST_ESCALATE, detail + "三路一致证据不足。",
+                            rel="insufficient_evidence", dir_=None,
                             escalation_reason="三路一致 INSUFFICIENT_EVIDENCE，证据不足")
-            return make(ST_ACCEPTED, detail + "有效意见全部一致，证据足以支持关系。")
+            return make(ST_ACCEPTED, detail + "有效意见全部一致，证据足以支持关系。",
+                        rel=rel, dir_=direction)
         # 分歧：2 对 1
         minority = [v for v in votes if v != top]
         if top_n == 2 and len(minority) == 1 and minority[0][0] == "insufficient_evidence":
             return make(ST_ACCEPTED, detail + "两路一致、一路证据不足，支持意见证据充分且无红线。",
-                        minority=True)
+                        rel=top[0], dir_=top[1], minority=True)
         return make(ST_ESCALATE, detail + "两路一致、一路明确反对，已记录反对理由。",
+                    rel=None, dir_=None,
                     escalation_reason="二对一分歧：少数派明确反对，不得简单多数放行")
 
     @staticmethod
@@ -945,18 +972,10 @@ class Orchestrator:
         final_status, applied_hits = route_adjudication(adj, redline_hits, self.graph_state, pair)
         edge_pair_ids = {pair.pair_id}
         if final_status == ST_ACCEPTED:
+            # 32号 F3 闭环：入边只取裁定结构化结论 adopted_relation/adopted_direction，
+            # 绝不取评审投票；no_relation/insufficient_evidence 一律不生成边。
             confidence_values = [e.raw["confidence"] for e in evals if e.raw and e.valid]
-            rel = _vote_relation(evals)
-            edge = {
-                "edge_id": f"edge:{rel}:{pair.source}->{pair.target}",
-                "pair_id": pair.pair_id,
-                "source": pair.source,
-                "target": pair.target,
-                "relation_type": _vote_relation(evals),
-                "direction": _vote_direction(evals),
-                "status": ST_ACCEPTED,
-                "adjudicator": ADJUDICATOR_ID,
-                "adopted_by": "orchestrator",
+            edge_extra = {
                 "adjudicated_at": now_iso(),
                 "review_independence": {
                     "model_sources": [REVIEWER_MODELS[r.reviewer_id] for r in self.review_providers],
@@ -968,10 +987,20 @@ class Orchestrator:
                 "high_influence": pair.high_influence,
                 "cache_key": pair_cache_key,
                 "prompt_version": self.prompt_version,
-                "schema_version": SCHEMA_VERSION,
             }
-            self.graph_state.add(edge)
-            self._append("accepted", edge)
+            edge, skip_reason = build_edge_from_adjudication(
+                adj, pair.source, pair.target, extra=edge_extra)
+            if edge is None:
+                # 采纳状态但结论为 no_relation/insufficient_evidence → 记为负向结论，不产边
+                self._append("rejected", {"pair_id": pair.pair_id, "source": pair.source,
+                                          "target": pair.target, "final_status": ST_ACCEPTED,
+                                          "adopted_relation": adj.get("adopted_relation"),
+                                          "no_edge_reason": skip_reason,
+                                          "reason": adj["rationale"], "adjudication": adj,
+                                          "cache_key": pair_cache_key, "decided_at": now_iso()})
+            else:
+                self.graph_state.add(edge)
+                self._append("accepted", edge)
         elif final_status == ST_REJECTED:
             self._append("rejected", {"pair_id": pair.pair_id, "source": pair.source,
                                       "target": pair.target, "final_status": ST_REJECTED,
@@ -1062,18 +1091,9 @@ class Orchestrator:
             self.graph_state.rewrite(self.paths["accepted"])
 
 
-def _vote_relation(evals: list[OpinionEval]) -> str:
-    for e in evals:
-        if e.valid:
-            return e.raw["relation_type"]
-    return "related"
-
-
-def _vote_direction(evals: list[OpinionEval]) -> str | None:
-    for e in evals:
-        if e.valid:
-            return e.raw["direction"]
-    return None
+# 32号 F3：_vote_relation/_vote_direction 已删除——入边只取裁定结构化结论
+# adopted_relation/adopted_direction（见 build_edge_from_adjudication），
+# 评审意见只用于 model_confidence 均值与 reviewer_agreement 摘要等元数据。
 
 
 # ---------------------------------------------------------------------------

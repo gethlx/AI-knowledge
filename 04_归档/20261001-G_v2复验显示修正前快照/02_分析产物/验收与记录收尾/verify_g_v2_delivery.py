@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """只读终审G_v2工件与裁定来源；只向标准输出写结果，不重建或发布。"""
 import hashlib
-import math
-import re
-import importlib.util
-import __future__
-import sys
 import json
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict, deque
@@ -112,7 +107,7 @@ def audit():
     keys = {k.get('id'): k.get('attr.name') for k in root.findall('m:key', ns)}
     graphml_edges = graph.findall('m:edge', ns)
     byedgeid = {v['edge_id']: v for v in g['edges']}
-    bad_numeric, wrongly_directed, bad_content, xml_ids, bad_pre_direction = [], [], [], [], []
+    bad_numeric, wrongly_directed, bad_content, xml_ids = [], [], [], []
     for element in graphml_edges:
         data = {keys[x.get('key')]: x.text for x in element.findall('m:data', ns)}
         eid = data['edge_id']; xml_ids.append(eid)
@@ -122,18 +117,8 @@ def audit():
             bad_content.append(eid)
         if data['relation_type'] == 'related' and element.get('directed', graph.get('edgedefault')) in ('true', 'directed'):
             wrongly_directed.append(eid)
-        directed = element.get('directed', graph.get('edgedefault')) in ('true', 'directed')
-        if data['relation_type'] == 'prerequisite' and not directed:
-            bad_pre_direction.append(eid)
-        confidence = data.get('model_confidence')
-        if edge is not None and edge.get('model_confidence') is None:
-            if confidence is not None: bad_numeric.append(eid)
-        else:
-            try:
-                value = float(confidence)
-                if not math.isfinite(value) or value != edge.get('model_confidence'):
-                    bad_numeric.append(eid)
-            except (ValueError, TypeError, AttributeError): bad_numeric.append(eid)
+        try: float(data['model_confidence'])
+        except (ValueError, TypeError): bad_numeric.append(eid)
     xml_nodes = graph.findall('m:node', ns)
     node_data = {element.get('id'): {keys[x.get('key')]: x.text for x in element.findall('m:data', ns)}
                  for element in xml_nodes}
@@ -151,72 +136,19 @@ def audit():
         errors = list(validator.iter_errors(rec))
         if errors:
             schema_failures.append({'pair_id': rec['pair_id'], 'first_error': errors[0].message})
-    v2 = read('03_交付物/p1_review_contract/edge_adjudication.v2.schema.json')
-    Draft7Validator.check_schema(v2)
-    v2_validator = Draft7Validator(v2)
-    sample = {'pair_id': '1-01__1-02', 'adjudicator': 'gpt-5.6-sol(via-subagent)',
-              'final_status': 'ACCEPTED_MODEL_ADJUDICATED', 'adopted_by': 'orchestrator',
-              'rationale': '本地结构化字段回归样例，不是新增业务裁定', 'residual_risks': ['模型裁定'],
-              'reviewer_agreement': '测试', 'escalation_reason': None, 'schema_version': 'p1-contract-v2',
-              'adopted_relation': 'related', 'adopted_direction': None}
-    missing = {k: v for k, v in sample.items() if k not in ('adopted_relation', 'adopted_direction')}
-    cases = {}
-    fixtures = [('missing_fields_rejected', missing, False),
-                ('pre_missing_direction_rejected', {k: v for k, v in {**sample, 'adopted_relation': 'prerequisite'}.items() if k != 'adopted_direction'}, False),
-                ('pre_null_direction_rejected', {**sample, 'adopted_relation': 'prerequisite'}, False),
-                ('pre_reverse_valid', {**sample, 'adopted_relation': 'prerequisite', 'adopted_direction': 'target_to_source'}, True),
-                ('pre_forward_valid', {**sample, 'adopted_relation': 'prerequisite', 'adopted_direction': 'source_to_target'}, True),
-                ('related_valid', sample, True),
-                ('v2_wrong_version_rejected', {**sample, 'schema_version': 'p1-contract-v1'}, False),
-                ('related_direction_rejected', {**sample, 'adopted_direction': 'source_to_target'}, False),
-                ('no_relation_valid', {**sample, 'adopted_relation': 'no_relation'}, True),
-                ('insufficient_evidence_valid', {**sample, 'adopted_relation': 'insufficient_evidence'}, True),
-                ('escalate_valid', {**sample, 'final_status': 'ESCALATE_HUMAN', 'escalation_reason': '测试升级', 'adopted_relation': None}, True),
-                ('deferred_valid', {**sample, 'final_status': 'ADJUDICATION_DEFERRED', 'adopted_relation': None}, True)]
-    for name, record, expected in fixtures:
-        actual = v2_validator.is_valid(record)
-        cases[name] = {'expected_valid': expected, 'actual_valid': actual, 'pass': expected == actual}
-    def module(name, path):
-        spec = importlib.util.spec_from_file_location(name, ROOT / path)
-        obj = importlib.util.module_from_spec(spec)
-        sys.modules[name] = obj
-        exec(compile((ROOT / path).read_text(), str(ROOT / path), "exec", flags=__future__.annotations.compiler_flag), obj.__dict__)
-        return obj
-    # 仅调用纯本地校验函数；不加载凭证、不发请求、不执行入口。
-    bridge = module('gv2_audit_bridge', '02_分析产物/sol_api_bridge.py')
-    pipeline = module('gv2_audit_review', '02_分析产物/multi_model_review.py')
-    pipeline_probes = {'bridge_missing_fields_errors': bridge.validate(missing, sample['pair_id']),
-                       'bridge_pre_null_direction_errors': bridge.validate({**sample, 'adopted_relation': 'prerequisite'}, sample['pair_id']),
-                       'consumer_valid_v2_errors': pipeline.validate_adjudication_schema(sample)}
-    pipeline_pass = (bool(pipeline_probes['bridge_missing_fields_errors']) and
-                     bool(pipeline_probes['bridge_pre_null_direction_errors']) and
-                     not pipeline_probes['consumer_valid_v2_errors'])
-    page = (ROOT / (folder + '/graph.html')).read_text()
-    embedded = re.search(r'const NODES=(\[.*?\]);\nconst EDGES=(\[.*?\]);\nconst DEFS=(\{.*?\});\n', page, re.S)
-    page_data_match = False
-    if embedded:
-        page_nodes, page_edges, definitions = [json.loads(v.replace('<\\/', '</')) for v in embedded.groups()]
-        page_data_match = (page_nodes == g['nodes'] and page_edges == g['edges'] and
-                           definitions == {n['card_id']: n['definition'] for n in summaries})
-    old_definitions = {n['card_id']: n['definition'] for n in read('03_交付物/G_v1_模型裁定版/node_summaries.json')}
-    extra_checks = {'node_summaries_current': not degree_mismatches and not adjacency_mismatches and len(summaries) == 197 and {n['card_id'] for n in summaries} == ids,
-                    'node_summary_original_definitions_preserved': {n['card_id']: n['definition'] for n in summaries} == old_definitions,
+    sample = {k: originals[0][k] for k in schema['required']}
+    cases = {'missing_relation_and_direction_accepted': validator.is_valid(sample),
+             'prerequisite_without_direction_accepted': validator.is_valid({**sample, 'adopted_relation': 'prerequisite'}),
+             'valid_prerequisite_accepted': validator.is_valid({**sample, 'adopted_relation': 'prerequisite', 'adopted_direction': 'target_to_source'})}
+    extra_checks = {'node_summaries_current': not degree_mismatches and not adjacency_mismatches,
                     'GraphML_content_counts_endpoints_match': xml_content_match,
                     'GraphML_related_edges_undirected': not wrongly_directed,
-                    'GraphML_prerequisite_edges_directed': not bad_pre_direction,
-                    'GraphML_double_values_valid_or_unknown_omitted': not bad_numeric,
-                    'schema_legacy_boundary_disclosed': len(schema_failures) == 1647 and '1,647' in schema.get('$comment', ''),
-                    'schema_v2_local_cases_pass': all(c['pass'] for c in cases.values()),
-                    'new_contract_connected_to_existing_pipeline': pipeline_pass,
-                    'G_v2_HTML_data_matches_formal_graph': page_data_match}
-    browser_path = ROOT / '02_分析产物/验收与记录收尾/G_v2页面复验结果-20261001.json'
-    browser = json.loads(browser_path.read_text()) if browser_path.exists() else {}
-    extra_checks['G_v2_browser_evidence_matches_current_HTML'] = (browser.get('browser_pass') is True and
-        browser.get('graph_html_sha256') == sha(folder + '/graph.html') and
-        browser.get('graph_version') == g['meta']['graph_version'])
-    artifact_pass = all(checks.values()) and all(value for key, value in extra_checks.items()
-        if key != 'new_contract_connected_to_existing_pipeline')
-    return {'checked_at': '2026-10-01', 'graph_artifact_pass': artifact_pass, 'baseline': g['meta']['graph_version'],
+                    'GraphML_double_values_valid': not bad_numeric,
+                    'schema_all_1907_records_compatible': not schema_failures,
+                    'schema_new_structured_result_required': not cases['missing_relation_and_direction_accepted'],
+                    'schema_prerequisite_direction_required': not cases['prerequisite_without_direction_accepted'],
+                    'G_v2_HTML_present': (ROOT / (folder + '/graph.html')).exists()}
+    return {'checked_at': '2026-10-01', 'baseline': g['meta']['graph_version'],
             'graph_data_checks': checks, 'graph_data_pass': all(checks.values()),
             'delivery_checks': extra_checks, 'final_delivery_pass': all(checks.values()) and all(extra_checks.values()),
             'counts': {'nodes': len(ids), 'edges': len(g['edges']), **typed_counts,
@@ -226,18 +158,12 @@ def audit():
             'GraphML_errors': {'invalid_double_count': len(bad_numeric), 'related_directed_count': len(wrongly_directed),
                               'content_mismatches': bad_content},
             'schema': {'passed': len(originals)-len(schema_failures), 'failed': len(schema_failures),
-                       'failure_samples': schema_failures[:5], 'v2_cases': cases, 'pipeline_probes': pipeline_probes},
+                       'failure_samples': schema_failures[:5], 'cases': cases},
             'protected_hash_checks': preserved, 'permanent_evidence_hash_checks': permanent_ok,
-            'current_browser_render': browser.get('browser_pass', False),
+            'current_browser_render': 'NOT_VERIFIED: G_v2 lacks graph.html; old HTML remains at G_v1',
             'semantic_review_scope': '恢复边与此前逐对裁定结果一致；不重新证明所有1562条关系的教学语义',
-            'contract_pipeline_hashes': {name: sha(name) for name in (
-                '03_交付物/p1_review_contract/edge_adjudication.schema.json',
-                '03_交付物/p1_review_contract/edge_adjudication.v2.schema.json',
-                '03_交付物/p1_review_contract/edge_adjudication_prompt.md',
-                '02_分析产物/sol_api_bridge.py', '02_分析产物/multi_model_review.py',
-                '02_分析产物/p6_batch_adjudicator.py', '02_分析产物/p6_mega_adjudicator.py')},
             'source_artifact_hashes': {folder + '/' + name: sha(folder + '/' + name)
-                                      for name in ('graph.json', 'graph.graphml', 'node_summaries.json', 'graph.html')}}
+                                      for name in ('graph.json', 'graph.graphml', 'node_summaries.json')}}
 
 if __name__ == '__main__':
     print(json.dumps(audit(), ensure_ascii=False, indent=2))

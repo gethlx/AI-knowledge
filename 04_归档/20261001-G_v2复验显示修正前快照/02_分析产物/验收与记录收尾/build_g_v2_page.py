@@ -109,10 +109,7 @@ function draw(){
    if(!a||!b)continue;
    const p1=pos(a),p2=pos(b),mx=(p1.x+p2.x)/2,my=(p1.y+p2.y)/2;
    const isPre=e.relation_type==='prerequisite';
-   // 箭头终点留在目标圆外（半径26）；中心终点会被后绘制的圆遮住。
-   const dx=p2.x-mx,dy=p2.y-(my-30),dl=Math.hypot(dx,dy);
-   const end=isPre?{x:p2.x-32*dx/dl,y:p2.y-32*dy/dl}:p2;
-   const line=el('path',{d:`M${p1.x},${p1.y} Q${mx},${my-30} ${end.x},${end.y}`,fill:'none',
+   const line=el('path',{d:`M${p1.x},${p1.y} Q${mx},${my-30} ${p2.x},${p2.y}`,fill:'none',
      stroke:isPre?'#2563eb':'#9333ea','stroke-width':1.2,opacity:0.55});
    if(isPre)line.setAttribute('marker-end','url(#arr)');
    line.addEventListener('mouseenter',()=>line.setAttribute('stroke-width',3));

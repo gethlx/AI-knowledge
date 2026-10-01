@@ -3,16 +3,31 @@
 """sol_api_bridge.py —— 经 Vimox API 真调 gpt-5.6-sol 生成裁定建议（8.5 协议）。
 
 调用链：reviews_inbox/<pair_id>/{reviewer_*.json} + card_evidence
-        → 填充 edge_adjudication_prompt.md 模板
+        → 填充裁定要求（32号 F3 闭环：结构化提示词，契约=edge_adjudication_prompt.md v2）
         → POST https://router.vimox.cn/v1/chat/completions (model=gpt-5.6-sol)
-        → Adjudication Schema 校验
+        → Adjudication v2 契约校验（adjudication_contract，jsonschema 加载真实 schema 文件）
         → 写 reviews_inbox/<pair_id>/adjudication.json
         → 编排器重跑补裁。
 
 每次调用打印 [SOL-CALL] 时间戳/耗时/pair_id，供主公在 Vimox 控制台对账。
 超时 120s，重试 3 次（0/30/60s 退避），3 次全败 → 跳过该 pair（留在 deferred）。
-纯标准库。
+纯标准库 + adjudication_contract（后者需 jsonschema，受控环境已装）。
+
+32 号 F3 闭环：本文件是实际生成入口，build_prompt 输出 v2 结构化字段
+（adopted_relation/adopted_direction），validate 按 v2 契约拒绝缺字段记录。
 """
+import json
+import re
+import sys
+import threading
+import time
+import urllib.request
+import urllib.error
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from adjudication_contract import validate_adjudication_v2
 import json
 import re
 import sys
@@ -103,9 +118,15 @@ CARD_B（{cb["canonical_name"]}）：
 {redlines}
 5. 检查采纳多数意见方向是否形成先修环/双向边。
 
-## 五、输出格式
-只输出一个 JSON 对象（不要 markdown 代码块、不要解释文字）：
-{{"pair_id": "{pair_id}", "adjudicator": "gpt-5.6-sol(via-subagent)", "final_status": "ACCEPTED_MODEL_ADJUDICATED|REJECTED_MODEL_ADJUDICATED|ESCALATE_HUMAN|ADJUDICATION_DEFERRED", "adopted_by": "orchestrator", "rationale": "<逐项复核说明>", "residual_risks": ["模型裁定，未人工逐条核验"], "reviewer_agreement": "<三路一致情况>", "escalation_reason": null 或 "<原因>", "schema_version": "p1-contract-v1"}}"""
+## 五、输出格式（Adjudication v2 契约，schema_version=p1-contract-v2）
+只输出一个 JSON 对象（不要 markdown 代码块、不要解释文字）。**结构化结论字段 adopted_relation / adopted_direction 为必填**（P9 教训：结论只写在 rationale 文字里会导致漏边，2026-09 批次因此漏入 229 对）：
+{{"pair_id": "{pair_id}", "adjudicator": "gpt-5.6-sol(via-subagent)", "final_status": "ACCEPTED_MODEL_ADJUDICATED|REJECTED_MODEL_ADJUDICATED|ESCALATE_HUMAN|ADJUDICATION_DEFERRED", "adopted_relation": "related|prerequisite|no_relation|insufficient_evidence|null", "adopted_direction": "source_to_target|target_to_source|null", "adopted_by": "orchestrator", "rationale": "<逐项复核说明；尾句必须与 adopted_relation/adopted_direction 一致>", "residual_risks": ["模型裁定，未人工逐条核验"], "reviewer_agreement": "<三路一致情况，含各路 relation_type+direction>", "escalation_reason": null 或 "<原因>", "schema_version": "p1-contract-v2"}}
+
+字段铁律（违反即校验拒绝）：
+- final_status 为 ACCEPTED/REJECTED 时，adopted_relation 与 adopted_direction 必填（无关系结论填 adopted_relation=null 之外的对应枚举；采纳"无关系"填 no_relation，证据不足填 insufficient_evidence）；
+- adopted_relation=prerequisite 时 adopted_direction 必填 source_to_target（source 是 target 的先修）或 target_to_source（target 是 source 的先修）；
+- adopted_relation 为 related/no_relation/insufficient_evidence 或 null 时 adopted_direction 恒为 null；
+- ESCALATE_HUMAN 必须给 escalation_reason，且 adopted_direction=null。"""
     return prompt
 
 
@@ -133,18 +154,10 @@ def call_sol(cfg: dict, prompt: str, pair_id: str) -> dict:
 
 
 def validate(adj: dict, pair_id: str) -> list[str]:
-    errs = []
+    """新产裁定按 v2 写入契约全量校验（32号 F3：缺关系/缺方向必须拒绝）。"""
+    errs = validate_adjudication_v2(adj)
     if adj.get("pair_id") != pair_id:
         errs.append("pair_id 不匹配")
-    if adj.get("final_status") not in ("ACCEPTED_MODEL_ADJUDICATED", "REJECTED_MODEL_ADJUDICATED",
-                                       "ESCALATE_HUMAN", "ADJUDICATION_DEFERRED"):
-        errs.append("final_status 非法")
-    if adj.get("adopted_by") != "orchestrator":
-        errs.append("adopted_by 必须为 orchestrator")
-    if not adj.get("rationale"):
-        errs.append("rationale 缺失")
-    if adj.get("final_status") == "ESCALATE_HUMAN" and not adj.get("escalation_reason"):
-        errs.append("ESCALATE_HUMAN 必须 escalation_reason")
     return errs
 
 

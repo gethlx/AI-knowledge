@@ -1,0 +1,186 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "银河AI通识课程体系 · 知识图谱 （197 卡 / 1562 边 · 当前绘制 2 边）" [level=1] [ref=e2733]
+    - generic [ref=e4]: G_v2 · graph_version 0bd1a09cd159 · 模型裁定未人工逐条核验（229 对按原始最终裁定重分流：186 恢复 / 43 排除，主公明示豁免人工验收）
+  - generic [ref=e5]:
+    - generic [ref=e6] [cursor=pointer]:
+      - checkbox "先修（prerequisite）" [checked] [ref=e7]
+      - text: 先修（prerequisite）
+    - generic [ref=e8] [cursor=pointer]:
+      - checkbox "相关（related）" [ref=e9]
+      - text: 相关（related）
+    - generic [ref=e10]: 知识标签：
+    - combobox [ref=e11]:
+      - option "全部"
+      - option "K1 人类、智能与机器" [selected]
+      - option "K2 数据、表征与知识"
+      - option "K3 算法、模型与学习"
+      - option "K4 生成式AI、交互与智能体"
+      - option "K5 AI应用、工程与创新"
+      - option "K6 社会、伦理与未来"
+    - generic [ref=e12]:
+      - generic [ref=e13]: 先修
+      - generic [ref=e15]: 相关
+  - generic: 1-02 智能 K1 人类、智能与机器 · 理解 · 度 17 Intelligence （点击查看关系清单）
+  - generic [ref=e2815]:
+    - generic [ref=e2816]:
+      - generic [ref=e2817]: 1-02 智能
+      - button "✕" [ref=e2818] [cursor=pointer]
+    - generic [ref=e2819]:
+      - generic [ref=e2820]: Intelligence
+      - generic [ref=e2821]: K1 人类、智能与机器 · 层级 理解 · 状态 SOURCE_TRUSTED
+      - generic [ref=e2822]: 度：17（入 0 / 出 17）
+      - generic [ref=e2823]: 定义：个体或系统在特定环境中达成目标所表现出的能力，如识别模式、推理、规划、适应新情况。
+      - generic [ref=e2824]:
+        - text: 入边（0）
+        - list [ref=e2825]:
+          - listitem [ref=e2826]: 无
+        - text: 出边（17）
+        - list [ref=e2827]:
+          - listitem [ref=e2828]:
+            - text: ▼ 本卡 ⇒
+            - link "1-01 人工智能" [ref=e2829] [cursor=pointer]:
+              - /url: "#"
+            - text: （先修）
+          - listitem [ref=e2830]:
+            - text: ◆
+            - link "1-03 人类与机器的差异" [ref=e2831] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2832]:
+            - text: ◆
+            - link "1-05 窄人工智能" [ref=e2833] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2834]:
+            - text: ◆
+            - link "1-06 通用人工智能（AGI）" [ref=e2835] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2836]:
+            - text: ◆
+            - link "1-07 超级智能（ASI）" [ref=e2837] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2838]:
+            - text: ◆
+            - link "1-08 图灵测试" [ref=e2839] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2840]:
+            - text: ◆
+            - link "1-09 感知—决策—行动" [ref=e2841] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2842]:
+            - text: ◆
+            - link "1-10 AI系统的能力边界" [ref=e2843] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2844]:
+            - text: ◆
+            - link "1-12 计算器与计算机的区别" [ref=e2845] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2846]:
+            - text: ◆
+            - link "1-18 AlphaGo 与专用人工智能" [ref=e2847] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2848]:
+            - text: ◆
+            - link "1-20 专用人工智能与通用人工智能" [ref=e2849] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2850]:
+            - text: ◆
+            - link "2-03 知识" [ref=e2851] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2852]:
+            - text: ◆
+            - link "3-03 搜索（问题求解）" [ref=e2853] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2854]:
+            - text: ◆
+            - link "3-40 具身智能与物理AI" [ref=e2855] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2856]:
+            - text: ◆
+            - link "4-08 聊天机器人" [ref=e2857] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2858]:
+            - text: ◆
+            - link "4-17 AI智能体" [ref=e2859] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+          - listitem [ref=e2860]:
+            - text: ◆
+            - link "4-31 计算机视觉与图像识别" [ref=e2861] [cursor=pointer]:
+              - /url: "#"
+            - text: （相关）
+  - img [ref=e18]:
+    - generic [ref=e1105]:
+      - generic [ref=e2735] [cursor=pointer]:
+        - generic [ref=e2737]: 1-01
+        - generic [ref=e2738]: 人工智能
+      - generic [ref=e2739] [cursor=pointer]:
+        - generic [ref=e2741]: 1-02
+        - generic [ref=e2742]: 智能
+      - generic [ref=e2743] [cursor=pointer]:
+        - generic [ref=e2745]: 1-03
+        - generic [ref=e2746]: 人类与机器的差异
+      - generic [ref=e2747] [cursor=pointer]:
+        - generic [ref=e2749]: 1-04
+        - generic [ref=e2750]: 输入—处理—输出
+      - generic [ref=e2751] [cursor=pointer]:
+        - generic [ref=e2753]: 1-05
+        - generic [ref=e2754]: 窄人工智能
+      - generic [ref=e2755] [cursor=pointer]:
+        - generic [ref=e2757]: 1-06
+        - generic [ref=e2758]: 通用人工智能（AGI…
+      - generic [ref=e2759] [cursor=pointer]:
+        - generic [ref=e2761]: 1-07
+        - generic [ref=e2762]: 超级智能（ASI）
+      - generic [ref=e2763] [cursor=pointer]:
+        - generic [ref=e2765]: 1-08
+        - generic [ref=e2766]: 图灵测试
+      - generic [ref=e2767] [cursor=pointer]:
+        - generic [ref=e2769]: 1-09
+        - generic [ref=e2770]: 感知—决策—行动
+      - generic [ref=e2771] [cursor=pointer]:
+        - generic [ref=e2773]: 1-10
+        - generic [ref=e2774]: AI系统的能力边界
+      - generic [ref=e2775] [cursor=pointer]:
+        - generic [ref=e2777]: 1-11
+        - generic [ref=e2778]: 自主性
+      - generic [ref=e2779] [cursor=pointer]:
+        - generic [ref=e2781]: 1-12
+        - generic [ref=e2782]: 计算器与计算机的区别
+      - generic [ref=e2783] [cursor=pointer]:
+        - generic [ref=e2785]: 1-13
+        - generic [ref=e2786]: 人与技术系统的关系
+      - generic [ref=e2787] [cursor=pointer]:
+        - generic [ref=e2789]: 1-14
+        - generic [ref=e2790]: 人机协作中的分工与责…
+      - generic [ref=e2791] [cursor=pointer]:
+        - generic [ref=e2793]: 1-15
+        - generic [ref=e2794]: 递归自我改进（RSI…
+      - generic [ref=e2795] [cursor=pointer]:
+        - generic [ref=e2797]: 1-16
+        - generic [ref=e2798]: AI 发展史（时间轴…
+      - generic [ref=e2799] [cursor=pointer]:
+        - generic [ref=e2801]: 1-17
+        - generic [ref=e2802]: AI 的主要技术路线
+      - generic [ref=e2803] [cursor=pointer]:
+        - generic [ref=e2805]: 1-18
+        - generic [ref=e2806]: AlphaGo 与专…
+      - generic [ref=e2807] [cursor=pointer]:
+        - generic [ref=e2809]: 1-19
+        - generic [ref=e2810]: AlphaFold …
+      - generic [ref=e2811] [cursor=pointer]:
+        - generic [ref=e2813]: 1-20
+        - generic [ref=e2814]: 专用人工智能与通用人…

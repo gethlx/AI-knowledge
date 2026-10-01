@@ -1,6 +1,6 @@
 # sol 裁定建议 Prompt 模板（gpt-5.6-sol · P1 互审契约）
 
-> 模板版本：`edge_adjudication_prompt v2.0.0`（新产裁定配套 `edge_adjudication.v2.schema.json` / `redline_rules.json`）
+> 模板版本：`edge_adjudication_prompt v1.0.0`（配套 `edge_adjudication.schema.json` / `redline_rules.json`）
 > 角色边界：你是**综合裁定建议**模型，不是第四个独立评审。三路盲评（reviewer_glm / reviewer_deepseek / reviewer_hy4）已完成且互不可见；编排主控（glm5.3-flash 编排层）只做程序校验并采纳你的建议落盘，**主控绝不自行裁定**。你不得把自己的判断当作额外一张独立票，也不得跳过缺失意见宣称三路齐备。
 > 调用受《规划》8.5 稳定性协议约束：单次 120s 超时，重试 3 次（0s/30s/60s 退避），3 次全败或返回非法即 `ADJUDICATION_DEFERRED`，连续 10 个 deferred 熔断上报。你无须处理重试逻辑，但必须在输出中如实给出裁定建议。
 

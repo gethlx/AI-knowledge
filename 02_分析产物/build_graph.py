@@ -38,7 +38,16 @@ def load_cards():
 
 
 def normalize(e):
-    """返回归一化后的 (src, dst)：先修边 src=先修卡（先理解它），dst=依赖卡。"""
+    """返回归一化后的 (src, dst)：先修边 src=先修卡（先理解它），dst=依赖卡。
+
+    32号 F3 闭环：v2 来源的边由 adjudication_contract.build_edge_from_adjudication
+    保证 direction == adopted_direction；此处对同时携带两字段的记录做一致性断言，
+    防止评审投票等未受校验的 direction 混入。
+    """
+    if "adopted_direction" in e and e.get("direction") != e.get("adopted_direction"):
+        raise ValueError(
+            f"{e.get('edge_id','?')}: direction={e.get('direction')!r} 与 "
+            f"adopted_direction={e.get('adopted_direction')!r} 不一致（32号 F3：方向映射必须受校验）")
     if e["relation_type"] == "prerequisite" and e.get("direction") == "target_to_source":
         return e["target"], e["source"]
     return e["source"], e["target"]

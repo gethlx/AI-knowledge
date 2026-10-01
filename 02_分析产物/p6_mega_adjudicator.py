@@ -172,4 +172,13 @@ def main():
 
 
 if __name__ == "__main__":
+    # 32号 F3 停用护栏：本文件为历史工具（落盘 p1-contract-v1/batch_mode=mega，未接 v2 写入契约）。
+    # 新产裁定入口：multi_model_review.py（dry-run/live 编排）或 sol_api_bridge.py（逐对直调）。
+    # 如确需以历史身份只读复跑，须显式设置环境变量 P6_LEGACY_CONFIRM=1。
+    import os
+    if os.environ.get("P6_LEGACY_CONFIRM") != "1":
+        print("[DEPRECATED] p6_mega_adjudicator 已停用：落盘契约为 p1-contract-v1，未接入"
+              " v2 写入契约（32号 F3）。新产裁定入口：multi_model_review.py / sol_api_bridge.py。"
+              " 如确需历史复跑，设置 P6_LEGACY_CONFIRM=1。")
+        sys.exit(2)
     main()

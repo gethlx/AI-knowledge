@@ -70,16 +70,12 @@
     },
     "escalation_reason": {
       "description": "升级原因。final_status=ESCALATE_HUMAN 时必须非空（条件必填）；触发红线时须注明 rule_id。",
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"]
     },
     "schema_version": {
       "description": "本 Adjudication 记录遵循的 Schema 契约版本。v2 记录固定为 p1-contract-v2。",
       "type": "string",
-      "minLength": 1,
-      "const": "p1-contract-v2"
+      "minLength": 1
     }
   },
   "required": [
@@ -100,17 +96,12 @@
     {
       "if": {
         "properties": {
-          "final_status": {
-            "const": "ESCALATE_HUMAN"
-          }
+          "final_status": { "const": "ESCALATE_HUMAN" }
         }
       },
       "then": {
         "properties": {
-          "escalation_reason": {
-            "type": "string",
-            "minLength": 1
-          }
+          "escalation_reason": { "type": "string", "minLength": 1 }
         }
       }
     },
@@ -118,85 +109,51 @@
       "if": {
         "properties": {
           "final_status": {
-            "enum": [
-              "ACCEPTED_MODEL_ADJUDICATED",
-              "REJECTED_MODEL_ADJUDICATED",
-              "ADJUDICATION_DEFERRED"
-            ]
+            "enum": ["ACCEPTED_MODEL_ADJUDICATED", "REJECTED_MODEL_ADJUDICATED", "ADJUDICATION_DEFERRED"]
           }
         }
       },
       "then": {
         "properties": {
-          "escalation_reason": {
-            "type": "null"
-          }
+          "escalation_reason": { "type": "null" }
         }
       }
     },
     {
       "if": {
         "properties": {
-          "final_status": {
-            "enum": [
-              "ACCEPTED_MODEL_ADJUDICATED",
-              "REJECTED_MODEL_ADJUDICATED"
-            ]
-          }
+          "final_status": { "enum": ["ACCEPTED_MODEL_ADJUDICATED", "REJECTED_MODEL_ADJUDICATED"] }
         }
       },
       "then": {
         "properties": {
-          "adopted_relation": {
-            "type": "string"
-          }
+          "adopted_relation": { "type": "string" }
         },
-        "required": [
-          "adopted_relation",
-          "adopted_direction"
-        ]
+        "required": ["adopted_relation", "adopted_direction"]
       }
     },
     {
       "if": {
         "properties": {
-          "adopted_relation": {
-            "const": "prerequisite"
-          }
+          "adopted_relation": { "const": "prerequisite" }
         }
       },
       "then": {
         "properties": {
-          "adopted_direction": {
-            "enum": [
-              "source_to_target",
-              "target_to_source"
-            ]
-          }
+          "adopted_direction": { "enum": ["source_to_target", "target_to_source"] }
         },
-        "required": [
-          "adopted_direction"
-        ]
+        "required": ["adopted_direction"]
       }
     },
     {
       "if": {
         "properties": {
-          "adopted_relation": {
-            "enum": [
-              "related",
-              "no_relation",
-              "insufficient_evidence",
-              null
-            ]
-          }
+          "adopted_relation": { "enum": ["related", "no_relation", "insufficient_evidence", null] }
         }
       },
       "then": {
         "properties": {
-          "adopted_direction": {
-            "type": "null"
-          }
+          "adopted_direction": { "type": "null" }
         }
       }
     }
