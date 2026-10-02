@@ -1,0 +1,15 @@
+### Result
+{"checks":["blank canvas mouse drag rotates camera","Chromium synthesized touch opens reading","320 final header no overflow","390 final header no overflow","430 final header no overflow"],"font":true}
+### Ran Playwright code
+```js
+await (async page=>{
+const checks=[];
+const r=await page.locator('#graph-surface').boundingBox();await page.mouse.move(r.x+15,r.y+150);await page.mouse.down();const down=await page.evaluate(()=>window.atlasUI.getState().camera);await page.mouse.move(r.x+80,r.y+170,{steps:10});const moved=await page.evaluate(()=>window.atlasUI.getState().camera);await page.mouse.up();if(JSON.stringify(down)===JSON.stringify(moved))throw Error('rotation');checks.push('blank canvas mouse drag rotates camera');
+const client=await page.context().newCDPSession(page);await client.send('Emulation.setTouchEmulationEnabled',{enabled:true});const b=await page.locator('#sticky-mode').boundingBox();await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:b.x+b.width/2,y:b.y+b.height/2}]});await client.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForFunction(()=>window.atlasUI.getState().mode==='reading');checks.push('Chromium synthesized touch opens reading');await client.send('Emulation.setTouchEmulationEnabled',{enabled:false});await client.detach();
+for(const width of [320,390,430]){await page.setViewportSize({width,height:844});if(!await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth))throw Error('overflow');checks.push(width+' final header no overflow')}
+await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html');await page.waitForFunction(()=>window.atlasUI?.getState().graphReady);await page.locator('#more summary').click();await page.screenshot({path:'output/playwright/atlas45/reading-390-final.png',fullPage:true});return {checks,font:await page.evaluate(()=>document.fonts.check('16px AtlasSerif'))};
+})(page);
+```
+### Page
+- Page URL: http://127.0.0.1:41839/atlas.html#4-03
+- Page Title: 大语言模型 · 银河AI知识图册

@@ -1,0 +1,22 @@
+{
+  "initial": {
+    "nodes": 3,
+    "links": 2,
+    "renderCalls": 6,
+    "webgl": true,
+    "iconFont": true,
+    "iconGlyph": "\"\"",
+    "noOverflow": true
+  },
+  "paused": true,
+  "resumed": true,
+  "focused": true,
+  "orbit": true,
+  "mobile": {
+    "noOverflow": true,
+    "canvasWidth": 366
+  },
+  "errors": [],
+  "scope": "3 nodes / 2 edges installation smoke, not the production graph",
+  "pass": true
+}

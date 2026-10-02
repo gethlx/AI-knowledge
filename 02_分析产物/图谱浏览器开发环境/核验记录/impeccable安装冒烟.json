@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "findings": [],
+  "stderr": "",
+  "meaning": "detector can scan the installation test page; not full visual QA"
+}

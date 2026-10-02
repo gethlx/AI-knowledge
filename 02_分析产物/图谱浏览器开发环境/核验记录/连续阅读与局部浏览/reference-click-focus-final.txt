@@ -1,0 +1,8 @@
+### Result
+{"id":"Myriel","target":{"x":-76.51966506070093,"y":-72.54147491861634,"z":33.23484819252229},"node":{"x":-51.32333407061085,"y":-138.5810234605976,"z":32.05698721708823},"screen":{"x":755.5619236799282,"y":4509.007021908209},"size":{"w":390,"h":844},"centered":false}
+### Ran Playwright code
+```js
+await (async (page) => { await page.goto("https://vasturiano.github.io/3d-force-graph/example/click-to-focus/"); await page.waitForTimeout(650); const node=await page.evaluate(()=>{const n=Graph.graphData().nodes[0];Graph.onNodeClick()(n);return n.id}); await page.waitForTimeout(3200); return await page.evaluate(id=>{const n=Graph.graphData().nodes.find(n=>n.id===id),t=Graph.controls().target,p=Graph.graph2ScreenCoords(n.x,n.y,n.z);return {id,target:{x:t.x,y:t.y,z:t.z},node:{x:n.x,y:n.y,z:n.z},screen:p,size:{w:Graph.width(),h:Graph.height()},centered:Math.abs(p.x-Graph.width()/2)<2&&Math.abs(p.y-Graph.height()/2)<2}},node); })(page);
+```
+### Page
+- Page URL: https://vasturiano.github.io/3d-force-graph/example/click-to-focus/

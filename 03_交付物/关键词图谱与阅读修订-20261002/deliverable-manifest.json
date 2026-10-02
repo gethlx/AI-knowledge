@@ -1,0 +1,37 @@
+[
+  {
+    "state": 1,
+    "name": "关键词网方向与状态修正",
+    "file": "01-keyword-network.png",
+    "sha256": "d69b872a021724aa00724e0933a78c33bf148823a3e9aa9f46e52748afdd9a41",
+    "status": "pending_user_visual_review"
+  },
+  {
+    "state": 2,
+    "name": "全部相邻概念清单",
+    "file": "02-all-neighbors.png",
+    "sha256": "253374d9d7d34cc5a0e3411ca6c44fb5373c3ade8d02a7d0234e6bf7aae59ecb",
+    "status": "pending_user_visual_review"
+  },
+  {
+    "state": 3,
+    "name": "输入时匹配提示",
+    "file": "03-search-suggestions.png",
+    "sha256": "f8c2070d679a8ea46544f9070733d95535c8128925f4a60ae40302a82eda1322",
+    "status": "pending_user_visual_review"
+  },
+  {
+    "state": 4,
+    "name": "连贯正文展开",
+    "file": "04-reading-flow.png",
+    "sha256": "8ee65647aa4bdba76a74c3c101d262dfe9035837a4d8417b6628827d327484c7",
+    "status": "pending_user_visual_review"
+  },
+  {
+    "state": 5,
+    "name": "首屏关键词缩略与简化入口",
+    "file": "05-reading-firstscreen.png",
+    "sha256": "2d4f0cc3d58710e13839f32665711c1ec51dc2552a3f83a0c6066f66aaa1eddf",
+    "status": "pending_user_visual_review"
+  }
+]

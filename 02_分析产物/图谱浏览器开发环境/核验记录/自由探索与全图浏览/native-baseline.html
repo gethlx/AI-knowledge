@@ -1,0 +1,4 @@
+<!doctype html><html lang="zh-CN"><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}</style></head><body><div id="g"></div><script type="module">
+import ForceGraph3D from '3d-force-graph';import input from '/src/ui/preview-data.json';
+window.nativeGraph=new ForceGraph3D(document.querySelector('#g'),{controlType:'orbit'}).graphData({nodes:input.graph.nodes.map(n=>({id:n.card_id,name:n.name})),links:input.graph.edges.map(e=>({source:e.effective_source,target:e.effective_target}))});
+</script></body></html>

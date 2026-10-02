@@ -1,11 +1,17 @@
 # WorkBuddy 内部数据（项目记忆/会话，不入公开仓库）
 .workbuddy/
 
-# 系统垃圾
-.DS_Store
+# 系统与依赖垃圾（可重建）
+**/.DS_Store
+node_modules/
+__pycache__/
+
+# 构建产物（可重建：npm exec vite build -- --config src/ui/vite.config.js）
+dist/
+dist-ui/
+
+# 会话日志
+.playwright-cli/
 
 # 过程性文件封存区（待项目验收后本地清除，不进仓库）
 04_归档/待删除_验收后清/
-
-# macOS 垃圾
-**/.DS_Store

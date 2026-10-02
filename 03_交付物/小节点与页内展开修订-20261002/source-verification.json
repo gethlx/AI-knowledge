@@ -1,0 +1,32 @@
+{
+  "02_分析产物/p0_baseline/card_evidence.jsonl": {
+    "baseline": "5b0dcbb1792d4b2e9f5900c0df63a51c001ab2bb41ec8f182917b2a2c077057b",
+    "current": "5b0dcbb1792d4b2e9f5900c0df63a51c001ab2bb41ec8f182917b2a2c077057b",
+    "unchanged": true
+  },
+  "03_交付物/G_v2_模型裁定版/graph.json": {
+    "baseline": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "current": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "unchanged": true
+  },
+  "03_交付物/G_v2_模型裁定版/graph.graphml": {
+    "baseline": "d0e9025c937ec5ca43f518b7825beada34290000a0709fcb7f7ea0f721d05c60",
+    "current": "d0e9025c937ec5ca43f518b7825beada34290000a0709fcb7f7ea0f721d05c60",
+    "unchanged": true
+  },
+  "03_交付物/G_v2_模型裁定版/node_summaries.json": {
+    "baseline": "36ff5c644fb85a6e1827e81ad7db5137c62e763c0913af5dd2581034f3ec38c5",
+    "current": "36ff5c644fb85a6e1827e81ad7db5137c62e763c0913af5dd2581034f3ec38c5",
+    "unchanged": true
+  },
+  "03_交付物/G_v2_模型裁定版/graph.html": {
+    "baseline": "078f5dd75f36feb0aa9bf2ed34a88d91091a55b8935f42ce88c8ac00626ae9c7",
+    "current": "078f5dd75f36feb0aa9bf2ed34a88d91091a55b8935f42ce88c8ac00626ae9c7",
+    "unchanged": true
+  },
+  "03_交付物/视觉状态补全-20261002/03-directory.png": {
+    "baseline": "0b2f769a8a91a3c14e5f8c43335976a1d9c1a9598b9a577e0844a2fe264bff8c",
+    "current": "0b2f769a8a91a3c14e5f8c43335976a1d9c1a9598b9a577e0844a2fe264bff8c",
+    "unchanged": true
+  }
+}

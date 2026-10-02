@@ -1,0 +1,25 @@
+[
+  {
+    "key": "explore44",
+    "file": "01-explore-with-details.png",
+    "prompt": "Use case: ui-mockup. Revise this selected warm paper atlas mobile screen into the exploration state of ONE unified graph-and-reading page. This is NOT a standalone neighbor page. Keep the exact graph geometry, six small 3D sphere anchors with floating labels and five main connections converging to one 大语言模型 gold sphere. Preserve incoming 模型→大语言模型 and 下一个词预测与自回归生成→大语言模型 arrows, outgoing 大语言模型→微调与指令微调 arrow, and undirected links to 预训练 and 人工智能生成内容. Keep all labels clear, no multiple central anchors. Graph has selected 大语言模型. Use one compact shared header 银河AI知识图册 with search and menu; remove 返回正文 and standalone 关系网 page title. Keep compact 全图 / 当前关系 toggle with 当前关系 active, and small 定位 / 暂停 / 操作提示 controls. Replace the neighbor-list bottom drawer completely with the SELECTED CONCEPT DETAIL drawer occupying lower ~40% of a realistic 390-by-844 phone viewport. Rounded paper drawer with drag handle; heading 大语言模型, subtitle Large Language Model (LLM), modest badge 认知层级：理解. Main body title 定义 and exact content: 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。 A restrained prominent footer action 展开阅读 with upward chevron; secondary outlined 查看它的关系; a small collapsed row 相邻概念 · 41 with downward chevron. No neighbor list as main content and NO 阅读正文 routing button. Clicking a node opens THIS detail drawer, not another node's neighbors. Preserve paper aesthetic but reduce graph/header unused space to fit phone. No phone device, no instruction annotations, single crisp portrait UI screenshot, not a long poster. Graph typography readable but modest, selected node marker 9–12px projected, ordinary markers 5px at phone scale. Details must be visible on the first phone screen. References define style and topology, not the old neighbor-first hierarchy.",
+    "references": [
+      "/Users/larry/WorkBuddy/2026-09-13-14-09-47/03_交付物/小节点与页内展开修订-20261002/01-network.png"
+    ],
+    "start": "2026-10-02 07:15:40 UTC",
+    "end": "2026-10-02 07:17:08 UTC",
+    "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-6136cab5-ce5c-4750-9b8c-63b35652e06d.png"
+  },
+  {
+    "key": "reading44",
+    "file": "02-expanded-reading.png",
+    "prompt": "Use case: ui-mockup. Create the expanded reading state of the SAME unified mobile graph/detail page, using image1's warm paper reading visual and exact existing content, and image2's small sphere/floating-label graph style. One continuous mobile screenshot, no phone hardware, no comparison split. Shared top header 银河AI知识图册 with search/menu. Near title, a compact outlined 收起正文 control indicates collapse back to graph exploration IN PLACE, no 返回正文 or routed new page. Preserve reading-first title 大语言模型, English Large Language Model (LLM), modest 认知层级：理解 badge; upper right compact clickable graph thumbnail, with one small center sphere for 大语言模型 and neighboring 模型 and 预训练, lines touch same sphere. Button on thumbnail 展开关系网 (upgrades same canvas, NOT navigation). In this expanded state body is one scrollable paper detail panel/page, same selection 大语言模型. Keep text exact: 定义 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。 案例 能续写、改写、翻译、摘要的对话模型。 安全 模型可能生成不实信息，事实必须人工核查。 更多说明 expanded inline with small up chevron and three paragraphs: 像超强的“接话高手”，根据前文猜下一个词；但需指出它没有理解与意图。 / 误解为“LLM理解语言、知道事实”（其基于统计规律生成，可能产生不实内容）。 / 把“说得像真的”当作“知道是真的”。 After content show 来源与阅读范围 collapsed, then 相邻概念 · 41 collapsed as secondary accordion and 查看它的关系 a secondary outlined action. No separate neighbor page, no additional list replacing detail. Maintain polished restrained typography and icons from image1, natural flowing content without giant blank footer, paper mountain footer optional modest. User's approved design merges graph and reading into two sizes of one same panel, not separate routes.",
+    "references": [
+      "/Users/larry/WorkBuddy/2026-09-13-14-09-47/03_交付物/小节点与页内展开修订-20261002/02-reading-inline.png",
+      "/Users/larry/WorkBuddy/2026-09-13-14-09-47/03_交付物/小节点与页内展开修订-20261002/01-network.png"
+    ],
+    "start": "2026-10-02 07:15:40 UTC",
+    "end": "2026-10-02 07:16:24 UTC",
+    "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-649c31ab-b486-4e13-9d96-102f14982b10.png"
+  }
+]

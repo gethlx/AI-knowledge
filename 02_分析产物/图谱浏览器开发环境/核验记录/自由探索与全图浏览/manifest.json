@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-02",
+  "report": 50,
+  "checks": 24,
+  "sha256": {
+    "02_分析产物/图谱浏览器开发环境/atlas.html": "94eeb83dd651dcbe086fec9fbeb2268ca90fb5950746cad5ea23fb70ea77022a",
+    "02_分析产物/图谱浏览器开发环境/src/ui/atlas-preview.js": "0d2673654c4ddaf710d8a0b592075e3467bffd1105fe38673fafa223dc382a28",
+    "02_分析产物/图谱浏览器开发环境/src/ui/README.md": "1aa6fced4bbea7be2309773f51501f1209820c6cf0c1bfdc0ddf43f228fea539",
+    "02_分析产物/图谱浏览器开发环境/src/ui/preview-data.json": "0ca6674103bb74a8ed9381ef815be614869dbfbe68235ae76075596e528253b0",
+    "02_分析产物/图谱浏览器开发环境/src/styles/atlas.css": "0ac2cf721324249e655fdd00acc2a02eab48138a16d2c161f6e222c2013dff66",
+    "02_分析产物/图谱浏览器开发环境/成本记录.csv": "e0c1248a170c99a3299c7ee0e50b74e655ae56c8281ac47e3c6b667799ef61c4",
+    "00-项目导航账本.md": "3b8381044f46be2504b1c7c3cd11731abadd7d815071b258dc533ecc65afa7a1",
+    "PROJECT-BRIEF.md": "ce040efbb18b65c94de116297278df38ac1f5212eaff139148dbd15f5f84765a",
+    "03_交付物/50-自由探索与完整关系网修订.md": "acf2bd0467b9f1ba7fb7944e50c562fe69818abd0d3caa591444340b01148142",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/source-verification.json": "4b4e664e5e8612f47b0afd588f33cf69c22a6fca4ee2854a959d3e73ac1f2262",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/native-baseline-check.json": "830139f578ae7c096cb2e88a7a05b5f12f2a000e4a8e54184be862da240467e7",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/impeccable.json": "3f0fc3cbf9974ab2cc357ac697736cefab3edfb393b283ce90519c0b962bb6b1",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/browser-check.json": "11c7a2ae09f74a0159dffdf6b3a6b28861a89e4c1dbf145d153d343ecdf30ed1",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/browser-check.txt": "9622617f86e14884ca7f53e42237a585206a24ba055a4579404d10ed094c6f56",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/build.txt": "ed706d666e622d3ab9bfd4591b011e9e975a15e3088b1b7e7e2ed210a8c803fe",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/native-baseline-check.txt": "8e491e7d87d84bb2ba3065b538c2463f2f6ad491df671f0b5cad4cdd1dec0a2c",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/verify50.js": "b818504500b85714f2cabf6f114c35fdfd45e6ce709f02f5abd0d9dd7b18510c",
+    "02_分析产物/图谱浏览器开发环境/核验记录/自由探索与全图浏览/native-baseline.html": "506534834b7dd54bd343e721569833e9fba73be3aaf3ba2db613da9f5068f2c4",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/graph-320.png": "de75e38d25341c39e1748ee742da149dc70539e3af5cc40747bd7b281c2e4cfb",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/drag-nonadjacent-390.png": "8166435d56fd78de33543d496f7b0cb33d03642376784dcd54960b919d449c22",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/graph-430.png": "c710ceaf329a9f42d66a6886dabde910d0b4c401dbeda0918a60b0619c1e29fd",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/graph-980.png": "ac91074921293d65671692c11d37e5414f034ea983d92b7feb1afcfe19ddce44",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/entry-390.png": "f88e3ae68a1119e27b05a1a30be7d99ec674daf0288f24fd4acc54b82aea20a5",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/pan-zoom-discovery-390.png": "49e06e149682805c6dcea83e7838f632ff9a2f7eff20674ced12612f66b4de68",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/overview-390.png": "8cdb325484a015569b154d027492cb0d713fc803401177afa6caeae011759cd0",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas50/overview-first.png": "69bd9d310f2d2977526d7713331f48896488b32e45ec0389b53be5bbf9c3574b"
+  }
+}

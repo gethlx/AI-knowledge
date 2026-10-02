@@ -1,0 +1,49 @@
+{
+  "revised": [
+    {
+      "direction": 1,
+      "title": "明亮数字图册",
+      "prompt": "Use case: ui-mockup. Design ONE first-screen mobile concept-reading webpage for 银河AI知识图册. Portrait mobile viewport, like a 390 by 844 CSS-pixel screen, not a long scrolling poster. No device frame. This is a learning reader, not a marketing page. Text is the principal content. Include a small spatial 3D connected-node thumbnail entrance to the relationship network within the first screen, plus navigation and search. Keep this thumbnail compact: the full rotating, zoomable network opens separately. No large graph hero. No separate relationship-explanation panel. Hide all internal concept IDs.\nUse only these concept facts: 大语言模型; Large Language Model (LLM); cognition 理解. Definition: 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。 Example: 能续写、改写、翻译、摘要的对话模型。 Safety: 模型可能生成不实信息，事实必须人工核查。 Other content can be on-demand entries labelled 案例、类比、误解、反例、深度、安全、来源; don't invent explanatory content for them. The network has 41 adjacent concepts. A compact thumbnail can use unlabeled nodes; don't attempt a detailed labeled topology at this small scale. Useful network link label 查看关系网 and optional 怎么看. No invented learning scores, progress, course categories or sources.\nChoose the composition, typography, iconography, material treatment and navigation freely. Make it believable and comfortable to read on a phone. This is an initial art direction, with no prior image to copy.\nArt direction: A bright contemporary digital reading companion. Explore clean expressive sans-serif typography, crisp navigation and a light sculptural visual identity. Seek an inviting, airy mobile composition with clear reading rhythm and one small tactile spatial graph accent. Design freely; don't imitate printed pages or dark instrument panels.",
+      "time": {
+        "start": {
+          "current_time": "2026-10-02 03:12:26 UTC"
+        },
+        "end": {
+          "current_time": "2026-10-02 03:13:05 UTC"
+        }
+      },
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-65e95260-fa3f-4e83-bee5-49f5ee803cd9.png",
+      "project_file": "direction-01.png"
+    },
+    {
+      "direction": 2,
+      "title": "纸面知识图册",
+      "prompt": "Use case: ui-mockup. Design ONE first-screen mobile concept-reading webpage for 银河AI知识图册. Portrait mobile viewport, like a 390 by 844 CSS-pixel screen, not a long scrolling poster. No device frame. This is a learning reader, not a marketing page. Text is the principal content. Include a small spatial 3D connected-node thumbnail entrance to the relationship network within the first screen, plus navigation and search. Keep this thumbnail compact: the full rotating, zoomable network opens separately. No large graph hero. No separate relationship-explanation panel. Hide all internal concept IDs.\nUse only these concept facts: 大语言模型; Large Language Model (LLM); cognition 理解. Definition: 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。 Example: 能续写、改写、翻译、摘要的对话模型。 Safety: 模型可能生成不实信息，事实必须人工核查。 Other content can be on-demand entries labelled 案例、类比、误解、反例、深度、安全、来源; don't invent explanatory content for them. The network has 41 adjacent concepts. A compact thumbnail can use unlabeled nodes; don't attempt a detailed labeled topology at this small scale. Useful network link label 查看关系网 and optional 怎么看. No invented learning scores, progress, course categories or sources.\nChoose the composition, typography, iconography, material treatment and navigation freely. Make it believable and comfortable to read on a phone. This is an initial art direction, with no prior image to copy.\nArt direction: An intimate printed knowledge atlas reimagined for touch. Explore editorial typography, tactile paper and carefully considered visual pacing. Let the reading surface carry the identity. Find your own original composition and palette; avoid generic blue-purple glossy card dashboards.",
+      "time": {
+        "start": {
+          "current_time": "2026-10-02 03:11:40 UTC"
+        },
+        "end": {
+          "current_time": "2026-10-02 03:12:58 UTC"
+        }
+      },
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-f0dd0a8a-b707-48bc-a84c-c7d56a1b13fe.png",
+      "project_file": "direction-02.png"
+    },
+    {
+      "direction": 3,
+      "title": "夜间空间图册",
+      "prompt": "Use case: ui-mockup. Design ONE first-screen mobile concept-reading webpage for 银河AI知识图册. Portrait mobile viewport, like a 390 by 844 CSS-pixel screen, not a long scrolling poster. No device frame. This is a learning reader, not a marketing page. Text is the principal content. Include a small spatial 3D connected-node thumbnail entrance to the relationship network within the first screen, plus navigation and search. Keep this thumbnail compact: the full rotating, zoomable network opens separately. No large graph hero. No separate relationship-explanation panel. Hide all internal concept IDs.\nUse only these concept facts: 大语言模型; Large Language Model (LLM); cognition 理解. Definition: 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。 Example: 能续写、改写、翻译、摘要的对话模型。 Safety: 模型可能生成不实信息，事实必须人工核查。 Other content can be on-demand entries labelled 案例、类比、误解、反例、深度、安全、来源; don't invent explanatory content for them. The network has 41 adjacent concepts. A compact thumbnail can use unlabeled nodes; don't attempt a detailed labeled topology at this small scale. Useful network link label 查看关系网 and optional 怎么看. No invented learning scores, progress, course categories or sources.\nChoose the composition, typography, iconography, material treatment and navigation freely. Make it believable and comfortable to read on a phone. This is an initial art direction, with no prior image to copy.\nArt direction: A sophisticated night-reading knowledge instrument. Explore a dark reading surface with excellent text contrast and a sense of spatial depth in the small graph entrance. Let precision, light and typography define the identity. Develop your own original composition; avoid generic glowing neon sci-fi dashboards.",
+      "time": {
+        "start": {
+          "current_time": "2026-10-02 03:11:40 UTC"
+        },
+        "end": {
+          "current_time": "2026-10-02 03:12:20 UTC"
+        }
+      },
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-5426f4ba-6782-4ee9-a666-5230ab997049.png",
+      "project_file": "direction-03.png"
+    }
+  ]
+}

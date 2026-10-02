@@ -1,0 +1,59 @@
+{
+ "time": "2026-10-02T14:32:27.942Z",
+ "checks": [
+  {
+   "id": "F1-back",
+   "name": "后退回4-03: 词条3-04展开态+惰性正文+related组恢复",
+   "pass": true,
+   "detail": "{\"sel\":\"4-03\",\"cardOpen\":true,\"cardBody\":8,\"relatedOpen\":true}"
+  },
+  {
+   "id": "F1-round2",
+   "name": "前进→再后退, 相邻展开状态仍保持",
+   "pass": true,
+   "detail": "{\"sel\":\"4-03\",\"cardOpen\":true,\"cardBody\":8,\"relatedOpen\":true}"
+  },
+  {
+   "id": "F1-reselect",
+   "name": "重新选回4-03, 展开状态保持(不重置)",
+   "pass": true,
+   "detail": "{\"cardOpen\":true,\"cardBody\":8,\"relatedOpen\":true}"
+  },
+  {
+   "id": "F1-default",
+   "name": "新概念首次打开保持默认分组策略(存在的组不偏离默认, 无词条展开)",
+   "pass": true,
+   "detail": "{\"relatedClosedDefault\":true,\"beforeOpenDefault\":null,\"anyCardOpen\":false}"
+  },
+  {
+   "id": "F2-back",
+   "name": "收起后立即后退, 正确切到上一概念",
+   "pass": true,
+   "detail": "sel=5-01"
+  },
+  {
+   "id": "F2-forward",
+   "name": "前进回3-04: 说明保持刚收起的收起态(不再展开)",
+   "pass": true,
+   "detail": "{\"sel\":\"3-04\",\"exp\":false}"
+  },
+  {
+   "id": "F2-forward2",
+   "name": "展开后立即后退→前进: 说明保持展开",
+   "pass": true,
+   "detail": "{\"sel\":\"3-04\",\"exp\":true}"
+  },
+  {
+   "id": "E4-strict",
+   "name": "概念/展开/滚动严格一致且相机精确恢复(差<2)",
+   "pass": true,
+   "detail": "{\"sel\":\"1-01\",\"exp\":[false,false],\"scroll\":[160,160],\"camDiff\":\"0.0000\"}"
+  },
+  {
+   "id": "X1",
+   "name": "全程无pageerror",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "antipattern": "flat-type-hierarchy",
+    "name": "Flat type hierarchy",
+    "description": "Dominant heading and body roles are separated by less than 1.25× at every step, leaving the size hierarchy flat. Add at least one stronger size step.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/larry/WorkBuddy/2026-09-13-14-09-47/02_分析产物/图谱浏览器开发环境/atlas.html",
+    "line": 0,
+    "snippet": "Role sizes: body 16px, h1 16px, h2 16px (largest adjacent step 1.00:1; target 1.25:1)"
+  }
+]

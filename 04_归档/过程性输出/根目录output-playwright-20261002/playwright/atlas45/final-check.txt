@@ -1,0 +1,54 @@
+### Result
+{"checks":["390 no horizontal overflow","node label opens model detail without focus change","node click preserves camera","mode switch preserves concept","explicit action changes graph focus","back restores graph focus","41 complete neighbor rows","16 name matches","zero result state","197 directory entries","320 no overflow","430 no overflow","768 no overflow","no browser page errors"],"errors":[],"state":{"selected":"4-03","focus":"4-03","mode":"reading","graphReady":true,"visible":["4-03","3-04","3-21","4-04","4-02","4-05"],"camera":{"position":{"x":0,"y":1.1021821192326179e-14,"z":180,"lookAt":{"x":0,"y":-5.0210518765041486e-14,"z":-820}},"target":{"x":0,"y":0,"z":0}}}}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const checks=[], errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  const assert=(ok,name)=>{if(!ok)throw Error(name);checks.push(name)};
+  await page.goto('http://127.0.0.1:41839/atlas.html');
+  await page.waitForFunction(()=>window.atlasUI?.getState().graphReady);
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('#more summary').click();
+  await page.screenshot({path:'output/playwright/atlas45/reading-390-final.png',fullPage:true});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=390),'390 no horizontal overflow');
+  await page.getByRole('button',{name:'展开关系网',exact:true}).click();
+  await page.screenshot({path:'output/playwright/atlas45/explore-390-final.png',fullPage:true});
+  const initial=await page.evaluate(()=>window.atlasUI.getState());
+  await page.getByRole('button',{name:'阅读模型',exact:true}).click();
+  const selected=await page.evaluate(()=>window.atlasUI.getState());
+  assert(selected.selected==='3-04'&&selected.focus==='4-03','node label opens model detail without focus change');
+  assert(JSON.stringify(initial.camera)===JSON.stringify(selected.camera),'node click preserves camera');
+  await page.getByRole('button',{name:'展开阅读',exact:true}).click();
+  await page.getByRole('button',{name:'收起正文',exact:true}).click();
+  assert((await page.evaluate(()=>window.atlasUI.getState())).selected==='3-04','mode switch preserves concept');
+  await page.locator('.explore-actions [data-action="focus"]').click();
+  assert((await page.evaluate(()=>window.atlasUI.getState())).focus==='3-04','explicit action changes graph focus');
+  await page.getByRole('button',{name:'上一概念',exact:true}).click();
+  await page.waitForFunction(()=>window.atlasUI.getState().selected==='4-03');
+  assert((await page.evaluate(()=>window.atlasUI.getState())).focus==='4-03','back restores graph focus');
+  await page.locator('#neighbors summary').click();
+  assert(await page.locator('.neighbor-item').count()===41,'41 complete neighbor rows');
+  await page.locator('#neighbors summary').click();
+  await page.getByRole('button',{name:'展开阅读',exact:true}).click();
+  await page.getByRole('button',{name:'查找概念',exact:true}).click();
+  await page.locator('#search-input').fill('模型');
+  assert(await page.locator('.concept-result').count()===16,'16 name matches');
+  await page.screenshot({path:'output/playwright/atlas45/search-390-final.png'});
+  await page.locator('#search-input').fill('zzzz-no-concept');
+  assert(await page.locator('.concept-result').count()===0,'zero result state');
+  await page.getByRole('button',{name:'浏览全部概念',exact:true}).click();
+  assert(await page.locator('.concept-result').count()===197,'197 directory entries');
+  await page.screenshot({path:'output/playwright/atlas45/directory-390-final.png'});
+  await page.getByRole('button',{name:'返回阅读',exact:true}).click();
+  for(const width of [320,430,768]){
+    await page.setViewportSize({width,height:844});
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),width+' no overflow');
+    await page.screenshot({path:'output/playwright/atlas45/reading-'+width+'-final.png',fullPage:true});
+  }
+  await page.setViewportSize({width:390,height:844});
+  assert(errors.length===0,'no browser page errors');
+  return {checks,errors,state:await page.evaluate(()=>window.atlasUI.getState())};
+}
+)(page);
+```

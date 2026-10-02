@@ -1,0 +1,56 @@
+{
+  "认知层级": {
+    "total": 197,
+    "nonempty": 197,
+    "empty": 0,
+    "placeholder": 0
+  },
+  "精确定义": {
+    "total": 197,
+    "nonempty": 197,
+    "empty": 0,
+    "placeholder": 0
+  },
+  "常见误解": {
+    "total": 197,
+    "nonempty": 162,
+    "empty": 0,
+    "placeholder": 35
+  },
+  "典型案例": {
+    "total": 197,
+    "nonempty": 162,
+    "empty": 0,
+    "placeholder": 35
+  },
+  "反例": {
+    "total": 197,
+    "nonempty": 162,
+    "empty": 0,
+    "placeholder": 35
+  },
+  "深度上限": {
+    "total": 197,
+    "nonempty": 197,
+    "empty": 0,
+    "placeholder": 0
+  },
+  "安全与伦理边界": {
+    "total": 197,
+    "nonempty": 143,
+    "empty": 0,
+    "placeholder": 54
+  },
+  "教学类比": {
+    "total": 197,
+    "nonempty": 88,
+    "empty": 109,
+    "placeholder": 0
+  },
+  "来源依据": {
+    "total": 197,
+    "nonempty": 197,
+    "empty": 0,
+    "placeholder": 0
+  }
+}

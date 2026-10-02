@@ -1,0 +1,8 @@
+### Error
+Error: locator.click: Error: strict mode violation: locator('[data-action="focus"]') resolved to 2 elements:
+    1) <button class="outline" data-action="focus">…</button> aka getByRole('button', { name: '查看它的关系' })
+    2) <button data-action="focus" class="outline reading-focus">…</button> aka getByText('查看它的关系').nth(1)
+
+Call log:
+[2m  - waiting for locator('[data-action="focus"]')[22m
+

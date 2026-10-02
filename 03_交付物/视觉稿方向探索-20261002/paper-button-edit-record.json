@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen edit",
+  "reference": "paper-refined-01.png",
+  "prompt": "Use case: ui-mockup / precise edit. The attached selected warm paper-atlas design is the reference. Preserve its warm paper background and the nearly transparent upper-right graph thumbnail card EXACTLY in visual identity; do NOT tint the whole card green, do NOT add a strong green outer border, do NOT increase the outer shadow. The user disliked that heavy treatment.\nChange ONLY the “查看关系网” action within the lower-left of the thumbnail card: make it a small refined outlined button, with warm off-white paper fill matching the card, a hairline muted olive/ink border, subtle rounded corners, the existing network icon, legible ink text “查看关系网” and a modest right-facing chevron. Keep its visual weight light and editorial, not a dark filled CTA. Keep “怎么看” as a separate secondary text action on the lower-right. Keep “41个相邻概念”, the 3D node preview, and all other page text, geometry, typography, body sections and footer as they are. Fit the button without enlarging the card or moving the diagram.\nNo visible glowing effects or radiating rings in this static design. Any subtle breathing animation will be implemented later as optional motion on the button only; don't depict it as decoration. No new labels, claims, numbers, categories, device frame or OS chrome. Return the whole page for review with only this localized button refinement.",
+  "start_utc": "2026-10-02 04:12:27 UTC",
+  "end_utc": "2026-10-02 04:13:03 UTC",
+  "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-06fb4a87-bfa5-44ba-b52d-3fc9a4df0f89.png",
+  "project_file": "paper-refined-03.png",
+  "status": "candidate_pending_user_review"
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "built-in image_gen edit",
+  "records": [
+    {
+      "phase": "correction",
+      "state": 1,
+      "name": "三维关系网探索修正",
+      "file": "01-network.png",
+      "prompt": "Use case: ui-mockup / precise edit. Keep this paper-atlas 3D graph exploration layout, volumetric graph, labels, correctly directed highlighted 模型→大语言模型 arrow, selection panel and controls. CHANGE ONLY these two details: replace the gray skeleton placeholder in the last visible neighboring-concept row with the actual text 预训练 and a small 相关 badge, retaining the chain icon and row chevron. No empty skeleton row in this loaded-state design. Also make both 先修 and 相关 filter chips visibly enabled (similar subtle sage emphasis, not one selected and one inactive) because both kinds of schematic links are visible. Never add arrows to related links. Preserve the count 41个相邻概念 and all other text and geometry. Don't regenerate a new art direction.",
+      "reference": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-bb465559-8626-44e6-9f5b-4c49dc91852f.png",
+      "start_utc": "2026-10-02 05:14:36 UTC",
+      "end_utc": "2026-10-02 05:15:17 UTC",
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-0664648f-97e7-48b2-96fa-14e2e0a4ea1c.png"
+    },
+    {
+      "phase": "correction",
+      "state": 3,
+      "name": "概念目录修正",
+      "file": "03-directory.png",
+      "prompt": "Use case: ui-mockup / precise edit. Keep this selected paper-atlas concept directory, all exact concept names, English names, cognition labels, total197, search and layer filter, list layout, book brand, return-to-reading and mountain-footer visual treatment. REMOVE ONLY the decorative network illustration in the upper-right next to 概念目录; leave calm paper whitespace there, don't replace it with another illustration or add controls. The directory should focus on finding concepts, not an unclickable graph decoration. Remove only the decorative footer slogan 在概念之间看见更大的知识图景, keep the mountain texture if visible. All useful text and rows remain unchanged, no new categories or IDs, no new palette or layout.",
+      "reference": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-504927bd-61b6-42f6-8615-fe9778152d61.png",
+      "start_utc": "2026-10-02 05:14:36 UTC",
+      "end_utc": "2026-10-02 05:15:55 UTC",
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-67ff3d25-cbbf-43f8-b297-693d7e80501b.png"
+    }
+  ]
+}

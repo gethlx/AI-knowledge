@@ -1,0 +1,16 @@
+{
+  "frozen": {
+    "02_分析产物/p0_baseline/card_evidence.jsonl": true,
+    "03_交付物/G_v2_模型裁定版/graph.html": true,
+    "03_交付物/G_v2_模型裁定版/node_summaries.json": true,
+    "03_交付物/G_v2_模型裁定版/graph.json": true,
+    "03_交付物/G_v2_模型裁定版/graph.graphml": true
+  },
+  "changed_since57": [
+    "02_分析产物/图谱浏览器开发环境/src/ui/atlas-preview.js"
+  ],
+  "original_cards_equal": true,
+  "graph_equal": true,
+  "plain_count": 197,
+  "plain_mismatch": []
+}

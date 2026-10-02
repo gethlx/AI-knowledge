@@ -1,0 +1,9 @@
+### Result
+{"checks":["actual scroll restored","sphere center opens model detail","reading shows differing graph focus"]}
+### Ran Playwright code
+```js
+await (async page=>{const checks=[];await page.goto('http://127.0.0.1:41839/atlas.html');await page.waitForFunction(()=>window.atlasUI?.getState().graphReady);await page.setViewportSize({width:390,height:844});await page.locator('#more summary').click();await page.evaluate(()=>window.scrollTo(0,450));const old=await page.evaluate(()=>scrollY);await page.locator('#sticky-mode').click();await page.locator('#sticky-mode').click();if(Math.abs(await page.evaluate(()=>scrollY)-old)>1)throw Error('scroll restoration');checks.push('actual scroll restored');await page.locator('#sticky-mode').click();const p=await page.evaluate(()=>{const g=window.atlasUI.graph(),n=g.graphData().nodes.find(n=>n.id==='3-04'),p=g.graph2ScreenCoords(n.x,n.y,n.z),r=document.querySelector('#graph-surface').getBoundingClientRect();return {x:p.x+r.x,y:p.y+r.y}});await page.mouse.click(p.x,p.y);if((await page.evaluate(()=>window.atlasUI.getState())).selected!=='3-04')throw Error('sphere click');checks.push('sphere center opens model detail');await page.locator('#sticky-mode').click();if(await page.locator('#thumbnail-focus').textContent()!=='聚焦：大语言模型')throw Error('focus caption');checks.push('reading shows differing graph focus');await page.goto('http://127.0.0.1:41839/atlas.html?view=explore');await page.waitForFunction(()=>window.atlasUI?.getState().graphReady);await page.screenshot({path:'output/playwright/atlas45/explore-390-final.png',fullPage:true});return {checks};})(page);
+```
+### Page
+- Page URL: http://127.0.0.1:41839/atlas.html?view=explore#4-03
+- Page Title: 大语言模型 · 银河AI知识图册

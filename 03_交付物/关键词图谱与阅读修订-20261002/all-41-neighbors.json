@@ -1,0 +1,376 @@
+{
+  "focus_id": "4-03",
+  "focus_name": "大语言模型",
+  "neighbor_count": 41,
+  "items": [
+    {
+      "card_id": "3-33",
+      "name": "多模态大模型",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-33",
+      "effective_target": "4-03",
+      "edge_id": "e0025_3-33__4-03"
+    },
+    {
+      "card_id": "4-39",
+      "name": "智能体工作流",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-39",
+      "edge_id": "e0036_4-03__4-39"
+    },
+    {
+      "card_id": "4-20",
+      "name": "人机交互",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-20",
+      "edge_id": "e0103_4-03__4-20"
+    },
+    {
+      "card_id": "4-19",
+      "name": "人工判断点",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-19",
+      "edge_id": "e0109_4-03__4-19"
+    },
+    {
+      "card_id": "4-21",
+      "name": "内容标识与AI参与说明",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-21",
+      "edge_id": "e0163_4-03__4-21"
+    },
+    {
+      "card_id": "3-35",
+      "name": "模型蒸馏",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-35",
+      "effective_target": "4-03",
+      "edge_id": "e0165_3-35__4-03"
+    },
+    {
+      "card_id": "4-13",
+      "name": "生成结果的比较与核查",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-13",
+      "edge_id": "e0213_4-03__4-13"
+    },
+    {
+      "card_id": "3-20",
+      "name": "Transformer 架构",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-20",
+      "effective_target": "4-03",
+      "edge_id": "e0235_3-20__4-03"
+    },
+    {
+      "card_id": "4-26",
+      "name": "智能体脚手架与子智能体",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-26",
+      "edge_id": "e0260_4-03__4-26"
+    },
+    {
+      "card_id": "3-08",
+      "name": "深度学习与神经网络",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-08",
+      "effective_target": "4-03",
+      "edge_id": "e0309_3-08__4-03"
+    },
+    {
+      "card_id": "3-04",
+      "name": "模型",
+      "display_group": "理解它的基础",
+      "relation_type": "prerequisite",
+      "effective_source": "3-04",
+      "effective_target": "4-03",
+      "edge_id": "e0311_3-04__4-03"
+    },
+    {
+      "card_id": "4-10",
+      "name": "提示与提示工程",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-10",
+      "edge_id": "e0400_4-03__4-10"
+    },
+    {
+      "card_id": "4-11",
+      "name": "多模态",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-11",
+      "edge_id": "e0409_4-03__4-11"
+    },
+    {
+      "card_id": "3-21",
+      "name": "下一个词预测与自回归生成",
+      "display_group": "理解它的基础",
+      "relation_type": "prerequisite",
+      "effective_source": "3-21",
+      "effective_target": "4-03",
+      "edge_id": "e0425_3-21__4-03"
+    },
+    {
+      "card_id": "4-07",
+      "name": "人类反馈强化学习与直接偏好优化",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-07",
+      "edge_id": "e0444_4-03__4-07"
+    },
+    {
+      "card_id": "4-34",
+      "name": "AI 应用全景",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-34",
+      "edge_id": "e0529_4-03__4-34"
+    },
+    {
+      "card_id": "4-22",
+      "name": "原生多模态",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-22",
+      "edge_id": "e0546_4-03__4-22"
+    },
+    {
+      "card_id": "3-17",
+      "name": "缩放定律",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-17",
+      "effective_target": "4-03",
+      "edge_id": "e0556_3-17__4-03"
+    },
+    {
+      "card_id": "4-09",
+      "name": "Token（词元）",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-09",
+      "edge_id": "e0665_4-03__4-09"
+    },
+    {
+      "card_id": "3-24",
+      "name": "混合专家模型（MoE）",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-24",
+      "effective_target": "4-03",
+      "edge_id": "e0674_3-24__4-03"
+    },
+    {
+      "card_id": "3-23",
+      "name": "扩散模型",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-23",
+      "effective_target": "4-03",
+      "edge_id": "e0678_3-23__4-03"
+    },
+    {
+      "card_id": "4-05",
+      "name": "微调与指令微调",
+      "display_group": "以它为基础",
+      "relation_type": "prerequisite",
+      "effective_source": "4-03",
+      "effective_target": "4-05",
+      "edge_id": "e0723_4-03__4-05"
+    },
+    {
+      "card_id": "4-32",
+      "name": "语音识别与语音合成",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-32",
+      "edge_id": "e0763_4-03__4-32"
+    },
+    {
+      "card_id": "4-12",
+      "name": "幻觉",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-12",
+      "edge_id": "e0773_4-03__4-12"
+    },
+    {
+      "card_id": "4-04",
+      "name": "预训练",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-04",
+      "edge_id": "e0794_4-03__4-04"
+    },
+    {
+      "card_id": "4-23",
+      "name": "上下文窗口与长上下文",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-23",
+      "edge_id": "e0809_4-03__4-23"
+    },
+    {
+      "card_id": "4-16",
+      "name": "工具调用",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-16",
+      "edge_id": "e0828_4-03__4-16"
+    },
+    {
+      "card_id": "4-45",
+      "name": "AI搜索与对话式搜索",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-45",
+      "edge_id": "e0920_4-03__4-45"
+    },
+    {
+      "card_id": "4-08",
+      "name": "聊天机器人",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-08",
+      "edge_id": "e0963_4-03__4-08"
+    },
+    {
+      "card_id": "4-33",
+      "name": "机器翻译与自然语言处理",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-33",
+      "edge_id": "e1002_4-03__4-33"
+    },
+    {
+      "card_id": "4-30",
+      "name": "学术诚信与 AI",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-30",
+      "edge_id": "e1036_4-03__4-30"
+    },
+    {
+      "card_id": "3-34",
+      "name": "推理模型",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-34",
+      "effective_target": "4-03",
+      "edge_id": "e1057_3-34__4-03"
+    },
+    {
+      "card_id": "4-17",
+      "name": "AI智能体",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-17",
+      "edge_id": "e1059_4-03__4-17"
+    },
+    {
+      "card_id": "4-29",
+      "name": "提示素养",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-29",
+      "edge_id": "e1069_4-03__4-29"
+    },
+    {
+      "card_id": "4-15",
+      "name": "基于资料的回答与知识库",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-15",
+      "edge_id": "e1077_4-03__4-15"
+    },
+    {
+      "card_id": "4-28",
+      "name": "氛围编程与规格驱动编程",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-28",
+      "edge_id": "e1121_4-03__4-28"
+    },
+    {
+      "card_id": "4-01",
+      "name": "生成式人工智能",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-01",
+      "effective_target": "4-03",
+      "edge_id": "e1131_4-01__4-03"
+    },
+    {
+      "card_id": "4-02",
+      "name": "人工智能生成内容",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-02",
+      "effective_target": "4-03",
+      "edge_id": "e1173_4-02__4-03"
+    },
+    {
+      "card_id": "4-06",
+      "name": "对齐",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-06",
+      "edge_id": "e1198_4-03__4-06"
+    },
+    {
+      "card_id": "3-22",
+      "name": "参数规模与模型大小",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "3-22",
+      "effective_target": "4-03",
+      "edge_id": "e1238_3-22__4-03"
+    },
+    {
+      "card_id": "4-14",
+      "name": "检索增强生成",
+      "display_group": "其他关联",
+      "relation_type": "related",
+      "effective_source": "4-03",
+      "effective_target": "4-14",
+      "edge_id": "e1263_4-03__4-14"
+    }
+  ]
+}

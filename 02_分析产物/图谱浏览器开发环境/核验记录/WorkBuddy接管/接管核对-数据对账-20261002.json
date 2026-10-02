@@ -1,0 +1,47 @@
+{
+ "check_time": "2026-10-02T20:40+08:00",
+ "items": [
+  {
+   "check": "卡文197卡对账(逐字段字节级)",
+   "status": "PASS",
+   "detail": "缺0 多0 字段差异0条"
+  },
+  {
+   "check": "graph_version基线",
+   "status": "PASS",
+   "detail": "\"0bd1a09cd159\""
+  },
+  {
+   "check": "预览节点数=197",
+   "status": "PASS",
+   "detail": "实际197"
+  },
+  {
+   "check": "预览边数=1562",
+   "status": "PASS",
+   "detail": "实际1562"
+  },
+  {
+   "check": "1562边端点/类型/方向逐边比对",
+   "status": "PASS",
+   "detail": "仅真源0 仅副本0 副本重复0"
+  },
+  {
+   "check": "节点ID集合一致",
+   "status": "PASS",
+   "detail": "差0个"
+  },
+  {
+   "check": "真源字段占位盘点(不改写仅记录)",
+   "status": "INFO",
+   "detail": "{\"教学类比\": 109, \"安全与伦理边界\": 54, \"认知层级\": 35, \"常见误解\": 35, \"典型案例\": 35, \"反例\": 35}"
+  },
+  {
+   "check": "通俗解释补齐层197条与真源对账",
+   "status": "PASS",
+   "detail": "197条"
+  }
+ ],
+ "defects": [],
+ "summary": "接管数据对账通过，无数据级缺陷"
+}

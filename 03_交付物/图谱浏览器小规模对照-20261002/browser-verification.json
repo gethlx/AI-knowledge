@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-02",
+  "checks": {
+    "cardFields": true,
+    "counts": true,
+    "allRelations": true,
+    "arrows": true,
+    "relatedLines": true,
+    "search": true,
+    "empty": true,
+    "navigate": true,
+    "back": true,
+    "keyboard": true,
+    "mobileNoOverflow": true,
+    "reducedMotion": true,
+    "readOnlyEmbedded": true,
+    "noPageErrors": true
+  },
+  "errors": [],
+  "pass": true
+}

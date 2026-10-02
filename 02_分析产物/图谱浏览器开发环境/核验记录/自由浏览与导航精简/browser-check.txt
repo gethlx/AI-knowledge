@@ -1,0 +1,44 @@
+### Result
+{"checks":[{"name":"删除历史与局部筛选，仅保留全局搜索","pass":true,"detail":null},{"name":"初始单次居中","pass":true,"detail":{"x":195,"y":181.5}},{"name":"普通拖动平移，选中节点脱离中心","pass":true,"detail":{"before":{"x":195,"y":181.5},"after":{"x":261,"y":206.5},"target":{"x":-41.39271287670925,"y":-5.050929976807593,"z":5.292728227920163}}},{"name":"停止后不回锁选中节点","pass":true,"detail":{"x":261,"y":206.5}},{"name":"指针缩放改变自由视点，不回选中中心","pass":true,"detail":{"before":{"x":-41.39271287670925,"y":-5.050929976807593,"z":5.292728227920163},"after":{"x":-29.60719575920429,"y":-6.813720998656626,"z":7.0636937179207},"distance":217.86723826607363,"point":{"x":251.89606484950974,"y":207.83881399271917}}},{"name":"右键旋转保持自由视点且不误选","pass":true,"detail":null},{"name":"主动定位仍可居中","pass":true,"detail":{"x":194.99999999999997,"y":181.5}},{"name":"用户拖动打断定位动画，后续不拉回","pass":true,"detail":{"x":273,"y":216.5}},{"name":"手机单指拖动平移且不锁中点","pass":true,"detail":{"x":252.00000000000006,"y":206.49999999999997}},{"name":"双指缩放可用，不改变选择","pass":true,"detail":{"before":313.6943360215027,"after":193.101514645408}},{"name":"绿色导航区与正文明显分区且全部邻居保留","pass":true,"detail":{"background":"rgb(233, 238, 231)","margin":28,"border":"2px","selected":"3-15","rows":21,"expected":21,"main":true,"opened":true,"sourceSearch":false}},{"name":"320px无横向溢出","pass":true,"detail":null},{"name":"430px无横向溢出","pass":true,"detail":null},{"name":"无未捕获异常或错误遮罩","pass":true,"detail":[]}],"errors":[]}
+### Ran Playwright code
+```js
+await (async (page) => {
+ const checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const check=(name,pass,detail)=>{checks.push({name,pass:!!pass,detail});if(!pass)throw Error(name+' '+JSON.stringify(detail));};
+ const state=()=>page.evaluate(()=>{const g=atlasUI.graph(),s=atlasUI.getState(),n=g.graphData().nodes.find(n=>n.id===s.selected),p=g.graph2ScreenCoords(n.x,n.y,n.z);return {selected:s.selected,node:{x:n.x,y:n.y,z:n.z},point:p,target:{...g.controls().target},position:{...g.camera().position},distance:g.camera().position.distanceTo(g.controls().target),size:{w:g.width(),h:g.height()},boxes:s.labelBoxes};});
+ const moved=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z);
+ await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html?view=explore#3-04');await page.reload();await page.waitForTimeout(750);
+ check('删除历史与局部筛选，仅保留全局搜索',await page.locator('#back,.history-row,#neighbor-filter').count()===0&&await page.locator('#search-input').count()===1,null);
+ const initial=await state();check('初始单次居中',Math.abs(initial.point.x-initial.size.w/2)<2&&Math.abs(initial.point.y-initial.size.h/2)<2,initial.point);
+ const rect=await page.locator('#webgl canvas').boundingBox();
+ await page.mouse.move(rect.x+14,rect.y+85);await page.mouse.down();await page.mouse.move(rect.x+80,rect.y+110,{steps:6});await page.mouse.up();await page.waitForTimeout(220);
+ const panned=await state();check('普通拖动平移，选中节点脱离中心',moved(panned.target,initial.target)>1&&Math.abs(panned.point.x-panned.size.w/2)>25&&panned.selected===initial.selected,{before:initial.point,after:panned.point,target:panned.target});
+ await page.waitForTimeout(600);const idle=await state();check('停止后不回锁选中节点',moved(panned.target,idle.target)<.1&&Math.abs(idle.point.x-idle.size.w/2)>25,idle.point);
+ await page.mouse.move(rect.x+rect.width*.8,rect.y+rect.height*.55);await page.mouse.wheel(0,-240);await page.waitForTimeout(250);
+ const zoomed=await state();check('指针缩放改变自由视点，不回选中中心',zoomed.distance<panned.distance&&moved(zoomed.target,panned.target)>1&&Math.abs(zoomed.point.x-zoomed.size.w/2)>10,{before:panned.target,after:zoomed.target,distance:zoomed.distance,point:zoomed.point});
+ const rotateBefore=await state();await page.mouse.move(rect.x+20,rect.y+65);await page.mouse.down({button:'right'});await page.mouse.move(rect.x+65,rect.y+85,{steps:5});await page.mouse.up({button:'right'});await page.waitForTimeout(180);
+ const rotated=await state();check('右键旋转保持自由视点且不误选',moved(rotated.position,rotateBefore.position)>1&&moved(rotated.target,rotateBefore.target)<.1&&rotated.selected===rotateBefore.selected,null);
+ await page.locator('[data-action="locate"]').click();await page.waitForTimeout(530);const relocated=await state();check('主动定位仍可居中',Math.abs(relocated.point.x-relocated.size.w/2)<2&&Math.abs(relocated.point.y-relocated.size.h/2)<2,relocated.point);
+ // Interrupt a fresh click-to-center animation with a real drag.
+ const click=await page.evaluate(()=>{const s=atlasUI.getState(),r=document.querySelector('#graph-surface').getBoundingClientRect(),b=s.labelBoxes.find(b=>b.id!==s.selected&&s.preferredLabels.includes(b.id));return {id:b.id,x:r.x+(b.left+b.right)/2,y:r.y+(b.top+b.bottom)/2};});
+ await page.mouse.click(click.x,click.y);await page.mouse.move(rect.x+12,rect.y+85);await page.mouse.down();await page.mouse.move(rect.x+90,rect.y+120,{steps:5});await page.mouse.up();await page.waitForTimeout(600);
+ const interrupted=await state();check('用户拖动打断定位动画，后续不拉回',interrupted.selected===click.id&&Math.abs(interrupted.point.x-interrupted.size.w/2)>25,interrupted.point);
+ // Test native touch events, not only desktop pointer mapping.
+ await page.locator('[data-action="locate"]').click();await page.waitForTimeout(520);
+ const t0=await state(),client=await page.context().newCDPSession(page),pt=(id,x,y)=>({id,x,y});
+ await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[pt(0,rect.x+18,rect.y+95)]});await client.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[pt(0,rect.x+75,rect.y+120)]});await client.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForTimeout(180);
+ const t1=await state();check('手机单指拖动平移且不锁中点',moved(t0.target,t1.target)>1&&Math.abs(t1.point.x-t1.size.w/2)>25&&t0.selected===t1.selected,t1.point);
+ const x=rect.x+rect.width/2,y=rect.y+rect.height/2;await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[pt(0,x-30,y),pt(1,x+30,y)]});await client.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[pt(0,x-60,y+12),pt(1,x+60,y+12)]});await client.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForTimeout(160);const t2=await state();await client.detach();check('双指缩放可用，不改变选择',t2.distance<t1.distance*.85&&t2.selected===t1.selected,{before:t1.distance,after:t2.distance});
+ // Content boundary and inline navigation remain usable.
+ await page.locator('#explanation>summary').scrollIntoViewIfNeeded();if(await page.locator('#explanation').getAttribute('open')===null)await page.locator('#explanation>summary').click();await page.locator('#neighbors>summary').scrollIntoViewIfNeeded();await page.locator('#neighbors>summary').click();
+ const first=page.locator('.neighbor-card').first();await first.locator('summary').click();await page.waitForTimeout(80);
+ const separation=await page.evaluate(()=>{const n=document.querySelector('#neighbors'),e=document.querySelector('#explanation'),ns=getComputedStyle(n);return {background:ns.backgroundColor,margin:parseFloat(ns.marginTop),border:ns.borderTopWidth,selected:atlasUI.getState().selected,rows:document.querySelectorAll('.neighbor-card').length,expected:Number(document.querySelector('#neighbor-count').textContent),main:document.querySelector('#detail').textContent.includes('解释说明'),opened:!!document.querySelector('.neighbor-card[open] .neighbor-reading p'),sourceSearch:!!document.querySelector('#neighbor-filter')};});
+ check('绿色导航区与正文明显分区且全部邻居保留',separation.background==='rgb(233, 238, 231)'&&separation.margin>=24&&separation.border==='2px'&&separation.rows===separation.expected&&separation.opened&&!separation.sourceSearch,separation);
+ await page.screenshot({path:'output/playwright/atlas48/navigation-390.png'});
+ for(const width of [320,430]){await page.setViewportSize({width,height:844});await page.locator('#neighbors>summary').scrollIntoViewIfNeeded();check(width+'px无横向溢出',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),null);await page.screenshot({path:'output/playwright/atlas48/navigation-'+width+'.png'});}
+ await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html?view=explore#3-04');await page.reload();await page.waitForTimeout(650);await page.screenshot({path:'output/playwright/atlas48/graph.png'});
+ check('无未捕获异常或错误遮罩',errors.length===0&&await page.locator('vite-error-overlay').count()===0,errors);
+ return {checks,errors};
+}
+)(page);
+```

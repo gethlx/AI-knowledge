@@ -1,0 +1,28 @@
+async (page) => {
+ const results=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const check=(name,pass,detail)=>{results.push({name,pass:!!pass,detail});if(!pass)throw Error(name+' '+JSON.stringify(detail));};
+ await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html?view=explore#4-03');await page.reload();await page.waitForTimeout(1100);
+ const get=()=>page.evaluate(()=>atlasUI.getState());
+ const structure=await page.evaluate(()=>{const g=atlasUI.graph(),d=g.graphData();return {nodes:d.nodes.length,links:d.links.length,nonFocus:d.links.filter(e=>e.source.id!=='4-03'&&e.target.id!=='4-03').length,transparent:d.links.filter(e=>g.linkColor()(e).endsWith(',0)')).length,sprites:d.nodes.filter(n=>n.__threeObj.children.some(c=>c.isSprite)).length,overlays:document.querySelectorAll('.node-label').length,sourceDirections:d.links.every(e=>e.source.id===e.effective_source&&e.target.id===e.effective_target)};});
+ check('完整诱导子图及非中心连线',structure.nodes===42&&structure.links===266&&structure.nonFocus===225&&structure.transparent===0&&structure.sourceDirections,structure);
+ check('42个三维文字精灵，无屏幕文字叠层',structure.sprites===42&&structure.overlays===0,structure);
+ const collision=()=>page.evaluate(()=>{const g=atlasUI.graph(),cam=g.camera(),V=cam.position.constructor,w=g.width(),h=g.height();const boxes=g.graphData().nodes.map(n=>{const s=n.__threeObj.children.find(c=>c.isSprite);if(!s?.visible)return null;const p=s.getWorldPosition(new V()),m=s.matrixWorld.elements,v=p.clone().project(cam),view=p.clone().applyMatrix4(cam.matrixWorldInverse),scale=h/(2*Math.tan(cam.fov*Math.PI/360)*Math.max(1,-view.z)),width=Math.hypot(m[0],m[1],m[2])*scale,height=Math.hypot(m[4],m[5],m[6])*scale,x=(v.x+1)*w/2,y=(1-v.y)*h/2;return {id:n.id,left:x-width/2,right:x+width/2,top:y-height,bottom:y};}).filter(Boolean);return {count:boxes.length,clipped:boxes.filter(b=>b.left<0||b.right>w||b.top<0||b.bottom>h),overlaps:boxes.flatMap((a,i)=>boxes.slice(i+1).filter(b=>a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top).map(b=>[a.id,b.id]))};});
+ check('静止标签避让及边界', (await collision()).overlaps.length===0&&(await collision()).clipped.length===0,await collision());
+ const before=await get();check('初始阅读与图谱焦点一致',before.selected==='4-03'&&before.focus==='4-03',before);const canvas=await page.locator('#webgl canvas').boundingBox();
+ await page.mouse.move(canvas.x+12,canvas.y+85);await page.mouse.down();await page.mouse.move(canvas.x+85,canvas.y+120,{steps:8});await page.waitForTimeout(80);
+ const during=await get();await page.screenshot({path:'output/playwright/atlas46/dragging.png'});
+ check('拖动中减少标签且相机旋转、正文不跳转',during.moving&&during.labelCount<=2&&during.selected===before.selected&&JSON.stringify(during.camera)!==JSON.stringify(before.camera),during);
+ await page.mouse.up();await page.waitForTimeout(500);const after=await get();
+ check('停下后恢复标签、避免重叠且不误选节点',after.selected===before.selected&&!after.moving&&after.labelCount>2&&(await collision()).overlaps.length===0,after);
+ await page.locator('[data-action="locate"]').click();await page.waitForTimeout(200);
+ const target=await page.evaluate(()=>{const g=atlasUI.graph(),cam=g.camera(),V=cam.position.constructor,b=document.querySelector('#graph-surface').getBoundingClientRect();const n=g.graphData().nodes.find(n=>n.id!==atlasUI.getState().selected&&n.__threeObj.children.some(c=>c.isSprite&&c.visible));const s=n.__threeObj.children.find(c=>c.isSprite),p=s.getWorldPosition(new V()),v=p.clone().project(cam),view=p.clone().applyMatrix4(cam.matrixWorldInverse),h=g.height(),scale=h/(2*Math.tan(cam.fov*Math.PI/360)*-view.z);return {id:n.id,x:b.x+(v.x+1)*g.width()/2,y:b.y+(1-v.y)*h/2-s.scale.y*scale/2};});
+ const cameraBefore=(await get()).camera;await page.mouse.click(target.x,target.y);await page.waitForTimeout(300);
+ const clicked=await get();check('真实三维文字点击打开正文而不改焦点/视角',clicked.selected===target.id&&clicked.focus==='4-03'&&JSON.stringify(clicked.camera)===JSON.stringify(cameraBefore),{target,clicked});
+ await page.locator('[data-action="pause"]').click();await page.waitForTimeout(180);check('缓慢旋转也精简标签',(await get()).labelCount<=2,await get());await page.locator('[data-action="pause"]').click();await page.waitForTimeout(200);check('暂停恢复标签',(await get()).labelCount>2,await get());
+ await page.locator('[data-action="focus"]:visible').click();await page.waitForTimeout(500);check('主动查看关系才切换焦点',(await get()).focus===target.id,await get());
+ await page.locator('[data-action="read"]:visible').click();await page.waitForTimeout(200);check('阅读与完整邻居仍可用',(await get()).mode==='reading'&&await page.locator('#concept-title').textContent()!==''&&Number(await page.locator('#neighbor-count').textContent())>0,await get());
+ for(const width of [320,430]){await page.setViewportSize({width,height:844});await page.goto('http://127.0.0.1:41839/atlas.html?view=explore#4-03');await page.reload();await page.waitForTimeout(600);const c=await collision();check(width+'px无横向溢出和标签重叠',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)&&c.overlaps.length===0&&c.clipped.length===0,c);await page.screenshot({path:'output/playwright/atlas46/explore-'+width+'.png'});}
+ await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html#4-03');await page.waitForTimeout(600);await page.screenshot({path:'output/playwright/atlas46/reading.png'});await page.locator('.thumbnail-open').click();await page.waitForTimeout(200);await page.screenshot({path:'output/playwright/atlas46/explore.png'});check('阅读到探索恢复合适比例',(await get()).labelCount>2,await get());
+ check('没有浏览器未捕获异常',errors.length===0,errors);
+ return {results,errors};
+}

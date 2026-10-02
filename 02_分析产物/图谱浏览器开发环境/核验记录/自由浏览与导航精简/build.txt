@@ -1,0 +1,19 @@
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 387 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-ui/atlas.html                          6.91 kB │ gzip:   2.47 kB
+dist-ui/assets/Phosphor-DtdjzkpE.woff2    147.38 kB
+dist-ui/assets/Phosphor-CDxgqcPu.ttf      488.63 kB
+dist-ui/assets/Phosphor-BdqudwT5.woff     488.71 kB
+dist-ui/assets/Phosphor-BXRFlF4V.svg    2,996.37 kB │ gzip: 832.83 kB
+dist-ui/assets/atlas-sAdwmXkX.css          75.18 kB │ gzip:  15.95 kB
+dist-ui/assets/atlas-flHcwJaL.js        2,220.38 kB │ gzip: 488.74 kB
+
+✓ built in 286ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

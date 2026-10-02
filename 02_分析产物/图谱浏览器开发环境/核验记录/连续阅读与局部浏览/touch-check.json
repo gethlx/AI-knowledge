@@ -1,0 +1,31 @@
+{
+  "before": {
+    "distance": 257.1562045284986,
+    "label": {
+      "left": 128.46153846153845,
+      "right": 261.53846153846155,
+      "top": 153.5,
+      "bottom": 179.5,
+      "id": "4-01",
+      "width": 127.0769230769231,
+      "height": 20
+    },
+    "selected": "4-01"
+  },
+  "after": {
+    "distance": 158.29821228112192,
+    "label": {
+      "left": 135.48636139235066,
+      "right": 268.56328446927375,
+      "top": 153.5,
+      "bottom": 179.5,
+      "id": "4-01",
+      "width": 127.0769230769231,
+      "height": 20
+    },
+    "selected": "4-01"
+  },
+  "pinchZoomWorks": true,
+  "constantHeight": true,
+  "noSelection": true
+}

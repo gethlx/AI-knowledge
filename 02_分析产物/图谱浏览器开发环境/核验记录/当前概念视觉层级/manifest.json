@@ -1,0 +1,23 @@
+{
+  "report": 51,
+  "checks": 10,
+  "sha256": {
+    "02_分析产物/图谱浏览器开发环境/src/ui/atlas-preview.js": "5dff959209458170ace9975bd9b5b4fdbae2f85a43121bcf3f4d840246c94be0",
+    "02_分析产物/图谱浏览器开发环境/src/ui/README.md": "e3b13b5ba04256946188147dae5ee6805d2e97738ee8944747ab8daf67f6d6a5",
+    "02_分析产物/图谱浏览器开发环境/成本记录.csv": "d1153d3f768aaba88a31ace45439831d0694e3f5dd2d8a38f591dadbcf3c696c",
+    "02_分析产物/图谱浏览器开发环境/atlas.html": "94eeb83dd651dcbe086fec9fbeb2268ca90fb5950746cad5ea23fb70ea77022a",
+    "00-项目导航账本.md": "eebcdcd19e9f38d328d4ee6df36bc87f14aa8a5bda5a74d7657b3bf1da3f2368",
+    "PROJECT-BRIEF.md": "6af6df0fde206ef25cd06dc73ff3ecde93611ebc212b7919d5e8f0211e447dd5",
+    "03_交付物/51-当前概念与关系线视觉层级微调.md": "670478f34e5d9e9521eae2014a7b5decee4b6a5e399b318486f8a0c0d3b75d09",
+    "02_分析产物/图谱浏览器开发环境/核验记录/当前概念视觉层级/source-verification.json": "3d27aa668d6ee5c5f5cf884748fc6a201713b46e81c9312d07b71d3ade51def1",
+    "02_分析产物/图谱浏览器开发环境/核验记录/当前概念视觉层级/impeccable.json": "3f0fc3cbf9974ab2cc357ac697736cefab3edfb393b283ce90519c0b962bb6b1",
+    "02_分析产物/图谱浏览器开发环境/核验记录/当前概念视觉层级/browser-check.json": "832f3ae01db825bb67233c0b0d4c5723deecc9c982b8d45ecf5b96effc1726cd",
+    "02_分析产物/图谱浏览器开发环境/核验记录/当前概念视觉层级/browser-check.txt": "b270babbd532cb8efed7322aec74e5524b320eb9547627510aabb686b59097cb",
+    "02_分析产物/图谱浏览器开发环境/核验记录/当前概念视觉层级/build.txt": "cc5b6eddfa24c9667307d460e6ff2b2ad8a82d1354440d29ffb6a4116f246fe7",
+    "02_分析产物/图谱浏览器开发环境/核验记录/当前概念视觉层级/verify51.js": "0311230a77fe2917c0d1772f3ad2fb8cb8267c887cecda811e531cf1d45c7844",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas51/current-390.png": "a92bd8d80fc4a9412935360a80acc7850d7a905af0d2fd6b2f3be1b19c91f903",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas51/current-430.png": "72c2b9696246360c223506cd01528c04eb36c8dfd39119d7c0d23766d03f2c74",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas51/current-320.png": "3b60a0a492932c0673b7762d514095c8143c8d05935789f51f7dbbe18e51bcc4",
+    "02_分析产物/图谱浏览器开发环境/output/playwright/atlas51/switched-390.png": "3c6e5277868368e13984af94b2b0408a561ffeb9efd8df1d24ef69c37f627e29"
+  }
+}

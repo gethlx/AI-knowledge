@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen edit",
+  "name": "关键词网方向与状态修正",
+  "file": "01-keyword-network.png",
+  "prompt": "Use case: ui-mockup / precise edit. Preserve this keyword-led paper-atlas relationship page, all six readable concept-word nodes, fine lines and small anchor dots, no spheres, controls, multiple-neighbor bottom panel and typography.\nCorrect only the graph semantics and state:\n1. In the 全图 / 当前概念 toggle, make 当前概念 active and 全图 inactive, since this is the current concept's illustrative local neighborhood.\n2. Draw clear but restrained arrowheads on these THREE existing connectors, with arrowheads next to the TARGET keyword's anchor: 模型 → 大语言模型; 下一个词预测与自回归生成 → 大语言模型; 大语言模型 → 微调与指令微调. Do not add reverse arrowheads. The two lines to 预训练 and 人工智能生成内容 remain WITHOUT arrows.\n3. Replace the selected-edge tooltip with this plain explanation exactly: 学习大语言模型前，先了解“模型”。\nNever use the term 先修 or prerequisite. Do not change the names, 41 total, 2/1/38 groups, readable word layout or page composition. No extra decorative objects, no blurs over keywords.",
+  "reference": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-8177ef43-2f9c-4e10-9818-1e84dfe79087.png",
+  "start_utc": "2026-10-02 05:51:25 UTC",
+  "end_utc": "2026-10-02 05:52:08 UTC",
+  "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-22a21c17-4cc4-4be5-a2de-e7ea65b22477.png"
+}

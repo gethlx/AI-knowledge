@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "name": "页面身份/内容/无遮罩",
+      "pass": true,
+      "detail": "http://127.0.0.1:41839/atlas.html#4-03"
+    },
+    {
+      "name": "实际197节点1562边与直接线分类",
+      "pass": true
+    },
+    {
+      "name": "197卡实际DOM定义/新增说明/既有字段映射",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "后退恢复相邻词条及分组展开",
+      "pass": false,
+      "detail": {
+        "old": {
+          "neighbor": "3-04",
+          "related": true
+        },
+        "restored": {
+          "sel": "4-03",
+          "neighbor": null,
+          "related": false
+        }
+      }
+    },
+    {
+      "name": "收起说明后立即后退再前进保持收起",
+      "pass": false,
+      "detail": {
+        "id": "3-04",
+        "open": true
+      }
+    },
+    {
+      "name": "等待同步后的主状态前进后退",
+      "pass": true,
+      "detail": {
+        "prev": {
+          "cam": {
+            "position": {
+              "x": 299.8423265288329,
+              "y": -71.54019786628768,
+              "z": 327.5118209861938,
+              "lookAt": {
+                "x": 299.8423265288329,
+                "y": -71.54019786628776,
+                "z": -672.4881790138062
+              }
+            },
+            "target": {
+              "x": 299.8423265288329,
+              "y": -71.54019786628771,
+              "z": -65.30975577966228
+            }
+          },
+          "scroll": 160
+        },
+        "next": {
+          "id": "3-07",
+          "open": false,
+          "cam": {
+            "position": {
+              "x": 299.8423265288329,
+              "y": -71.54019786628768,
+              "z": 327.5118209861938,
+              "lookAt": {
+                "x": 299.8423265288329,
+                "y": -71.54019786628776,
+                "z": -672.4881790138062
+              }
+            },
+            "target": {
+              "x": 299.8423265288329,
+              "y": -71.54019786628771,
+              "z": -65.30975577966228
+            }
+          },
+          "scroll": 160
+        }
+      }
+    },
+    {
+      "name": "320px无溢出",
+      "pass": true
+    },
+    {
+      "name": "430px无溢出",
+      "pass": true
+    },
+    {
+      "name": "搜索零结果提示",
+      "pass": true
+    },
+    {
+      "name": "真实WebGL上下文丢失后阅读可用",
+      "pass": true
+    },
+    {
+      "name": "正常流程无页面异常",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "独立构建服务可达",
+      "pass": false,
+      "detail": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:41840/atlas.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:41840/atlas.html\", waiting until \"load\"\u001b[22m\n"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "tool": "built-in image_gen",
+  "records": [
+    {
+      "phase": "initial",
+      "state": 1,
+      "name": "三维关系网探索",
+      "file": "01-network.png",
+      "prompt": "Use case: ui-mockup. Create ONE additional mobile web UI state for the selected 银河AI知识图册. The attached image is STYLE REFERENCE, NOT a layout to copy for every page. Preserve its warm ivory paper grain, elegant ink serif headings, comfortable Chinese text, muted moss/sage/ochre icons, thin warm-gray rules, restrained outlined controls. No heavy green filled panels, glowing sci-fi appearance, desktop layout, hardware frame, OS status bar or browser chrome. Design for a readable 390px-wide phone. This is a functional concept reader, not a landing page. Internal concept IDs are never shown. Text facts below are authoritative; do not invent achievements, course categories, mastery scores, extra explanations or facts.\nSTATE: FULL 3D RELATIONSHIP EXPLORATION, after entering from the accepted reading-page thumbnail. Make this genuinely spatial: volumetric sage/ochre spheres in perspective at different depths, fine connecting lines, occlusion and restrained shadows, not a flat node circle or poster. A warm-paper fullscreen spatial canvas occupies most of the mobile viewport. Only current node 大语言模型 and a selected neighboring node 模型 need readable labels; other nodes may be unlabeled schematic points. These are visual samples, not an exact rendering of all source data.\nHeader: back action 返回正文, title 关系网, search icon. Compact 全图 / 邻域 selector with 邻域 active, and 先修 / 相关 filters. Highlight exactly one prerequisite connection 模型 → 大语言模型, arrow toward 大语言模型, never bidirectional; related sample links must have no arrow. A small contextual hint anchored to the selected edge says “模型是大语言模型的先修概念”; no permanent explanation panel.\nA compact bottom selection sheet shows 大语言模型, small metadata 认知层级：理解, 41个相邻概念, and a refined outlined 阅读正文 action, plus 相邻概念 list entry. Accessible compact controls 定位 / 暂停 / 怎么看 stay outside this sheet; don't cover the main graph with text or giant controls. Reading returns to its saved position. No giant mountain footer on the exploration canvas; paper grain only. The real 3D graph and dynamic motion will be implemented later, do not pretend this image validates interaction.",
+      "start_utc": "2026-10-02 05:10:25 UTC",
+      "end_utc": "2026-10-02 05:11:07 UTC",
+      "reference": "03_交付物/视觉稿方向探索-20261002/paper-refined-03.png",
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-bb465559-8626-44e6-9f5b-4c49dc91852f.png"
+    },
+    {
+      "phase": "initial",
+      "state": 2,
+      "name": "概念搜索",
+      "file": "02-search.png",
+      "prompt": "Use case: ui-mockup. Create ONE additional mobile web UI state for the selected 银河AI知识图册. The attached image is STYLE REFERENCE, NOT a layout to copy for every page. Preserve its warm ivory paper grain, elegant ink serif headings, comfortable Chinese text, muted moss/sage/ochre icons, thin warm-gray rules, restrained outlined controls. No heavy green filled panels, glowing sci-fi appearance, desktop layout, hardware frame, OS status bar or browser chrome. Design for a readable 390px-wide phone. This is a functional concept reader, not a landing page. Internal concept IDs are never shown. Text facts below are authoritative; do not invent achievements, course categories, mastery scores, extra explanations or facts.\nSTATE: CONCEPT SEARCH RESULTS, mobile page with paper identity. Compact header back arrow and title 查找概念. A prominent but restrained search field contains “模型”, with clear/close icon. Show a small accurate caption “名称匹配 · 16个结果”; show these first four exact name/English/metadata pairs as legible linked result rows separated by fine rules:\n模型 / Model / 理解\n模型评价 / Model Evaluation / 分析评价\n模型架构 / Model Architecture / 识记\n参数规模与模型大小 / Model Size / Parameters / 理解\nEach row has a subtle arrow to read the concept and a muted highlight of matching Chinese characters, no invented prose excerpt or score. Allow the long name to wrap; no tiny text. The rest of the 16 results continue below the viewport rather than pretending only four exist. An unobtrusive entry 浏览全部概念 navigates to the directory; back restores the previous reading page. No graph hero, category-chip grid, fake recents or keyboard image. Use negative space naturally, not enormous empty slabs.",
+      "start_utc": "2026-10-02 05:10:25 UTC",
+      "end_utc": "2026-10-02 05:11:42 UTC",
+      "reference": "03_交付物/视觉稿方向探索-20261002/paper-refined-03.png",
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-e2070d36-96ad-4395-9c1c-8cf060e48f94.png"
+    },
+    {
+      "phase": "initial",
+      "state": 3,
+      "name": "概念目录",
+      "file": "03-directory.png",
+      "prompt": "Use case: ui-mockup. Create ONE additional mobile web UI state for the selected 银河AI知识图册. The attached image is STYLE REFERENCE, NOT a layout to copy for every page. Preserve its warm ivory paper grain, elegant ink serif headings, comfortable Chinese text, muted moss/sage/ochre icons, thin warm-gray rules, restrained outlined controls. No heavy green filled panels, glowing sci-fi appearance, desktop layout, hardware frame, OS status bar or browser chrome. Design for a readable 390px-wide phone. This is a functional concept reader, not a landing page. Internal concept IDs are never shown. Text facts below are authoritative; do not invent achievements, course categories, mastery scores, extra explanations or facts.\nSTATE: BROWSE ALL CONCEPTS DIRECTORY, a calm paper-atlas contents page, distinct from search results. Header back arrow and title 概念目录; small truthful total 197个概念, a search entry and compact optional level filter 全部层级. Do not invent topic groups or lessons. An editorial vertical contents list shows these actual name/English/cognition pairs, with understated arrows and fine separation:\n人工智能 / Artificial Intelligence (AI) / 理解\n智能 / Intelligence / 理解\n人类与机器的差异 / Human–Machine Difference / 理解\n输入—处理—输出 / Input–Process–Output (IPO) / 应用\n窄人工智能 / Narrow AI / 识记\n通用人工智能（AGI） / Artificial General Intelligence (AGI) / 分析评价\nKeep long Chinese names and English wraps readable. No visible ordered numbers, internal IDs, study progress or invented counts per category. More concepts continue below, no tiny 197-item wall. A small paper bookmark-style 返回阅读 action can return to 大语言模型 without fabricating a reading history. Restrained mountain footer may continue the reference style if space permits; never replace useful content with decoration.",
+      "start_utc": "2026-10-02 05:10:25 UTC",
+      "end_utc": "2026-10-02 05:12:22 UTC",
+      "reference": "03_交付物/视觉稿方向探索-20261002/paper-refined-03.png",
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-504927bd-61b6-42f6-8615-fe9778152d61.png"
+    },
+    {
+      "phase": "initial",
+      "state": 4,
+      "name": "完整卡文展开",
+      "file": "04-reading-expanded.png",
+      "prompt": "Use case: ui-mockup. Create ONE additional mobile web UI state for the selected 银河AI知识图册. The attached image is STYLE REFERENCE, NOT a layout to copy for every page. Preserve its warm ivory paper grain, elegant ink serif headings, comfortable Chinese text, muted moss/sage/ochre icons, thin warm-gray rules, restrained outlined controls. No heavy green filled panels, glowing sci-fi appearance, desktop layout, hardware frame, OS status bar or browser chrome. Design for a readable 390px-wide phone. This is a functional concept reader, not a landing page. Internal concept IDs are never shown. Text facts below are authoritative; do not invent achievements, course categories, mastery scores, extra explanations or facts.\nSTATE: SAME accepted concept reader scrolled down to the extended content area, with several reading sections unfolded. This is not a redesigned first screen or a separate course. A compact sticky context header says 大语言模型 with back/返回顶部 and subtle 查看关系网 access; it preserves the reading location while content unfolds. Warm paper, ink serif headings, softly colored section icons and fine dividers retain the chosen identity.\nRender these actual original paragraphs exactly, as full-width expanded disclosure sections with clear fold affordances:\n类比: 像超强的“接话高手”，根据前文猜下一个词；但需指出它没有理解与意图。\n常见误解: 误解为“LLM理解语言、知道事实”（其基于统计规律生成，可能产生不实内容）。\n反例: 把“说得像真的”当作“知道是真的”。\nBelow, show collapsed entries 深度、安全、来源 with expand arrows; 案例 remains reachable through the contents. Don't write any new prose for collapsed entries. All original card fields remain accessible by scroll/expand rather than tiny multi-column text.\nNo large graph card here, because this represents a scrolled reading state; it must be linked back to the approved first screen. Spacious but efficient mobile line lengths. The expanded area should feel like part of the same document, with no heavy colored box or detached pop-up sheet.",
+      "start_utc": "2026-10-02 05:10:25 UTC",
+      "end_utc": "2026-10-02 05:12:47 UTC",
+      "reference": "03_交付物/视觉稿方向探索-20261002/paper-refined-03.png",
+      "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-ace8302b-576c-4d5b-a10c-3bdcba31b208.png"
+    }
+  ]
+}

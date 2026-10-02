@@ -1,0 +1,6 @@
+### Result
+{"id":"Myriel","transitionMs":3000,"selectedPosition":{"x":-50.90903799510115,"y":-138.87284989374754,"z":31.437311285225796}}
+### Ran Playwright code
+```js
+await (async (page) => { return await page.evaluate(()=>{const n=Graph.graphData().nodes[0];Graph.onNodeClick()(n);return {id:n.id,transitionMs:3000,selectedPosition:{x:n.x,y:n.y,z:n.z}};}); })(page);
+```

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-02",
+  "hashes": {
+    "02_分析产物/p0_baseline/card_evidence.jsonl": "5b0dcbb1792d4b2e9f5900c0df63a51c001ab2bb41ec8f182917b2a2c077057b",
+    "03_交付物/G_v2_模型裁定版/graph.html": "078f5dd75f36feb0aa9bf2ed34a88d91091a55b8935f42ce88c8ac00626ae9c7",
+    "03_交付物/G_v2_模型裁定版/node_summaries.json": "36ff5c644fb85a6e1827e81ad7db5137c62e763c0913af5dd2581034f3ec38c5",
+    "03_交付物/G_v2_模型裁定版/graph.json": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "03_交付物/G_v2_模型裁定版/graph.graphml": "d0e9025c937ec5ca43f518b7825beada34290000a0709fcb7f7ea0f721d05c60"
+  },
+  "verified_after": "2026-10-02",
+  "unchanged_after": {
+    "02_分析产物/p0_baseline/card_evidence.jsonl": true,
+    "03_交付物/G_v2_模型裁定版/graph.html": true,
+    "03_交付物/G_v2_模型裁定版/node_summaries.json": true,
+    "03_交付物/G_v2_模型裁定版/graph.json": true,
+    "03_交付物/G_v2_模型裁定版/graph.graphml": true
+  },
+  "route_a_content_check": {
+    "all_197_card_objects_equal": true,
+    "all_1562_effective_edges_equal": true
+  }
+}

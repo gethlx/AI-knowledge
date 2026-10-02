@@ -1,0 +1,13 @@
+async(page)=>{
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.setViewportSize({width:390,height:844});await page.reload();await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(2200);
+ const read=()=>page.evaluate(()=>{const g=atlasUI.graph(),s=atlasUI.getState();const edges=g.graphData().links;return {selected:s.selected,nodes:g.graphData().nodes.length,total:edges.length,direct:edges.filter(e=>e.effective_source===s.selected||e.effective_target===s.selected).length,bold:edges.filter(e=>e.__lineObj.material.linewidth===1.6).length,wrong:edges.filter(e=>{const direct=e.effective_source===s.selected||e.effective_target===s.selected;return e.__lineObj.material.linewidth!==(direct?1.6:.6)||e.__lineObj.material.opacity!==(direct?.94:.48)}).map(e=>[e.effective_source,e.effective_target]),positions:g.graphData().nodes.map(n=>[n.id,n.x,n.y,n.z])}});
+ const before=await read();await page.screenshot({path:'output/playwright/atlas52/current-390.png'});
+ await page.evaluate(()=>atlasUI.selectConcept('3-04'));await page.waitForTimeout(650);const switched=await read();
+ const stable=before.positions.every((p,i)=>p.every((v,j)=>typeof v==='number'?Math.abs(v-switched.positions[i][j])<.01:v===switched.positions[i][j]));
+ await page.setViewportSize({width:320,height:844});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);await page.screenshot({path:'output/playwright/atlas52/switched-320.png'});
+ const pass=before.nodes===197&&before.total===1562&&before.wrong.length===0&&before.bold===before.direct&&switched.wrong.length===0&&switched.bold===switched.direct&&stable&&!overflow&&!errors.length;
+ if(!pass)throw Error(JSON.stringify({before,switched,stable,overflow,errors}));
+ await page.setViewportSize({width:390,height:844});await page.evaluate(()=>atlasUI.selectConcept('3-07'));await page.waitForTimeout(650);
+ return {pass,before:{...before,positions:undefined},switched:{...switched,positions:undefined},stable,overflow,errors};
+}

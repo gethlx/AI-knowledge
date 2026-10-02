@@ -1,0 +1,71 @@
+{
+ "time": "2026-10-02T14:36:30.847Z",
+ "checks": [
+  {
+   "id": "S1-back",
+   "name": "后退回4-03四项一致",
+   "pass": true,
+   "detail": "{\"url\":\"4-03\",\"sel\":\"4-03\",\"histSel\":\"4-03\",\"h1\":\"大语言模型\"}"
+  },
+  {
+   "id": "S1-f1keep",
+   "name": "后退后相邻展开保持(F1不回归)",
+   "pass": true,
+   "detail": "{\"cardOpen\":true,\"body\":8,\"relatedOpen\":true}"
+  },
+  {
+   "id": "S1-fwd",
+   "name": "前进到3-07四项一致",
+   "pass": true,
+   "detail": "{\"url\":\"3-07\",\"sel\":\"3-07\",\"histSel\":\"3-07\",\"h1\":\"监督学习与无监督学习\"}"
+  },
+  {
+   "id": "S1-reselect",
+   "name": "重新选回4-03四项一致",
+   "pass": true,
+   "detail": "{\"url\":\"4-03\",\"sel\":\"4-03\",\"histSel\":\"4-03\",\"h1\":\"大语言模型\"}"
+  },
+  {
+   "id": "S1-critical",
+   "name": "重新选回后再后退: URL/selected/state/正文=3-07",
+   "pass": true,
+   "detail": "{\"url\":\"3-07\",\"sel\":\"3-07\",\"histSel\":\"3-07\",\"h1\":\"监督学习与无监督学习\"}"
+  },
+  {
+   "id": "S1-fwd2",
+   "name": "前进回4-03四项一致",
+   "pass": true,
+   "detail": "{\"url\":\"4-03\",\"sel\":\"4-03\",\"histSel\":\"4-03\",\"h1\":\"大语言模型\"}"
+  },
+  {
+   "id": "S1-f1keep2",
+   "name": "前进回4-03后相邻展开仍保持",
+   "pass": true,
+   "detail": "{\"cardOpen\":true,\"body\":8,\"relatedOpen\":true}"
+  },
+  {
+   "id": "S2-collapse",
+   "name": "收起后零等待后退→前进: 说明保持收起",
+   "pass": true,
+   "detail": "{\"sel\":\"3-04\",\"exp\":false}"
+  },
+  {
+   "id": "S2-expand",
+   "name": "展开后零等待后退→前进: 说明保持展开",
+   "pass": true,
+   "detail": "{\"sel\":\"3-04\",\"exp\":true}"
+  },
+  {
+   "id": "E4-strict",
+   "name": "概念/展开/滚动严格一致+相机精确恢复(<2)",
+   "pass": true,
+   "detail": "scroll=160/160 exp=false/false camDiff=0.0000"
+  },
+  {
+   "id": "X1",
+   "name": "全程无pageerror",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen edit",
+  "name": "按需图例",
+  "file": "05-help.png",
+  "prompt": "Use case: ui-mockup, additional state of the attached paper-atlas graph exploration page. Preserve the same warm paper identity, volumetric network, header and interface. Show the on-demand 怎么看 help opened as a mobile bottom sheet. The sheet temporarily replaces the normal node-selection bottom sheet, so controls don't stack into clutter. Dim the graph softly behind; retain context, no new full-page design. Clear title 怎么看关系网 and a prominent close X; a small drag handle. The sheet is not a permanent relationship explanation panel.\nInclude two compact accurate relation keys:\n先修: 模型 → 大语言模型\ncaption: 箭头指向后续概念，模型是大语言模型的先修。\n相关: 大语言模型 — 预训练\ncaption: 两者相关，不表示先后顺序。\nThe related sample line has NO arrow; prerequisite sample arrow points RIGHT from 模型 to 大语言模型. No reverse or double arrows, no pedagogical mastery claims.\nThen concise interaction hints in a calm readable layout:\n拖动旋转\n双指缩放\n点击节点查看概念\n定位回到当前概念\nDo not add lessons, progress or engineering terms. Enough room for comfortable phone text and touch targets, same ink serif headings/muted sage-ochre linework/refined borders as reference. The diagram behind remains schematic; do not invent more labeled nodes. This is the fifth visual state, not a real functional demonstration.",
+  "reference": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-0664648f-97e7-48b2-96fa-14e2e0a4ea1c.png",
+  "start_utc": "2026-10-02 05:16:58 UTC",
+  "end_utc": "2026-10-02 05:17:37 UTC",
+  "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-e31fb626-8204-4a4d-963e-3aaea12d1594.png"
+}

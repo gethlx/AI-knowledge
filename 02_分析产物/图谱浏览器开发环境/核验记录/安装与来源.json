@@ -1,0 +1,740 @@
+{
+  "date": "2026-10-02",
+  "skills": {
+    "img-to-frontend": {
+      "installed_at": "2026-10-02",
+      "repo": "am-will/codex-skills",
+      "commit": "9f954c3b63fda0d1875252009c196bf15072c1ca",
+      "source_path": "/tmp/skillaudit/20261002-kg-codex-skills/skills/img-to-frontend",
+      "upstream_file_hashes": {
+        "SKILL.md": "e70d82a580d68163c498ed79d224fd175ffb84fb269513cd2a0c29b05c706d48",
+        "references/visual-iteration-checklist.md": "5426d8a287903868de7cce2dc8c07096d94a0bb4956fb5e7f5c897d35c7dbfea",
+        "agents/openai.yaml": "60c2c91860c41bd8d35624ec07f51c111e279f59b6d0ca754d8f625faa6e37c3"
+      },
+      "license": "not declared in audited repository",
+      "install_method": "skill-installer helper into shared pool; no hooks installer; source text unmodified",
+      "mounts": {
+        ".codex": "/Users/larry/AI-Tools/shared/skills/img-to-frontend",
+        ".workbuddy": "/Users/larry/AI-Tools/shared/skills/img-to-frontend"
+      }
+    },
+    "impeccable": {
+      "installed_at": "2026-10-02",
+      "repo": "pbakaus/impeccable",
+      "commit": "5e7914c46890a73460d099a1fae100a169e08c09",
+      "source_path": "/tmp/skillaudit/20261002-kg-impeccable/plugin/skills/impeccable",
+      "upstream_file_hashes": {
+        "SKILL.md": "71135790775b6984f0eedf58107a25b877f1ce46c4c1b481b24e5eb5cb2b2e0a",
+        "scripts/command-metadata.json": "e8720f3aa41135211cc58cc299a39eeda86c75651f4279cc1ede8db10dcc0584",
+        "scripts/impeccable": "39d9600489073e227e4f4d55c451ce4252a6632ed7ae37923efbbcbc91f16d07",
+        "scripts/live-browser.js": "f68a3d68ac92606e91aa8878e003d9432ddd09aa97ca01c6b3ce46c937dca316",
+        "scripts/VERSION": "fecf23c4b3c2c29381d4c14cacb998939eb53f5791b99ab7e4e0bc7972c44524",
+        "scripts/impeccable.cmd": "69cad1ae7355825ef320ac9638a1c9675ba9fda01c9a0fa12244cc4a1973e550",
+        "scripts/live-browser-session.js": "42831c3cd874346d8e7f120808d91e6ed3cda5c3eca6eefd76b126659536bc87",
+        "scripts/modern-screenshot.umd.js": "bb36665889124a0b6e15f16045265737449c3bdcf2712cdb08af3cfa01563e2b",
+        "scripts/live-browser-ignores.js": "c1cb6877ca99a0c1b38ba0c7d59f32702d3022f6821d8045f7133f7c40b6362f",
+        "scripts/live-browser-dom.js": "de1b7404f4cdfd7b515196afb17b74b1980f0bc88cb8681ae93a76ca48ec7bdb",
+        "scripts/data/font-index.json": "47edbdfaf27073c47033d1ac7dfee881be49e2dcbda7671d1157300481dde6da",
+        "scripts/data/font-index-failures.json": "835f19a0a3812f3652dd6979a2ce5597f654fd01f26e1b420b92d5f42b997ce4",
+        "reference/document.md": "87b3db688c7963898bda8096f7868fed05ec5a0a80d14298e8b906b70cdf9c42",
+        "reference/distill.md": "b2f60e0154bf0e687badc46d8c8420e2118a9a6e21162050722be779dc02cb6d",
+        "reference/routing.md": "dd6c5877467a30cb328789297bb5250b21c1c673d25c570a990043aa07ed01ac",
+        "reference/craft-floor.md": "96e2e6bd4fcf9a2c6da65fb029f96d9176308fae2efd9d8653d3b8d838960e07",
+        "reference/shape.md": "a55f016c046cb6a27c55bd7f346375aeb506a755c4fbca19a5f92dbd42309c23",
+        "reference/adapt.md": "0648e4e06d01cabc91fa7dc19256ceedeeeea213b9265e9d36b0918370e16fb2",
+        "reference/live.md": "82a16d267d0b39ff381a65e3093d372fbbc845484f2c831583bef0447aaaad51",
+        "reference/operate.md": "a9d2203acd45ca33a13d5c68b02b23ed512425ac15f0e8438318ed124b43729d",
+        "reference/bolder.md": "4879f38b23d0a251a63cbb0327e660296194cd2e71eb4da3236c6ebfe5807746",
+        "reference/harden.md": "3898bd9b56a042e860a0db4fb4dd81ac81126fa218b604702e2ac0c2287ae09b",
+        "reference/new-work.md": "d6fc29ab069ccdedaa6da953b676bf2ebfa9cf968fe6e804f14986dca541786e",
+        "reference/mode-operate.md": "385a0efe833bd4afe4a257e7159590de0cf1b7fd8f7b213b732f1e537c62dab7",
+        "reference/region-map.md": "5c0d1dca9ab72c3ae4a0ea728d6acecf8af980a5b7defa1c7a3924992b62f69a",
+        "reference/android.md": "058f81f256134841875fd3183e06b37a023de0c877fd2b9eecd97011640791fe",
+        "reference/mode-persuade.md": "21e78c8a77badb3f83290cd4577ed3b24bd4dd3b57136d7da75733d4f3ee9ac0",
+        "reference/extract.md": "bfc51972fbf387566dc9e29c8b1af479a66ab401fdbce659fae9e6a5a9d85316",
+        "reference/doctor.md": "f40ee8bfd08554ed539c2a823bfc6dc81c12947765b8306220c3d2176dbfbd22",
+        "reference/polish.md": "73893e18e874e14beccd7fca92335d9036f5a5e068fd8815fd7daceadf186a43",
+        "reference/adapt.native.md": "17c583cf8ad41266ea1e787b666b9d91fe13469d3d0f6af57c08e0146f9b17ac",
+        "reference/mode-read.md": "a569989e6a3d6453b4c45e9474e162a15cc54e11732ac6baa7990a6e7cccc0b5",
+        "reference/typeset.md": "da98692848aa2e9ea22c681522a082f2226cb5dbfdb704ac38903be1b4cffafd",
+        "reference/component-review.md": "02332b269c7017f907c89dfcdefd075b3ae301bb6d0f7d12860fd3554a3d6728",
+        "reference/quieter.md": "ee6d6d127c1c2ab3526d529a8e3698be2185b5e346ac617f37501de2c0698b97",
+        "reference/critique.md": "8bf1b06547f571d9b8d3875426fff6621fadd3bc08ae9ebb16d749f5c5f44b01",
+        "reference/live-setup.md": "73058cdbe80f7387a8b063db4e2376d0d7276ddaff6bd5e14d3473aecb640465",
+        "reference/colorize.md": "d1fbd55074abb2251bdaa03749d34acc42c38e46e47549f18f5848df57d43c42",
+        "reference/init.md": "78c236dadb7e70337dc9dfa67e65fc15b7abed137ad320c16410ddfa7aec34f9",
+        "reference/audit.md": "d9963fd73bf6129fe0c8ec25c5148f50617ec85683b8eeae7e411c9a42e2db33",
+        "reference/craft.md": "9205e222bc6565b37fb504ceec93233c2d2a456802b69d16e6b1c44723907c4c",
+        "reference/clarify.md": "6c382f8283756e8a693d832b750f7e4cbff1ca5bdcc3825b2b4ef4da9f21876a",
+        "reference/generate.md": "abb8829a629420e6de63690dfbb4a074a01c3de8a3d4934f2bea4bca95dcda5f",
+        "reference/onboard.md": "9a2c08ee2516d2ee87129e7ebe6a0895f9990c9852d1f6fa7e70be9a6a88a659",
+        "reference/optimize.md": "6d368b679a0ed1815812815de65863b5840d419589dfbda06224c01149240287",
+        "reference/animate.md": "94b4ce6299fea93d9f256b2d25705961a76bc5ea940c56db4145686ebc99df1b",
+        "reference/hooks.md": "7842cb455877616783d1c1154213e35f6e55e1a1a0416c72d36b317d68107ae0",
+        "reference/overdrive.md": "a9856cb40da6519b1334bcfc75a4fbe83bef39ca86ee6f3effcb2a96794c627c",
+        "reference/ios.md": "40c87038b5f75147a5952a96237acf312a327bf70c1bcd8e0a5f064625ae9668",
+        "reference/audit.native.md": "fe91fcf28638f95577af481a50edaf339d6c9a3ad3b9fa477bc81c116b8bc392",
+        "reference/visualize.md": "f48fb39f7dc5618f3553feabfce4e1906696caa6c886ed5981988db6fc28654e",
+        "reference/delight.md": "56500b1f9d2fcec8324d7f448d813048b5831a46d3feeb1055bd3eb17ec3660f",
+        "reference/layout.md": "1d6d2658482b7e2df0c4d27b1b29c5195f0803b402278b96590598f4d3e57aa7",
+        "reference/degraded/documenter.md": "bcc05ea92faebb5c74037a9d4263a5ce9a56f5ab07c8ab3c59ee704d8cade745",
+        "reference/degraded/manual-edit-applier.md": "5fae7f8a2fc3ddd49ad0a413446dc44daedef5b6b7de5eb935bd2fbfad646d58",
+        "reference/degraded/finish-reviewer.md": "275dd1b6e63bbd30d2713227c4f79b880a8bc4e01cc48d392068bb86939d3afa",
+        "reference/degraded/asset-producer.md": "89ef10ebf027136ca44d9cb1d272ece612563de312a7b7f6fd28edeab277281c"
+      },
+      "license": "Apache-2.0",
+      "install_method": "skill-installer helper into shared pool; no hooks installer; source text unmodified",
+      "engine": {
+        "version": "0.1.10",
+        "platform": "darwin-arm64",
+        "sha256": "2b5e17470a100e4b16309931c5a847318ec79044338e04e96115fd14637c9d94",
+        "download": "https://github.com/pbakaus/impeccable/releases/download/engine-v0.1.10/impeccable-darwin-arm64",
+        "checksum_verified_by": "upstream launcher required release .sha256 match before execution"
+      },
+      "mounts": {
+        ".codex": "/Users/larry/AI-Tools/shared/skills/impeccable",
+        ".workbuddy": "/Users/larry/AI-Tools/shared/skills/impeccable"
+      }
+    }
+  },
+  "local_reference_checks": [
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/craft-floor.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/operate.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/craft.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/shape.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/init.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/document.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/extract.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/critique.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/audit.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/audit.native.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/polish.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/bolder.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/quieter.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/distill.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/harden.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/onboard.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/animate.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/colorize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/typeset.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/layout.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/delight.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/overdrive.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/clarify.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/adapt.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/adapt.native.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/optimize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/generate.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/routing.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/routing.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/hooks.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "SKILL.md",
+      "target": "reference/doctor.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/document.md",
+      "target": "init.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/document.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/shape.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/adapt.md",
+      "target": "adapt.native.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/live.md",
+      "target": "live-setup.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/live.md",
+      "target": "craft-floor.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/live.md",
+      "target": "craft-floor.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/live.md",
+      "target": "live-setup.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/operate.md",
+      "target": "craft-floor.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "init.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "region-map.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "visualize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "visualize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "visualize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "mode-persuade.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "mode-operate.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "mode-read.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "visualize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "shape.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "visualize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "region-map.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "component-review.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "component-review.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "degraded/finish-reviewer.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "degraded/finish-reviewer.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "visualize.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "document.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "degraded/documenter.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/new-work.md",
+      "target": "document.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/region-map.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/doctor.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/doctor.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/adapt.native.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/adapt.native.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/typeset.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/typeset.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/typeset.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/typeset.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/live-setup.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/live-setup.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/colorize.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/colorize.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/init.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/init.md",
+      "target": "document.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/init.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/init.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/init.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/audit.md",
+      "target": "audit.native.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/craft.md",
+      "target": "init.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/craft.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/generate.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/generate.md",
+      "target": "live-setup.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/animate.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/animate.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/hooks.md",
+      "target": "craft-floor.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/audit.native.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/audit.native.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/audit.native.md",
+      "target": "audit.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/visualize.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/visualize.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/delight.md",
+      "target": "animate.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/layout.md",
+      "target": "ios.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/layout.md",
+      "target": "android.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/layout.md",
+      "target": "new-work.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/layout.md",
+      "target": "live.md",
+      "exists": true
+    },
+    {
+      "skill": "impeccable",
+      "file": "reference/degraded/asset-producer.md",
+      "target": "../component-review.md",
+      "exists": true
+    }
+  ],
+  "missing_references": [],
+  "versions": {
+    "vite": "8.3.2",
+    "3d-force-graph": "1.80.1",
+    "@phosphor-icons/web": "2.1.2",
+    "three": "0.186.1"
+  },
+  "node": "v24.14.0",
+  "npm": "11.9.0",
+  "playwright_cli": "0.1.22",
+  "frozen_inputs_unchanged": {
+    "02_分析产物/p0_baseline/card_evidence.jsonl": true,
+    "03_交付物/G_v2_模型裁定版/graph.html": true,
+    "03_交付物/G_v2_模型裁定版/node_summaries.json": true,
+    "03_交付物/G_v2_模型裁定版/graph.json": true,
+    "03_交付物/G_v2_模型裁定版/graph.graphml": true
+  },
+  "automatic_hooks_installed": false,
+  "global_skill_issue_unchanged": "m-astock has intentional existing separate entities",
+  "closeout": {
+    "browser_smoke_pass": true,
+    "build_pass": true,
+    "frozen_source_hashes_unchanged": true,
+    "both_mounts_readable": true
+  },
+  "node_bin_dir": "/Users/larry/.local/share/fnm/node-versions/v24.14.0/installation/bin"
+}

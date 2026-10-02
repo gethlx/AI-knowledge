@@ -1,0 +1,38 @@
+[
+  {
+    "key": "graph43",
+    "prompt": "Use case: ui-mockup. Redesign this mobile knowledge graph screen, retaining the warm paper-atlas aesthetic and Chinese navigation. Critical structural repair: each concept has EXACTLY ONE small visible spherical 3D node, with a floating readable Chinese label immediately beside/above it. The label and sphere are one object visually. ALL links for a concept converge to that SAME sphere, never to text edges, empty space or additional anchors. Make the current 大语言模型 node a modest amber sphere, approximately 9px at a 390px mobile width; other spheres about 5px. Labels are the content, spheres only connection anchors. No enormous balls, no giant text or ornamental text shadows. Show a credible perspective view of a spatial 3D network with fine links and distant subdued nodes, foreground labels clear and separated. Exactly five main neighboring labels: 模型, 下一个词预测与自回归生成 (wrap), 微调与指令微调, 预训练, 人工智能生成内容. Render straight links with correct directional arrowheads: 模型→大语言模型; 下一个词预测与自回归生成→大语言模型; 大语言模型→微调与指令微调. Other two links undirected. Every one of these five links meets the ONE current sphere. Depth through spatial arrangement and modest node shading, labels face reader, no fake shadow typography. Graph takes upper two thirds of usable screen, bottom SAME SCREEN drawer about a third. Header 返回正文 / 关系网, toggle 全图 / 当前概念 with 当前概念 active. Compact 定位 / 暂停 / 操作提示 controls. Bottom drawer header 大语言模型 · 相邻概念 41 and 阅读正文. Rows grouped 先了解这些概念 · 2 (模型; 下一个词预测与自回归生成); 以它为基础 · 1 (微调与指令微调); 其他关联 · 38 (预训练; 人工智能生成内容 visible). Panel handle and unobtrusive scroll affordance, small 展开清单 button expands this SAME drawer, NEVER links to a separate neighbor page. Restrained paper/editorial design, readable realistic phone density, no phone hardware, single portrait screenshot. Prior image is stylistic reference, replace its broken multi-anchor geometry and disproportionate bottom panel.",
+    "reference": "/Users/larry/WorkBuddy/2026-09-13-14-09-47/03_交付物/关键词图谱与阅读修订-20261002/01-keyword-network.png",
+    "start": "2026-10-02 07:02:15 UTC",
+    "end": "2026-10-02 07:02:56 UTC",
+    "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-f09a1100-d5a1-4e39-a307-cb1bffcadac9.png",
+    "file": "first-pass-network.png"
+  },
+  {
+    "key": "reading43",
+    "prompt": "Use case: ui-mockup. Edit this selected warm paper-atlas mobile reading page into ONE continuous page with 更多说明 expanded inline, not a separate route. Preserve the reading-first hierarchy, title 大语言模型, subtitle Large Language Model (LLM), modest 认知层级：理解 badge, navigation and upper right clickable small graph thumbnail. Thumbnail uses a single small sphere per concept with floating labels 大语言模型 / 模型 / 预训练 and continuous lines meeting node centers, no huge ball; 查看关系网 outlined button, 41个相邻概念. Keep definition, case, safety text exactly: 定义 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。 案例 能续写、改写、翻译、摘要的对话模型。 安全 模型可能生成不实信息，事实必须人工核查。 After safety, show 更多说明 expanded with a SMALL upward chevron and three ordinary flowing paragraphs, without extra field headings: 像超强的“接话高手”，根据前文猜下一个词；但需指出它没有理解与意图。 / 误解为“LLM理解语言、知道事实”（其基于统计规律生成，可能产生不实内容）。 / 把“说得像真的”当作“知道是真的”。 Then 来源与阅读范围 collapsed. A single long scrollable mobile webpage screenshot, NOT multiple screens, NOT split-panel comparison. Compact natural typography/spacing so full real content fits a reasonable long screenshot; do not create enormous blank regions or an extra page header. Keep original paper visual and restrained icons, optional mountain-paper footer only after content. No new factual text. User specifically requests merging former separate 更多说明 page into this reading page.",
+    "reference": "/Users/larry/WorkBuddy/2026-09-13-14-09-47/03_交付物/关键词图谱与阅读修订-20261002/05-reading-firstscreen.png",
+    "start": "2026-10-02 07:02:15 UTC",
+    "end": "2026-10-02 07:03:44 UTC",
+    "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-98aacac7-f3da-42ef-80b4-02791a48dfc2.png",
+    "file": "02-reading-inline.png"
+  },
+  {
+    "key": "graph43fix",
+    "prompt": "Use case ui-mockup. PRECISE LOCAL CONNECTION REPAIR ONLY on this image. Keep all labels, sphere sizes, layout, interface, drawer and paper style unchanged. The two incoming arrows currently stop above the title 大语言模型 in empty space. This is WRONG. Erase those two incoming line segments and redraw each as a single continuous straight segment that reaches the ONE gold sphere BELOW the title 大语言模型. Green line goes from the green 模型 sphere upper left down-right directly into that gold sphere; amber line goes from the gold 下一个词预测与自回归生成 sphere upper right down-left directly into the SAME gold sphere. Place each arrowhead at the edge of that central gold sphere, pointing INTO the sphere, not into the text. No gap at endpoints. Move the current label 大语言模型 slightly above-left of the central gold sphere if needed to prevent any text crossing the lines; do not move sphere or add anchors. All five highlighted lines must share EXACTLY the gold central sphere as endpoint. Keep outgoing arrow to 微调与指令微调 and two undirected lines as they are. This is a geometric repair, no redesign, no decorative arrows, no extra dots.",
+    "reference": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-f09a1100-d5a1-4e39-a307-cb1bffcadac9.png",
+    "start": "2026-10-02 07:03:50 UTC",
+    "end": "2026-10-02 07:04:28 UTC",
+    "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-b2802ed5-dd6f-4008-aca3-29f39fd72c7b.png",
+    "file": "connection-repair-network.png"
+  },
+  {
+    "key": "graph43final",
+    "prompt": "Precise local edit of mobile UI mockup. Everything stays identical except current label and green arrowhead. Move the central 大语言模型 text into the clear blank area directly LEFT of its gold sphere, same vertical level as the sphere, with a small gap between text right edge and sphere left edge. Text must not cross or hide either incoming diagonal line, outgoing line or sphere. Remove old text above the sphere. Restore the GREEN incoming line arrowhead clearly visible just before it meets the upper-left edge of the central gold sphere. The green line from 模型 must be one continuous segment to gold sphere and arrow points into it. Keep amber incoming arrow into sphere, green outgoing arrow to 微调与指令微调, blue/red undirected edges, all other labels and drawer exactly intact. ONE central sphere, all five edges meet it. No extra dots. No new UI. Only local readability correction.",
+    "reference": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-b2802ed5-dd6f-4008-aca3-29f39fd72c7b.png",
+    "start": "2026-10-02 07:05:22 UTC",
+    "end": "2026-10-02 07:06:01 UTC",
+    "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-9ddcb8cb-1c93-48ef-b6a7-96155badfd74.png",
+    "file": "01-network.png"
+  }
+]

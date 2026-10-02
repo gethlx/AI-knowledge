@@ -1,0 +1,16 @@
+{
+  "02_分析产物/p0_baseline/card_evidence.jsonl": {
+    "before": "5b0dcbb1792d4b2e9f5900c0df63a51c001ab2bb41ec8f182917b2a2c077057b",
+    "after": "5b0dcbb1792d4b2e9f5900c0df63a51c001ab2bb41ec8f182917b2a2c077057b",
+    "unchanged": true
+  },
+  "03_交付物/G_v2_模型裁定版/graph.json": {
+    "before": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "after": "6bda85116b142b1a81a103ed61ed1bd23ebccb29503974ee00ffbed9ce10fb7e",
+    "unchanged": true
+  },
+  "selected_original": {
+    "path": "03_交付物/视觉稿方向探索-20261002/direction-02.png",
+    "sha256": "d7dd11802c0b0882300affdd91121840a5b95440fe52cab863b64fd3bcd1b441"
+  }
+}

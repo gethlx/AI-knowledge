@@ -1,0 +1,10 @@
+Use case: ui-mockup. Generate ONE high-fidelity desktop website UI design comp, landscape 1440x1000 approximate. Project 银河AI知识图册, a Chinese knowledge reader with local concept relationships. Audience author/teachers. An intentional calm contemporary technical atlas, white paper surfaces, midnight navy slim header, teal accents, exquisite Chinese system typography, no marketing hero, no photos, no purple gradients, no fake mastery metrics. Same real node for a controlled comparison. Three columns: left 210px concept directory and search; center wide reading canvas 700px; right relationship rail 330px with a restrained small node diagram. Top logo text 银河AI知识图册 and search 搜索概念. Left selected 4-03 大语言模型; other entries 4-01 生成式人工智能, 4-02 人工智能生成内容, 4-04 预训练. Center title 大语言模型, subtitle Large Language Model (LLM), discrete id 4-03 and cognition 理解. Large definition in a lightly tinted teal inset, then a beautiful airy stacked reading hierarchy, no card spam. Verbatim Chinese:
+精确定义: 在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成与转换能力的大规模参数模型。
+常见误解: 误解为“LLM理解语言、知道事实”（其基于统计规律生成，可能产生不实内容）。
+典型案例: 能续写、改写、翻译、摘要的对话模型。
+反例: 把“说得像真的”当作“知道是真的”。
+深度上限: 只讲“预测下一个词”的直觉，不讲Transformer架构与注意力机制。
+安全与伦理边界: 模型可能生成不实信息，事实必须人工核查。
+教学类比: 像超强的“接话高手”，根据前文猜下一个词；但需指出它没有理解与意图。
+来源依据: 母版§3.2“大语言模型（Large Language Model, LLM）”
+Right rail title 概念关系, subtitle 全部41条 · 先修3条 · 相关38条. Diagram exactly directed 3-04 模型 → 大语言模型 and 3-21 下一个词预测与自回归生成 → 大语言模型, then 大语言模型 → 4-05 微调与指令微调; symmetrical related lines to 4-01 生成式人工智能,4-02 人工智能生成内容,4-04 预训练. Label diagram 局部展示6条 / 全部41条. Below text lists 先理解:模型,下一个词预测与自回归生成; 以它为先修:微调与指令微调. Model arrows represent prerequisites only. All Chinese readable, keep actual words unchanged as much as possible. Pixel polished, functional app composition with subtle strokes, generous readable center, disciplined layout. No device/browser frame, no watermarks. This is static design reference only.

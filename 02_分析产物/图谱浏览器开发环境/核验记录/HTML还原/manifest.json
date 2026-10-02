@@ -1,0 +1,50 @@
+{
+  "02_分析产物/图谱浏览器开发环境/atlas.html": {
+    "bytes": 8096,
+    "sha256": "8d4175e1a23931ac0cabffefda3a78e23ca48a172aef7b90b49bc6c706541609"
+  },
+  "02_分析产物/图谱浏览器开发环境/src/styles/atlas.css": {
+    "bytes": 12316,
+    "sha256": "d86b2847bca9a9ed777ee26fac0fd6b328c81f2b1e91175f4064c9e02a6cce82"
+  },
+  "02_分析产物/图谱浏览器开发环境/src/ui/atlas-preview.js": {
+    "bytes": 15369,
+    "sha256": "5713caa5d283acf2d61a192865e04d8b75590b794261aa25748becb15afce56d"
+  },
+  "02_分析产物/图谱浏览器开发环境/src/ui/vite.config.js": {
+    "bytes": 127,
+    "sha256": "a0233b5e16ebcf526e20e74113f432301718ebda079f30846e2170fc647e6e7a"
+  },
+  "02_分析产物/图谱浏览器开发环境/src/ui/preview-data.json": {
+    "bytes": 865851,
+    "sha256": "0ca6674103bb74a8ed9381ef815be614869dbfbe68235ae76075596e528253b0"
+  },
+  "02_分析产物/图谱浏览器开发环境/src/ui/README.md": {
+    "bytes": 5103,
+    "sha256": "0365b892eec69378b5a0d391f272b785ec24b0a684926598e2b275402b18bb3f"
+  },
+  "02_分析产物/图谱浏览器开发环境/src/ui/asset-generation.json": {
+    "bytes": 1018,
+    "sha256": "3ef4ba43e8274548d2482bcdcdd78f38ef48daf6e0efff3d8cd1b7168c796647"
+  },
+  "02_分析产物/图谱浏览器开发环境/public/assets/paper-mountains.png": {
+    "bytes": 2251705,
+    "sha256": "7385e5783f8764ef10b847feb955a52194b8d18d4327faa642e9fb084dcdec30"
+  },
+  "02_分析产物/图谱浏览器开发环境/public/assets/atlas-serif.woff2": {
+    "bytes": 494260,
+    "sha256": "2d7e3bd2b84cd91cc0aa5ce8a4f7f695b3149acc790548516eb0f11d2bab2afa"
+  },
+  "02_分析产物/图谱浏览器开发环境/public/assets/OFL.txt": {
+    "bytes": 4350,
+    "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+  },
+  "02_分析产物/图谱浏览器开发环境/package.json": {
+    "bytes": 476,
+    "sha256": "ce24b3fdd29800b8835c5de6954eb2398c5ffc7c0a01c0004dfc17ee8fa71ee0"
+  },
+  "02_分析产物/图谱浏览器开发环境/package-lock.json": {
+    "bytes": 39357,
+    "sha256": "ae9361b2654696b6eac6b713e72d52a57c36e190958568e12ed75474b0e2895d"
+  }
+}

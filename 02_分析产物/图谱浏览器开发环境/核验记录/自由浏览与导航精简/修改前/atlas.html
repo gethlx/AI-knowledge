@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f1">
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="/assets/atlas-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <title>银河AI知识图册</title>
+</head>
+<body>
+  <a class="skip" href="#concept-title">跳到概念正文</a>
+  <div id="atlas" class="atlas reading">
+    <header class="masthead">
+      <a href="./atlas.html" class="brand" aria-label="银河AI知识图册首页"><i class="ph ph-book-open" aria-hidden="true"></i><span>银河AI知识图册</span></a>
+      <nav aria-label="图册导航">
+        <button class="icon-button" data-action="mode" id="sticky-mode" aria-label="展开或收起关系网"><i class="ph ph-graph" aria-hidden="true"></i></button>
+        <button class="icon-button" data-action="search" aria-label="查找概念"><i class="ph ph-magnifying-glass" aria-hidden="true"></i></button>
+        <button class="icon-button" data-action="directory" aria-label="概念目录"><i class="ph ph-list" aria-hidden="true"></i></button>
+      </nav>
+    </header>
+    <div class="history-row"><button data-action="back" id="back" disabled><i class="ph ph-arrow-left" aria-hidden="true"></i>上一概念</button><span id="context-name"></span></div>
+    <section class="exploration" aria-label="关系网探索">
+      <div class="graph-toolbar">
+        <button class="focus-scope" data-action="help"><i class="ph ph-graph" aria-hidden="true"></i><span id="focus-label">大语言模型的关系</span></button>
+        <div class="graph-controls">
+          <button class="text-button" data-action="overview">全景</button>
+          <button class="icon-button" data-action="zoom-in" aria-label="放大关系网"><i class="ph ph-plus" aria-hidden="true"></i></button>
+          <button class="icon-button" data-action="zoom-out" aria-label="缩小关系网"><i class="ph ph-minus" aria-hidden="true"></i></button>
+          <button class="icon-button" data-action="locate" aria-label="定位当前概念"><i class="ph ph-crosshair" aria-hidden="true"></i></button>
+          <button class="icon-button" data-action="pause" id="pause" aria-label="开始缓慢旋转" aria-pressed="false"><i class="ph ph-play" aria-hidden="true"></i></button>
+          <button class="icon-button" data-action="help" aria-label="关系网操作提示"><i class="ph ph-question" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div id="expanded-graph" class="expanded-graph"></div>
+      <p class="preview-note">局部关系网 · <span id="graph-count">42</span> 个概念 · <span id="edge-count">266</span> 条关系</p>
+    </section>
+    <main id="detail" class="detail">
+      
+      <div class="concept-hero">
+        <div class="hero-copy">
+          <h1 id="concept-title" tabindex="-1">大语言模型</h1>
+          <p class="english" id="english">Large Language Model (LLM)</p>
+          
+          
+        </div>
+        <div class="graph-thumbnail">
+          <div id="thumbnail-graph"></div>
+          <span id="thumbnail-focus" class="thumbnail-focus" hidden></span>
+          <button class="outline thumbnail-open" data-action="explore"><i class="ph ph-graph" aria-hidden="true"></i>展开关系网<i class="ph ph-caret-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <section class="content-section definition">
+        <span class="section-icon"><i class="ph ph-file-text" aria-hidden="true"></i></span>
+        <div><h2>定义</h2><p id="definition"></p></div>
+      </section>
+      <details class="content-section explanation" id="explanation">
+        <summary><span class="section-icon sage"><i class="ph ph-chat-dots" aria-hidden="true"></i></span><h2>解释说明</h2><span id="explanation-toggle">展开阅读</span><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary>
+        <div class="details-copy" id="explanation-copy"></div>
+      </details>
+      <details class="neighbors" id="neighbors">
+        <summary><span class="section-icon"><i class="ph ph-graph" aria-hidden="true"></i></span><h2>相邻概念 · <span id="neighbor-count">41</span></h2><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary>
+        <div class="neighbor-content"><p>点击相邻概念，在这里展开阅读。</p><label class="field"><i class="ph ph-magnifying-glass" aria-hidden="true"></i><input id="neighbor-filter" placeholder="筛选相邻概念" aria-label="筛选相邻概念"></label><div id="neighbor-list"></div></div>
+      </details>
+
+    </main>
+    <footer class="paper-footer" aria-hidden="true"></footer>
+  </div>
+  <div id="graph-surface" class="graph-surface"><div id="webgl"></div><div id="node-labels"></div><p id="graph-error" hidden role="alert"></p></div>
+  <section id="browser-panel" class="browser-panel" hidden aria-label="概念浏览">
+    <header class="browser-header"><button class="text-button" data-action="close-browser"><i class="ph ph-caret-left" aria-hidden="true"></i>返回阅读</button><span class="small-brand">银河AI知识图册</span></header>
+    <h1 id="browser-title">查找概念</h1><p id="browser-subtitle"></p>
+    <div class="search-controls"><label class="field"><i class="ph ph-magnifying-glass" aria-hidden="true"></i><input id="search-input" type="search" placeholder="搜索概念名称（中文或英文）" aria-label="搜索概念名称（中文或英文）"></label><label class="filter-label"><span class="sr-only">认知层级</span><select id="level-filter"><option value="">全部层级</option><option>识记</option><option>理解</option><option>应用</option><option>分析评价</option><option>待定</option></select></label></div>
+    <p class="match-help" id="match-help">输入时显示匹配名称，点击即可阅读</p>
+    <div id="results" class="results" aria-live="polite"></div>
+    <button class="outline browse-all" data-action="directory"><i class="ph ph-book-open" aria-hidden="true"></i>浏览全部概念<i class="ph ph-caret-right" aria-hidden="true"></i></button>
+    <footer class="paper-footer" aria-hidden="true"></footer>
+  </section>
+  <dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title">探索关系网</h2><p>拖动旋转，双指或滚轮缩放；也可用加减按钮。名称保持可读大小，不随放大膨胀。</p><p>点击节点或名称，镜头自动居中，并优先显示几个直接相邻概念。点“全景”查看当前局部网的整体结构，点定位按钮回到当前概念。</p><p>箭头表示理解后一个概念前，需要先了解前一个；其他连线表示关联。远近和连线长度仅用于排布，不代表知识关系强弱。</p><p>正文与相邻概念均在当前位置向下展开。</p><form method="dialog"><button class="primary">知道了</button></form></dialog>
+  <p id="notice" class="notice" role="status" hidden></p>
+  <script type="module" src="/src/ui/atlas-preview.js"></script>
+</body>
+</html>

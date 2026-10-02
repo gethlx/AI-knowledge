@@ -1,0 +1,39 @@
+{
+ "time": "2026-10-02T14:32:39.747Z",
+ "checks": [
+  {
+   "id": "K1",
+   "name": "Tab键可聚焦控件",
+   "pass": true,
+   "detail": "焦点=A.brand"
+  },
+  {
+   "id": "K2",
+   "name": "Escape关闭搜索面板",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "K3",
+   "name": "键盘Enter选择目录概念",
+   "pass": true,
+   "detail": "{\"sel\":\"1-01\",\"hidden\":true}"
+  },
+  {
+   "id": "K4",
+   "name": "图内197个键盘可读节点按钮",
+   "pass": true,
+   "detail": "count=197 label=阅读人工智能"
+  },
+  {
+   "id": "K5",
+   "name": "320px长文卡无溢出且通俗解释完整",
+   "pass": true,
+   "detail": "{\"overflow\":0,\"plainLen\":323,\"fieldLen\":550}"
+  }
+ ],
+ "summary": {
+  "total": 5,
+  "pass": 5
+ }
+}

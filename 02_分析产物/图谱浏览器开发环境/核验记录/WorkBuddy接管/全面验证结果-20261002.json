@@ -1,0 +1,248 @@
+{
+ "time": "2026-10-02T14:31:48.914Z",
+ "env": "headless-chromium(dev 41839)",
+ "checks": [
+  {
+   "id": "A1",
+   "name": "页面加载(load)",
+   "pass": true,
+   "detail": "324ms"
+  },
+  {
+   "id": "A2",
+   "name": "三维完整加载 197/1562",
+   "pass": true,
+   "detail": "{\"graph\":197,\"edge\":1562,\"ready\":true}"
+  },
+  {
+   "id": "A3",
+   "name": "主卡正文渲染(定义+通俗解释+字段块)",
+   "pass": true,
+   "detail": "{\"h1\":\"大语言模型\",\"doc\":\"大语言模型 · 银河AI知识图册\",\"def\":\"在海量文本上训练、以预测词序列下一个单元为目标、具备语言生成\",\"plainParas\":3,\"plainChars\":244,\"fieldParas\":5}"
+  },
+  {
+   "id": "A4",
+   "name": "无console错误(初始)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "A5",
+   "name": "atlasUI可见节点全集=197",
+   "pass": true,
+   "detail": "197"
+  },
+  {
+   "id": "A6",
+   "name": "12卡抽验正文渲染映射(定义+通俗解释)",
+   "pass": true,
+   "detail": "全部含定义与通俗解释"
+  },
+  {
+   "id": "B0",
+   "name": "真实点击\"展开关系网\"进入探索模式",
+   "pass": true,
+   "detail": "mode=explore"
+  },
+  {
+   "id": "B1",
+   "name": "真实路径: 拖拽旋转+滚轮放大使相机移动",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "B2",
+   "name": "全景视野出现可点击名称标签(避让后)",
+   "pass": true,
+   "detail": "labelCount=9"
+  },
+  {
+   "id": "B2b",
+   "name": "围绕非邻居目标局部放大后其名称仍可见",
+   "pass": true,
+   "detail": "{\"sel\":\"4-03\",\"targetVisible\":true,\"labels\":14}"
+  },
+  {
+   "id": "B3",
+   "name": "点视野名称B(2-17)切换阅读",
+   "pass": true,
+   "detail": "{\"sel\":\"2-17\",\"h1\":\"信息茧房与算法推荐\",\"def\":184,\"plain\":279}"
+  },
+  {
+   "id": "B4",
+   "name": "切换后相机可自由移动(无持续锁定)",
+   "pass": true,
+   "detail": "已执行第二次拖拽无异常"
+  },
+  {
+   "id": "C1",
+   "name": "中文搜索\"语言模型\"有结果",
+   "pass": true,
+   "detail": "1个"
+  },
+  {
+   "id": "C2",
+   "name": "英文搜索\"neural\"有结果",
+   "pass": true,
+   "detail": "1个"
+  },
+  {
+   "id": "C3",
+   "name": "零结果有可读提示",
+   "pass": true,
+   "detail": "没有匹配的概念。试试更短的词，或浏览全部"
+  },
+  {
+   "id": "C4",
+   "name": "空输入有引导提示",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "C5",
+   "name": "目录列出全部197",
+   "pass": true,
+   "detail": "197"
+  },
+  {
+   "id": "C6",
+   "name": "认知层级筛选\"理解\"生效",
+   "pass": true,
+   "detail": "64个"
+  },
+  {
+   "id": "C7",
+   "name": "点击搜索结果切换并关闭面板",
+   "pass": true,
+   "detail": "{\"sel\":\"4-03\",\"h1\":\"大语言模型\",\"panelHidden\":true}"
+  },
+  {
+   "id": "D1",
+   "name": "相邻分组渲染(before/after/related)",
+   "pass": true,
+   "detail": "{\"count\":\"41\",\"groups\":[{\"key\":\"before\",\"open\":true,\"items\":2},{\"key\":\"after\",\"open\":true,\"items\":1},{\"key\":\"related\",\"open\":false,\"items\":38}]}"
+  },
+  {
+   "id": "D2",
+   "name": "其他关联默认收起",
+   "pass": true,
+   "detail": "open=false"
+  },
+  {
+   "id": "D3",
+   "name": "相邻卡原地展开含定义+通俗解释",
+   "pass": true,
+   "detail": "{\"open\":true,\"def\":36,\"plain\":204}"
+  },
+  {
+   "id": "D4",
+   "name": "重复点已选概念不错误重置",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "E1",
+   "name": "后退① 到中间概念B",
+   "pass": true,
+   "detail": "{\"sel\":\"2-01\"}"
+  },
+  {
+   "id": "E2",
+   "name": "后退② 回到起始概念A",
+   "pass": true,
+   "detail": "{\"sel\":\"1-01\",\"cam\":{\"x\":-24.48932971069516,\"y\":-38.570513800241855,\"z\":184.8066006328745,\"lookAt\":{\"x\":-382.63584618318396,\"y\":160.91663208906783,\"z\":-727.2986297893386}}}"
+  },
+  {
+   "id": "E3",
+   "name": "前进① 到B(修复核心)",
+   "pass": true,
+   "detail": "{\"sel\":\"2-01\"}"
+  },
+  {
+   "id": "E4",
+   "name": "前进② 回到C且展开/滚动/相机恢复",
+   "pass": true,
+   "detail": "{\"sel\":\"3-01\",\"exp\":false,\"scroll\":180,\"camDiff\":\"0.0\"}"
+  },
+  {
+   "id": "F1",
+   "name": "WebGL初始化失败→可读提示+正文仍可读",
+   "pass": true,
+   "detail": "{\"errShown\":true,\"errText\":\"三维视图暂时无法加载。你仍可阅读正文，并\",\"def\":44,\"title\":\"大语言模型\"}"
+  },
+  {
+   "id": "F2",
+   "name": "WebGL失败模式下搜索可用",
+   "pass": true,
+   "detail": "25个"
+  },
+  {
+   "id": "F3",
+   "name": "运行中webglcontextlost→提示且正文可读",
+   "pass": true,
+   "detail": "{\"shown\":true,\"text\":\"三维视图已暂停（图形上下文丢失）。正文、搜索、目录和相邻概念\",\"defStill\":true}"
+  },
+  {
+   "id": "G320",
+   "name": "320px无横向溢出+正文完整",
+   "pass": true,
+   "detail": "{\"overflow\":0,\"h1\":\"算法\",\"plain\":233}"
+  },
+  {
+   "id": "G390",
+   "name": "390px无横向溢出+正文完整",
+   "pass": true,
+   "detail": "{\"overflow\":0,\"h1\":\"算法\",\"plain\":233}"
+  },
+  {
+   "id": "G430",
+   "name": "430px无横向溢出+正文完整",
+   "pass": true,
+   "detail": "{\"overflow\":0,\"h1\":\"算法\",\"plain\":233}"
+  },
+  {
+   "id": "G-touch",
+   "name": "触控点选节点切换概念(模拟)",
+   "pass": true,
+   "detail": "选中=3-01"
+  },
+  {
+   "id": "I1",
+   "name": "加载性能(含三维初始化)",
+   "pass": true,
+   "detail": "DCL=88ms load=91ms 首次goto实测=324ms(headless)"
+  },
+  {
+   "id": "I2",
+   "name": "FPS(headless参考值, 不代表实机)",
+   "pass": true,
+   "detail": "~23fps"
+  },
+  {
+   "id": "H0",
+   "name": "dist-ui preview服务器就绪(41840)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "H1",
+   "name": "dist-ui独立构建: 数据/字体/图标/背景/通俗解释",
+   "pass": true,
+   "detail": "{\"graph\":197,\"edge\":1562,\"fontOk\":true,\"bg\":true,\"iconFont\":\"Phosphor\",\"plain\":244,\"def\":44}"
+  },
+  {
+   "id": "H2",
+   "name": "dist-ui无pageerror",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "summary": {
+  "total": 39,
+  "pass": 39,
+  "fail": 0,
+  "loadMs": 324,
+  "fps": 23,
+  "consoleErrors": []
+ }
+}

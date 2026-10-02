@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-02",
+  "checks": {
+    "mobileNoOverflow": true,
+    "startsWithReading": true,
+    "originalFields": true,
+    "relations41": true,
+    "prerequisiteTypes": true,
+    "escapeAndFocus": true,
+    "neighborJump": true,
+    "restoresPosition": true,
+    "restoresExpanded": true,
+    "search": true,
+    "empty": true,
+    "desktopNoOverflow": true,
+    "reducedMotion": true,
+    "noPageErrors": true
+  },
+  "errors": [],
+  "pass": true
+}

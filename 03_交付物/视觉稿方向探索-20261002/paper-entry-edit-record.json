@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen edit",
+  "reference": "paper-refined-01.png",
+  "prompt": "Use case: ui-mockup / precise-object-edit. Edit the attached selected paper-atlas mobile concept reader. CHANGE ONLY the upper-right 3D graph thumbnail card's visual treatment to read as a clickable interactive entrance instead of a decorative illustration. Keep its current position, approximate size, spatial nodes, accurate count “41个相邻概念”, “查看关系网” and separate “怎么看” help control.\nWithin that card, replace the nearly page-matching beige transparent background with a visibly distinct light muted sage-green inset surface, harmonizing with the existing moss-green nodes and warm paper. Use a crisp restrained sage border, a small convincing cast shadow and clear corner definition so it looks like a contained touch target. Avoid a big luminous hero or glossy modern dashboard.\nMake the card's lower “查看关系网” action visibly button-like: a slightly deeper muted green filled or clearly bordered action area with legible ink/dark-green text and a right-facing chevron. Keep “怎么看” visually secondary and separate from the primary action. Preserve the thumbnail as an actual image window inside the bounded card, no fading it out into the page.\nEverything OUTSIDE the graph card must remain visually unchanged: exact layout and all copy, warm paper texture, book branding, serif typography, title, cognition label, definition, example, safety, reading-entry tiles, mountain footer, margins and overall composition. No new concept facts, labels, numbers, badges, pointer/hand illustration or explanatory panel. No device/browser chrome. Do not redesign the whole page.",
+  "start_utc": "2026-10-02 03:52:51 UTC",
+  "end_utc": "2026-10-02 03:53:29 UTC",
+  "original_path": "/Users/larry/.codex/generated_images/01a0f55a-1923-76b3-a0bc-8c52dd95f752/exec-42d1fa75-2227-4c18-9e96-192801d2b8cc.png",
+  "project_file": "paper-refined-02.png",
+  "status": "candidate_pending_user_review"
+}
