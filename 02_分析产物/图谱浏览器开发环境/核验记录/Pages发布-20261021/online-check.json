@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "url": "https://gethlx.github.io/AI-knowledge/",
+  "initial": {
+    "title": "大语言模型 · 银河AI知识图册",
+    "path": "/AI-knowledge/",
+    "ready": true,
+    "nodes": 197,
+    "edges": 1562,
+    "definition": 44,
+    "font": true,
+    "background": "url(\"https://gethlx.github.io/AI-knowledge/assets/paper-mountains.png\")",
+    "overflow": false
+  },
+  "found": 1,
+  "selected": "监督学习与无监督学习",
+  "errors": [],
+  "failed": [],
+  "browser": "Chromium 390x844 (Playwright; Browser plugin skill unavailable)",
+  "build_commit": "2b7c27869b0dfa2ba6cf3a4de0f647857a9fe86b",
+  "workflow_run": "https://github.com/gethlx/AI-knowledge/actions/runs/39576457379"
+}

@@ -78,3 +78,7 @@ WB正式整合采用50号完整场景/视野标签、52号高亮/线宽与49号�
 - 移除renderNeighbors恢复块的syncHistoryStateNow（selectConcept流程中该块执行时条目仍属上一概念，写历史会覆盖它——56号自引入的回归）。
 - open属性/清单变化改由MutationObserver（body subtree, attributeFilter:['open'], childList, 微任务级）同步到历史条目，覆盖用户点击与程序设置，早于任何后续导航任务；toggle→syncNow监听移除；滚动/相机保持250ms节流。
 - 回归64项PASS（57号修复回归11项含四项一致断言与零等待场景+全面39+F1F2 9+键盘5），失败退出非零。
+
+## 2026-10-21 · 在线预览
+
+用户授权发布当前候选至 https://gethlx.github.io/AI-knowledge/ 。仓库.github/workflows/pages.yml按/AI-knowledge/子路径构建并仅发布dist-ui，复制atlas.html为index.html支持站点根入口；本地运行及原专用构建入口保持。390px公开页面、197/1562、资源与搜索切换已验证，手机实机仍待验证；60号升级未实施。
