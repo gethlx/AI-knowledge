@@ -87,7 +87,7 @@ function renderCard(){
   $('#neighbor-filter').value='';renderNeighbors();
   $('#neighbors').open=saved.get(selected)?.neighbors??false;
   $('#back').disabled=historyStack.length===0;
-  renderContext();document.title=name(selected)+' · 银河AI知识图册';
+  renderContext();document.title=name(selected)+' · 神奇科学AI知识图册';
   if(graph){graph.nodeColor(n=>n.id===selected?'#ba914d':n.color);refreshLinks()}
   syncLabels();document.dispatchEvent(new CustomEvent('atlas:selection',{detail:{id:selected}}));
 }

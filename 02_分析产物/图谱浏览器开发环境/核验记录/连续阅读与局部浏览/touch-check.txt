@@ -6,4 +6,4 @@ await (async (page) => { await page.goto("http://127.0.0.1:41839/atlas.html?view
 ```
 ### Page
 - Page URL: http://127.0.0.1:41839/atlas.html?view=explore#4-01
-- Page Title: 生成式人工智能 · 银河AI知识图册
+- Page Title: 生成式人工智能 · 神奇科学AI知识图册

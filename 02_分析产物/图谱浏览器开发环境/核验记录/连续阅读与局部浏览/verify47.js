@@ -4,7 +4,7 @@ async (page) => {
  const check=(name,pass,detail)=>{checks.push({name,pass:!!pass,detail});if(!pass)throw Error(name+' '+JSON.stringify(detail));};
  const state=()=>page.evaluate(()=>atlasUI.getState());
  await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html?view=explore#4-03');await page.reload();await page.waitForTimeout(900);
- check('页面身份与真实内容',await page.title()==='大语言模型 · 银河AI知识图册'&&await page.locator('#definition').textContent()!=='',await page.title());
+ check('页面身份与真实内容',await page.title()==='大语言模型 · 神奇科学AI知识图册'&&await page.locator('#definition').textContent()!=='',await page.title());
  check('无错误遮罩或加载失败',await page.locator('vite-error-overlay').count()===0&&await page.locator('#graph-error').isHidden(),null);
  const geometry=await page.evaluate(()=>{const g=atlasUI.graph(),d=g.graphData(),f=g.d3Force('link').distance(),dist=d.links.map(e=>f(e)),length=d.links.map(e=>Math.hypot(e.source.x-e.target.x,e.source.y-e.target.y,e.source.z-e.target.z));return {nodes:d.nodes.length,edges:d.links.length,targetMin:Math.min(...dist),targetMax:Math.max(...dist),lengthMin:Math.min(...length),lengthMax:Math.max(...length),fixed:d.nodes.filter(n=>n.fx!==undefined||n.fy!==undefined||n.fz!==undefined).length};});
  check('真实子图与可变空间排布',geometry.nodes===42&&geometry.edges===266&&geometry.targetMax-geometry.targetMin>10&&geometry.lengthMax>geometry.lengthMin*2&&geometry.fixed===0,geometry);

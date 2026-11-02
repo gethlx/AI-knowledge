@@ -1,7 +1,7 @@
 # 35 · 前端设计 Skill 扩充对比（SkillHub + GitHub 二轮调研）
 
 > 2026-10-01｜主公要求在 34 号三候选基础上扩充对比池。本轮：SkillHub（WorkBuddy 市场）三路检索 + GitHub/实测榜单二轮检索，共新增 6 个有效候选、排除 5 类噪音。**仍未安装任何 Skill、未试作**。
-> 适用场景不变：银河AI知识图册 = 中文长文卡文阅读 + 密集关系图 + 知识查阅（product UI，非 landing page）。
+> 适用场景不变：神奇科学AI知识图册 = 中文长文卡文阅读 + 密集关系图 + 知识查阅（product UI，非 landing page）。
 
 ## 一句话结论
 

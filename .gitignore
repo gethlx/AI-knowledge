@@ -6,7 +6,7 @@
 node_modules/
 __pycache__/
 
-# 构建产物（可重建：npm exec vite build -- --config src/ui/vite.config.js）
+# 构建产物（在图册工程目录执行 npm run build 可重建）
 dist/
 dist-ui/
 

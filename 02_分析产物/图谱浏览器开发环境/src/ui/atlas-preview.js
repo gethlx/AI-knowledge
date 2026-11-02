@@ -18,7 +18,7 @@ const name=id=>nodes.get(id)?.name??id;
 const meaningful=s=>typeof s==='string'&&s.trim()!==''&&s.trim()!=='—';
 const params=new URLSearchParams(location.search);
 let selected=cards.has(location.hash.slice(1))?location.hash.slice(1):'4-03';
-let focus=selected, mode=params.get('view')==='explore'?'explore':'reading';
+let focus=selected, mode=params.get('view')==='reading'?'reading':'explore';
 let graph=null, rotating=false, graphReady=false, searchMode='search', lastBrowserTrigger=null;
 const saved=new Map();
 const surface=$('#graph-surface'), labels=$('#node-labels');
@@ -37,6 +37,15 @@ function linkSpacing(e){
 const textSprites=new Map();
 let labelHitBoxes=[], graphClickMoved=false, draggingNode=null, pauseAfterTap=false;
 function hitLabel(x,y){const b=surface.getBoundingClientRect();return labelHitBoxes.find(r=>x-b.x>=r.left&&x-b.x<=r.right&&y-b.y>=r.top&&y-b.y<=r.bottom)?.id}
+function hitConcept(x,y){
+  const labelId=hitLabel(x,y);if(labelId)return labelId;
+  const bounds=surface.getBoundingClientRect(),camera=graph.camera();
+  const hit=graph.graphData().nodes.map(n=>{
+    const p=new Vector3(n.x,n.y,n.z).project(camera);
+    return {id:n.id,depth:p.z,distance:Math.hypot((p.x+1)*bounds.width/2+bounds.x-x,(1-p.y)*bounds.height/2+bounds.y-y)};
+  }).filter(n=>n.depth>=-1&&n.depth<=1).sort((a,b)=>a.distance-b.distance)[0];
+  return hit?.distance<=16?hit.id:null;
+}
 const endpoint=x=>typeof x==='object'?x.id:x;
 const nodeMaterials=new Map(),lineMaterials=new Map();
 const isActiveLink=e=>endpoint(e.source)===selected||endpoint(e.target)===selected;
@@ -133,21 +142,27 @@ function renderCard(){
   $('#definition').textContent=f['精确定义'];
   $('#explanation-copy').innerHTML=explanationHTML(selected);
   $('#explanation').hidden=!$('#explanation-copy').textContent.trim();
-  $('#explanation').open=saved.get(selected)?.explanation??mode==='reading';
+  $('#explanation').open=saved.get(selected)?.explanation??true;
+  $('#explanation-toggle').textContent=$('#explanation').open?'收起说明':'展开阅读';
   $('#neighbor-count').textContent=neighborTotal(selected);
   renderNeighbors();
   $('#neighbors').open=saved.get(selected)?.neighbors??true;
-  renderContext();document.title=name(selected)+' · 银河AI知识图册';
+  renderContext();document.title=name(selected)+' · 神奇科学AI知识图册';
   if(graph){refreshNodeColors();refreshLinks()}
   syncLabels();document.dispatchEvent(new CustomEvent('atlas:selection',{detail:{id:selected}}));
 }
 function renderNeighbors(){
-  const groups=neighbors(selected);
-  $('#neighbor-list').innerHTML=Object.entries(groups).map(([key,items])=>{
+  const groups=Object.entries(neighbors(selected)).filter(([,items])=>items.length);
+  const single=groups.length===1;
+  const help={before:'理解本概念前，可先了解以下概念。',after:'以下概念以本概念为基础。',related:'以下概念与本概念直接关联。'};
+  $('#neighbor-help').textContent=(single?help[groups[0][0]]:'以下概念按关系分组。')+'点开名称即可在此阅读。';
+  $('#neighbor-help').hidden=!groups.length;
+  $('#neighbor-list').innerHTML=groups.map(([key,items])=>{
     const rows=items;
     if(!rows.length)return '';
-    const heading={before:'先了解这些概念',after:'以它为基础',related:'其他关联'}[key];
+    const heading={before:'先了解这些概念',after:'以它为基础',related:'相关联的概念'}[key];
     const content=rows.map(n=>'<details class="neighbor-card" data-neighbor="'+esc(n.id)+'"><summary class="neighbor-item"><i class="ph ph-file-text" aria-hidden="true"></i><span>'+esc(name(n.id))+'</span><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary><div class="neighbor-reading"></div></details>').join('');
+    if(single)return content;
     return '<details class="neighbor-group" data-group="'+key+'"'+(key==='related'?'':' open')+'><summary class="neighbor-group-heading"><h3>'+heading+' · '+rows.length+'</h3><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary>'+content+'</details>';
   }).join('')||'<p class="empty">暂无相邻概念。</p>';
   // 恢复该概念离开时的分组与词条展开态(旧历史条目无此字段则保持默认策略)。
@@ -366,7 +381,7 @@ renderCard();setMode(mode,false);
 await document.fonts.ready;
 try{
   graph=new ForceGraph3D($('#webgl'),{controlType:'orbit',rendererConfig:{antialias:true,alpha:true}});
-  graph.backgroundColor('rgba(0,0,0,0)').showNavInfo(false).nodeLabel(n=>esc(n.name)).nodeRelSize(1.2).nodeVal(.65).nodeThreeObject(makeLabel).nodeThreeObjectExtend(true).nodeColor(n=>n.id===selected?'#bf7b2c':n.color)
+  graph.backgroundColor('rgba(0,0,0,0)').showNavInfo(false).nodeLabel('').nodeRelSize(1.2).nodeVal(.65).nodeThreeObject(makeLabel).nodeThreeObjectExtend(true).nodeColor(n=>n.id===selected?'#bf7b2c':n.color)
     .linkThreeObject(makeLine).linkPositionUpdate(positionLine)
     .linkDirectionalArrowLength(e=>e.relation_type==='prerequisite'?2.5:0).linkDirectionalArrowRelPos(.96).linkDirectionalArrowColor('#75846e')
     .enableNodeDrag(true).warmupTicks(200).cooldownTicks(75).cooldownTime(1200)
@@ -378,7 +393,7 @@ try{
       rotating=false;graph.controls().autoRotate=false;
       $('#pause').setAttribute('aria-pressed','false');$('#pause').setAttribute('aria-label','开始缓慢旋转');$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>';
     })
-    .onNodeDragEnd(()=>{draggingNode=null;graphClickMoved=true;interacting=false}).onNodeClick((n,e)=>{if(!graphClickMoved)selectConcept(hitLabel(e.clientX,e.clientY)??n.id)}).onEngineStop(()=>{
+    .onNodeDragEnd(()=>{draggingNode=null;graphClickMoved=true;interacting=false}).onNodeClick((n,e)=>{if(e.pointerType!=='touch'&&!graphClickMoved)selectConcept(hitLabel(e.clientX,e.clientY)??n.id)}).onEngineStop(()=>{
       if(pendingFit){pendingFit=false;preferredLabels=localNeighbors();centerSelected(false)}
       if(pauseAfterTap){pauseAfterTap=false;graph.cooldownTicks(75)}
       if(!interacting&&!draggingNode)endMotion();
@@ -402,8 +417,23 @@ try{
     interacting=true;
   });
   graph.controls().addEventListener('end',()=>{interacting=false;endMotion()});
-  let canvasStart=null;
+  let canvasStart=null,touchTap=null;
+  const touchPointers=new Set(),touchSlop=10;
   const canvas=graph.renderer().domElement;
+  // Touch has no hover phase. Resolve the visible word at contact, independently
+  // of DragControls' tiny-motion drag events and the library's cached hoverObj.
+  canvas.addEventListener('pointerdown',e=>{
+    if(e.pointerType!=='touch')return;
+    touchPointers.add(e.pointerId);
+    if(touchPointers.size>1){if(touchTap)touchTap.cancelled=true;return}
+    touchTap={pointerId:e.pointerId,x:e.clientX,y:e.clientY,id:hitConcept(e.clientX,e.clientY),cancelled:false};
+  },true);
+  canvas.addEventListener('pointermove',e=>{
+    if(touchTap?.pointerId===e.pointerId&&Math.hypot(e.clientX-touchTap.x,e.clientY-touchTap.y)>touchSlop)touchTap.cancelled=true;
+  },true);
+  canvas.addEventListener('pointercancel',e=>{
+    touchPointers.delete(e.pointerId);if(touchTap?.pointerId===e.pointerId)touchTap=null;
+  },true);
   // 运行中图形上下文丢失：降级为纯阅读（正文/搜索/目录/相邻清单均可用），如实提示。
   canvas.addEventListener('webglcontextlost',e=>{
     e.preventDefault();graphReady=false;
@@ -412,30 +442,35 @@ try{
   },false);
   // This library emits a synthetic pointerup without the original pointer id.
   // Clear OrbitControls' active gesture before that event; use its public lifecycle.
-  const finishNodeGesture=()=>{
+  const finishNodeGesture=e=>{
     const controls=graph.controls();
     if(!controls.enabled){
       // DragControls restarts physics even for a stationary tap. Keep tap selection stable.
-      if(!graphClickMoved&&!draggingNode){pauseAfterTap=true;graph.cooldownTicks(0)}
+      const lightTouch=e.type==='pointerup'&&touchTap?.pointerId===e.pointerId&&!touchTap.cancelled;
+      if(lightTouch||(!graphClickMoved&&!draggingNode)){pauseAfterTap=true;graph.cooldownTicks(0)}
       controls.disconnect();controls.connect(canvas);
     }
   };
   canvas.addEventListener('pointerup',finishNodeGesture,true);
   canvas.addEventListener('pointercancel',finishNodeGesture,true);
+  canvas.addEventListener('pointerup',e=>{
+    if(e.pointerType!=='touch'||!touchPointers.has(e.pointerId))return;
+    touchPointers.delete(e.pointerId);
+    const tap=touchTap;if(tap?.pointerId!==e.pointerId)return;
+    touchTap=null;
+    if(tap.cancelled||touchPointers.size||mode!=='explore'||Math.hypot(e.clientX-tap.x,e.clientY-tap.y)>touchSlop)return;
+    const id=tap.id??hitConcept(e.clientX,e.clientY);
+    // Let native drag cleanup finish, then navigate once. Native touch onNodeClick
+    // is ignored above so a stale hover cannot select a second concept.
+    if(id)requestAnimationFrame(()=>selectConcept(id));
+  },true);
   canvas.addEventListener('pointerdown',e=>{graphClickMoved=false;canvasStart={x:e.clientX,y:e.clientY}});
   canvas.addEventListener('pointermove',e=>{if(canvasStart&&Math.hypot(e.clientX-canvasStart.x,e.clientY-canvasStart.y)>6)graphClickMoved=true});
   canvas.addEventListener('pointercancel',()=>canvasStart=null);
   canvas.addEventListener('pointerup',e=>{
     const start=canvasStart;canvasStart=null;
-    if((e.pointerType==='mouse'&&e.button!==0)||mode!=='explore'||!start||graphClickMoved||Math.hypot(e.clientX-start.x,e.clientY-start.y)>6)return;
-    const labelId=hitLabel(e.clientX,e.clientY);if(labelId){selectConcept(labelId);return}
-    const bounds=surface.getBoundingClientRect();
-    const hit=graph.graphData().nodes.map(n=>{
-      const p=graph.graph2ScreenCoords(n.x,n.y,n.z);
-      return {id:n.id,distance:Math.hypot(p.x+bounds.x-e.clientX,p.y+bounds.y-e.clientY)};
-    }).sort((a,b)=>a.distance-b.distance)[0];
-    // A small visible sphere still needs a forgiving touch target.
-    if(hit?.distance<=16)selectConcept(hit.id);
+    if(e.pointerType==='touch'||(e.pointerType==='mouse'&&e.button!==0)||mode!=='explore'||!start||graphClickMoved||Math.hypot(e.clientX-start.x,e.clientY-start.y)>6)return;
+    const id=hitConcept(e.clientX,e.clientY);if(id)selectConcept(id);
   });
   graphReady=true;renderGraphData();resizeGraph();
   graph.cameraPosition({x:0,y:0,z:220},{x:0,y:0,z:0},0);

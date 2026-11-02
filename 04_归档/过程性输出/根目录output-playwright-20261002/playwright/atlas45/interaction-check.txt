@@ -6,4 +6,4 @@ await (async page=>{const checks=[];await page.goto('http://127.0.0.1:41839/atla
 ```
 ### Page
 - Page URL: http://127.0.0.1:41839/atlas.html?view=explore#4-03
-- Page Title: 大语言模型 · 银河AI知识图册
+- Page Title: 大语言模型 · 神奇科学AI知识图册

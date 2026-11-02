@@ -43,6 +43,6 @@ async(page)=>{
  for(const width of [320,430,980]){await page.setViewportSize({width,height:844});await page.evaluate(()=>scrollTo(0,0));check(width+'px无横向溢出',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),null);await page.screenshot({path:'output/playwright/atlas50/graph-'+width+'.png'});}
  await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:41839/atlas.html?view=explore#3-04');await page.reload();await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(2100);await page.screenshot({path:'output/playwright/atlas50/entry-390.png'});
  check('文字不受远处雾色淡化',await page.evaluate(()=>atlasUI.graph().graphData().nodes.every(n=>n.__threeObj.children.filter(c=>c.isSprite).every(c=>c.material.fog===false))),null);
- check('页面身份、正常内容、无错误遮罩或应用异常',await page.title()==='模型 · 银河AI知识图册'&&!!await page.locator('#definition').textContent()&&await page.locator('vite-error-overlay').count()===0&&errors.length===0,errors);
+ check('页面身份、正常内容、无错误遮罩或应用异常',await page.title()==='模型 · 神奇科学AI知识图册'&&!!await page.locator('#definition').textContent()&&await page.locator('vite-error-overlay').count()===0&&errors.length===0,errors);
  return {checks,errors,environment:{url:page.url(),viewports:[320,390,430,980],browser:'Playwright Chromium'},evidence:{entry,remote:remote.id,held,panBefore,panAfter,zoomed,rotatedHeld,overview,clicked}};
 }

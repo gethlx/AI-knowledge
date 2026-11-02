@@ -1,2 +1,2 @@
-import {defineConfig} from 'vite';
-export default defineConfig({build:{outDir:'dist-ui',rollupOptions:{input:'atlas.html'}}});
+// Compatibility for older build commands; the root config is authoritative.
+export {default} from '../../vite.config.js';

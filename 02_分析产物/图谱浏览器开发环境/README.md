@@ -1,33 +1,39 @@
-# 图谱浏览器开发环境
+# 神奇科学AI知识图册 · 前端工程
 
-本目录是Codex / WorkBuddy共用的本地工程环境。atlas.html已实现完整197卡、197节点/1562边及真实三维浏览；50号交互与52号视觉已获用户确认。index.html只保留3节点安装测试。当前等待WorkBuddy工程核对、补缺及手机验收，不代表正式工程已验收。正式G_v2及卡文保持只读。
+这是本地开发与GitHub在线图册共用的源码。首页为index.html，包含197个概念、1562条关系、定义与解释、搜索和相邻概念原位阅读。默认展开关系网与解释说明；手机实机体验仍需结合真实设备复测。
 
-当前任务入口：../../03_交付物/53-已确认浏览器交接与WorkBuddy后续任务.md；页面行为与接口：src/ui/README.md。
+## 安装与启动
 
-## 已锁定工具
+安装Node.js 22.12或更高版本（含npm），在本目录执行：
 
-- Node v24.14.0 / npm 11.9.0（复用本机现有运行时，未全局重装）。
-- Vite 8.3.2：本地开发及构建。
-- 3d-force-graph 1.80.1：真实Three.js/WebGL三维关系图；Three 0.186.1由锁文件固定。
-- @phosphor-icons/web 2.1.2：真实图标库。本安装测试用regular字体；正式界面按选定视觉稿选择匹配图标与加载方式。
-- Playwright CLI 0.1.22：复用现有Skill脚本；同一脚本也已挂到WorkBuddy。
+```bash
+npm ci
+npm run dev
+```
 
-## 双方使用
+打开终端显示的根地址，默认是 http://127.0.0.1:41839/ 。端口被占用时会明确报错。浏览期间保留终端运行；不能直接双击源码HTML运行。
 
-在本目录执行 `./tools.sh npm run dev`；默认本地地址为 `http://127.0.0.1:41839/`，端口占用时明确报错。产品专用构建：`./tools.sh npm exec vite build -- --config src/ui/vite.config.js`，输出dist-ui；`npm run build`仅构建原安装测试。`./tools.sh npm ci --ignore-scripts`可按锁文件重装当前依赖。包装器固定本机Node真实路径，避免两端PATH不同。当前安装和构建无需运行依赖包生命周期脚本。不要把node_modules或dist提交到仓库。
+## 构建和预览
 
-`./tools.sh impeccable context --target index.html` 读取当前目标背景；`./tools.sh impeccable detect --json index.html` 手动检测。相对目标以本目录为基准，也可以传绝对路径。这个包装器使用共享池固定引擎，关闭该入口的更新检查和选型遥测；没有安装自动编辑hook。Impeccable检测结果不能替代截图对照和真实交互验收。
+```bash
+npm run build
+npm run preview
+```
 
-`./tools.sh browser --help`使用现有Playwright CLI。两端挂载的Skill目录需刷新或新开对话才会被客户端索引；当前已核对两端文件及命令入口可达，不宣称替WorkBuddy执行过智能体任务。
+构建输出为dist-ui/，首页是index.html。预览默认仍用41839端口，需要先停止开发服务，或以 `npm run preview -- --port 41840` 指定其他端口。托管时上传整个dist-ui目录。默认相对资源路径支持放到子目录；固定部署路径可用 `npm run build -- --base=/你的子路径/`。
 
-新Skill真身：`~/AI-Tools/shared/skills/img-to-frontend/`、`~/AI-Tools/shared/skills/impeccable/`。两端入口均为软链，不要用各端安装器覆盖软链；升级应在独立目录审查后替换共享池，不能直接使用upstream update覆盖正在读取的Skill。
+GitHub Pages执行同一个build命令，只附加/AI-knowledge/路径。开发、构建、预览与在线发布共用根vite.config.js，无需另外复制或拼装首页。旧的src/ui/vite.config.js仅转导该配置，兼容以前的构建命令。
 
-当前任务与验收入口见53号；38号为安装来源及早期分工。核验记录在 `核验记录/`。
+## 入口与数据
 
-## 当前边界
+- `/`：唯一产品首页，读取src/ui/atlas-preview.js和src/ui/preview-data.json。
+- `/atlas.html`：旧链接兼容跳转，保留查询参数和概念hash；开发及构建后均可用。
+- `/tests/smoke/`：仅开发模式提供的早期三节点安装测试，不进入产品构建。
+- 原始卡文与G_v2关系包是知识权威来源，preview-data.json是运行副本；本次入口统一不改知识数据。
+- 页面行为、接口及历史验收记录见src/ui/README.md，项目当前进度见仓库根导航账本；历史交接文档不是当前启动指引。
 
-安装测试无外部模型/API调用，未新生成视觉稿。运行依赖的已知漏洞查询为0，不代表完整安全审计。构建有三维JS包体超过500kB的提示；正式产品由WorkBuddy检查按需加载和手机实机表现，当前完整图浏览器预览已通过既有核验，手机实机性能仍未验证。
+## 可选维护工具
 
-## 2026-10-02 HTML还原入口
+普通使用和构建只需要Node.js及npm，不需要Codex、WorkBuddy、Skill或本机共享目录。tools.sh仅为可选命令包装器，不包含个人电脑路径：`./tools.sh npm run dev`与标准npm命令等价。
 
-打开http://127.0.0.1:41839/atlas.html。源码、视觉尺寸与WorkBuddy接口见src/ui/README.md；当前视觉52号、交接53号，45号为早期还原记录。专用构建：./tools.sh npm exec vite build -- --config src/ui/vite.config.js，输出dist-ui。原安装测试保留不覆盖；当前已为完整197/1562预览，仍需53号工程验收。
+设计检查和浏览器工具如需使用，应自行安装并加入PATH，或通过IMPECCABLE_BIN、PLAYWRIGHT_CLI指定可执行程序。它们缺失不影响图册运行。不提交node_modules或dist-ui；构建的大包提示不代表图册构建失败。

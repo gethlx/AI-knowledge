@@ -57,7 +57,7 @@ function renderCard(){
   $('#more').open=prev?.more??false;$('#sources').open=prev?.sources??false;$('#neighbors').open=prev?.neighbors??false;
   $('#back').disabled=historyStack.length===0;
   renderContext();
-  document.title=name(selected)+' · 银河AI知识图册';
+  document.title=name(selected)+' · 神奇科学AI知识图册';
   if(graph)graph.nodeColor(n=>n.id===selected?'#ba914d':n.color);
   syncLabels();
   document.dispatchEvent(new CustomEvent('atlas:selection',{detail:{id:selected}}));
