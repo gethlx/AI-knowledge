@@ -1,6 +1,11 @@
 import '@phosphor-icons/web/regular';
 import '../styles/atlas.css';
 import input from './preview-data.json';
+import { t, getLanguage, setLanguage, resolveLanguage, fieldsFor, englishName, wrapLabel, applyDocumentLanguage } from './i18n.js';
+let languageStorage;
+try { languageStorage = window.localStorage; } catch { /* Storage is optional. */ }
+setLanguage(resolveLanguage(location.search, languageStorage), languageStorage);
+applyDocumentLanguage();
 import ForceGraph3D from '3d-force-graph';
 import SpriteText from 'three-spritetext';
 import { Line2 } from 'three/addons/lines/Line2.js';
@@ -14,7 +19,8 @@ const nodes=new Map(input.graph.nodes.map(n=>[n.card_id,n]));
 const edges=input.graph.edges;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const name=id=>nodes.get(id)?.name??id;
+const name=id=>getLanguage()==='en'?(cards.has(id)?englishName(cards.get(id)):id):(nodes.get(id)?.name??id);
+const secondaryName=id=>getLanguage()==='en'?(nodes.get(id)?.name??''):(cards.get(id)?.en??'');
 const meaningful=s=>typeof s==='string'&&s.trim()!==''&&s.trim()!=='—';
 const params=new URLSearchParams(location.search);
 let selected=cards.has(location.hash.slice(1))?location.hash.slice(1):'4-03';
@@ -88,12 +94,12 @@ function refreshNodeColors(){
     anchor.material=nodeMaterials.get(color);
   }
 }
-function wrapName(text){return text.length>8?text.match(/.{1,8}/gu).join('\n'):text}
+function wrapName(text){return wrapLabel(text)}
 function makeLabel(n){
   let sprite=textSprites.get(n.id);
   if(!sprite){
     sprite=new SpriteText(wrapName(n.name),9,n.id===selected?'#8b4c19':'#253d35');
-    sprite.fontFace='AtlasSerif, serif';sprite.fontSize=56;sprite.fontWeight=600;
+    sprite.fontFace=getLanguage()==='en'?'Georgia, serif':'AtlasSerif, serif';sprite.fontSize=56;sprite.fontWeight=600;
     sprite.backgroundColor=n.id===selected?'#fff0d0':'rgba(248,246,241,0.94)';sprite.padding=[1.7,.8];sprite.borderRadius=1;
     sprite.material.fog=false;sprite.material.depthTest=false;sprite.material.depthWrite=false;sprite.material.sizeAttenuation=false;sprite.renderOrder=30;
     sprite.userData.aspect=sprite.scale.x/sprite.scale.y;sprite.userData.lines=sprite.text.split('\n').length;
@@ -126,28 +132,28 @@ function neighborSnapshot(){
           cards:[...document.querySelectorAll('#neighbor-list .neighbor-card[open]')].map(d=>d.dataset.neighbor)};
 }
 function saveReading(){saved.set(selected,{scroll:window.scrollY,explanation:$('#explanation').open,neighbors:$('#neighbors').open,neighborState:neighborSnapshot()})}
-function snapshot(){return {selected,focus,mode,camera:cameraState(),reading:{scroll:window.scrollY,explanation:$('#explanation').open,neighbors:$('#neighbors').open,neighborState:neighborSnapshot()}}}
+function snapshot(){return {selected,focus,mode,language:getLanguage(),camera:cameraState(),reading:{scroll:window.scrollY,explanation:$('#explanation').open,neighbors:$('#neighbors').open,neighborState:neighborSnapshot()}}}
 const explanationKeys=['教学类比','典型案例','常见误解','反例','安全与伦理边界'];
 function explanationHTML(id){
-  const f=cards.get(id).fields;
+  const f=fieldsFor(cards.get(id));
   // 主公授权的通俗解释层（真源: 02_分析产物/内容补齐/），作为解释说明主体；字段块随后保留原文。
   const plain=meaningful(f['通俗解释'])?'<div class="plain-explanation">'+f['通俗解释'].split('\n').filter(Boolean).map(p=>'<p>'+esc(p)+'</p>').join('')+'</div>':'';
   const prefixes={'教学类比':'','典型案例':'例如：','常见误解':'常见误解：','反例':'反例：','安全与伦理边界':'使用时留意：'};
-  return plain+explanationKeys.filter(k=>meaningful(f[k])).map(k=>'<p data-field="'+k+'">'+(prefixes[k]?'<span class="explanation-prefix">'+prefixes[k]+'</span>':'')+'<span>'+esc(f[k])+'</span></p>').join('');
+  return plain+explanationKeys.filter(k=>meaningful(f[k])).map(k=>'<p data-field="'+k+'">'+(prefixes[k]?'<span class="explanation-prefix">'+t(prefixes[k])+'</span>':'')+'<span>'+esc(f[k])+'</span></p>').join('');
 }
 function notify(text){$('#notice').textContent=text;$('#notice').hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>$('#notice').hidden=true,4200)}
 function renderCard(){
-  const c=cards.get(selected),f=c.fields;
-  $('#concept-title').textContent=name(selected);$('#english').textContent=c.en;
+  const c=cards.get(selected),f=fieldsFor(c);
+  $('#concept-title').textContent=name(selected);$('#english').textContent=secondaryName(selected);$('#english').lang=getLanguage()==='en'?'zh-CN':'en';
   $('#definition').textContent=f['精确定义'];
   $('#explanation-copy').innerHTML=explanationHTML(selected);
   $('#explanation').hidden=!$('#explanation-copy').textContent.trim();
   $('#explanation').open=saved.get(selected)?.explanation??true;
-  $('#explanation-toggle').textContent=$('#explanation').open?'收起说明':'展开阅读';
+  $('#explanation-toggle').textContent=$('#explanation').open?t('收起说明'):t('展开阅读');
   $('#neighbor-count').textContent=neighborTotal(selected);
   renderNeighbors();
   $('#neighbors').open=saved.get(selected)?.neighbors??true;
-  renderContext();document.title=name(selected)+' · 神奇科学AI知识图册';
+  renderContext();document.title=name(selected)+' · '+t('神奇科学AI知识图册');
   if(graph){refreshNodeColors();refreshLinks()}
   syncLabels();document.dispatchEvent(new CustomEvent('atlas:selection',{detail:{id:selected}}));
 }
@@ -155,7 +161,7 @@ function renderNeighbors(){
   const groups=Object.entries(neighbors(selected)).filter(([,items])=>items.length);
   const single=groups.length===1;
   const help={before:'理解本概念前，可先了解以下概念。',after:'以下概念以本概念为基础。',related:'以下概念与本概念直接关联。'};
-  $('#neighbor-help').textContent=(single?help[groups[0][0]]:'以下概念按关系分组。')+'点开名称即可在此阅读。';
+  $('#neighbor-help').textContent=t(single?help[groups[0][0]]:'以下概念按关系分组。')+t('点开名称即可在此阅读。');
   $('#neighbor-help').hidden=!groups.length;
   $('#neighbor-list').innerHTML=groups.map(([key,items])=>{
     const rows=items;
@@ -163,8 +169,8 @@ function renderNeighbors(){
     const heading={before:'先了解这些概念',after:'以它为基础',related:'相关联的概念'}[key];
     const content=rows.map(n=>'<details class="neighbor-card" data-neighbor="'+esc(n.id)+'"><summary class="neighbor-item"><i class="ph ph-file-text" aria-hidden="true"></i><span>'+esc(name(n.id))+'</span><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary><div class="neighbor-reading"></div></details>').join('');
     if(single)return content;
-    return '<details class="neighbor-group" data-group="'+key+'"'+(key==='related'?'':' open')+'><summary class="neighbor-group-heading"><h3>'+heading+' · '+rows.length+'</h3><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary>'+content+'</details>';
-  }).join('')||'<p class="empty">暂无相邻概念。</p>';
+    return '<details class="neighbor-group" data-group="'+key+'"'+(key==='related'?'':' open')+'><summary class="neighbor-group-heading"><h3>'+t(heading)+' · '+rows.length+'</h3><i class="ph ph-caret-down disclosure" aria-hidden="true"></i></summary>'+content+'</details>';
+  }).join('')||'<p class="empty">'+t('暂无相邻概念。')+'</p>';
   // 恢复该概念离开时的分组与词条展开态(旧历史条目无此字段则保持默认策略)。
   // 注意: 恢复只改DOM, 不写历史——selectConcept流程中此刻URL/条目仍属上一概念, 写历史会覆盖它。
   const ns=saved.get(selected)?.neighborState;
@@ -176,9 +182,9 @@ function renderNeighbors(){
 function selectConcept(id){
   if(!cards.has(id))return false;
   if(id!==selected){
-    saveReading();history.replaceState(historySnapshot(),'',location.hash);
+    saveReading();history.replaceState(historySnapshot(),'',historyUrl());
     selected=id;
-    renderCard();history.pushState(historySnapshot(),'', '#'+id);
+    renderCard();history.pushState(historySnapshot(),'',historyUrl());
   }
   closeBrowser();
   if(graphReady){
@@ -189,9 +195,21 @@ function selectConcept(id){
 }
 // 前进/后退: 条目state实时同步(概念/展开/滚动/相机), 双向一致恢复。
 function historySnapshot(){const s=snapshot();s.atlas=true;return s}
+function historyUrl(){
+  const url=new URL(location.href);
+  // Every entry is shareable, including visits that originally used a stored preference.
+  url.searchParams.set('lang',getLanguage());url.hash=selected;
+  return url;
+}
+function historyLanguage(state){
+  const requested=new URLSearchParams(location.search).get('lang');
+  if(requested==='en'||requested==='zh')return requested;
+  // Older entries may lack a locale. Never let a later preference change reinterpret them.
+  return state.language==='en'?'en':'zh';
+}
 let syncTimer;
 // 离散展开动作即时写入历史条目(不走防抖, 快速后退不丢最近状态); 滚动/相机保持250ms节流。
-function syncHistoryStateNow(){clearTimeout(syncTimer);history.replaceState(historySnapshot(),'',location.hash)}
+function syncHistoryStateNow(){clearTimeout(syncTimer);history.replaceState(historySnapshot(),'',historyUrl())}
 function syncHistoryState(){
   clearTimeout(syncTimer);
   syncTimer=setTimeout(syncHistoryStateNow,250);
@@ -200,13 +218,15 @@ window.addEventListener('popstate',e=>{
   const next=e.state;
   if(!next||!next.atlas)return;
   clearTimeout(syncTimer);
+  setLanguage(historyLanguage(next),languageStorage);
   selected=next.selected;
   if(focus!==next.focus){focus=next.focus;renderGraphData()}
   if(next.reading)saved.set(next.selected,next.reading);
-  renderCard();setMode(next.mode,false);
+  renderLanguage();setMode(next.mode,false);
   restoreCamera(next.camera);preferredLabels=localNeighbors();syncLabels();window.scrollTo(0,next.reading?.scroll??0);
+  syncHistoryStateNow();
 });
-history.replaceState(historySnapshot(),'',location.pathname+location.search+'#'+selected);
+history.replaceState(historySnapshot(),'',historyUrl());
 window.addEventListener('scroll',syncHistoryState,{passive:true});
 // open属性/清单变化经MutationObserver在微任务级同步(早于任何后续导航任务, 覆盖用户点击与程序设置);
 // 不依赖异步排队的toggle事件。恢复DOM引发的属性变化在导航流程完成后触发, 写入的是当前(正确)条目且幂等。
@@ -216,19 +236,19 @@ function setMode(next){
   const y=window.scrollY;mode=next;
   $('#atlas').className='atlas'+(next==='explore'?' graph-open':'');
   (next==='reading'?$('#thumbnail-graph'):$('#expanded-graph')).append(surface);
-  if(graph){rotating=false;graph.controls().autoRotate=false;$('#pause').setAttribute('aria-pressed','false');$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>'}
+  if(graph){rotating=false;graph.controls().autoRotate=false;$('#pause').setAttribute('aria-label',t('开始缓慢旋转'));$('#pause').setAttribute('aria-pressed','false');$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>'}
   resizeGraph();renderContext();
   if(graphReady)centerSelected(false);
   window.scrollTo(0,y);document.dispatchEvent(new CustomEvent('atlas:mode',{detail:{mode}}));
 }
 function renderContext(){
-  $('#focus-label').textContent='当前概念：'+name(selected);
+  $('#focus-label').textContent=t('当前概念：')+name(selected);
   $('#thumbnail-focus').hidden=true;
   for(const b of labels.children)b.tabIndex=mode==='explore'?0:-1;
 }
 function graphDataForFocus(){
   // Exploration needs the full dataset; selecting a concept never clips the scene.
-  visibleNodes=input.graph.nodes.map((n,i)=>({id:n.card_id,name:n.name,color:palette[i%palette.length]}));
+  visibleNodes=input.graph.nodes.map((n,i)=>({id:n.card_id,name:name(n.card_id),color:palette[i%palette.length]}));
   visibleEdges=edges.map(e=>({...e,source:e.effective_source,target:e.effective_target}));
   return {nodes:visibleNodes.map(n=>({...n})),links:visibleEdges.map(e=>({...e}))};
 }
@@ -306,11 +326,47 @@ function zoomGraph(factor){
 function renderGraphData(){
   const data=graphDataForFocus();pendingFit=true;
   // Keyboard users can read every node; visual text lives inside the WebGL scene.
-  labels.innerHTML=data.nodes.map(n=>'<button class="graph-a11y-node" data-concept="'+esc(n.id)+'" aria-label="阅读'+esc(n.name)+'">'+esc(n.name)+'</button>').join('');
+  renderAccessibleNodes(data.nodes);
   if(graph)graph.graphData(data);
   $('#graph-count').textContent=data.nodes.length;
   $('#edge-count').textContent=data.links.length;
   renderContext();requestAnimationFrame(syncLabels);
+}
+function renderAccessibleNodes(list){
+  labels.innerHTML=list.map(n=>'<button class="graph-a11y-node" data-concept="'+esc(n.id)+'" aria-label="'+esc(t('阅读')+n.name)+'">'+esc(n.name)+'</button>').join('');
+}
+// Rendering a restored locale must not save outgoing reading state or navigate.
+function renderLanguage(){
+  applyDocumentLanguage();
+  renderCard();
+  // Relabel the existing scene without resetting the graph layout or camera.
+  for(const n of visibleNodes)n.name=name(n.id);
+  if(graph){
+    for(const n of graph.graphData().nodes){
+      n.name=name(n.id);
+      const sprite=textSprites.get(n.id);
+      if(!sprite)continue;
+      sprite.fontFace=getLanguage()==='en'?'Georgia, serif':'AtlasSerif, serif';
+      sprite.text=wrapName(n.name);
+      sprite.userData.aspect=sprite.scale.x/sprite.scale.y;
+      sprite.userData.lines=sprite.text.split('\n').length;
+    }
+    renderAccessibleNodes(graph.graphData().nodes);
+    renderContext();syncLabels();
+  }
+  if(!$('#browser-panel').hidden){
+    $('#browser-title').textContent=t(searchMode==='directory'?'概念目录':'查找概念');
+    renderResults();
+  }
+  $('#pause').setAttribute('aria-label',t(rotating?'暂停旋转':'开始缓慢旋转'));
+  const error=$('#graph-error');if(error.dataset.errorKey)error.textContent=t(error.dataset.errorKey);
+  $('#notice').hidden=true;
+}
+function switchLanguage(value=getLanguage()==='en'?'zh':'en'){
+  const scroll=window.scrollY;
+  saveReading();setLanguage(value,languageStorage);renderLanguage();
+  // Restore synchronously: a queued callback could overwrite a subsequent Back/Forward scroll.
+  window.scrollTo(0,scroll);syncHistoryStateNow();
 }
 function resizeGraph(){
   if(!graph)return;
@@ -326,17 +382,17 @@ function highlight(text,q){
 }
 function renderResults(){
   const q=$('#search-input').value.trim(), level=$('#level-filter').value;
-  const matching=input.cards.filter(c=>(name(c.card_id)+' '+c.en).toLowerCase().includes(q.toLowerCase())&&(!level||c.fields['认知层级']===level));
-  $('#browser-subtitle').textContent=searchMode==='directory'?'共197个概念':'';
-  if(searchMode==='search'&&!q){$('#results').innerHTML='<p class="empty">输入中文或英文概念名称，查找你想了解的内容。</p>';return}
+  const matching=input.cards.filter(c=>(nodes.get(c.card_id).name+' '+c.en+' '+englishName(c)).toLowerCase().includes(q.toLowerCase())&&(!level||c.fields['认知层级']===level));
+  $('#browser-subtitle').textContent=searchMode==='directory'?t('共{count}个概念',{count:input.cards.length}):'';
+  if(searchMode==='search'&&!q){$('#results').innerHTML='<p class="empty">'+t('输入中文或英文概念名称，查找你想了解的内容。')+'</p>';return}
   const iconList=['brain','lightbulb','users','tree-structure','crosshair','globe'];
-  $('#results').innerHTML='<p class="result-count">匹配概念名称（中文或英文） · '+matching.length+'个</p>'+matching.map((c,i)=>'<button class="concept-result" data-concept="'+esc(c.card_id)+'"><span class="result-icon"><i class="ph ph-'+iconList[i%iconList.length]+'" aria-hidden="true"></i></span><span class="result-copy"><strong>'+highlight(name(c.card_id),q)+'</strong><small>'+highlight(c.en,q)+'</small>'+(searchMode==='directory'?'<span class="level">'+esc(c.fields['认知层级'])+'</span>':'')+'</span><i class="ph ph-caret-right" aria-hidden="true"></i></button>').join('')+(matching.length?'':'<p class="empty">没有匹配的概念。试试更短的词，或浏览全部概念。</p>');
+  $('#results').innerHTML='<p class="result-count">'+t('匹配概念名称（中文或英文） · {count}个',{count:matching.length})+'</p>'+matching.map((c,i)=>'<button class="concept-result" data-concept="'+esc(c.card_id)+'"><span class="result-icon"><i class="ph ph-'+iconList[i%iconList.length]+'" aria-hidden="true"></i></span><span class="result-copy"><strong>'+highlight(name(c.card_id),q)+'</strong><small>'+highlight(secondaryName(c.card_id),q)+'</small>'+(searchMode==='directory'?'<span class="level">'+esc(t(c.fields['认知层级']))+'</span>':'')+'</span><i class="ph ph-caret-right" aria-hidden="true"></i></button>').join('')+(matching.length?'':'<p class="empty">'+t('没有匹配的概念。试试更短的词，或浏览全部概念。')+'</p>');
 }
 function openBrowser(type,trigger){
   lastBrowserTrigger=trigger??lastBrowserTrigger;searchMode=type;
   $('#browser-panel').hidden=false;$('#browser-panel').className='browser-panel '+type;
   $('#atlas').inert=true;document.body.style.overflow='hidden';
-  $('#browser-title').textContent=type==='directory'?'概念目录':'查找概念';
+  $('#browser-title').textContent=type==='directory'?t('概念目录'):t('查找概念');
   $('#search-input').value='';$('#level-filter').value='';renderResults();
   $('#search-input').focus();
 }
@@ -351,6 +407,7 @@ document.addEventListener('click',e=>{
   const b=e.target.closest('[data-action]');if(!b)return;
   const action=b.dataset.action;
   if(action==='search'||action==='directory')openBrowser(action,b);
+  else if(action==='language')switchLanguage();
   else if(action==='close-browser')closeBrowser();
   else if(action==='read')$('#explanation').open=true;
   else if(action==='explore')setMode('explore');
@@ -363,19 +420,19 @@ document.addEventListener('click',e=>{
   else if(action==='zoom-out')zoomGraph(1.33);
   else if(action==='pause'){
     rotating=!rotating;if(graph){graph.controls().autoRotate=rotating;graph.controls().autoRotateSpeed=.35}
-    b.setAttribute('aria-pressed',String(rotating));b.setAttribute('aria-label',rotating?'暂停旋转':'开始缓慢旋转');
+    b.setAttribute('aria-pressed',String(rotating));b.setAttribute('aria-label',rotating?t('暂停旋转'):t('开始缓慢旋转'));
     b.innerHTML='<i class="ph ph-'+(rotating?'pause':'play')+'" aria-hidden="true"></i>';syncLabels();
   }
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBrowser()});
 $('#search-input').addEventListener('input',renderResults);
 $('#level-filter').addEventListener('change',renderResults);
-$('#explanation').addEventListener('toggle',()=>{$('#explanation-toggle').textContent=$('#explanation').open?'收起说明':'展开阅读'});
+$('#explanation').addEventListener('toggle',()=>{$('#explanation-toggle').textContent=$('#explanation').open?t('收起说明'):t('展开阅读')});
 document.addEventListener('toggle',e=>{
   const d=e.target;if(!d.matches?.('.neighbor-card')||!d.open)return;
   const body=d.querySelector('.neighbor-reading');if(body.childElementCount)return;
-  const id=d.dataset.neighbor,f=cards.get(id).fields,explanation=explanationHTML(id);
-  body.innerHTML='<h3>定义</h3><p>'+esc(f['精确定义'])+'</p>'+(explanation?'<h3>解释说明</h3>'+explanation:'');
+  const id=d.dataset.neighbor,f=fieldsFor(cards.get(id)),explanation=explanationHTML(id);
+  body.innerHTML='<h3>'+t('定义')+'</h3><p>'+esc(f['精确定义'])+'</p>'+(explanation?'<h3>'+t('解释说明')+'</h3>'+explanation:'');
 },true);
 renderCard();setMode(mode,false);
 await document.fonts.ready;
@@ -391,7 +448,7 @@ try{
       const position=graph.camera().position.clone(),target=graph.controls().target.clone();
       graph.cameraPosition(position,target,0);
       rotating=false;graph.controls().autoRotate=false;
-      $('#pause').setAttribute('aria-pressed','false');$('#pause').setAttribute('aria-label','开始缓慢旋转');$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>';
+      $('#pause').setAttribute('aria-pressed','false');$('#pause').setAttribute('aria-label',t('开始缓慢旋转'));$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>';
     })
     .onNodeDragEnd(()=>{draggingNode=null;graphClickMoved=true;interacting=false}).onNodeClick((n,e)=>{if(e.pointerType!=='touch'&&!graphClickMoved)selectConcept(hitLabel(e.clientX,e.clientY)??n.id)}).onEngineStop(()=>{
       if(pendingFit){pendingFit=false;preferredLabels=localNeighbors();centerSelected(false)}
@@ -399,7 +456,7 @@ try{
       if(!interacting&&!draggingNode)endMotion();
       syncLabels();
     })
-    .onLinkClick(e=>{if(graphClickMoved)return;notify(e.relation_type==='prerequisite'?'学习'+name(e.effective_target)+'前，先了解“'+name(e.effective_source)+'”。':name(e.effective_source)+'与'+name(e.effective_target)+'存在关联。')});
+    .onLinkClick(e=>{if(graphClickMoved)return;notify(e.relation_type==='prerequisite'?t('学习{target}前，先了解“{source}”。',{target:name(e.effective_target),source:name(e.effective_source)}):t('{source}与{target}存在关联。',{source:name(e.effective_source),target:name(e.effective_target)}))});
   graph.scene().fog=new Fog('#f8f6f1',1,2000);
   graph.d3Force('charge').strength(-125);graph.d3Force('link').distance(linkSpacing).strength(.14);
   const controls=graph.controls();
@@ -413,7 +470,7 @@ try{
     const position=graph.camera().position.clone(),target=graph.controls().target.clone();
     graph.cameraPosition(position,target,0);
     rotating=false;graph.controls().autoRotate=false;
-    $('#pause').setAttribute('aria-pressed','false');$('#pause').setAttribute('aria-label','开始缓慢旋转');$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>';
+    $('#pause').setAttribute('aria-pressed','false');$('#pause').setAttribute('aria-label',t('开始缓慢旋转'));$('#pause').innerHTML='<i class="ph ph-play" aria-hidden="true"></i>';
     interacting=true;
   });
   graph.controls().addEventListener('end',()=>{interacting=false;endMotion()});
@@ -438,7 +495,7 @@ try{
   canvas.addEventListener('webglcontextlost',e=>{
     e.preventDefault();graphReady=false;
     const box=$('#graph-error');box.hidden=false;
-    box.textContent='三维视图已暂停（图形上下文丢失）。正文、搜索、目录和相邻概念清单仍可正常使用；刷新页面可恢复三维视图。';
+    box.dataset.errorKey='三维视图已暂停（图形上下文丢失）。正文、搜索、目录和相邻概念清单仍可正常使用；刷新页面可恢复三维视图。';box.textContent=t('三维视图已暂停（图形上下文丢失）。正文、搜索、目录和相邻概念清单仍可正常使用；刷新页面可恢复三维视图。');
   },false);
   // This library emits a synthetic pointerup without the original pointer id.
   // Clear OrbitControls' active gesture before that event; use its public lifecycle.
@@ -478,12 +535,13 @@ try{
   const updateSceneLabels=()=>{syncLabels();requestAnimationFrame(updateSceneLabels)};
   requestAnimationFrame(updateSceneLabels);
 }catch(error){
-  $('#graph-error').hidden=false;$('#graph-error').textContent='三维视图暂时无法加载。你仍可阅读正文，并在相邻概念清单中继续浏览。';
+  $('#graph-error').hidden=false;$('#graph-error').dataset.errorKey='三维视图暂时无法加载。你仍可阅读正文，并在相邻概念清单中继续浏览。';$('#graph-error').textContent=t('三维视图暂时无法加载。你仍可阅读正文，并在相邻概念清单中继续浏览。');
   console.error(error);
 }
 // Stable UI entry points for the production scene/state adapter; no source writes.
 window.atlasUI={
-  selectConcept,setMode,focusSelected,
+  selectConcept,setMode,focusSelected,switchLanguage,
+  getLanguage,
   getState:()=>({selected,focus,mode,overview,scope:'full',labelPolicy:'viewport',preferredLabels:[...preferredLabels],labelBoxes:labelHitBoxes.map(b=>({...b})),graphReady,visible:visibleNodes.map(n=>n.id),edgeCount:visibleEdges.length,labelCount:Number(surface.dataset.labelCount??0),moving:surface.dataset.moving==='true',camera:cameraState()}),
   readCard:id=>cards.get(id),
   getNeighbors:neighbors,
